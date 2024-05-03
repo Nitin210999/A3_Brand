@@ -1,0 +1,488 @@
+
+<style>
+    h5,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        width: 100%;
+    }
+
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        width: 100%;
+    }
+
+    #content-description {
+        display: none;
+    }
+
+    .page-content {
+        font-family: 'Lato', sans-serif;
+        margin: 0px;
+        margin-top: 40px;
+    }
+
+    .page-content section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .page-content h3 {
+        margin: 0px;
+    }
+
+    .page-content table,
+    .page-content th,
+    .page-content td {
+        border: 1px solid;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .page-content table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .page-content td {
+        width: 50%;
+    }
+
+    .page-content .container {
+        width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1320px;
+    }
+
+    .page-content .row {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .page-content .row.flex-direction-column {
+        flex-direction: column;
+    }
+
+    .page-content .left {
+        flex: 0 0 65%;
+        max-width: 65%;
+        margin-right: auto;
+    }
+
+    .page-content .right {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-left: auto;
+    }
+
+    .page-content h5 {
+        font-size: 32px !important;
+        font-weight: 600;
+    }
+
+    .page-content h2 {
+        font-size: 20px;
+        color: #0f0f0f;
+        font-weight: 500;
+        padding-block: 2%;
+    }
+
+    .page-content p {
+        font-size: 16px;
+        line-height: 28px;
+        color: #0f0f0f;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+
+    .page-content ul {
+        list-style: none;
+        font-size: 18px;
+        line-height: 48px;
+        color: #0f0f0f;
+        font-weight: 400;
+        padding-left: 21px;
+        margin-top: 0px;
+    }
+
+    .page-content ul li::before {
+        content: "\2022";
+        color: #f47c08;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .page-content header {
+        background-color: #0f0f0f;
+        padding: 10px 0px;
+        margin-bottom: 50px;
+    }
+
+    .page-content header h5 {
+        color: #ffffff;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .page-content footer {
+        background-color: #0f0f0f;
+        padding: 20px 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .page-content footer p {
+        font-size: 18px;
+        line-height: 36px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .page-content .hero-image {
+        max-width: 100%;
+        /* height: 550px; */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-content .hero-image img {
+        width: 100%;
+    }
+
+    .page-content .card-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 15px;
+    }
+
+    .page-content .card .card-head {
+        background-color: #f47c08;
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        padding: 10px 0px;
+        align-items: center;
+    }
+
+    .page-content .card .card-head p {
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+
+    .page-content .card .card-body {
+        background-color: #f6f6f6;
+        border: 1px solid #e4e4e4;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .page-content .card .map-wrap {
+        padding: 0px;
+    }
+
+    .page-content .card .card-body p {
+        margin: 0px;
+        font-size: 19px;
+        line-height: 36px;
+        color: #0f0f0f;
+    }
+
+    .page-content .card .card-body .text-right {
+        text-align: right;
+    }
+
+    .page-content .menu {
+        background-color: #f47c08;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .page-content .menu a {
+        background-color: #ffffff;
+        padding: 20px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        width: 20%;
+        color: #0f0f0f;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 900px) {
+        .page-content h5 {
+            font-size: 22px !important;
+        }
+
+        .page-content h2 {
+            font-size: 17px;
+            color: #0f0f0f;
+            font-weight: 500;
+            padding-block: 2%;
+        }
+
+        .page-content .container {
+            width: unset;
+        }
+
+        .page-content .left {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .right {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+
+
+        .page-content .hero-image img {
+            max-width: 100%;
+            height: unset;
+        }
+
+        .page-content .menu {
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .page-content .menu a {
+            padding: 20px 0px;
+            width: 100%;
+        }
+
+        .page-content .card .map-wrap iframe {
+            height: 400px;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+    }
+</style>
+<div class="page-content">
+    <header>
+        <div class="container">
+            <h5>The Different Trim Levels of the 2024 GMC Sierra 1500</h5>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="left">
+                    <div class="hero-image">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/a97e23c6a316469f9bf347386df84484.jpg"
+                            alt="A Closer Look">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/6aefe964df5541fe88539e7b8e76e540.png"
+                                    alt="">
+                                <p>Hours of Operation</p>
+                            </div>
+                            <div class="card-body">
+                                <p>Saturday <br>Sunday <br>Monday <br>Tuesday <br>Wednesday <br>Thursday <br>Friday
+                                </p>
+                                <p class="text-right">9:00 AM - 7:00 PM <br> 10:00 AM - 6:00 PM <br> 9:00 AM - 8:00
+                                    PM<br> 9:00 AM - 8:00 PM<br> 9:00 AM - 8:00 PM <br> 9:00 AM - 8:00 PM<br> 9:00
+                                    AM -
+                                    8:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/0d3c96086aca4dc2b2d61e56f078371a.png"
+                                    alt="">
+                                <p>Find us here</p>
+                            </div>
+                            <div class="card-body map-wrap">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas"><iframe width="100%" height="200" id="gmap_canvas"
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6650.1367330287385!2d-117.674!3d33.5516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceef68edc0001%3A0x1f695a52c0f5c75e!2sLaguna%20Niguel%20GMC!5e0!3m2!1sen!2sin!4v1701264111143!5m2!1sen!2sin"
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row flex-direction-column">
+                <h5 style="padding-block: 2%;color: #000;">The Different Trim Levels of the 2024 GMC Sierra 1500
+
+</h5>
+
+                <p>Full-size pickup trucks have been a popular choice among Americans for a long time due to their versatility, power, and style, making them suitable for work and play. In the crowded market of full-size pickups, the 2024 GMC Sierra 1500 is one of the top contenders. It offers a range of trim levels to meet the needs and preferences of every driver.
+
+                </p>
+
+                <p>The 2024 GMC Sierra 1500 is a truck that excels in performance without compromising comfort and style. It is designed to handle tough jobs with ease while also providing a luxurious interior and advanced technology features that make it a popular choice among truck enthusiasts.
+
+                </p>
+                <p>In this article, we will look closer at the different trim levels of the 2024 GMC Sierra 1500, from the base model to the top-of-the-line Denali Ultimate. We will explore each trim level's unique features and capabilities, helping you decide which one is right for you. Whether you're looking for a workhorse that can handle heavy loads or a luxury truck that offers the latest in comfort and convenience, there's a Sierra 1500 trim level that's perfect for you.
+                </p>
+                <h2>Pro
+                </h2>
+
+                <p>The 2024 GMC Sierra 1500 Pro trim is an excellent choice for drivers seeking a balance between efficiency and power. Equipped with the TurboMax™ engine, this truck delivers optimal performance with 310 horsepower and 430 lb.-ft. of torque. This engine is paired with an eight-speed automatic transmission, ensuring smooth and responsive handling on the road. The Pro trim also offers an available 5.3 EcoTec3 V8 engine for those who desire even more power.
+
+                </p>
+
+                <p>In terms of design, the Pro trim features 17-inch all-season tires that provide excellent traction in various weather conditions. The interior is designed for comfort and functionality, with vinyl seat trim that is easy to clean and maintain. The GMC Infotainment System with a 7-inch display keeps you connected and entertained on the go, while GMC Pro Safety features provide added peace of mind with advanced safety technologies.
+
+                </p>
+
+               <!--<p>The 2024 Yukon AT4 has other features to enhance its off-road capabilities, such as the Magnetic Ride Control, which reads the road up to 1,000 times a second for a smooth and controlled ride. The Autotrac® Two-Speed Transfer Case is another feature that allows drivers to switch seamlessly between two-wheel and four-wheel drive as 
+                </p>-->
+
+                <h2>SLE
+                </h2>
+
+                <p>Building upon the features of the Pro trim, the SLE trim offers even more options to suit your needs. One notable addition is the availability of the 3.0L Duramax® turbo diesel I6 engine, which provides excellent fuel efficiency and impressive towing capabilities. This engine is paired with an eight-speed automatic transmission for smooth and responsive performance.
+
+                </p>
+                <p>
+                    The SLE trim comes with 17-inch six-spoke Bright Silver aluminum wheels that add a touch of style to the truck's exterior. The GMC MultiPro tailgate is another standout feature, which offers six different configurations to make loading and unloading cargo easier than ever. Inside the cabin, dual-zone automatic climate control ensures you and your passengers stay comfortable, irrespective of the weather outside. Additionally, the 12.3-inch driver information center provides important vehicle information at a glance, keeping you informed and in control while driving.
+
+                </p>
+                <h2>
+                    Elevation
+                </h2>
+
+                <p>The 2024 GMC Sierra 1500 Elevation trim is designed to take your adventures to new heights. One notable addition is the high-capacity suspension, which provides improved handling and stability on rough terrain. This suspension is paired with 20-inch all-season tires and 20-inch six-spoke high-gloss black aluminum wheels, giving the Elevation trim a bold and rugged look.
+
+                </p>
+
+                <p>In terms of design, the GMC Sierra Elevation trim features LED fog lamps that provide enhanced visibility in low-light conditions. This is especially useful for off-road driving or when navigating through inclement weather. Inside the cabin, the Elevation trim offers the same comfort and convenience features as the SLE trim, including dual-zone automatic climate control and the 12.3-inch driver information center.
+
+                </p>
+                <h2>SLT</h2>
+                <p>
+                    The 2024 GMC Sierra 1500 SLT trim is a perfect blend of power and technology, making it an ideal choice for drivers who value performance and convenience. With its 5.3L EcoTec3 V8 engine, the SLT trim offers impressive power and towing capabilities. For those who desire even more power, an available 6.2L EcoTec3 V8 engine is also offered. Both engines are paired with a ten-speed automatic transmission, ensuring smooth and responsive handling on the road.
+
+                </p>
+                <p>
+                    In terms of design, the SLT trim features 18-inch all-season tires that provide excellent traction in various weather conditions. The interior of the SLT trim is designed for comfort and luxury, with perforated leather seat trim that adds a touch of elegance to the cabin. The GMC Premium Infotainment System offers advanced connectivity and entertainment options, keeping you connected and entertained on the go.
+
+                </p>
+        
+
+                <h2>AT4
+                </h2>
+
+                <p>The 2024 GMC Sierra 1500 AT4 trim is a truck that's tailor-made for those who love off-roading adventures. It's built to handle rough terrain with ease, thanks to its 2" factory lift with off-road suspension and Rancho® Monotube Shocks. The AT4 trim also comes equipped with underbody skid plates to protect the undercarriage from rocks and debris, ensuring that you can tackle any trail with confidence.
+                </p>
+
+                <p>The AT4 trim features a rugged and aggressive exterior that sets it apart from other trucks in its class. Inside the cabin, the AT4 trim offers a unique Jet Black interior with Kalahari accents and heated and ventilated perforated front leather seating surfaces. The 13.4" diagonal center touchscreen and 12.3" diagonal driver information center provide advanced connectivity and vehicle information at a glance, keeping you informed and in control on the road.
+
+                </p>
+
+                <h2>AT4X</h2>
+
+                <p>The 2024 GMC Sierra 1500 AT4X trim is the epitome of luxury and capability, designed for those who crave an exceptional off-roading adventure without compromising on comfort. With its Multimatic™ DSSV dampers, the AT4X trim offers superior handling and control on rough terrain, ensuring a smooth and comfortable ride on and off the road. The full grain leather seats add a touch of luxury to the cabin, providing both style and comfort for the driver and passengers.
+
+                </p>
+                <p>Additionally, the AT4X trim features a sleek and modern exterior that sets it apart from other trucks in its class. The AEV stamped-steel front bumper with front winch capability and AEV stamped boron steel front approach skid plate provide added protection and functionality, making navigating challenging terrain easier. The 12-speaker Bose premium series with Centerpoint surround sound provides an immersive audio experience, keeping you entertained on the go.The AT4X trim has a sleek and modern exterior design that sets it apart from other trucks in its class. The power sliding rear window and bed view camera add convenience and functionality, making loading and unloading cargo easier. Additionally, the universal home remote lets you control your garage door and other home automation devices from your truck.
+                </p>
+                <h2>Denali</h2>
+                <p>The 2024 GMC Sierra 1500 Denali trim sets the bar high for luxury and performance, offering an unparalleled blend of comfort and capability. With its available 6.2L V8 gas engine paired with a 10-speed automatic transmission, the Denali trim delivers impressive power and smooth acceleration, making every drive a thrilling experience.
+                </p>
+                <p>Inside the cabin, the Denali trim exudes luxury with its authentic open-pore wood, patterned aluminum trim, and forge perforated-leather seating surfaces. These premium materials are meticulously crafted to create a sophisticated and inviting atmosphere for drivers and passengers. The 13.4" diagonal center touchscreen and 12.3" diagonal digital driver information center offer advanced connectivity and vehicle information at your fingertips, keeping you informed and entertained on the road.
+                </p>
+                <p>In addition to its luxurious interior, the Denali trim also offers advanced technology features to enhance your driving experience. The continuous damping adaptive ride control ensures a smooth and comfortable ride, while the available Super Cruise hands-free driver assistance technology provides added convenience and safety on long journeys.
+                </p>
+
+                <h2>Denali Ultimate
+                </h2>
+                <p>The 2024 GMC Sierra 1500 Denali Ultimate trim combines power and luxury to provide an unmatched experience of performance and sophistication. It is equipped with a 6.2L V8 gas engine and a 10-speed automatic transmission, which delivers impressive power and seamless acceleration to ensure a thrilling drive every time.
+                </p>
+                <p>Inside the cabin, the Denali Ultimate trim radiates opulence. It features a distinctive Denali Vader chrome grille and exclusive 22" 7-spoke ultra-bright machined aluminum wheels with bright chrome accents. These premium materials are expertly crafted to create a refined and welcoming atmosphere. The 13.4" diagonal center touchscreen and 12.3" diagonal digital driver information center offer advanced connectivity and vehicle information at your fingertips.
+                </p>
+                <p>Moreover, the GMC Sierra Denali Ultimate has advanced technology features that enhance your driving experience. The heated and ventilated 16-way power front seats with massage ensure a comfortable journey, while the 12-speaker Bose premium series with Centerpoint surround sound provides an immersive audio experience. The available Super Cruise hands-free driver assistance technology offers added convenience and safety during extended trips.
+                </p>
+                <h2>Final Thoughts
+                </h2>
+
+                <p>The 2024 GMC Sierra trim levels offer a wide range of choices, each tailored to meet drivers' diverse needs and preferences. From the Pro trim, which balances efficiency and power, to the Denali Ultimate trim, which combines luxury and performance, there is a Sierra 1500 trim level for every driver. Whether you're looking for a workhorse that can handle heavy loads or a luxury truck with advanced technology features, the 2024 GMC Sierra 1500 has you covered.</p>
+                <p>Ready to experience the power and luxury of the GMC Sierra? Look no further! Visit Laguna Niguel GMC today for the best deals on the GMC Sierra lease and GMC Sierra AT4 for sale. Our extensive inventory, competitive lease specials, and expert auto service make us the go-to destination for all your GMC needs. Don't wait; call us at (949) 545-9770 or visit us at 28332 Camino Capistrano, Laguna Niguel, CA, and drive away in your dream GMC Sierra today!
+                </p>
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>COPYRIGHT © 2024</p>
+        </div>
+    </footer>
+</div>

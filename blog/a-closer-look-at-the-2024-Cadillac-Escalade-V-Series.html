@@ -1,0 +1,465 @@
+<style>
+    h5,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        width: 100%;
+    }
+
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        width: 100%;
+    }
+
+    #content-description {
+        display: none;
+    }
+
+    .page-content {
+        font-family: 'Lato', sans-serif;
+        margin: 0px;
+        margin-top: 40px;
+    }
+
+    .page-content section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .page-content h3 {
+        margin: 0px;
+    }
+
+    .page-content table,
+    .page-content th,
+    .page-content td {
+        border: 1px solid;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .page-content table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .page-content td {
+        width: 50%;
+    }
+
+    .page-content .container {
+        width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1320px;
+    }
+
+    .page-content .row {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .page-content .row.flex-direction-column {
+        flex-direction: column;
+    }
+
+    .page-content .left {
+        flex: 0 0 65%;
+        max-width: 65%;
+        margin-right: auto;
+    }
+
+    .page-content .right {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-left: auto;
+    }
+
+    .page-content h5 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .page-content h2 {
+        font-size: 20px;
+        color: #0f0f0f;
+        font-weight: 500;
+        padding-block: 2%;
+    }
+
+    .page-content p {
+        font-size: 16px;
+        line-height: 28px;
+        color: #0f0f0f;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+
+    .page-content ul {
+        list-style: none;
+        font-size: 18px;
+        line-height: 48px;
+        color: #0f0f0f;
+        font-weight: 400;
+        padding-left: 21px;
+        margin-top: 0px;
+    }
+
+    .page-content ul li::before {
+        content: "\2022";
+        color: #f47c08;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .page-content header {
+        background-color: #0f0f0f;
+        padding: 10px 0px;
+        margin-bottom: 50px;
+    }
+
+    .page-content header h5 {
+        color: #ffffff;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .page-content footer {
+        background-color: #0f0f0f;
+        padding: 20px 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .page-content footer p {
+        font-size: 18px;
+        line-height: 36px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .page-content .hero-image {
+        max-width: 100%;
+        /* height: 550px; */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-content .hero-image img {
+        width: 100%;
+    }
+
+    .page-content .card-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 15px;
+    }
+
+    .page-content .card .card-head {
+        background-color: #f47c08;
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        padding: 10px 0px;
+        align-items: center;
+    }
+
+    .page-content .card .card-head p {
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+
+    .page-content .card .card-body {
+        background-color: #f6f6f6;
+        border: 1px solid #e4e4e4;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .page-content .card .map-wrap {
+        padding: 0px;
+    }
+
+    .page-content .card .card-body p {
+        margin: 0px;
+        font-size: 19px;
+        line-height: 36px;
+        color: #0f0f0f;
+    }
+
+    .page-content .card .card-body .text-right {
+        text-align: right;
+    }
+
+    .page-content .menu {
+        background-color: #f47c08;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .page-content .menu a {
+        background-color: #ffffff;
+        padding: 20px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        width: 20%;
+        color: #0f0f0f;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 900px) {
+        .page-content h5 {
+            font-size: 15px;
+        }
+
+        .page-content h2 {
+            font-size: 17px;
+            color: #0f0f0f;
+            font-weight: 500;
+            padding-block: 2%;
+        }
+
+        .page-content .container {
+            width: unset;
+        }
+
+        .page-content .left {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .right {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .hero-image {
+            /* height: 340px; */
+        }
+
+        .page-content .hero-image img {
+            max-width: 100%;
+            height: unset;
+        }
+
+        .page-content .menu {
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .page-content .menu a {
+            padding: 20px 0px;
+            width: 100%;
+        }
+
+        .page-content .card .map-wrap iframe {
+            height: 400px;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+    }
+</style>
+
+<div class="page-content">
+    <header>
+        <div class="container">
+            <h5>A Closer Look at the 2024 Cadillac Escalade V-Series</h5>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="left">
+                    <div class="hero-image">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-cad/blogs/e642d63fcb2a4a8a8a75df0a237b189d.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-cad/undefined/ff5220627e1340bfba2b5bdda6b93571.png"
+                                    alt="">
+                                <p>Hours of Operation</p>
+                            </div>
+                            <div class="card-body">
+                                <p>Saturday <br>Sunday <br>Monday <br>Tuesday <br>Wednesday <br>Thursday <br>Friday
+                                </p>
+                                <p class="text-right">9:00 AM - 7:00 PM <br> 10:00 AM - 6:00 PM <br> 9:00 AM - 8:00
+                                    PM<br> 9:00 AM - 8:00 PM<br> 9:00 AM - 8:00 PM <br> 9:00 AM - 8:00 PM<br> 9:00
+                                    AM -
+                                    8:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-cad/undefined/b89cf55782ed40c29fce796d1fb780d2.png"
+                                    alt="">
+                                <p>Find us here</p>
+                            </div>
+                            <div class="card-body map-wrap">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas"><iframe width="100%" height="200" id="gmap_canvas"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.087694391914!2d-117.67361450000001!3d33.5510978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcef09641ed507%3A0x2f5dee3fc1db363c!2sCadillac%20of%20Laguna%20Niguel!5e0!3m2!1sen!2sin!4v1709045760040!5m2!1sen!2sin"
+                                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.cadillacoflagunaniguel.com/VehicleSearchResults?search=new&make">View
+                        Inventory</a>
+                    <a href="https://www.cadillacoflagunaniguel.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.cadillacoflagunaniguel.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7613', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div>
+                <div class="row flex-direction-column">
+                    <h5 style="padding-block: 2%;">A Closer Look at the 2024 Cadillac Escalade V-Series</h5>
+
+                    <p>For two decades, the Cadillac V-Series has been synonymous with exhilarating performance and
+                        refined luxury. In celebration of its 20th anniversary, the iconic Escalade has been given the
+                        V-Series treatment, elevating its already impressive status to new heights. This isn't just any
+                        anniversary; it's a milestone that demands high-octane celebration, and the Escalade V-Series
+                        delivers with power like never before.</p>
+
+                    <p>This SUV is made for those who embrace the future, with luxurious appointments that include
+                        innovations designed to enhance the time spent inside. This article will examine the 2024
+                        Cadillac Escalade V-Series, exploring its performance capabilities, luxurious features, and
+                        innovative technologies. Whether you prefer to be behind the wheel or in the passenger seat, the
+                        Escalade V-Series will deliver a thrilling and luxurious experience.</p>
+
+
+
+                    <h2>Intensified Performance</h2>
+
+                    <p>Equipped with a hand-built 6.2L supercharged V8 engine, this SUV delivers an astonishing 682
+                        horsepower and 653 lb.-ft. of torque, propelling it from 0 to 60 mph in just 4.4 seconds. This
+                        mega-output engine is a testament to Cadillac's legendary craftsmanship and performance, with
+                        each engine built by hand and signed by the engine craftsman. It's not just a vehicle; it's a
+                        work of art.</p>
+
+                    <p>Exclusive to the Cadillac V-Series, the Escalade V-Series features V-Mode, which allows drivers
+                        to personalize certain vehicle settings that control driving dynamics and performance. With a
+                        quick touch, you can adjust steering response, braking response, suspension, powertrain, and
+                        even the sound of the engine, allowing you to tailor your driving experience to your
+                        preferences.</p>
+
+                    <p>Apart from its powerful engine and customizable driving modes, the Cadillac Escalade-V has
+                        track-proven high-performance hardware. This includes front brakes from Brembo and an electronic
+                        limited-slip differential (eLSD). The Brembo brakes and impressive 16-inch front rotors provide
+                        a confident pedal feel and secure stopping power. The eLSD reacts intelligently to road
+                        conditions, maximizing traction when you need a firm grip on the road, such as during rain,
+                        snow, or cornering. Additionally, the Escalade V-Series features Magnetic Ride Control, which
+                        reads the road up to 1,000 times per second to make your drive responsive and smooth, ensuring
+                        that every drive is as exhilarating as it is luxurious.</p>
+
+                    
+
+                    <h2>Impressive Exterior</h2>
+
+                    <p>The 2024 Cadillac Escalade pays homage to the 20th Anniversary of V-Series with a host of exciting features. One of the most striking elements is the custom grille header, which sets the tone for the vehicle's bold and aggressive design. This is complemented by a wake-up animation screen, a special puddle lamp projector, and the return of the exclusive heritage color, Black Diamond Tricoat, specially formulated to sparkle with a diamond-like finish. These elements come together to create a truly impressive exterior that is sure to turn heads wherever you go.</p>
+
+                    <p>In addition to the custom grille header, the 2024 Escalade V-Series also features distinctive 22" wheels that are designed to accentuate the vehicle's bold lines and curves. These wheels add to the vehicle's overall aesthetic appeal and enhance its performance on the road. The exclusive front and rear fascia with dark quad exhaust further emphasize the vehicle's performance character, giving it a sleek and sporty look.</p>
+
+                   
+
+                    <h2>Luxurious Interior</h2>
+
+                    <p>You'll immediately notice the commitment to craftsmanship and attention to detail that epitomizes the brand. The interior of the 2024 Escalade-V is a testament to the art of automotive design, with each element meticulously curated to create an inviting and sophisticated ambience. From the hand-finished Platinum interior to the Zebra wood accents that add a touch of elegance, every detail has been carefully considered to ensure a truly luxurious experience.</p>
+
+                    <p>When it comes to comfort, the 2024 Escalade V-Series is unparalleled in its class. The seats are upholstered in the finest materials, offering unmatched comfort. Whether going on a long road trip or running errands around town, you'll find that the interior of the Escalade V-Series is a place where you can truly relax and unwind.</p>
+
+                    
+
+                    <h2>Advanced Technology</h2>
+
+                    <p>The 2024 Cadillac Escalade V-Series is more than just a vehicle; it's a technological wonder. Its advanced technology is centered around the Curved OLED display, which stretches an impressive 38 inches diagonally. This remarkable screen offers a captivating experience for the driver and passengers, providing vivid, clear visuals that delight the eye. Additionally, the AKG Studio Reference 36-speaker audio system ensures an unparalleled sound experience, with each note and detail brought to life with stunning clarity.</p>
+
+                    <p>But that's not all. The 2024 Escalade V-Series also features a Full-color Head-Up Display, which projects essential information directly onto the windshield, allowing you to focus on the road ahead. With the Rear Seat Entertainment System, passengers can enjoy their favorite movies and show on the go, ensuring everyone has a comfortable and enjoyable trip. Furthermore, the HD Rear Vision Camera provides a clear view of your surroundings, making parking and maneuvering more manageable.</p>
+                    <p>When it comes to safety, the 2024 Escalade V-Series has got you covered. With Super Cruise™ Hands-Free Driver Assistance Technology, you can enjoy a more relaxed driving experience, with the car taking care of many tasks that would typically demand your attention. Additionally, Conversation Enhancement enables you to communicate effortlessly with your passengers, even with loud road noise. With Augmented Reality-Enabled Navigation and Night Vision, you'll have all the necessary tools to navigate confidently and safely, regardless of the conditions.</p>
+
+                    <h2>Safety and Driver Assistance</h2>
+
+                    <p>Equipped with the Cadillac Smart System suite, this vehicle offers comprehensive features to keep you and your passengers safe on the road. From Front Park Assist to Rear Pedestrian Alert, Lane Keep Assist, and more, the Escalade V-Series has the latest technology to help prevent accidents and mitigate risks.</p>
+
+                    <p>HD Surround Vision provides a 360-degree view of your surroundings, giving you a clear picture of what's happening on all sides of the vehicle. Combined with Rear Cross Traffic Alert and Lane Change Alert with Side Blind Zone Alert, you'll have the confidence to navigate through traffic easily, knowing that the Escalade V-Series has your back. With Adaptive Cruise Control, you can maintain a safe distance from the vehicle ahead, even in stop-and-go traffic, while the Rear Camera Mirror with a washer ensures a clear view of what's behind you at all times.</p>
+                    <p>But safety doesn't stop when you're parked. The 2024 Escalade V-Series also features Enhanced Automatic Emergency Braking, Enhanced Automatic Parking Assist, and Automatic Seat Belt Tightening, providing peace of mind on the road or in a parking lot. And for those who tow, Trailer Side Blind Zone Alert adds an extra layer of safety, alerting you to vehicles in your blind spots when towing a trailer. In every way, the 2024 Cadillac Escalade V-Series prioritizes safety and driver assistance, offering a driving experience that is not only exhilarating but also secure and stress-free.</p>
+
+                    <h2>Final Thoughts</h2>
+
+                    <p>The 2024 Cadillac Escalade V-Series is a tribute to twenty years of automotive excellence. It combines exciting performance, refined luxury, and advanced technology. The car boasts a hand-built 6.2L supercharged V8 engine, customizable V-Mode, and high-performance hardware proven on the track. The Escalade V-Series promises to provide a luxurious yet thrilling driving experience. Its impressive exterior design, luxurious interior appointments, and advanced technology make it an engineering and design masterpiece. The car's comprehensive suite of safety and driver assistance features ensure that you and your passengers always stay protected on the road. Whether you want to be behind the wheel or in the passenger seat, the 2024 Cadillac Escalade V-Series promises an unmatched luxurious experience.</p>
+
+                    <p>Looking for an "Escalade V for sale" or "Cadillac Escalade V for sale"? Look no further than the Cadillac of Laguna Niguel! Our dealership, located at 28332 Camino Capistrano, Laguna Niguel, CA, is your trusted source for all things Cadillac. Whether you're in the market for a new or pre-owned Escalade V, our extensive inventory and competitive lease specials make us the premier destination for Cadillac enthusiasts in LAGUNA NIGUEL and beyond. Plus, our expert auto service ensures that your vehicle will be in top condition for years. Call us at (949) 485-4062 or visit us today to experience the Cadillac of Laguna Niguel difference. We look forward to seeing you soon!</p>
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.cadillacoflagunaniguel.com/VehicleSearchResults?search=new&make">View
+                        Inventory</a>
+                    <a href="https://www.cadillacoflagunaniguel.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.cadillacoflagunaniguel.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7613', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>COPYRIGHT © 2024</p>
+        </div>
+    </footer>
+</div>
