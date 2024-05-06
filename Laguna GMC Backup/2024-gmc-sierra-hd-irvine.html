@@ -1,0 +1,2900 @@
+<style>
+    /* Write your master css here */
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+    body {
+        margin: 0;
+    }
+
+    .main-div {
+        max-width: 100%;
+        font-family: 'Lato' !important;
+    }
+
+    .main-div>h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+        font-family: 'Lato' !important;
+    }
+
+    .sns-head-28 {
+        margin-inline: 28%;
+        margin-bottom: 40px;
+    }
+
+    .main-div img {
+        max-width: 100%;
+        width: 100% !important;
+        
+    }
+
+    :root {
+        --sns-btn-bg: #666 !important;
+        --sns-btn-back: #cc0001 !important;
+        --sns-black: #000 !important;
+        --sns-white: #fff !important;
+
+    }
+
+    .sns-mb-9 {
+        margin-block: 1% !important;
+    }
+
+    .sns-color-black {
+        color: var(--sns-black) !important;
+    }
+
+    .sns-inline5 {
+
+        margin-inline: 20% !important;
+        /* margin-bottom: 22px; */
+        margin-block: 2%;
+
+    }
+
+    .sns-white {
+        color: var(--sns-white) !important;
+    }
+
+    .sns-gray {
+        background-color: #666 !important;
+    }
+
+    .sns-f-21 {
+        font-weight: 400 !important;
+        line-height: normal !important;
+        letter-spacing: 3px !important;
+        color: #fff !important;
+    }
+
+
+
+
+    .sns-f-40 {
+        font-size: 2.1vw !important;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 3px !important;
+        line-height: normal !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-30 {
+        font-size: 1.55vw !important;
+        font-weight: 600 !important;
+        line-height: normal !important;
+        letter-spacing: 4.5px !important;
+        color: var(--sns-black) !important;
+
+    }
+
+    .sns-f-26 {
+        font-size: 1.4vw !important;
+        font-weight: 400 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 8.84px !important;
+        line-height: normal !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-22 {
+        font-size: 1.15vw !important;
+        font-weight: 400 !important;
+        line-height: normal !important;
+        letter-spacing: 3.3px !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-20 {
+        font-size: 1.0vw !important;
+        font-weight: 400 !important;
+        line-height: normal !important;
+        letter-spacing: 3px !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-inline-23 {
+        margin-inline: 23%;
+    }
+
+    .sns-f-18 {
+        font-size: 1.0vw !important;
+        font-weight: 400 !important;
+        line-height: normal !important;
+        letter-spacing: 2.7px !important;
+        color: var(--sns-black) !important;
+    }
+
+    /* kartik */
+    .no-gap-2x2 {
+        width: calc(100%/2);
+    }
+
+    .no-gap-2x2-back {
+        background-color: var(--sns-btn-bg);
+        color: var(--sns-white);
+    }
+
+    .no-gap-2x2 .padd-2x2 {
+        padding-inline: 8%;
+
+    }
+
+    .bg-bottom {
+        padding-bottom: 2%;
+        text-align: left;
+    }
+
+    .no-gap-2x2 .padd-2x2-1 {
+        padding-block: 3%;
+    }
+
+    .padd-2x2 ul {
+        padding-left: 3.5%;
+    }
+
+    .padd-2x2 ul li {
+        margin-bottom: 1%;
+        text-align: left;
+    }
+
+    .sns-p-2 {
+        padding-block: 4%;
+    }
+
+
+    .sns-underline {
+        text-decoration: underline;
+        text-decoration-color: var(--sns-btn-back);
+        text-underline-offset: 17%;
+    }
+
+    .sns-mb-3 {
+        margin-block: 2% !important;
+    }
+
+    .sns-mb-6 {
+        margin-bottom: 4% !important;
+    }
+
+    .sns-mb-2 {
+        margin-block: 4% !important;
+    }
+
+    .sns-mb-1 {
+        margin-top: 4% !important;
+    }
+
+    .sns-mb-7 {
+        margin-bottom: 2% !important;
+    }
+
+    .sns-mb-4 {
+        margin-block: 1% !important;
+    }
+
+    .sns-inline {
+        margin-inline: 19% !important;
+        /* margin-bottom: 22px; */
+        margin-block: 2%;
+    }
+
+    .sns-inline1 {
+        margin-inline: 20%;
+
+    }
+
+    .sns-pr {
+        padding-right: 44%;
+    }
+
+    .sns-m-top-3 {
+        margin-top: 3% !important;
+    }
+
+    .sns-mt-4 {
+        margin-top: 5% !important;
+    }
+
+    .sns-mt-5 {
+        margin-top: 5% !important;
+    }
+
+    .sns-mt-8 {
+        margin-top: 12% !important;
+    }
+
+    .sns-m-top-5 {
+        margin-top: 5% !important;
+    }
+
+    /* Custom css */
+
+    /* The sns-d-flex becomes flexible by setting the display property to flex */
+    .sns-d-flex {
+        display: flex;
+    }
+
+    /* justify-content to align the item on the main axis ,center */
+    .sns-justify-content-center {
+        justify-content: center;
+    }
+
+    .sns-justify-center {
+        justify-content: center;
+    }
+
+    /* Distribute items evenly Start, in-between, and end gaps have equal sizes */
+    .sns-justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    /*Items will have space between them */
+    .sns-justify-content-space-between {
+        justify-content: space-between;
+    }
+
+    /*tems will have space before, between, and after them */
+    .sns-justify-content-space-around {
+        justify-content: space-around;
+    }
+
+    /* the align-items property to align our item on the cross axis, center*/
+    .sns-align-center {
+        align-items: center;
+    }
+
+    .sns-align-end {
+        align-items: end;
+    }
+
+    /* sets the items in row */
+    .sns-f-row {
+        flex-direction: row;
+    }
+
+    /* sets the items in column */
+    .sns-f-column {
+        flex-direction: column;
+    }
+
+    /* sns-flex-wrap property is used to specify whether flex items are forced into a single line or wrapped onto multiple lines.  */
+    .sns-flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    /* The flexbox items are aligned at the baseline of the cross axis. */
+    .sns-basline {
+        align-items: baseline;
+    }
+
+    .sns-wor {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .sns-text-center {
+        text-align: center;
+    }
+
+    .sns-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+
+
+
+
+
+
+
+    /* ====================== Width ==========================*/
+    .sns-w-25 {
+        width: 25%;
+    }
+
+    .sns-w-50 {
+        width: 50%;
+    }
+
+    .sns-w-75 {
+        width: 75%;
+    }
+
+    .sns-w-100 {
+        width: 100%;
+    }
+
+    /* start */
+    .sns-desk-none {
+        display: none;
+    }
+
+    .sns-mob-none {
+        display: block;
+    }
+
+
+
+    /* End */
+
+
+    /* padding left and right top bottom in rem */
+    .sns--0 {
+        padding: 0;
+    }
+
+    .sns--1 {
+        padding: 0.25rem;
+    }
+
+    .sns--2 {
+        padding: 0.5rem;
+    }
+
+    .sns--3 {
+        padding: 1rem;
+    }
+
+    .sns--4 {
+        padding: 1.5rem;
+    }
+
+    .sns--5 {
+        padding: 3rem;
+    }
+
+    /* padding left and right top bottom in rem */
+
+
+
+
+    /* padding left and right in rem */
+    .sns-x-0 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .sns-x-1 {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+    }
+
+    .sns-x-2 {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .sns-x-3 {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .sns-x-4 {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .sns-px-5 {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+    /* padding left and right in rem */
+
+
+
+
+    /* padding -top and bottom in rem */
+    .sns-py-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .sns-py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .sns-py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .sns-py-3 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .sns-py-4 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .sns-py-5 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /* padding -top and bottom in rem */
+
+
+
+
+    /* padding -top in rem */
+    .sns-pt-0 {
+        padding-top: 0;
+    }
+
+    .sns-pt-1 {
+        padding-top: 0.25rem;
+    }
+
+    .sns-pt-2 {
+        padding-top: 0.5rem;
+    }
+
+    .sns-pt-3 {
+        padding-top: 1rem;
+    }
+
+    .sns-pt-4 {
+        padding-top: 1.5rem;
+    }
+
+    .sns-pt-5 {
+        padding-top: 2rem;
+    }
+
+    .sns-pt-6 {
+        padding-top: 2.5rem;
+    }
+
+    .sns-pt-7 {
+        padding-top: 3rem;
+    }
+
+    .sns-pt-8 {
+        padding-top: 3.5rem;
+    }
+
+    .sns-pt-9 {
+        padding-top: 4rem;
+    }
+
+    /* padding -top in rem */
+
+
+
+
+
+    /* padding -right in rem */
+
+    .sns-pe-0 {
+        padding-right: 0;
+    }
+
+    .sns-pe-1 {
+        padding-right: 0.25rem;
+    }
+
+    .sns-pe-2 {
+        padding-right: 0.5rem;
+    }
+
+    .sns-pe-3 {
+        padding-right: 1rem;
+    }
+
+    .sns-pe-4 {
+        padding-right: 1.5rem;
+    }
+
+    .sns-pe-5 {
+        padding-right: 2rem;
+    }
+
+    .sns-pe-6 {
+        padding-right: 2.5rem;
+    }
+
+    .sns-pe-7 {
+        padding-right: 3rem;
+    }
+
+    .sns-pe-8 {
+        padding-right: 3.5rem;
+    }
+
+    .sns-pe-9 {
+        padding-right: 4rem;
+    }
+
+    .advance {
+        margin-inline: 21%;
+        margin-bottom: 40px;
+    }
+
+    .sierra {
+        margin-inline: 20%;
+        margin-bottom: 40px;
+    }
+
+    /* padding -right in rem */
+
+
+
+
+    /* padding -bottom in rem */
+
+    .sns-pb-0 {
+        padding-bottom: 0;
+    }
+
+    .sns-pb-1 {
+        padding-bottom: 0.25rem;
+    }
+
+    .sns-pb-2 {
+        padding-bottom: 0.5rem;
+    }
+
+    .sns-pb-3 {
+        padding-bottom: 1rem;
+    }
+
+    .sns-pb-4 {
+        padding-bottom: 1.5rem;
+    }
+
+    .sns-pb-5 {
+        padding-bottom: 2rem;
+    }
+
+    .sns-pb-6 {
+        padding-bottom: 2.5rem;
+    }
+
+    .sns-pb-7 {
+        padding-bottom: 3rem;
+    }
+
+    .sns-pb-8 {
+        padding-bottom: 3.5rem;
+    }
+
+    .sns-pb-9 {
+        padding-bottom: 4rem;
+    }
+
+    /* padding -bottom in rem */
+
+
+
+
+
+    /* padding -left in rem */
+
+    .sns-ps-0 {
+        padding-left: 0;
+    }
+
+    .sns-ps-1 {
+        padding-left: 0.25rem;
+    }
+
+    .sns-ps-2 {
+        padding-left: 0.5rem;
+    }
+
+    .sns-ps-3 {
+        padding-left: 1rem;
+    }
+
+    .sns-ps-4 {
+        padding-left: 1.5rem;
+    }
+
+    .sns-ps-5 {
+        padding-left: 2rem;
+    }
+
+    .sns-ps-6 {
+        padding-left: 2.5rem;
+    }
+
+    .sns-ps-7 {
+        padding-left: 3rem;
+    }
+
+    .sns-ps-8 {
+        padding-left: 3.5rem;
+    }
+
+    .sns-ps-9 {
+        padding-left: 4rem;
+    }
+
+    /* padding -left in rem */
+
+
+
+
+
+    .sns-fw-100 {
+        font-weight: 100;
+    }
+
+    .sns-fw-200 {
+        font-weight: 200;
+    }
+
+    .sns-fw-300 {
+        font-weight: 300;
+    }
+
+    .sns-fw-400 {
+        font-weight: 400;
+    }
+
+    .sns-fw-500 {
+        font-weight: 500;
+    }
+
+    .sns-fw-600 {
+        font-weight: 600 !important;
+    }
+
+    .sns-fw-700 {
+        font-weight: 700;
+    }
+
+    .sns-fw-800 {
+        font-weight: 800;
+    }
+
+
+    /* font-weight normal italic bold */
+
+
+
+    .sns-text-start {
+        text-align: left;
+    }
+
+    .sns-text-end {
+        text-align: right;
+    }
+
+    .sns-text-center {
+        text-align: center;
+    }
+
+    .sns-text-decoration-none {
+        text-decoration: none;
+    }
+
+    .sns-text-decoration-underline {
+        text-decoration: underline;
+    }
+
+    .sns-text-decoration-line-through {
+        text-decoration: line-through;
+    }
+
+
+
+    /* .text-capitalize lowercase capitalize*/
+
+    .sns-text-lowercase {
+        text-transform: lowercase;
+    }
+
+    .sns-text-uppercase {
+        text-transform: uppercase;
+    }
+
+    .sns-text-capitalize {
+        text-transform: capitalize;
+    }
+
+    .sns-text-wrap {
+        white-space: normal;
+    }
+
+    .sns-text-nowrap {
+        white-space: nowrap;
+    }
+
+    /* .text-capitalize lowercase capitalize*/
+
+
+    .sns-col-4 {
+        width: calc(85%/4);
+    }
+
+    .sns-col-3 {
+        width: calc(88%/3);
+    }
+
+    .sns-col-1 {
+        width: calc(94%/1);
+    }
+
+    .sns-acura_banner_sec {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        /* flex-direction: column; */
+    }
+
+    .sns-acura_banner_sec_imgs .sns-main_img {
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        line-height: 0;
+    }
+
+
+    .sns-acura_banner_sec_imgs .sns-main_img img {
+        width: 100%;
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+
+    .acura_banner_sec_imgs_cnt {
+        color: #fff;
+        top: 20%;
+        position: absolute;
+        left: 7.3%;
+        z-index: 2;
+    }
+
+    .acura_banner_sec_imgs_cnt>h5 {
+        font-size: 1.38vw;
+        font-weight: 400;
+        text-transform: initial;
+        color: #fff;
+    }
+
+    .acura_banner_sec_imgs_cnt2 {
+        color: #fff;
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+        z-index: 2;
+    }
+
+    .acura_banner_sec_imgs_cnt2>h5 {
+        font-size: 1.65vw;
+        font-weight: 400;
+        text-transform: initial;
+    }
+
+
+    .sns-acura_banner_sec_lft {
+        position: absolute;
+        z-index: 2;
+        top: 6.2%;
+        left: 6.5%;
+        color: #fff;
+        width: 17%;
+        display: flex;
+    }
+
+
+    .sns-acura_banner_sec_lft h1 {
+        font-weight: 400;
+        font-size: 2.46vw;
+        margin-block: 0%;
+        text-transform: initial;
+        font-family: 'Lato';
+        line-height: 1.1em;
+    }
+
+    .sns-acura_banner_sec_lft p {
+        padding-bottom: 6%;
+        font-size: 1.15vw;
+        margin-block: 0%;
+        font-weight: 500;
+    }
+
+
+    .sns-desk-banner {
+        display: none;
+    }
+
+    .sns-mob-banner {
+        display: block;
+    }
+
+    .border-left {
+        border-left: 3px solid #cc0001;
+        height: 4.49vw;
+        margin-top: 3.5%;
+        margin-right: 3%;
+    }
+
+
+
+
+    .sns-d-flex {
+        display: flex;
+    }
+
+    .sns-mt-3 {
+        margin-top: 0rem;
+    }
+
+    .sns-four-button>.sns-BN {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2% 0;
+        background-color: var(--sns-btn-bg);
+        margin-top: -1px;
+    }
+
+    .sns-BN>a {
+        color: var(--sns-white);
+        text-decoration: none !important;
+        letter-spacing: 0px;
+    }
+
+    .white {
+        color: white;
+    }
+
+
+    .sns-BN>.sns-btn {
+        width: calc(85%/4);
+        padding: 1.5% 0;
+        box-sizing: border-box;
+    }
+
+    .justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    .sns-BN .sns-butn {
+        background-color: var(--sns-btn-back);
+        color: var(--sns-white);
+        font-size: 1.25vw;
+        font-weight: bold;
+        line-height: normal;
+        text-align: center;
+        /* border: 2px solid #FFFFFF; */
+        transition: 0.5s;
+        border-radius: 0;
+        text-transform: capitalize;
+    }
+
+    .sns-BN .sns-butn:hover {
+        background-color: var(--sns-white);
+        color: var(--sns-black);
+    }
+
+    .sns-main-head-1 {
+        /* max-width: 50%;
+margin: 0 auto; */
+        text-align: center;
+        /* margin-top: 5%; */
+
+    }
+
+
+
+    .sns-mb-4 {
+        margin-block: 1%;
+    }
+
+    .no-gap-6x6 {
+        width: calc(100%/2);
+    }
+
+    .no-gap-6x6 .padd-6x6 {
+        padding-inline: 16%;
+    }
+
+    .no-gap-6x6 .padd-6x6-1 {
+        padding-block: 4%;
+        padding-inline: 0 10%;
+    }
+
+    .padd-6x6 ul {
+        padding-left: 3.5%;
+    }
+
+    .padd-6x6 ul li {
+        margin-bottom: 1.5%;
+    }
+
+    /* section css */
+
+    .sns-calc1 {
+        width: calc(99%/1);
+    }
+
+    .sns-calc2 {
+        width: calc(95.72%/2);
+    }
+
+
+    .sns-w-47 {
+        width: 47.5%;
+    }
+
+
+    .sns-gallery-img {
+        overflow: hidden;
+
+    }
+
+    .sns-m-g {
+        margin: 0.5VW;
+    }
+
+    .sns-gallery-img img {
+        width: 100%;
+        transition: 0.3s;
+        vertical-align: bottom;
+    }
+
+    .sns-gallery-img img:hover {
+        transform: scale(1.2);
+    }
+
+    .sns-d-flex {
+        display: flex;
+    }
+
+    .sns-mt-3 {
+        margin-top: 0rem;
+    }
+
+    .sns-four-button>.sns-BN {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2% 0;
+        background-color: var(--sns-btn-bg);
+        margin-top: -1px;
+    }
+
+    .sns-BN>a {
+        color: var(--sns-white);
+        text-decoration: none !important;
+        letter-spacing: 0px;
+    }
+
+
+    .sns-BN>.sns-btn {
+        width: calc(85%/4);
+        padding: 1.5% 0;
+        box-sizing: border-box;
+    }
+
+    .justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    .main-div sup {
+        /* font-size: 0.8em; */
+        font-size: 0.9em;
+        position: relative;
+        top: 0.2em;
+        line-height: 0.1em;
+    }
+
+    .sns-BN .sns-butn {
+        background-color: var(--sns-btn-back);
+        color: var(--sns-white);
+        font-size: 1.25vw;
+        font-weight: bold;
+        line-height: normal;
+        text-align: center;
+        /* border: 2px solid #FFFFFF; */
+        transition: 0.5s;
+        border-radius: 0;
+        text-transform: uppercase;
+    }
+
+    .sns-BN .sns-butn:hover {
+        background-color: var(--sns-white);
+        color: var(--sns-black);
+    }
+
+    /* This Secton was duplicated from Section 2. */
+
+
+
+
+    .no-gap-2x2 {
+        width: calc(100%/2);
+        text-align: center;
+    }
+
+    .no-gap-2x2-back {
+        background-color: var(--sns-btn-bg);
+        color: var(--sns-white);
+    }
+
+    .no-gap-2x2 .padd-2x2 {
+        padding-inline: 8%;
+
+    }
+
+    .no-gap-2x2 .padd-2x2-1 {
+        padding-block: 3%;
+    }
+
+    .sns-model {
+        width: calc(90%/3);
+        text-align: center;
+        border: 1px solid #CDCBCC;
+        background: #FFF;
+        margin-top: 2%;
+        /* margin-block: 1.5%; */
+
+    }
+
+    .model-gap {
+        gap: 2%;
+    }
+
+    .sns-model .sns-model-padd {
+        padding-inline: 3%;
+        padding-block: 7%;
+    }
+
+    .seo-per {
+        padding: 4% 3% 0 3%;
+        background-color: #fff;
+        font-weight: 500;
+        color: var(--sns-black);
+    }
+
+    .seo-per p {
+        margin-bottom: 1.3%;
+        line-height: 1.1em !important;
+    }
+
+    .seo-per p a {
+        text-decoration-color: var(--sns-black);
+    }
+
+
+
+
+
+
+
+    .disc {
+        padding: 2% 3%;
+        background-color: var(--sns-white);
+        font-weight: 400;
+        line-height: 1.3em !important;
+        color: var(--sns-black);
+    }
+
+    .disc p {
+        margin-bottom: 1.1%;
+        line-height: 1.2em !important;
+    }
+
+    .disc a {
+        overflow-wrap: break-word;
+    }
+
+
+
+
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .no-gap-2x2 {
+            width: calc(100%/1);
+        }
+
+        .no-gap-2x2 .padd-2x2 {
+            padding-inline: 5%;
+            padding-block: 3%;
+        }
+
+    }
+
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .sns-f-40 {
+            font-size: clamp(26px, 2.5vw, 40px) !important;
+        }
+
+        .sns-f-30 {
+            font-size: clamp(24px, 1.9vw, 30px) !important;
+
+        }
+
+        .sns-f-26 {
+            font-size: clamp(22px, 1.7vw, 26px) !important;
+        }
+
+        .sns-f-22 {
+            font-size: clamp(18px, 1.4vw, 22px) !important;
+        }
+
+        .sns-f-20 {
+            font-size: clamp(18px, 1.1vw, 20px) !important;
+        }
+
+        .sns-f-18 {
+            font-size: clamp(16px, 1.0vw, 18px) !important;
+        }
+
+
+
+    }
+
+
+
+    @media screen and (max-width: 480px) {
+        .no-gap-2x2 .padd-2x2 {}
+
+        .no-gap-2x2 .padd-2x2-1 {}
+
+        .padd-6x6 ul {
+            padding-left: 6.5%;
+        }
+
+        /* .sns-f-22 {
+            margin-inline: 3%;
+            margin-block: 10%;
+        } */
+
+        .sns-f-30 {
+            letter-spacing: 3px !important;
+
+        }
+
+        .sns-mt-5 {
+            margin-top: 3% !important;
+        }
+
+        .sns-mt-9 {
+            margin-top: 12% !important;
+        }
+
+        .sns-f-23 {
+            /* margin-inline: 2%; */
+            margin-block: 10% !important;
+        }
+
+        .sns-m-top-5 {
+            margin-top: 11% !important;
+        }
+
+        .safety {
+            margin-top: 12% ! important;
+        }
+
+        .sns-inline5 {
+            margin-inline: 2% !important;
+            /* margin-bottom: 22px; */
+            /* margin-block: 7%; */
+            margin-bottom: 10%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-desk-none {
+            display: block;
+        }
+
+        .sns-mob-none {
+            display: none;
+        }
+
+        .sns-head-28 {
+            margin-inline: 5% !important;
+            margin-bottom: 40px !important;
+        }
+
+        .sns-inline2 {
+            margin-inline: 9% !important;
+            /* margin-bottom: 22px; */
+
+        }
+
+        .sns-inline {
+            margin-inline: 2% !important;
+            /* margin-bottom: 22px; */
+            margin-block: 5% !important;
+        }
+
+        .sns-inline6 {
+            margin-inline: 3% !important;
+            margin-block: 5% !important;
+            margin-bottom: 10% !important;
+        }
+
+        .sns-padd-l {
+
+            margin-top: 12% !important;
+            margin-bottom: 5% !important;
+        }
+        .sns-padd-l2 {
+
+            margin-top: 12% !important;
+            margin-bottom: 8% !important;
+        }
+    }
+
+
+
+    @media screen and (max-width: 660px) {
+        .sns-acura_banner_sec_lft {
+            position: initial;
+            width: 73%;
+            text-align: center;
+            color: #000000;
+            display: inline;
+            margin-block: 12% 3%;
+            margin-inline: auto;
+        }
+
+        .acura_banner_sec_imgs_cnt {
+            position: initial;
+            color: #000000;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10%;
+        }
+
+        .acura_banner_sec_imgs_cnt2 {
+            position: initial;
+            color: #000000;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .acura_banner_sec_imgs_cnt>h5 {
+            color: #000 !important;
+        }
+
+        .sns-desk-banner {
+            display: block;
+        }
+
+        .sns-mob-banner {
+            display: none;
+        }
+
+        .sns-acura_banner_sec_lft h1 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+
+        .acura_banner_sec_imgs_cnt>h5 {
+            font-size: 22px;
+            margin-top: 3%;
+            margin-bottom: 3%;
+
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .acura_banner_sec_imgs_cnt2 {
+            bottom: 4%;
+        }
+
+        .acura_banner_sec_imgs_cnt {
+            bottom: 9%;
+        }
+    }
+
+
+
+    @media screen and (max-width: 890px) {
+        .sns-BN>.sns-btn {
+            width: calc(91%/2);
+            /* margin: 1.5% auto; */
+            padding: 2% 0;
+        }
+
+        .sns-BN .sns-butn {
+            font-size: clamp(18px, 1vw, 20px) !important;
+        }
+
+        .sns-f-b {
+            margin-bottom: 3%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-BN>.sns-btn {
+            width: calc(80%/1);
+        }
+
+        .sns-four-button>.sns-BN {
+            padding: 10% 0;
+            background: var(--sns-btn-bg);
+        }
+
+        .sns-BN>.sns-btn {
+            padding: 5% 0;
+        }
+
+        .sns-f-b {
+            margin-bottom: 5%;
+        }
+
+        .sns-f-b-r {
+            margin-bottom: 5%;
+        }
+    }
+
+
+
+
+
+
+
+    @media screen and (max-width: 890px) {
+        /* .sns-main-head-1 {
+    max-width: 80%;
+}  */
+    }
+
+    @media screen and (max-width: 480px) {
+        /* .sns-main-head-1 {
+    max-width: 90%;
+} */
+    }
+
+
+
+
+
+
+    @media screen and (max-width: 1200px) {
+        .no-gap-6x6 .padd-6x6 {
+            padding-inline: 8%;
+        }
+    }
+
+    @media screen and (max-width: 890px) {
+        .no-gap-6x6 {
+            width: calc(100%/1);
+        }
+
+        .no-gap-6x6 .padd-6x6 {
+            padding-inline: 5%;
+            padding-block: 5%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .padd-6x6 ul {
+            padding-left: 6.5%;
+        }
+
+        .sns-f-26 {
+            margin-bottom: 6% !important;
+        }
+    }
+
+
+
+
+
+
+
+
+
+    /* media */
+
+    @media screen and (max-width: 1100px) {
+        .sns-m-g {
+            margin: 0.48vw;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .sns-calc1 {
+            width: calc(100%);
+        }
+
+        .sns-calc2 {
+            width: calc(100%);
+        }
+
+        .sns-w-47 {
+            width: 100%;
+        }
+
+        .sns-m-g {
+            margin: 0;
+        }
+    }
+
+
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .sns-BN>.sns-btn {
+            width: calc(91%/2);
+            /* margin: 1.5% auto; */
+            padding: 2% 0;
+        }
+
+        .sns-BN .sns-butn {
+            font-size: clamp(18px, 1vw, 20px) !important;
+        }
+
+        .sns-f-b {
+            margin-bottom: 3%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-BN>.sns-btn {
+            width: calc(85%/1);
+        }
+
+        .sns-four-button>.sns-BN {
+            padding: 10% 0;
+            background: var(--sns-btn-bg);
+        }
+
+        .sns-BN>.sns-btn {
+            padding: 5% 0;
+        }
+
+        .sns-f-b {
+            margin-bottom: 5%;
+        }
+
+        .sns-f-b-r {
+            margin-bottom: 5%;
+        }
+
+        .sns-m-top-3 {
+            margin-top: 10% !important;
+        }
+
+        .experience {
+            margin-inline: 1%;
+        }
+
+        .sns-f-20 {
+
+            letter-spacing: 2px !important;
+
+        }
+
+        .sns-f-62 {
+            padding: 3% 0px !important;
+        }
+
+        .prograde {
+            padding-right: 3% !important;
+        }
+
+        .sns-mb-3 {
+            margin-block: 7% !important;
+        }
+    }
+
+
+
+    @media screen and (max-width: 890px) {
+        .no-gap-2x2 {
+            width: calc(100%/1);
+        }
+
+        .no-gap-2x2 .padd-2x2 {
+            padding-inline: 5%;
+            padding-block: 3%;
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .no-gap-2x2 .padd-2x2 {}
+
+        .no-gap-2x2 .padd-2x2-1 {}
+
+    }
+
+
+
+
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .sns-model {
+            width: calc(92%/2);
+        }
+
+        .sns-model .sns-model-padd {}
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-model {
+            width: calc(100%/1);
+
+        }
+
+        .sns-model .sns-model-padd {}
+    }
+
+
+
+
+
+
+    @media screen and (max-width: 480px) {
+
+        .seo-per {
+            padding: 10% 3% 0 3%;
+        }
+
+        .seo-per p {
+            margin-bottom: 7%;
+        }
+
+        .disc {
+            padding: 16% 3%;
+
+        }
+
+        .disc p {
+            margin-bottom: 7%;
+            padding-inline: 0 5%;
+        }
+
+        .sns-model {
+
+            border: 0px solid #CDCBCC;
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* This Secton was duplicated from Section 3. */
+
+
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 4. */
+    /* This Secton was duplicated from Section 26. */
+    /* This Secton was duplicated from Section 5. */
+
+    /* This Secton was duplicated from Section 3. */
+
+    /* This Secton was duplicated from Section 12. */
+    /* This Secton was duplicated from Section 11. */
+    /* This Secton was duplicated from Section 8. */
+    /* This Secton was duplicated from Section 10. */
+    /* This Secton was duplicated from Section 11. */
+    /* This Secton was duplicated from Section 8. */
+    /* This Secton was duplicated from Section 6. */
+    /* This Secton was duplicated from Section 7. */
+    /* This Secton was duplicated from Section 12. */
+    /* This Secton was duplicated from Section 11. */
+</style>
+<div class="main-div">
+    <div class="sns-acura_banner_sec sns-f-column">
+        <div class="sns-acura_banner_sec_imgs">
+            <figure class="sns-main_img"> <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/72fe6ab313bf49389601ce46d971e4f1.png"
+                    alt="banner" class="sns-mob-banner">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d7e76ba928b242bc94f126e98110594c.png"
+                    alt="mb-banner" class="sns-desk-banner">
+
+        </div>
+        <div class="sns-acura_banner_sec_lft">
+            <div class="border-left sns-mob-banner"></div>
+            <h1>2024 SIERRA HEAVY DUTY</h1>
+        </div>
+        <div class="acura_banner_sec_imgs_cnt">
+            <h5>
+                STARTING AT $44,400*
+            </h5>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-3 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-f-b "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Sierra%202500%20HD&year=2024">
+                <div>View Inventory</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b-r "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Choose Your Offer</div>
+            </a>
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mt-9 sns-head-28">
+            <h3 class="sns-f-26 sns-mb-2 sns-mb-6 ">Exterior</h3>
+            <h2 class="sns-mob-none sns-f-40 sns-underline sns-mb-3">POWERFULLY BOLD EXTERIOR</h2>
+            <h2 class="sns-desk-none sns-f-40  sns-mb-3 ">POWERFULLY <br><span class="sns-underline">BOLD
+                    EXTERIOR</span></h2>
+            <p class="sns-f-22 sns-f-23 sns-mb-1">Sierra Heavy Duty’s impressive exterior stands out proudly
+                everywhere you
+                go.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7f2103d56a874219858d9ac7acfca1d9.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9a41730592994ab5930b5579be40f9e5.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30 sns-mb-7">NEW LED PROJECTOR HEADLAMPS AND SIGNATURE LIGHTING</h3>
+                    <p class="sns-f-20 padd-6x6-1">New LED projector headlamps with striking animated sequences
+                        helps enhance Sierra Heavy Duty’s bold exterior design.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30 sns-mb-7">NEW FRONT BUMPER, FASCIA AND AVAILABLE REDESIGNED DENALI CHROME
+                        GRILLE</h3>
+                    <p class="sns-f-20 padd-6x6-1">Stand out everywhere you go with Sierra HD Denali’s bold new
+                        front end.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/af3a07f69f7e4250982da69f3415a06d.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e1e5c855600a4f9db5c8601f2218f876.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7388a0fe095247b7b589fbf661364494.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/dabc7010b43446519b01d38eecea912c.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30 sns-mb-7">AVAILABLE SIX-FUNCTION MULTIPRO TAILGATE</h3>
+                    <p class="sns-f-20 padd-6x6-1">The powerfully innovative available MultiPro<sup
+                            class="main-div sup">™</sup>
+                        Tailgate combines six convenient functions that help improve loading, unloading and
+                        accessing the cargo bed to make light work of almost any job.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-head-28">
+            <h2 class="sns-mob-none sns-f-40 sns-underline sns-mb-3">EXTERIOR GALLERY</h2>
+            <h2 class="sns-desk-none sns-f-40  sns-mb-3">EXTERIOR <br><span class="sns-underline">GALLERY</span>
+            </h2>
+        </div>
+    </section>
+
+
+    <div class="main-gallery-div sns-d-flex sns-flex-wrap sns-justify-content-center sns-mx-auto ">
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/92b319e976474558a5c36226a8f907a3.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/417d3ae41750488eaed0424d06ab6428.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d238af702dbc4187bf17caba5ce5a438.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a353565f53ff4817bc5b839a30774252.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/13378569660a41518acb5daf47848349.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/bef9e2f1f2b54b34afee85410ef2cb8b.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6f8f50a960b040fa9c169ddb2421cafc.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/37b1f4d5eda347a8b20203b6c43b514d.png"
+                            alt="" class="sns-desk-none">
+
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f00ec8a31b9a4312a3db54d7a17a94fb.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ceba84fdce9b40f48d98c399aacb946e.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ee16c91aa4e84378b1e74e107695f819.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/78f40e67ccd44fdd98a6739b45bd7f9a.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f721b4a6e15343929043f6f9af8039df.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7ab59ab6c20744608451986edfea42bf.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/adc1005cb8e24aa7abe42b310786280b.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a1952c1617d44b55bfb9b4a0127d0bd9.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-m-top-5">
+        <div class="sns-BN justify-content-evenly">
+            <a class="sns-btn sns-butn"
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Sierra%202500%20HD&year=2024">
+                <div>View Inventory</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mt-9">
+            <h3 class="sns-f-26">interior</h3>
+            <h2 class="sns-mob-none sns-f-40 sns-underline sns-mb-4">PREMIUM INTERIORS</h2>
+            <h2 class="sns-desk-none sns-f-40 sns-mb-4">PREMIUM <br> <span class="sns-underline">INTERIORS</span>
+            </h2>
+            <p class="sns-f-22 sns-interior sns-inline">Sierra Heavy Duty’s interiors are rugged and refined with
+                premium materials to make every trip first-class.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center sns-m-top-3">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e7f6b5effba14aa985146ef79b0fbdfb.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7e527da3e1e748b4accdc7316edd05b7.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30" style="color:#000 !important">AVAILABLE BEST-IN-CLASS* 16-WAY POWER FRONT
+                        SEATS WITH MASSAGING FEATURE
+                    </h3>
+                    <p class="sns-f-20 padd-6x6-1">Experience serious comfort everywhere you go in Sierra Heavy
+                        Duty’s luxurious seating.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">AVAILABLE EXCLUSIVE OBSIDIAN RUSH INTERIOR</h3>
+                    <p class="sns-f-20 padd-6x6-1">Sierra HD AT4X features an exclusive Obsidian Rush interior that
+                        is designed to let you tackle tough terrain in comfort and style.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d6b8020c12864f3db287af7d7bb63e24.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/68f7ec7b6cf64bc1a152e6ebdf85ec65.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/57b56d8489064fccbe83fc8d0c29d578.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/980aa8df2b994d23b4ff75c25e119bf8.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">AVAILABLE 10-WAY POWER-ADJUSTABLE FRONT HEATED AND VENTILATED BUCKET SEATS
+                    </h3>
+                    <p class="sns-f-20 padd-6x6-1">Sierra Heavy Duty offers premium front seats with perforated
+                        leather appointments.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-head-28">
+            <h2 class="sns-mob-none sns-f-40 sns-underline sns-mb-3">INTERIOR GALLERY</h2>
+            <h2 class="sns-desk-none sns-f-40 sns-mb-3">INTERIOR <br><span class="sns-underline">GALLERY</span>
+            </h2>
+        </div>
+    </section>
+
+
+    <div class="main-gallery-div sns-d-flex sns-flex-wrap sns-justify-content-center sns-mx-auto ">
+
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7f73c7f0b1054f3aad51b2d534191759.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c94918db899047debbc656a627429750.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cbe4107b9b514b1ab24b330937707a23.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/58ff6674deec4061808124f02d32f90e.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e8f28a9396be4bdf8d0cfeb46dfb1a41.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6d7501602d7f475584a3b4f09d354227.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a4508fac680d40b18455118f38bd8bad.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b1413d40b6d5462ebc964aae1cb9ece0.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/5efda3663dc346c98af01edeb8dbb4e6.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e2a13fa491df49a39b0f4983d642b802.jpg"
+                            alt="" class="sns-desk-none">
+
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b4415052200940bc8835c3d3fe42ae7d.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ad1f45182ddc43dfb8e9ee6675fedffd.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/5e15370036e845e0940030c4a5ff8346.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0682db39aee34500af0cb1ea452e9f45.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sns-four-button sns-mt-3 sns-m-top-5">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get a quote</div>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- <div class="sns-main-head-1 sns-mt-5 sns-mt-9">
+        <h3 class="sns-f-26">interior</h3>
+        <h2 class="sns-mob-none sns-f-40 sns-underline sns-mb-4">PREMIUM INTERIORS</h2>
+        <h2 class="sns-desk-none sns-f-40 sns-mb-4">PREMIUM <br> <span class="sns-underline">INTERIORS</span>
+        </h2>
+        <p class="sns-f-22 sns-interior sns-inline">Sierra Heavy Duty’s interiors are rugged and refined with
+            premium materials to make every trip first-class.</p>
+    </div> -->
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mt-9">
+            <h2 class="sns-mob-none sns-f-40 sns-underline sns-mb-3">THE POWER TO PULL YOUR WORLD</h2>
+            <h2 class="sns-desk-none sns-f-40 sns-mb-3">THE POWER TO PULL <br> <span class="sns-underline">YOUR
+                    WORLD</span> </h2>
+            <p class="sns-f-22 sns-interior sns-inline">Sierra Heavy Duty is the real deal—with the strength and
+                pulling power
+                to haul heavy loads and the most available trailering-assistance technologies in its class.*</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center no-gap-2x2-back sns-m-top-3">
+            <div class="no-gap-2x2">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2bd5e941530041d0876af0901ad669da.jpg"
+                    alt="ELEVATION EDITION">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f6816b207b7a40f4a9ae9f0571bab92f.jpg"
+                    alt="ELEVATION EDITION">
+            </div>
+
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <h3 class="sns-f-21 sns-f-30 bg-bottom sns-f-62" style="color:#fff !important">AVAILABLE 6.6L
+                        DURAMAX
+                        TURBO DIESEL V8 WITH NEW TURBOCHARGER AND
+                        ALLISON<sup>®</sup> 10-SPEED TRANSMISSION</h3>
+                    <p class="sns-f-21 bg-bottom sns-f-20" style="color:#fff !important">Sierra Heavy Duty’s
+                        world-class towing capability is enhanced for
+                        2024 with an all-new, more efficient turbocharger.</p>
+                    <ul>
+                        <li class="sns-f-21 sns-f-20" style="color:#fff !important">975 lb-ft of Torque and 470 hp
+                        </li>
+                        <li class="sns-f-21 sns-f-20" style="color:#fff !important">Up to 25% Increase in Low-End
+                            Torque Over the Previous Model Year</li>
+                        <li class="sns-f-21 sns-f-20" style="color:#fff !important">Increased Power and Torque Over
+                            the Entire Operating Speed Range</li>
+                        <li class="sns-f-21 sns-f-20" style="color:#fff !important">Enhanced Exhaust Brake
+                            Performance for Improved Control When Towing
+                        </li>
+                        <li class="sns-f-21 sns-f-20" style="color:#fff !important">Improved Engine Braking With a
+                            More Powerful Turbo Vane Actuator and
+                            Uprated Valve Springs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center no-gap-2x2-back sns-m-top-3">
+
+
+            <div class="no-gap-2x2 sns-desk-none">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8dc33fafda8843fd953143a0f2b032a9.jpg"
+                    alt="DENALI DETAILS">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/87aa426d9c57409998ad84ad3187b9ac.jpg"
+                    alt="DENALI DETAILS">
+            </div>
+
+
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <h3 class="sns-f-21 sns-f-30 bg-bottom .experience" style="color:#fff !important">EXPERIENCE V8
+                        TOWING
+                        PROWESS</h3>
+                    <p class="sns-f-21 sns-f-20 bg-bottom" style="color: #fff !important;">Sierra Heavy Duty’s
+                        standard 6.6L V8 gas engine is now paired with
+                        the Allison 10-speed automatic transmission. This allows the engine to be held closer to its
+                        peak power band, optimizing power, torque and efficiency.</p>
+                    <h3 class="sns-f-21 sns-f-30 bg-bottom" style="color: #fff !important;">6.6L V8 GAS ENGINE WITH
+                        ALLISON® 10-SPEED AUTOMATIC TRANSMISSION
+                    </h3>
+                    <ul>
+                        <li class="sns-f-21 sns-f-20" style="color: #fff !important;">401 hp</li>
+                        <li class="sns-f-21 sns-f-20" style="color: #fff !important;">464 lb-ft of Torque</li>
+                        <li class="sns-f-21 sns-f-20" style="color: #fff !important;">10.8:1 Compression Ratio</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="no-gap-2x2 sns-mob-none">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8dc33fafda8843fd953143a0f2b032a9.jpg"
+                    alt="DENALI DETAILS">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/87aa426d9c57409998ad84ad3187b9ac.jpg"
+                    alt="DENALI DETAILS">
+            </div>
+
+
+
+            <!-- <div class="no-gap-2x2">
+  <img class="sns-mob-none" src="" alt="AIR RIDE ADAPTIVE SUSPENSION" >
+  <img class="sns-desk-none" src="" alt="AIR RIDE ADAPTIVE SUSPENSION" >
+</div>
+
+<div class="no-gap-2x2">
+  <div class="padd-2x2">
+    <h3 class="sns-f-22"></h3>
+    <p class="sns-f-18 padd-2x2-1"></p>
+  </div>
+</div> -->
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5">
+            <h2 class="sns-mob-none sns-f-40 sns-underline sns-mb-3 sns-inline-23">SIERRA HEAVY DUTY ADVANCED
+                TRAILERING</h2>
+            <h2 class="sns-desk-none sns-f-40 sns-padd-l">SIERRA HEAVY DUTY <br> ADVANCED <br> <span
+                    class="sns-underline">TRAILERING</span> </h2>
+            <p class="sns-f-22 sns-inline5">The New 2024 Sierra Heavy Duty offers the most trailering-assistance
+                technologies in its class,* and this available advanced tech allows you to trailer with enhanced
+                confidence and improved camera* views.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e3470f48070a4c25a2afc440e93cf204.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4e864cbb5d7847cfbd6020a7a5a2eae4.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30 prograde">PROGRADE<sup>™</sup> TRAILERING TECH</h3>
+                    <p class="sns-f-20 padd-6x6-1">This advanced suite of available intelligent technologies helps
+                        streamline the hitching and towing process with integrated tools that help enhance your
+                        sense of safety, confidence and visibility.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">UP TO 14 AVAILABLE CAMERA VIEWS* INCLUDING TRANSPARENT TRAILER VIEW</h3>
+                    <p class="sns-f-20 padd-6x6-1">More views help to provide a more confident trailering
+                        experience, such as transparent trailer view, which is now enhanced to enable compatibility
+                        with most gooseneck and fifth-wheel trailers.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/572d336bd5c041598c26a6d140f5b521.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/72df8fe7e3f54a2f98393dd507985182.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/41b7a98b4d6c46b7ab9b4a51f359e705.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9e5f6f94ec7241d8b0435a4484792a5e.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">ADAPTIVE CRUISE CONTROL* WITH TRAILERING</h3>
+                    <p class="sns-f-20 padd-6x6-1">This available feature is an all-new technology for Sierra Heavy
+                        Duty. It allows the truck’s available Adaptive Cruise Control to account for additional drag
+                        and increased braking distances when towing a trailer.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="sns-four-button sns-mt-5 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Choose Your Offer
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5">
+            <h2 class="sns-mob-none sns-f-40 sns-underline sns-mb-3">ADVANCED TECHNOLOGY</h2>
+            <h2 class="sns-desk-none sns-f-40" style="margin-top: 12%;">ADVANCED<br> <span class="sns-underline">TECHNOLOGY</span>
+            </h2>
+            <p class="sns-f-22 sns-inline sns-mob-none">Sierra Heavy Duty’s available massive customizable screens and advanced
+                tech
+                help keep you informed and in command.</p>
+            <p class="sns-f-22 sns-inline6 sns-desk-none">Sierra Heavy Duty’s available massive customizable screens and advanced
+                tech
+                help keep you informed and in command.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9d92685d7657406ea18657e44580e675.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/756ddd22daf14b36a91c3da136c74fd8.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">TOP OF THE CLASS</h3>
+                    <p class="sns-f-20 padd-6x6-1">Sierra Heavy Duty offers the most trailering-assistance tech in
+                        its class* thanks to smart HDNA.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">AVAILABLE 13.4" DIAGONAL CENTER TOUCH-SCREEN—THE LARGEST IN ITS CLASS*</h3>
+                    <p class="sns-f-20 padd-6x6-1">A 13.4" diagonal tablet-style touch-screen—the largest in its
+                        class—is the customizable, high-tech centerpiece of the cabin.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3351a9e4cc094dc196868fd9257059bb.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/47a6d1e50b0e4828a7ca10d9179883f2.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6e575db535f44bf1b3839c0b1468d359.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9a182488bbdd465fbb5d281575fd4683.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30 prograde">12.3" DIAGONAL DIGITAL DRIVER INFORMATION CENTER
+                    </h3>
+                    <p class="sns-f-20 padd-6x6-1">Sierra Heavy Duty features an available 12.3" diagonal digital
+                        Driver Information Center. Control and customize important vehicle, driving and infotainment
+                        content with high-resolution clarity.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">TRAVEL IN SIERRA HEAVY DUTY STYLE</h3>
+                    <p class="sns-f-20 padd-6x6-1">The spacious, comfortable cabin offers innovative driver-centric
+                        technologies such as the Bose* Premium Sound System with Richbass woofer.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9d6baa2fa076421b8d099eb58c0fb1fe.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/294afb1ef89b4a08a5ed9e8ea348ed70.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="sns-four-button sns-mt-5 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp
+            ">
+                <div>get pre-approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 safety sns-mob-none">SAFETY</h2>
+            <h2 class="sns-f-40 sns-underline safety sns-padd-l sns-desk-none">SAFETY</h2>
+
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center no-gap-2x2-back sns-m-top-3">
+
+            <div class="no-gap-2x2 sns-desk-none">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7e9f2b091a2949a8b4b3ec07ba49cfaa.jpg"
+                    alt="DENALI DETAILS">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/43f6f7a18643480da9d088f8d0bbf5bc.png"
+                    alt="DENALI DETAILS">
+            </div>
+
+
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <h3 class="sns-f-21 bg-bottom sns-f-30 " style="color:#fff !important">SIERRA HD PRO
+                        SAFETY*</h3>
+                    <p class="sns-f-21 sns-f-20 bg-bottom" style="color: #fff !important;">Every Sierra Heavy Duty
+                        includes active safety and
+                        driver-assistance technologies that help while driving and trailering. Sierra HD Pro Safety
+                        includes:</p>
+                    <ul>
+                        <li class="sns-f-21 sns-f-20" style="color: #fff !important;">Following Distance Indicator
+                        </li>
+                        <li class="sns-f-21 sns-f-20" style="color: #fff !important;">Forwaed Collision Alert</li>
+                        <li class="sns-f-21 sns-f-20" style="color: #fff !important;">Front Pedestrian Braking</li>
+                        <li class="sns-f-21 sns-f-20" style="color: #fff !important;">IntelliBeam</li>
+                        <li class="sns-f-21 sns-f-20" style="color: #fff !important;">Lane Departure Warning</li>
+                        <li class="sns-f-21 sns-f-20" style="color: #fff !important;">Buckle to Drive</li>
+                        <li class="sns-f-21 sns-f-20" style="color: #fff !important;">Automatic Emergency Braking
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-2x2 sns-mob-none">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7e9f2b091a2949a8b4b3ec07ba49cfaa.jpg"
+                    alt="DENALI DETAILS">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/43f6f7a18643480da9d088f8d0bbf5bc.png"
+                    alt="DENALI DETAILS">
+            </div>
+            <!-- <div class="no-gap-2x2">
+  <img class="sns-mob-none" src="" alt="AIR RIDE ADAPTIVE SUSPENSION" >
+  <img class="sns-desk-none" src="" alt="AIR RIDE ADAPTIVE SUSPENSION" >
+</div>
+
+<div class="no-gap-2x2">
+  <div class="padd-2x2">
+    <h3 class="sns-f-22"></h3>
+    <p class="sns-f-18 padd-2x2-1"></p>
+  </div>
+</div> -->
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5">
+            <h2 class="sns-mob-none sns-f-40 sns-underline sns-mb-9">SIERRA HEAVY DUTY TRIMS</h2>
+            <h2 class="sns-desk-none sns-f-40 sns-padd-l2">SIERRA HEAVY <br> <span
+                class="sns-underline">DUTY TRIMS</span></h2>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div model-gap">
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/113527c09eee4cbe8c86ace775c10bbc.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/713a6ed97b3948278676fc771ecf52cc.png"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">PRO</p>
+                <p class="sns-f-20 sns-p-2" style="color:#565656 !important">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: 0.1px!important;">$44,400*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e4e3e950f01e4997a1559b646b6ed560.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2d8109040fb643e69eb6cd9659fdda5e.png"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">SLE</p>
+                <p class="sns-f-20 sns-p-2" style="color:#565656 !important">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: 0.1px!important;">$49,200*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/97ed061ca358468299c61d36792de151.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/240dff7888684762bb579cfef3b29654.png"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">SLT</p>
+                <p class="sns-f-20 sns-p-2" style="color:#565656 !important">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: 0.1px!important;">$60,500*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/fe256f2afa27486981e5802537546ba9.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/5bd1a5cb3a2646ceaae8dfadb587d950.png"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">AT4</p>
+                <p class="sns-f-20 sns-p-2" style="color:#565656 !important">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: 0.1px!important;">$69,100*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6ae69c15848543ce9834ca4b48d863e9.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6b7fc41e874145dcbf2b60958f554b47.png"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">DENALI</p>
+                <p class="sns-f-20 sns-p-2" style="color:#565656 !important">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: 0.1px!important;">$73,200*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b6c3ba74a730481480cf6be339ae7f97.png"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/49c41e725a704e54bd46aa32d60a5f14.pn"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">AT4X</p>
+                <p class="sns-f-20 sns-p-2" style="color:#565656 !important">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: 0.1px!important;">$81,800*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ba2e3b5ca3144acd9c20b9f62a7c0735.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4d4d8d7b64bf47e482237deb4d07f9f7.png"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">DENALI ULTIMATE</p>
+                <p class="sns-f-20 sns-p-2" style="color:#565656 !important">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: 0.1px!important;">$91,900*</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sns-four-button sns-mt-4">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-f-b "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Sierra%202500%20HD&year=2024">
+                <div>View Inventory</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b-r "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Choose Your Offer</div>
+            </a>
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="seo">
+        <div class="seo-per sns-f-20">
+            <p><b>Introducing the 2024 GMC Sierra HD at Laguna Niguel GMC in Irvine, CA</b></p>
+            <p>The latest GMC heavy-duty lineup addition boasts bold style, new amenities, and premium features. The
+                2024 GMC Sierra HD Irvine, CA, puts competitors on notice with its exceptional power, towing
+                capacity, advanced technology, and robust drivetrain options. Off-road enthusiasts will be delighted
+                to know that an off-road-oriented trim, AT4X, will be introduced later in the year in addition to
+                the six trim levels available now: Pro, SLE, SLT, AT4, Denali, and Denali Ultimate trims.
+            </p>
+            <p>The new Sierra HD offers comprehensive driver-assistance features that boost driver confidence while
+                handling the heavy-duty truck. Standard GMC Pro Safety systems include lane-departure warning,
+                forward collision alert, automatic high-beam headlights, and automatic emergency braking. The 2024
+                GMC Sierra Heavy Duty truck takes trailering technology to the next level with features such as
+                adaptive cruise control with trailering functions, blind-spot warning, and up to 14 different camera
+                view modes, including a "transparent" trailer mode that virtually eliminates blind spots.
+            </p>
+            <p>The 2024 GMC Sierra HD Irvine, CA, has a first-class cabin outfitted with premium materials, leather
+                upholstery, and exciting gadgets that ensure you ride comfortably and conveniently. Every 2024
+                Sierra HD features a customizable infotainment system and advanced tech that keeps you informed and
+                in command of the Sierra truck. Most trim levels come with a standard 8-inch infotainment display,
+                and select trims can upgrade to a 15-inch touchscreen. Contact our GMC truck dealer in Irvine, CA,
+                for more detailed information on the 2024 GMC Sierra HD in Irvine, CA.
+
+            </p>
+            <p><b>Which dealers offer the 2024 2024 GMC Sierra HD in Irvine, CA, for test drives?
+
+                </b></p>
+            <p>The 2024 GMC Sierra HD model is available for a test drive at Laguna Niguel GMC. Explore our online
+                page for more information about scheduling a test drive. You can also find information about our
+                financing options on our page. Our dedicated staff is ready to guide you through the process.</p>
+            <p>Choose from the two robust powertrains available in the 2024 GMC Sierra HD lineup. The standard
+                powertrain for the base trim is a 401-horsepower 6.6-liter V-8 engine paired with a 10-speed
+                automatic transmission. This powerful engine generates 464 pound-feet of torque. For even more power
+                and improved towing capability, the optional 470-horsepower Duramax Turbo Diesel V-8 with a 10-speed
+                automatic transmission generates an impressive 975 pound-feet of torque, which allows it to tow up a
+                whopping 36,000 pounds.
+            </p>
+            <p>Trailer assist features in the 2024 Sierra HD make maneuvering the truck easier. GMC provides a
+                smartphone app for monitoring and remotely controlling the trailer functions. Standard features such
+                as Transparent Trailer View, Trailer Side Blind Zone Alert, and available adaptive cruise control
+                with trailering are some innovative safety and driver-assist systems to aid drivers.
+
+            </p>
+            <p><b>Where can I test drive a 2024 GMC Sierra HD in Irvine, CA?
+                </b></p>
+            <p>Laguna Niguel GMC is eager to give you a first-time experience behind the wheel of the new 2024
+                Sierra HD. All models are available for a test drive at our dealership in Irvine, CA. Visit us to
+                witness the exceptional capability, technology, and features that make the 2024 GMC Sierra HD
+                Irvine, CA, a top-rated heavy-duty truck lineup.</p>
+        </div>
+
+
+        <div class="disc sns-f-20">
+            <p> *The Manufacturer’s Suggested Retail Price excludes destination freight charge, tax, title, license,
+                dealer
+                fees and optional equipment. Dealer sets final price. <a
+                    href="https://www.gmc.com/tools/destination-freightcharges">Click here to see all GMC vehicles’
+                    destination
+                    freight charges.</a></p>
+
+            <p>*Class is gasoline and diesel heavy-duty pickups in the GM Large Pickup segment. Based on latest
+                competitive data available.</p>
+
+            <p>*Safety or driver-assistance features are no substitute for the driver’s responsibility to operate
+                the vehicle in a safe manner. Read the vehicle Owner’s Manual for important feature limitations and
+                information. Some camera views require available accessory camera and installation. Not compatible
+                with all trailers. See your dealer for details.</p>
+
+            <p>*Safety or driver-assistance features are no substitute for the driver’s responsibility to operate
+                the vehicle in a safe manner. The driver should remain attentive to traffic, surroundings and road
+                conditions at all times. Visibility, weather and road conditions may affect feature performance.
+                Read the vehicle Owner’s Manual for more important feature limitations and information.</p>
+
+            <p>*Bose<sup class="main-div sup">®</sup> is a registered trademark of the Bose Corporation in the U.S.
+                and other countries.</p>
+
+
+            <!--                 
+            <p>*Google Maps is a trademark of Google, Inc. Google, Google Play, and Google Maps are trademarks of
+                Google
+                LLC.</p>
+
+            <p>*Available on select 2017 model year and newer GM vehicles with compatible hardware. Third-party
+                trademarks
+                are the
+                property of their respective third-party owners and used under agreement. Requires active service
+                plan and
+                paid AT&T
+                vehicle data plan. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for
+                details
+                and
+                limitations.</p>
+
+            <p>*Bose<sup>®</sup> is a registered trademark of the Bose Corporation in the U.S. and other
+                countries.</p>
+
+            <p>*Not compatible with all devices.</p>
+
+            <p>*Feature may not be available on certain vehicles. See dealer for feature availability. The system
+                wirelessly
+                charges
+                one compatible mobile device. Some phones have built-in wireless charging technology and others
+                require a
+                special
+                adapter/back cover. To check for phone or other device compatibility, see <a
+                    href="https://www.gmc.com/owners">my.gmc.com/learn</a> or consult
+                your carrier.</p>
+
+            <p>*EPA-estimated 15 city/20 hwy mpg (Yukon 2WD with 5.3L V8 Engine.)</p>
+
+            <p>*EPA-estimated 14 city/20 hwy mpg (Yukon 2WD with 6.2L V8 Engine.)</p>
+
+            <p>*Based on fuel tank capacity for Yukon XL with available 3.0L Duramax Turbo-Diesel engine and EPA
+                est. 27 hwy
+                mpg
+                (2WD).
+                Your range may be less.</p>
+
+            <p>*Whichever comes first. See dealer for limited warranty details.</p>
+
+            <p>*Requires Yukon 2WD with 5.3L gas engine and available Max Trailering Package. Before you buy a
+                vehicle or
+                use it for
+                trailering, carefully review the trailering section of the Owner’s Manual. The weight of passengers,
+                cargo
+                and options
+                or accessories may reduce the amount you can tow.</p>
+
+            <p>*Safety or driver assistance features are no substitute for the driver’s responsibility to operate
+                the
+                vehicle in a
+                safe
+                manner. Read the vehicle Owner’s Manual for important feature limitations and information.</p>
+
+            <p>*Device data connection required. Available on select Apple and Android devices. Some features
+                require active
+                service
+                plan and working electrical system. Service availability, features and functionality vary by
+                vehicle. Terms
+                and
+                limitations apply.</p>
+
+            <p>*Always pay attention while driving and when using Super Cruise. Do not use a handheld device.
+                Requires
+                active Super
+                Cruise plan or trial. Terms apply. Visit <a
+                    href="https://www.gmc.com/connectivity-technology/super-cruise">gmc.com/connectivity-technology/super-cruise</a>
+                for
+                compatible
+                roads and full
+                details.</p>
+
+            <p>*Lane Change on Demand and Automatic Lane Change not available while trailering. Always pay attention
+                while
+                driving
+                and
+                when using Super Cruise. Do not use a hand-held device. Requires active Super Cruise plan or trial.
+                Terms
+                apply. Visit
+                <a
+                    href="https://www.gmc.com/connectivity-technology/super-cruise">gmc.com/connectivity-technology/super-cruise</a>
+                for compatible roads and full details.
+            </p>
+
+            <p>*After initial 3-year period, an eligible Connected Services plan must be purchased. Connected
+                Services vary
+                by
+                vehicle
+                and model and require active service plan, working electrical system, cell reception and GPS signal.
+                Does
+                not include
+                safety services. Super Cruise vehicles are connected to emergency services. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+            </p>
+
+            <p>*Safety or driver assistance features are no substitute for the driver’s responsibility to operate
+                the
+                vehicle in a
+                safe
+                manner. The driver should remain attentive to traffic, surroundings and road conditions at all
+                times.
+                Visibility,
+                weather and road conditions may affect feature performance. Read the vehicle Owner’s Manual for more
+                important feature
+                limitations and information.</p>
+
+            <p>*Google built-in services are subject to limitations and availability may vary by vehicle,
+                infotainment
+                system and
+                location. Select service plan required. Certain Google actions and functionality may require account
+                linking. User
+                terms
+                and privacy statements apply. Google, Android Auto, Google Play, and Google Maps are trademarks of
+                Google
+                LLC.</p>
+
+            <p>*Functionality is subject to limitations and varies by vehicle, infotainment system, and location.
+                Select
+                service
+                plan
+                required. Certain Alexa skills require account linking to use. Certain Alexa functionality is
+                dependent on
+                smart home
+                technology. Amazon, Alexa and all related logos are trademarks of Amazon.com, Inc. or its
+                affiliates. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for
+                additional details.</p>
+
+            <p>*Vehicle user interface is a product of Apple, and its terms and privacy statements apply. Requires
+                compatible
+                iPhone<sup>®</sup>,
+                and data plan rates apply. Apple CarPlay<sup>®</sup> is a trademark of Apple Inc.
+                Siri<sup>®</sup>, iPhone<sup>®</sup> and iTunes<sup>®</sup> are
+                trademarks of
+                Apple Inc., registered in the U.S. and other countries.</p>
+
+            <p>*To use Android Auto on your car display, you need a compatible Android smartphone with an active
+                data plan.
+                You can
+                check which smartphones are compatible at <a
+                    href="https://support.google.com/androidauto/answer/6348019?hl=en&ref_topic=6106969">g.co/androidauto/requirements.</a>
+                Google, Android and Android
+                Auto are trademarks
+                of Google LLC.</p>
+
+            <p>*Safety or driver assistance features are no substitute for the driver’s responsibility to operate
+                the
+                vehicle in a
+                safe
+                manner. Read the vehicle Owner’s Manual for important feature limitations and information. Some
+                camera views
+                require
+                available accessory camera and installation. Not compatible with all trailers. See your dealer for
+                details.
+            </p>
+
+            <p>*Connected services vary by vehicle model and require active service plan, working electrical system,
+                cell
+                reception
+                and
+                GPS signal. Does not include emergency or security services. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+            </p>
+
+            <p>*Go to <a
+                    href="https://www.gmc.com/support/vehicle/smartphone-connections/bluetooth-wifi">https://www.gmc.com/support/vehicle/smartphone-connections/bluetooth-wifi</a>
+                to find out which
+                phones are compatible
+                with the vehicle. Full Bluetooth feature functionality varies by device, model, and software
+                version.</p>
+
+            <p>*Services are subject to limitations, and availability may vary by vehicle, infotainment system,
+                location and
+                active
+                service plan. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details
+                and
+                limitations.
+            </p>
+
+            <p>*Available on select Apple and Android devices. Service availability, features and functionality vary
+                by
+                vehicle,
+                device
+                and the plan you are enrolled in. Terms apply. Device data connection required. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and
+                limitations.</p>
+
+            <p>*Requires paid plan. Lock/unlock feature requires automatic locks. Remote start requires GM
+                factory-installed
+                and
+                enabled remote start system. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for
+                details
+                and limitations.</p>
+
+            <p>*Vehicle user interface is a product of Google, and its terms and privacy statements apply. Requires
+                the
+                Android Auto
+                app on Google Play and a compatible Android<sup>™</sup> smartphone. Data plan rates apply. You
+                can check which
+                smartphones are
+                compatible at <a
+                    href="https://support.google.com/androidauto/answer/6348019?hl=en&ref_topic=6106969">g.co/androidauto/requirements.</a>
+                Android Auto is a trademark of Google LLC.</p>
+
+            <p>*Connected Vehicle Plan does not include emergency or security services. Service varies with
+                conditions and
+                location.
+                Data plans provided by AT&T<sup>®</sup>. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">https://www.onstar.com</a>
+                for details and limitations.</p>
+
+            <p>*OnStar plan, working electrical system, cell reception and GPS signal required. OnStar links to
+                emergency
+                services.
+                See
+                <a href="https://www.onstar.com/?evar25=gmc_disclosure">https://www.onstar.com</a> for details and
+                limitations.
+                Automatic Crash Response: not all vehicles may
+                transmit all crash
+                data. Roadside services provided by Allstate Roadside Service for vehicles only. Limitations and
+                restrictions apply.
+                Stolen Vehicle Assistance requires armed GM factory-installed theft-deterrent system, contact method
+                on file
+                and
+                enrollment to receive alerts. Additional messaging and data rates may apply. Services are intended
+                to assist
+                with
+                vehicle recovery and do not prevent theft or protect against damage or loss.
+            </p>
+
+            <p>*Requires subscription to Remote Access Plan or Unlimited Access Plan. Services are subject to user
+                terms and
+                limitations, and vary by vehicle model. Unlock feature requires automatic locks. Remote start
+                requires GM
+                factory-installed and enabled remote start system. Check <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">here</a> for more details.</p>
+
+            <p>*Service varies with conditions and location. Requires active service and paid AT&T data plan. Visit
+                <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for
+                details and limitations.
+            </p>
+
+            <p>*U.S. and Canada only. Available on select Apple and Android devices. Mobile Crash Response services
+                are
+                intended for
+                use in vehicles only and can connect automatically on Android devices only. Service coverage varies
+                with
+                conditions
+                and
+                location. Service availability, features and functionality vary by device and software version.
+                Device
+                permissions are
+                required for app to operate properly. OnStar links to emergency services. Device and app may not
+                transmit
+                all crash
+                data. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">https://www.onstar.com</a> for
+                details and
+                limitations.</p>
+
+            <p>*Automatic Crash Response: OnStar plan, working electrical system, cell reception and GPS signal
+                required.
+                OnStar
+                links
+                to emergency services. Not all vehicles may transmit all crash data. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+                OnStar
+                Emergency-Certified Advisors: Certified by the International Academies of Emergency Dispatch.</p>
+
+            <p>*OnStar plan, working electrical system, cell reception and GPS signal required. OnStar links to
+                emergency
+                services.
+                See
+                <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+            </p>
+
+            <p>*OnStar plan, working electrical system, cell reception, and GPS signal required. OnStar links to
+                emergency
+                services.
+                See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for coverage map,
+                details, and
+                system
+                limitations. Limited-time offer. Services provided by OnStar in its
+                sole discretion.</p>
+
+            <p>*Roadside services provided by Allstate Roadside Service for vehicles only. Limitations and
+                restrictions
+                apply.</p>
+
+            <p>*OnStar plan, working electrical system, cell reception and GPS signal required. OnStar links to
+                emergency
+                services.
+                See
+                <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+                Stolen
+                Vehicle
+                Assistant requires armed GM factory-installed theft-deterrent
+                system, contact method on file and enrollment to receive alerts. Additional messaging and data rates
+                may
+                apply.
+                Services
+                are intended to assist with vehicle recovery and do not prevent theft or protect against damage or
+                loss.
+            </p> -->
+        </div>
+    </div>
+
+
+</div>
+<script>
+    // Function to add a link to the head
+function addLink(rel, href, crossorigin) {
+  var link = document.createElement('link');
+  link.rel = rel;
+  link.href = href;
+  if (crossorigin) {
+    link.crossOrigin = "anonymous";
+  }
+  document.head.appendChild(link);
+}
+
+// Add preconnect links
+addLink('preconnect', 'https://fonts.googleapis.com');
+addLink('preconnect', 'https://fonts.gstatic.com', true);
+
+// Add stylesheet link
+addLink('stylesheet', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&display=swap');
+</script>

@@ -1,0 +1,2352 @@
+<style>
+    /* Write your master css here */
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+
+    body {
+        margin: 0;
+    }
+
+    .main-div {
+        max-width: 100%;
+        font-family: 'Lato' !important;
+    }
+
+    .main-div sup {
+        /* font-size: 0.8em; */
+        font-size: 0.9em;
+        /* position: relative;
+        top: 0.2em; */
+        line-height: 0.1em;
+    }
+
+    .main-div>h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+        font-family: 'Lato' !important;
+    }
+
+    .main-div img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    :root {
+        --sns-btn-bg: #666 !important;
+        --sns-btn-back: #CC0001 !important;
+        --sns-black: #000 !important;
+        --sns-white: #fff !important;
+
+    }
+
+    .sns-color-black {
+        color: var(--sns-black) !important;
+    }
+
+    .sns-white {
+        color: var(--sns-white) !important;
+    }
+
+    .sns-gray {
+        background-color: #666 !important;
+    }
+
+
+
+    .sns-f-40 {
+        font-size: 2.1vw !important;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.1em;
+        line-height: normal !important;
+        color: #000 !important;
+
+    }
+
+    .sns-f-30 {
+        font-size: 1.5vw !important;
+        font-weight: 600 !important;
+        line-height: normal !important;
+        color: #000 !important;
+        letter-spacing: 0.13em;
+
+    }
+
+    .sns-f-26 {
+        font-size: 1.4vw !important;
+        font-weight: 400 !important;
+        color: #000 !important;
+        letter-spacing: 0.2em;
+        line-height: normal !important;
+
+    }
+
+    .sns-f-24 {
+        font-size: 1.24vw !important;
+        font-weight: 400 !important;
+        color: #000 !important;
+        letter-spacing: 0.2em;
+        line-height: normal !important;
+
+    }
+
+    .sns-f-22 {
+        font-size: 1.15vw !important;
+        color: #000 !important;
+
+    }
+
+    .sns-f-20 {
+        font-size: 1.1vw !important;
+        line-height: normal !important;
+        color: #000 !important;
+        letter-spacing: 0.13em;
+
+
+    }
+
+    .sns-f-18 {
+        font-size: 1.0vw !important;
+        color: #000 !important;
+        line-height: normal !important;
+        letter-spacing: 0.12em;
+
+
+    }
+
+
+    @media screen and (max-width: 890px) {
+        .sns-f-40 {
+            font-size: clamp(26px, 2.5vw, 40px) !important;
+        }
+
+        .sns-f-30 {
+            font-size: clamp(24px, 1.9vw, 30px) !important;
+
+        }
+
+        .sns-f-26 {
+            font-size: clamp(22px, 1.7vw, 26px) !important;
+        }
+
+        .sns-f-24 {
+            font-size: clamp(20px, 1.25vw, 24px) !important;
+        }
+
+        .sns-f-22 {
+            font-size: clamp(18px, 1.4vw, 22px) !important;
+        }
+
+        .sns-f-20 {
+            font-size: clamp(18px, 1.1vw, 20px) !important;
+        }
+
+        .sns-f-18 {
+            font-size: clamp(16px, 1.0vw, 18px) !important;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-f-40 {
+            font-weight: 600 !important;
+        }
+    }
+
+
+
+
+
+    .sns-underline {
+        text-decoration: underline;
+        text-decoration-color: var(--sns-btn-back);
+        text-underline-offset: 17%;
+    }
+
+    .sns-mb-1 {
+        margin-bottom: 1% !important;
+    }
+
+    .sns-mb-2 {
+        margin-bottom: 2% !important;
+    }
+
+    .sns-mb-3 {
+        margin-bottom: 3% !important;
+    }
+
+    .sns-mb-4 {
+        margin-bottom: 4% !important;
+    }
+
+    .sns-mb-5 {
+        margin-bottom: 5% !important;
+    }
+
+    /* .sns-mb-3 {
+        margin-block: 3% !important;
+    }
+    .sns-mb-4 {
+        margin-block: 4% !important;
+    } */
+
+    .sns-m-top-3 {
+        margin-top: 2.5% !important;
+    }
+
+    .sns-mt-2 {
+        margin-top: 2% !important;
+    }
+
+    .sns-mt-3 {
+        margin-top: 3% !important;
+    }
+
+    .sns-mt-4 {
+        margin-top: 4% !important;
+    }
+
+    .sns-mt-5 {
+        margin-top: 5% !important;
+    }
+
+    .sns-mt-6 {
+        margin-top: 6% !important;
+    }
+
+
+
+
+    /* Custom css */
+
+    /* The sns-d-flex becomes flexible by setting the display property to flex */
+    .sns-d-flex {
+        display: flex;
+    }
+
+    /* justify-content to align the item on the main axis ,center */
+    .sns-justify-content-center {
+        justify-content: center;
+    }
+
+    .sns-justify-center {
+        justify-content: center;
+    }
+
+    /* Distribute items evenly Start, in-between, and end gaps have equal sizes */
+    .sns-justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    /*Items will have space between them */
+    .sns-justify-content-space-between {
+        justify-content: space-between;
+    }
+
+    /*tems will have space before, between, and after them */
+    .sns-justify-content-space-around {
+        justify-content: space-around;
+    }
+
+    /* the align-items property to align our item on the cross axis, center*/
+    .sns-align-center {
+        align-items: center;
+    }
+
+    .sns-align-end {
+        align-items: end;
+    }
+
+    /* sets the items in row */
+    .sns-f-row {
+        flex-direction: row;
+    }
+
+    /* sets the items in column */
+    .sns-f-column {
+        flex-direction: column;
+    }
+
+    /* sns-flex-wrap property is used to specify whether flex items are forced into a single line or wrapped onto multiple lines.  */
+    .sns-flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    /* The flexbox items are aligned at the baseline of the cross axis. */
+    .sns-basline {
+        align-items: baseline;
+    }
+
+    .sns-wor {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .sns-text-center {
+        text-align: center;
+    }
+
+    .sns-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+
+
+
+
+
+
+
+    /* ====================== Width ==========================*/
+    .sns-w-25 {
+        width: 25%;
+    }
+
+    .sns-w-50 {
+        width: 50%;
+    }
+
+    .sns-w-75 {
+        width: 75%;
+    }
+
+    .sns-w-100 {
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* start */
+    .sns-desk-none {
+        display: none;
+    }
+
+    .sns-mob-none {
+        display: block;
+    }
+
+    /* End */
+
+
+    /* padding left and right top bottom in rem */
+    .sns--0 {
+        padding: 0;
+    }
+
+    .sns--1 {
+        padding: 0.25rem;
+    }
+
+    .sns--2 {
+        padding: 0.5rem;
+    }
+
+    .sns--3 {
+        padding: 1rem;
+    }
+
+    .sns--4 {
+        padding: 1.5rem;
+    }
+
+    .sns--5 {
+        padding: 3rem;
+    }
+
+    /* padding left and right top bottom in rem */
+
+
+
+
+    /* padding left and right in rem */
+    .sns-x-0 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .sns-x-1 {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+    }
+
+    .sns-x-2 {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .sns-x-3 {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .sns-x-4 {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .sns-px-5 {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+    /* padding left and right in rem */
+
+
+
+
+    /* padding -top and bottom in rem */
+    .sns-py-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .sns-py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .sns-py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .sns-py-3 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .sns-py-4 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .sns-py-5 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /* padding -top and bottom in rem */
+
+
+
+
+    /* padding -top in rem */
+    .sns-pt-0 {
+        padding-top: 0;
+    }
+
+    .sns-pt-1 {
+        padding-top: 0.25rem;
+    }
+
+    .sns-pt-2 {
+        padding-top: 0.5rem;
+    }
+
+    .sns-pt-3 {
+        padding-top: 1rem;
+    }
+
+    .sns-pt-4 {
+        padding-top: 1.5rem;
+    }
+
+    .sns-pt-5 {
+        padding-top: 2rem;
+    }
+
+    .sns-pt-6 {
+        padding-top: 2.5rem;
+    }
+
+    .sns-pt-7 {
+        padding-top: 3rem;
+    }
+
+    .sns-pt-8 {
+        padding-top: 3.5rem;
+    }
+
+    .sns-pt-9 {
+        padding-top: 4rem;
+    }
+
+    /* padding -top in rem */
+
+
+
+
+
+    /* padding -right in rem */
+
+    .sns-pe-0 {
+        padding-right: 0;
+    }
+
+    .sns-pe-1 {
+        padding-right: 0.25rem;
+    }
+
+    .sns-pe-2 {
+        padding-right: 0.5rem;
+    }
+
+    .sns-pe-3 {
+        padding-right: 1rem;
+    }
+
+    .sns-pe-4 {
+        padding-right: 1.5rem;
+    }
+
+    .sns-pe-5 {
+        padding-right: 2rem;
+    }
+
+    .sns-pe-6 {
+        padding-right: 2.5rem;
+    }
+
+    .sns-pe-7 {
+        padding-right: 3rem;
+    }
+
+    .sns-pe-8 {
+        padding-right: 3.5rem;
+    }
+
+    .sns-pe-9 {
+        padding-right: 4rem;
+    }
+
+    /* padding -right in rem */
+
+
+
+
+    /* padding -bottom in rem */
+
+    .sns-pb-0 {
+        padding-bottom: 0;
+    }
+
+    .sns-pb-1 {
+        padding-bottom: 0.25rem;
+    }
+
+    .sns-pb-2 {
+        padding-bottom: 0.5rem;
+    }
+
+    .sns-pb-3 {
+        padding-bottom: 1rem;
+    }
+
+    .sns-pb-4 {
+        padding-bottom: 1.5rem;
+    }
+
+    .sns-pb-5 {
+        padding-bottom: 2rem;
+    }
+
+    .sns-pb-6 {
+        padding-bottom: 2.5rem;
+    }
+
+    .sns-pb-7 {
+        padding-bottom: 3rem;
+    }
+
+    .sns-pb-8 {
+        padding-bottom: 3.5rem;
+    }
+
+    .sns-pb-9 {
+        padding-bottom: 4rem;
+    }
+
+    /* padding -bottom in rem */
+
+
+
+
+
+    /* padding -left in rem */
+
+    .sns-ps-0 {
+        padding-left: 0;
+    }
+
+    .sns-ps-1 {
+        padding-left: 0.25rem;
+    }
+
+    .sns-ps-2 {
+        padding-left: 0.5rem;
+    }
+
+    .sns-ps-3 {
+        padding-left: 1rem;
+    }
+
+    .sns-ps-4 {
+        padding-left: 1.5rem;
+    }
+
+    .sns-ps-5 {
+        padding-left: 2rem;
+    }
+
+    .sns-ps-6 {
+        padding-left: 2.5rem;
+    }
+
+    .sns-ps-7 {
+        padding-left: 3rem;
+    }
+
+    .sns-ps-8 {
+        padding-left: 3.5rem;
+    }
+
+    .sns-ps-9 {
+        padding-left: 4rem;
+    }
+
+    /* padding -left in rem */
+
+
+
+
+
+    .sns-fw-100 {
+        font-weight: 100;
+    }
+
+    .sns-fw-200 {
+        font-weight: 200;
+    }
+
+    .sns-fw-300 {
+        font-weight: 300;
+    }
+
+    .sns-fw-400 {
+        font-weight: 400;
+    }
+
+    .sns-fw-500 {
+        font-weight: 500;
+    }
+
+    .sns-fw-600 {
+        font-weight: 600 !important;
+    }
+
+    .sns-fw-700 {
+        font-weight: 700;
+    }
+
+    .sns-fw-800 {
+        font-weight: 800;
+    }
+
+
+    /* font-weight normal italic bold */
+
+
+
+    .sns-text-start {
+        text-align: left;
+    }
+
+    .sns-text-end {
+        text-align: right;
+    }
+
+    .sns-text-center {
+        text-align: center;
+    }
+
+    .sns-text-decoration-none {
+        text-decoration: none;
+    }
+
+    .sns-text-decoration-underline {
+        text-decoration: underline;
+    }
+
+    .sns-text-decoration-line-through {
+        text-decoration: line-through;
+    }
+
+
+
+    /* .text-capitalize lowercase capitalize*/
+
+    .sns-text-lowercase {
+        text-transform: lowercase;
+    }
+
+    .sns-text-uppercase {
+        text-transform: uppercase;
+    }
+
+    .sns-text-capitalize {
+        text-transform: capitalize;
+    }
+
+    .sns-text-wrap {
+        white-space: normal;
+    }
+
+    .sns-text-nowrap {
+        white-space: nowrap;
+    }
+
+    /* .text-capitalize lowercase capitalize*/
+
+
+    .sns-col-4 {
+        width: calc(85%/4);
+    }
+
+    .sns-col-3 {
+        width: calc(88%/3);
+    }
+
+    .sns-col-1 {
+        width: calc(94%/1);
+    }
+
+
+    @media screen and (max-width: 480px) {
+        .sns-desk-none {
+            display: block;
+        }
+
+        .sns-mob-none {
+            display: none;
+        }
+    }
+
+
+
+    .sns-desk-view-c {
+        display: block;
+    }
+
+    .sns-tab-view-c {
+        display: none;
+    }
+
+    .sns-mob-view-c {
+        display: none;
+    }
+
+    @media screen and (max-width: 890px) {
+        .sns-desk-view-c {
+            display: none;
+        }
+
+        .sns-tab-view-c {
+            display: block;
+        }
+
+        .sns-mob-view-c {
+            display: none;
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-desk-view-c {
+            display: none;
+        }
+
+        .sns-tab-view-c {
+            display: none;
+        }
+
+        .sns-mob-view-c {
+            display: block;
+        }
+
+    }
+
+
+
+    .seo-per {
+        padding: 4% 3% 0 3%;
+        background-color: #fff;
+        font-weight: 500;
+        color: var(--sns-black);
+    }
+
+    .seo-per p {
+        margin-bottom: 1.5%;
+        line-height: 1.3em !important;
+    }
+
+
+    .seo-per p a {
+        text-decoration-color: var(--sns-black);
+    }
+
+
+
+
+
+
+
+    .disc {
+        padding: 2% 3%;
+        background-color: var(--sns-white);
+        font-weight: 400;
+        line-height: 1.3em !important;
+        color: var(--sns-black);
+    }
+
+    .disc p {
+        margin-bottom: 1.5%;
+        line-height: 1.3em !important;
+    }
+
+    @media screen and (max-width: 890px) {
+        .seo-per p b {
+            font-weight: 800;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .seo-per {
+            padding: 10% 3% 0 3%;
+        }
+
+        .seo-per p {
+            margin-bottom: 7%;
+        }
+
+        .disc {
+            padding: 16% 3%;
+
+        }
+
+        .disc p {
+            margin-bottom: 7%;
+            padding-inline: 0 5%;
+        }
+    }
+
+
+
+
+
+
+
+    .sns-acura_banner_sec {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        /* flex-direction: column; */
+    }
+
+    .border-left {
+        border-left: 3px solid #CC0001;
+        height: 4.9vw;
+        margin-top: 3%;
+        margin-right: 3%;
+    }
+
+    .sns-acura_banner_sec_imgs .sns-main_img {
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        line-height: 0;
+    }
+
+    .sns-acura_banner_sec_imgs .sns-main_img img {
+        width: 100%;
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+
+    .acura_banner_sec_imgs_cnt {
+        color: #fff;
+        top: 20.5%;
+        position: absolute;
+        left: 7.3%;
+        z-index: 2;
+    }
+
+    .acura_banner_sec_imgs_cnt>h5 {
+        font-size: 1.38vw;
+        font-weight: 400;
+        text-transform: initial;
+        color: var(--sns-white);
+    }
+
+    .acura_banner_sec_imgs_cnt2 {
+        color: var(--sns-white);
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+        z-index: 2;
+    }
+
+    .acura_banner_sec_imgs_cnt2>h5 {
+        font-size: 1.65vw;
+        font-weight: 400;
+        text-transform: initial;
+    }
+
+
+    .sns-acura_banner_sec_lft {
+        position: absolute;
+        z-index: 2;
+        top: 6.2%;
+        left: 6.5%;
+        color: #fff;
+        width: 17%;
+        display: flex;
+    }
+
+    .sns-acura_banner_sec_lft h1 {
+        font-weight: 600 !important;
+        font-size: 2.46vw;
+        margin-block: 0%;
+        text-transform: initial;
+        line-height: normal;
+        font-family: 'Lato' !important;
+    }
+
+    .sns-acura_banner_sec_lft p {
+        padding-bottom: 6%;
+        font-size: 1.15vw;
+        margin-block: 0%;
+        font-weight: 500;
+    }
+
+
+    .sns-desk-banner {
+        display: none;
+    }
+
+    .sns-mob-banner {
+        display: block;
+    }
+
+
+    @media screen and (max-width: 660px) {
+        .sns-acura_banner_sec_lft {
+            position: initial;
+            width: 90%;
+            text-align: center;
+            color: #000000;
+            display: inline;
+            margin-block: 12% 3%;
+            margin-inline: auto;
+        }
+
+        .acura_banner_sec_imgs_cnt {
+            position: initial;
+            color: #000000;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10%;
+        }
+
+        .acura_banner_sec_imgs_cnt2 {
+            position: initial;
+            color: #000000;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .sns-desk-banner {
+            display: block;
+        }
+
+        .sns-mob-banner {
+            display: none;
+        }
+
+        .sns-acura_banner_sec_lft h1 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+
+        .acura_banner_sec_imgs_cnt>h5 {
+            font-size: 22px;
+            color: var(--sns-black) !important;
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .acura_banner_sec_imgs_cnt2 {
+            bottom: 4%;
+        }
+
+        .sns-acura_banner_sec_lft {
+            margin-block: 15% 3%;
+        }
+
+        .acura_banner_sec_imgs_cnt {
+            margin-bottom: 13%;
+        }
+    }
+
+    .sns-d-flex {
+        display: flex;
+    }
+
+    .sns-mt-3 {
+        margin-top: 0rem;
+    }
+
+    .sns-four-button>.sns-BN {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3% 0;
+        background-color: var(--sns-btn-bg);
+        margin-top: -1px;
+    }
+
+    .sns-BN>a {
+        color: var(--sns-white);
+        text-decoration: none !important;
+        letter-spacing: 0px;
+    }
+
+
+    .sns-BN>.sns-btn {
+        width: calc(85%/4);
+        padding: 1.5% 0;
+        box-sizing: border-box;
+    }
+
+    .justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    .sns-BN .sns-butn {
+        background-color: var(--sns-btn-back);
+        color: var(--sns-white);
+        font-size: 1.25vw;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        font-family: 'Lato' !important;
+        /* border: 2px solid #FFFFFF; */
+        transition: 0.5s;
+        border-radius: 0;
+    }
+
+    .sns-BN .sns-butn:hover {
+        background-color: var(--sns-white);
+        color: var(--sns-black);
+    }
+
+    @media screen and (max-width: 890px) {
+        .sns-BN>.sns-btn {
+            width: calc(91%/2);
+            /* margin: 1.5% auto; */
+            padding: 2% 0;
+        }
+
+        .sns-BN .sns-butn {
+            font-size: clamp(24px, 1vw, 25px) !important;
+        }
+
+        .sns-f-b {
+            margin-bottom: 3%;
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .with-word {
+            white-space: nowrap;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-BN>.sns-btn {
+            width: calc(85%/1);
+        }
+
+        .sns-four-button>.sns-BN {
+            padding: 10% 0;
+            background: var(--sns-btn-bg);
+        }
+
+        .sns-BN>.sns-btn {
+            padding: 4% 0;
+        }
+
+        .sns-f-b {
+            margin-bottom: 5%;
+        }
+
+        .sns-btn-cap {
+            text-transform: capitalize !important;
+        }
+
+        .sns-f-b-r {
+            margin-bottom: 5%;
+        }
+    }
+
+    .sns-main-head-1 {
+
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .sns-main-head-1 h3 {
+        margin-bottom: 2%;
+    }
+
+
+    /*
+    @media screen and (max-width: 480px) {
+        .sns-main-head-1 {
+             max-width: 90%; 
+        }
+    } */
+    .with-gap-3x3 {
+        width: calc(91%/3);
+        text-align: center;
+        /* margin-block: 1.5%; */
+
+    }
+
+    .gap-3x3-div {
+        gap: 1.5%;
+    }
+
+    .with-gap-3x3 .with-gap-3x3-padd {
+        padding-inline: 3%;
+        padding-block: 3%;
+    }
+
+    .with-gap-3x3-padd h3 {
+        margin-block: 1.5% 3%;
+    }
+
+    .with-gap-3x3-padd p {
+        margin-inline: 2%;
+    }
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .with-gap-3x3 {
+            width: calc(92%/2);
+        }
+
+        .with-gap-3x3 .with-gap-3x3-padd {}
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .with-gap-3x3 {
+            width: calc(100%/1);
+
+        }
+
+        .with-gap-3x3-padd p {
+            margin-inline: 1%;
+        }
+
+        .with-gap-3x3 .with-gap-3x3-padd {
+            padding-block: 3% 8%;
+        }
+    }
+
+    /* This Secton was duplicated from Section 3. */
+    /* section css */
+
+    .sns-calc1 {
+        width: calc(99%/1);
+    }
+
+    .sns-calc2 {
+        width: calc(95.72%/2);
+    }
+
+
+    .sns-w-47 {
+        width: 47.5%;
+    }
+
+
+    .sns-gallery-img {
+        overflow: hidden;
+
+    }
+
+    .sns-m-g {
+        margin: 0.5VW;
+    }
+
+    .sns-gallery-img img {
+        width: 100%;
+        transition: 0.3s;
+        vertical-align: bottom;
+    }
+
+    .sns-gallery-img img:hover {
+        transform: scale(1.2);
+    }
+
+    /* media */
+
+    @media screen and (max-width: 1100px) {
+        .sns-m-g {
+            margin: 0.48vw;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .sns-calc1 {
+            width: calc(100%);
+        }
+
+        .sns-calc2 {
+            width: calc(100%);
+        }
+
+        .sns-w-47 {
+            width: 100%;
+        }
+
+        .sns-m-g {
+            margin: 0;
+        }
+    }
+
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 4. */
+    /* This Secton was duplicated from Section 5. */
+    /* This Secton was duplicated from Section 6. */
+    /* This Secton was duplicated from Section 7. */
+    /* This Secton was duplicated from Section 8. */
+    .no-gap-6x6 {
+        width: calc(100%/2);
+    }
+
+    .no-gap-6x6 .padd-6x6 {
+        padding-inline: 15%;
+    }
+
+    .no-gap-6x6 .padd-6x6-1 {
+        padding-block: 2%;
+        padding-inline: 0 10%;
+    }
+
+    .padd-6x6 ul {
+        padding-left: 3.5%;
+        margin-top: 3%;
+    }
+
+    .padd-6x6 ul li {
+        margin-bottom: 1.5%;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .no-gap-6x6 .padd-6x6 {
+            padding-inline: 8%;
+        }
+    }
+
+    @media screen and (max-width: 890px) {
+        .no-gap-6x6 {
+            width: calc(100%/1);
+        }
+
+        .no-gap-6x6 .padd-6x6 {
+            padding-inline: 5%;
+            padding-block: 5%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .padd-6x6 ul {
+            padding-left: 6.5%;
+
+        }
+
+        .no-gap-6x6 .padd-6x6-1 {
+
+            padding-inline: 0 0%;
+        }
+
+        .no-gap-6x6 .padd-6x6 {
+
+            padding-inline: 4% 1%;
+        }
+
+        .text-cen-mob {
+            text-align: center;
+        }
+
+        .padd-6x6 ul {
+            padding-left: 6%;
+        }
+
+        .pad-inline-2 {
+            padding-inline: 2% !important;
+        }
+
+    }
+
+    /* This Secton was duplicated from Section 12. */
+    /* This Secton was duplicated from Section 13. */
+    /* This Secton was duplicated from Section 14. */
+    /* This Secton was duplicated from Section 16. */
+
+
+    /* h2 {
+            position: relative;
+            display: inline; 
+            text-transform: uppercase;       
+        }
+    
+        h2:after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -2px;
+            border-bottom: 1px solid #000;
+            content: ""
+        } */
+
+    /* This Secton was duplicated from Section 15. */
+    .sns-btn {
+        text-transform: uppercase;
+    }
+
+    /* This Secton was duplicated from Section 18. */
+
+    .sns-let-spc-6 {
+        letter-spacing: 0.1em;
+    }
+
+    .sns-model {
+        width: calc(90%/3);
+        text-align: center;
+        border: 1px solid #CDCBCC;
+        background: #FFF;
+        margin-top: 2%;
+        padding-block: 0 1.5%;
+
+
+    }
+
+    .model-m-b {
+        margin-bottom: 6%;
+    }
+
+    .sns-model-padd h3 {
+        margin-top: 4%;
+        letter-spacing: 0.2em;
+    }
+
+    .sns-model-padd p {
+        margin-block: 4% 2.2%;
+        letter-spacing: 0.18em;
+    }
+
+    .cu-img-wid {
+        width: 90% !important;
+        margin-inline: auto;
+    }
+
+    .model-gap {
+        gap: 2%;
+    }
+
+    .sns-model .sns-model-padd {
+        padding-inline: 3%;
+        padding-block: 3%;
+    }
+
+    .text-cap-desk {
+        text-transform: capitalize !important;
+    }
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .sns-model {
+            width: calc(92%/2);
+        }
+
+        .sns-model .sns-model-padd {}
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-model {
+            width: calc(100%/1);
+
+        }
+
+        .sns-model {
+            border: 0px solid #CDCBCC;
+        }
+
+        .model-m-b {
+            margin-bottom: 11%;
+        }
+
+        .cu-mt-mob {
+            margin-top: 16% !important;
+        }
+
+        .cu-mt-mob-15 {
+            margin-top: 15% !important;
+        }
+
+        .cu-mt-mob-14 {
+            margin-top: 14% !important;
+        }
+
+        .cu-mb-mob-14 {
+            margin-bottom: 12% !important;
+        }
+
+        .cu-mt-mob-6 {
+            margin-top: 6% !important;
+        }
+
+        .text-cap-desk {
+            text-transform: uppercase !important;
+        }
+
+
+        .sns-model .sns-model-padd {}
+    }
+
+    /* This Secton was duplicated from Section 2. */
+</style>
+<div class="main-div">
+    <div class="sns-acura_banner_sec sns-f-column">
+        <div class="sns-acura_banner_sec_imgs">
+            <figure class="sns-main_img"> <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/735a47c3f3114b02a8e06fec0ab305ad.png"
+                    alt="banner" class="sns-mob-banner">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/70b2585091334e92b5859e2a91604538.png"
+                    alt="mb-banner" class="sns-desk-banner">
+
+        </div>
+        <div class="sns-acura_banner_sec_lft">
+            <div class="border-left sns-mob-banner"></div>
+            <h1>2024 YUKON & YUKON XL</h1>
+        </div>
+        <div class="acura_banner_sec_imgs_cnt">
+            <h5>
+                STARTING AT $58,200*
+            </h5>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-f-b "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Yukon&year=2024">
+                <div>View Inventory</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b-r "
+                href="https://www.lagunaniguelgmc.com/VehicleDetails/new-2024-GMC-Yukon-4WD_4dr_AT4-LAGUNA_NIGUEL-CA/5750873850">
+                <div>Choose Your Offer</div>
+            </a>
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-6 sns-sec-3 cu-mt-mob-15">
+            <h3 class="sns-f-26 sns-color-black cu-mt-mob-14" style="text-transform: uppercase;">Exterior</h3>
+            <h2 class="sns-f-40 sns-underline sns-color-black sns-mob-none">Stand out among large SUVs</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-color-black sns-desk-none cu-mb-mob-14" style="margin-top: 8% !important;">
+                Stand out among <br><span class="sns-underline">large SUVs</span></h2>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div sns-m-top-3">
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/73416f4a664142c48f1de3f87e77f14c.png"
+                alt="DISTINCT GRILLES">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/60c5c8a3e5114243be483151d51de670.png"
+                alt="DISTINCT GRILLES">
+            <div class="with-gap-3x3-padd">
+                <h3 class="sns-f-20" style="font-weight: 600;">DISTINCT GRILLES</h3>
+                <p class="sns-f-18"> Each Yukon trim features a magnificently appointed grille designed to turn heads.
+                </p>
+            </div>
+        </div>
+
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/fcd5e0bcd76b443a963c70b4f723442b.png"
+                alt="PREMIUM WHEELS">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/582d875d0b8d4376a6a7d8dccfe41783.png"
+                alt="PREMIUM WHEELS">
+            <div class="with-gap-3x3-padd">
+                <h3 class="sns-f-20" style="font-weight: 600;">PREMIUM WHEELS</h3>
+                <p class="sns-f-18">Yukon offers a variety of wheels to match your sense of style.</p>
+            </div>
+        </div>
+
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ff617bc7f3b6420891847ad6658a2916.png"
+                alt="DUAL EXHAUST SYSTEM">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3b56a4e2f722478093e3fd1cfee44be8.png"
+                alt="DUAL EXHAUST SYSTEM">
+            <div class="with-gap-3x3-padd">
+                <h3 class="sns-f-20" style="font-weight: 600;">DUAL EXHAUST SYSTEM</h3>
+                <p class="sns-f-18">Denali and Denali Ultimate models with gas engines offer a dual exhaust system with
+                    dual
+                    twin polished stainless-steel tips.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-sec-3">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-color-black sns-mob-none">exterior gallery</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-color-black sns-desk-none cu-mb-mob-14">exterior <br> <span
+                    class="sns-underline">gallery</span></h2>
+        </div>
+    </section>
+
+
+    <div class="main-gallery-div sns-d-flex sns-flex-wrap sns-justify-content-center sns-mx-auto ">
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/fbbea5a2d5e8437c9d9fda9b09c2e28c.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3a8df4b9805843d0905603f607e0e7ac.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4b82bb6f96ac4a99b88dd74bf3acf347.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/445117d1e0f54060b8617de72e012fb9.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c347d25e637c4bbba5745718b5e4e42f.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/46c4bf73a7f342c8b4da08911dbba6b2.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/03c72996843f4d31975d3bb43c035c54.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/02e6225a0b7c4d4eaa104e2eda91537c.png"
+                            alt="" class="sns-desk-none">
+
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a747f9f8d9964a0b8f0e75e9ffa1910b.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/82d8fb6753c1424ca715b4abe006ff83.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/799f9b67424743ada9f255db78570292.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/1735cb486ddd4f099dd84499bd462e1d.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/26fe0df5456a45d2b0c542231de310ed.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d5350a2ba0a34936af67bab5690eb034.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6d5bd919a7e74207bae73de81c3879e4.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b3ac1c4da7d34b5e9d960b6af6781007.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-4 cu-mt-mob-14 cu-mb-mob-14">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Yukon&year=2024">
+                <div>View Inventory</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-6 sns-mb-2 sns-sec-3 cu-mt-mob-14">
+            <h3 class="sns-f-26 sns-color-black " style="text-transform: uppercase;">interior</h3>
+            <h2 class="sns-f-40 sns-desk-view-c sns-underline sns-mb-3 sns-color-black">Elevate your amenities</h2>
+            <h2 class="sns-f-40 sns-tab-view-c sns-underline sns-mb-3 sns-color-black">Elevate your amenities</h2>
+            <h2 class="sns-f-40 sns-mob-view-c sns-mb-3 sns-color-black" style=" padding-block: 6% 9%;">Elevate your
+                <br><span class="sns-underline">amenities </span></h2>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div sns-m-top-3">
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2cb0252634b845a3aae65d894840990f.png"
+                alt="PREMIUM MATERIALS">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6951ae97cf764bffbfc7f2f5e89c1099.png"
+                alt="PREMIUM MATERIALS">
+            <div class="with-gap-3x3-padd">
+                <h3 class="sns-f-20" style="font-weight: 600;">PREMIUM MATERIALS</h3>
+                <p class="sns-f-18">Yukon Denali Ultimate offers a sophisticated interior with excellent comfort and
+                    convenience.</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4bbda19155484dfda717328b6d68c65f.png"
+                alt="SPACIOUS VERSATILITY">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6d129ffd100e4e64b46dcf8e57fa68ea.png"
+                alt="SPACIOUS VERSATILITY">
+            <div class="with-gap-3x3-padd">
+                <h3 class="sns-f-20" style="font-weight: 600;">SPACIOUS VERSATILITY</h3>
+                <p class="sns-f-18">Experience refined comfort and convenience with flexible seating and storage
+                    options.
+                </p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/dc82d990624041f5bb7921bf957ed878.png"
+                alt="PREMIUM BOSE SYSTEM">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3a6dd0c686344c3da7013e5c5c2c190a.png"
+                alt="PREMIUM BOSE SYSTEM">
+            <div class="with-gap-3x3-padd">
+                <h3 class="sns-f-20" style="font-weight: 600;">PREMIUM BOSE SYSTEM</h3>
+                <p class="sns-f-18">Enjoy powerful sound from Bose* on SLT, AT4, Denali and Denali Ultimate.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-sec-3">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-desk-view-c sns-color-black">Interior gallery</h2>
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-tab-view-c sns-color-black">Interior gallery</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-mob-view-c sns-color-black" style="padding-block: 3% 7%;">Interior <br>
+                <span class="sns-underline">gallery</h2>
+        </div>
+    </section>
+
+
+    <div class="main-gallery-div sns-d-flex sns-flex-wrap sns-justify-content-center sns-mx-auto ">
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c570ac78f93e47b3956c3b743b5de51f.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ba760e94a00046f2b31e62cbdf31c22e.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ae1a940473b846bea1ff2fc5af9493a0.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3dc24d8c2bd947bbbc5ff65beb24846e.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ff837eafaef347cc85cefbe17bcf3588.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f15afe8268564cfb8ba4fa2f24407be6.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/83ac32a7542848ac84aaf392ccfe28b1.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/47ec32349ab44f59b49b7d6247521e55.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/322ec083607b41cc9d2d5fdc6605b429.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4624e513c1684c428e9d7c105c1f3382.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/84a67fc024a844fca120ac6e52163003.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7dce00ce34ee448f965de0be238f2fce.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8ccc5bf2a2174332b4baa75cdbf05855.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/776cc7148f744ae8bae7c3a2e50ae9f9.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="sns-four-button sns-mt-5 cu-mt-mob-14 cu-mb-mob-14">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-6 sns-mb-2 sns-sec-3">
+            <h3 class="sns-f-26 sns-color-black " style="text-transform: uppercase;">Capability</h3>
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-color-black sns-mob-none">Power you can feel</h2>
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-color-black sns-desk-none" style="padding-block: 4% 9%;">
+                Power you can feel</h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c74fd4bb8d79457aa7e758c0dab976cb.png"
+                    alt="ACTIVE RESPONSE 4WD SYSTEM" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f533c2919a84473fab14e54c868deb9d.png"
+                    alt="ACTIVE RESPONSE 4WD SYSTEM" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 text-cen-mob">
+                    <h3 class="sns-f-30">ACTIVE RESPONSE 4WD SYSTEM</h3>
+                    <p class="sns-f-20 padd-6x6-1 pad-inline-2">Helps improve traction in slick or off-road conditions.
+                        Standard on
+                        Denali Ultimate and available on Denali and AT4.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 text-cen-mob">
+                    <h3 class="sns-f-30">ADAPTIVE SUSPENSION</h3>
+                    <p class="sns-f-20 padd-6x6-1 pad-inline-2">First-in-class available four-corner air ride adaptive
+                        suspension allows
+                        you to adjust to driving conditions for a comfortable ride.</p>
+
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d765c3051e4e47acb294dc8f0289f32d.png"
+                    alt="ADAPTIVE SUSPENSION" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e5b364e03d1d40df8d3f9cfb3ec61e6c.png"
+                    alt="ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f21096f82a80408898fb0de6faf120d6.png"
+                    alt="6.2L V8 ENGINE" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/43b0429ba84b41ff8e9ddee3b4f9ca43.png"
+                    alt="6.2L V8 ENGINE" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 text-cen-mob">
+                    <h3 class="sns-f-30">6.2L V8 ENGINE
+                    </h3>
+                    <p class="sns-f-20 padd-6x6-1 sns-mob-none
+            ">This powerful engine offers the epitome<br> of performance.</p>
+                    <p class="sns-f-20 padd-6x6-1 sns-desk-none
+            ">This powerful engine offers the epitome of performance.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 text-cen-mob">
+                    <h3 class="sns-f-30">5.3L V8 ENGINE</h3>
+                    <p class="sns-f-20 padd-6x6-1 pad-inline-2 ">Powerful capability to help you tackle the open road
+                        with confidence.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/bb0fec97efce4f48b52030e30c951565.png"
+                    alt="5.3L V8 ENGINE" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/46f33deec9ae443da66dd633b16ff9a3.png"
+                    alt="5.3L V8 ENGINE" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8327a1aa12504cefa5b2af4604646260.png"
+                    alt="3.0L DURAMAX<sup>®</sup> TURBO-DIESEL ENGINE" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3d652fe8d831492681aee828eb3ad063.png"
+                    alt="3.0L DURAMAX<sup>®</sup> TURBO-DIESEL ENGINE" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 text-cen-mob">
+                    <h3 class="sns-f-30">3.0L DURAMAX<sup>®</sup> TURBO-DIESEL ENGINE</h3>
+                    <p class="sns-f-20 padd-6x6-1 pad-inline-2">Power through even the toughest terrain with efficiency,
+                        thanks to an
+                        available 3.0L Duramax Turbo-Diesel engine.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <div class="sns-four-button sns-mt-6">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-btn-cap "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Value Your Trade</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-6 sns-mb-2 sns-sec-3 cu-mt-mob-14">
+            <h3 class="sns-f-26 sns-color-black sns-mb-2">TECHNOLOGY</h3>
+            <div>
+                <h2 class="sns-f-40 sns-mb-3 sns-color-black sns-desk-view-c">Excellent technology that’s packaged
+                    <br><span class="sns-underline">for
+                        exceptional convenience<span></h2>
+                <h2 class="sns-f-40 sns-mb-3 sns-color-black sns-tab-view-c" style="margin-inline: 5%;">Excellent
+                    technology <span class="with-word" style="white-space: nowrap;"> that’s packaged</span><br> <span
+                        class="sns-underline" style="">for
+                        exceptional convenience<span></h2>
+                <h2 class="sns-f-40 sns-mb-3 sns-color-black sns-mob-view-c"
+                    style="margin-inline: 3%; padding-block: 5% 8%;">Excellent technology that’s packaged for
+                    exceptional <span class="sns-underline">convenience<span></h2>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f76e3df946cc449183e3fb3ff21412e7.png"
+                    alt="SUPER CRUISE" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/deae8b77c3e644439ce253345b677820.png"
+                    alt="SUPER CRUISE" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">SUPER CRUISE</h3>
+                    <p class="sns-f-20 padd-6x6-1">The future starts now. Super Cruise is the first true hands-free
+                        driver
+                        assistance technology for compatible roads.</p>
+
+                    <p class="sns-f-20 padd-6x6-1" style="margin-bottom: -1%;">Under the proper conditions with an
+                        attentive driver, Super Cruise driver
+                        assistance technology can permit hands-free operation of the vehicle.</p>
+
+                    <ul>
+                        <li class="sns-f-20">Allows hands-free automatic lane changing</li>
+                        <li class="sns-f-20">Pull a trailer hands-free (only while automatic hands-free lane changing is
+                            disabled)</li>
+                        <li class="sns-f-20">Includes three years of connectivity to support functionality, after which
+                            a
+                            Super Cruise plan must be purchased</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">DIGITAL DISPLAYS</h3>
+
+
+                    <ul>
+                        <li class="sns-f-20">10.2" diagonal premium GMC Infotainment System* with access to hundreds of
+                            apps
+                            and features</li>
+                        <li class="sns-f-20">12" diagonal digital Driver Information Center that allows you to easily
+                            view
+                            information and control functions via the steering wheel</li>
+                        <li class="sns-f-20">15" diagonal Head-Up Display that conveniently projects key information
+                            directly onto your windshield. Standard on Denali Ultimate and Denali, and available on AT4
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6a43db2531f6483dafb790513e82d0fb.png"
+                    alt="DIGITAL DISPLAYS" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/69da68063d404142a47881d3974e95b1.png"
+                    alt="DIGITAL DISPLAYS" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b2986ecf5d02498b8e13c0d5076d09bb.png"
+                    alt="UP TO 13 CAMERA VIEWS*" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c5484812d9c846fcb5a50282014e3e04.png"
+                    alt="UP TO 13 CAMERA VIEWS*" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30 sns-mob-none">UP TO 13 CAMERA VIEWS*
+                    </h3>
+                    <h3 class="sns-f-30 sns-desk-none">UP TO 13 CAMERA <br>VIEWS*
+                    </h3>
+
+                    <ul>
+                        <li class="sns-f-20">Transparent Trailer View*</li>
+                        <li class="sns-f-20">Hitch Guidance with Hitch View</li>
+                        <li class="sns-f-20">Front Camera View</li>
+                        <li class="sns-f-20">Rear Camera View</li>
+                        <li class="sns-f-20">Surround View</li>
+                        <li class="sns-f-20">Front Top-Down View</li>
+                        <li class="sns-f-20">Rear Top-Down View</li>
+                        <li class="sns-f-20">Front Side View</li>
+                        <li class="sns-f-20">Rear Side View with Biasing</li>
+                        <li class="sns-f-20">Rear Trailer View* with Trailer Angle Indicator</li>
+                        <li class="sns-f-20">Inside Trailer View*</li>
+                        <li class="sns-f-20">Picture-in-Picture Side View*</li>
+                        <li class="sns-f-20">Rear Camera Mirror</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-6 sns-mb-2 sns-sec-3 cu-mt-mob-6">
+            <h3 class="sns-f-26 sns-color-black">SAFETY</h3>
+            <div class="sns-mb-2">
+                <h2 class="sns-f-40 sns-mb-3 sns-desk-view-c sns-color-black">GMC Pro Safety and available GMC
+                    Pro-Safety
+                    Plus
+                    offer <br> collision-avoidance and driver assistance <br>
+                    <span class=" sns-underline"> technologies that help enhance your awareness </span>
+                </h2>
+                <h2 class="sns-f-40 sns-mb-3 sns-tab-view-c sns-color-black">GMC Pro Safety and available GMC Pro-Safety
+                    Plus
+                    offer collision-avoidance and driver assistance technologies that help<br>
+                    <span class=" sns-underline"> enhance your awareness </span>
+                </h2>
+                <h2 class="sns-f-40 sns-mb-3 sns-mob-view-c sns-color-black "
+                    style=" padding-block: 6% 9%; margin-inline: 2%;">GMC Pro Safety and available GMC Pro-Safety
+                    Plus
+                    offer collision-<br>avoidance and driver assistance technologies that help enhance your
+                    <span class=" sns-underline"> awareness </span>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center" style="background: #666;">
+        <div class="no-gap-6x6">
+            <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e73c840b21f64277b467526849bbacc6.png"
+                alt="GMC Pro Safety includes:" class="sns-mob-none">
+            <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/93dc38c2809a4597b1de2e38f935391d.png"
+                alt="GMC Pro Safety includes:" class="sns-desk-none">
+        </div>
+
+        <div class="no-gap-6x6">
+            <div class="padd-6x6">
+                <h3 class="sns-f-24" style="color: #FFF !important; text-transform: initial; ">GMC Pro Safety includes:
+                </h3>
+
+                <ul>
+                    <li class="sns-f-20"
+                        style="color: #FFF !important; letter-spacing: 0.22em; text-transform: initial;  ">Automatic
+                        Emergency Braking</li>
+                    <li class="sns-f-20"
+                        style="color: #FFF !important; letter-spacing: 0.22em; text-transform: initial;  ">Following
+                        Distance Indicator</li>
+                    <li class="sns-f-20"
+                        style="color: #FFF !important; letter-spacing: 0.22em; text-transform: initial; ">Forward
+                        Collision Alert</li>
+                    <li class="sns-f-20"
+                        style="color: #FFF !important; letter-spacing: 0.22em; text-transform: initial;  ">Front
+                        Pedestrian Braking</li>
+                    <li class="sns-f-20"
+                        style="color: #FFF !important; letter-spacing: 0.22em; text-transform: initial; ">IntelliBeam
+                    </li>
+                    <li class="sns-f-20"
+                        style="color: #FFF !important; letter-spacing: 0.22em; text-transform: initial;  ">Lane Keep
+                        Assist with Lane Departure Warning</li>
+
+                </ul>
+                <h3 class="sns-f-24" style="color: #FFF !important; margin-top: 6%; text-transform: initial; ">Available
+                    GMC Pro Safety Plus includes all the features
+                    of GMC Pro Safety and adds:</h3>
+
+                <ul>
+                    <li class="sns-f-20"
+                        style="color: #FFF !important; letter-spacing: 0.22em; text-transform: initial; ">Lane Change
+                        Alert with Side Blind Zone Alert</li>
+                    <li class="sns-f-20"
+                        style="color: #FFF !important; letter-spacing: 0.22em; text-transform: initial;  ">Rear Cross
+                        Traffic Alert</li>
+                    <li class="sns-f-20"
+                        style="color: #FFF !important; letter-spacing: 0.22em; text-transform: initial; ">Front and Rear
+                        Park Assist</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-5 cu-mt-mob-15">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-1 sns-sec-3 cu-mt-mob">
+            <h2 class=" sns-mob-none sns-f-40 sns-underline  sns-color-black sns-let-spc-6">YUKON TRIMS</h2>
+            <h2 class=" sns-desk-none sns-f-40 sns-underline sns-mb-3 sns-color-black sns-let-spc-6"
+                style="padding-block: 3%;">YUKON TRIMS</h2>
+        </div>
+    </section>
+
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div model-gap model-m-b">
+        <div class="sns-model">
+            <img class="sns-mob-none cu-img-wid"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cf7e8f98475f4d6e9d73a114fc87f36b.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cf7e8f98475f4d6e9d73a114fc87f36b.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <h3 class="sns-f-30">SLE</h3>
+                <p class="sns-f-20" style="color: #565656 !important; ">Starting At</p>
+                <h2 class="sns-f-40">$58,200*</h2>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none cu-img-wid"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0e053e2c38db4f36a20825e7e24a1a1b.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0e053e2c38db4f36a20825e7e24a1a1b.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <h3 class="sns-f-30">SLT</h3>
+                <p class="sns-f-20" style="color: #565656 !important;">Starting At</p>
+                <h2 class="sns-f-40">$64,900*</h2>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none cu-img-wid"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7073e988282646d892e32133af25a7c5.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7073e988282646d892e32133af25a7c5.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <h3 class="sns-f-30">AT4</h3>
+                <p class="sns-f-20" style="color: #565656 !important;">Starting At</p>
+                <h2 class="sns-f-40">$71,505*</h2>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none cu-img-wid"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/24c7bd62df074fa29b98d47fdde05bce.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/24c7bd62df074fa29b98d47fdde05bce.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <h3 class="sns-f-30">DENALI</h3>
+                <p class="sns-f-20" style="color: #565656 !important;">Starting At</p>
+                <h2 class="sns-f-40">$76,305*</h2>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none cu-img-wid"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7735901154fe4bf79885cf24811e6e74.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7735901154fe4bf79885cf24811e6e74.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <h3 class="sns-f-30">DENALI ULTIMATE</h3>
+                <p class="sns-f-20" style="color: #565656 !important;">Starting At</p>
+                <h2 class="sns-f-40">$96,555*</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-f-b text-cap-desk "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Yukon&year=2024">
+                <div>View Inventory</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b text-cap-desk " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b-r text-cap-desk"
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Value Your Trade</div>
+            </a>
+            <a class="sns-btn sns-butn text-cap-desk"
+                href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="seo">
+        <div class="seo-per sns-f-20">
+            <p><b>Introducing the 2024 Yukon & Yukon XL Irvine, CA from Laguna Niguel.</b></p>
+
+            <p>The 2024 Yukon XL is truly a symbol of excellence and is perhaps among the leading models in the running
+                for
+                the ultimate full-sized SUV. From its classic sterling metallic exterior to the Alpine Umber interior,
+                this
+                vehicle definitely has everything there is to offer from a top-tier SUV. The exterior boasts a
+                front-facing
+                camera on the bonnet, LED headlights, fog lights, daytime running lights, and also tail lights. It’s a
+                rear-wheel drive that can go into four-wheel drive with tires 275 on its width and a 50 series side wall
+                wrapped around 22-inch wheels. This vehicle boasts a lot of head and leg room, and a lot of cargo
+                capacity.
+                The rear view is very clean, having retractable window wipers and a quad-tip exhaust. Underneath the
+                hood,
+                you get a 420 horsepower engine, 460 pound-feet of torque, and can do a 10-speed automatic auto
+                transmission. </p>
+
+            <p>Moving on to the interior, this vehicle is a true behemoth with a cargo capacity of up to 144.7 cubic
+                feet.
+                This cargo space can be maximized using two sets of buttons in the rear wall which will lower the
+                third-row
+                and middle-row seats, creating more space and essentially turning this ultimate full-size SUV into the
+                ultimate tailgating full-size SUV. The interior doors also boast a nice armrest that’s unusually large
+                thanks to the size of the vehicle and a beautiful premium wood grain paneling.</p>
+
+            <p>At the front seats, the vehicle comes with, premium leather seats which are power-adjustable, heated, and
+                ventilated, with speakers built into the headrest for that premium experience. The driver’s seat is not
+                left
+                out of this experience, boasting a power-adjustable steering wheel for tilt and telescope adjustments, a
+                head-up display, and a premium multitasker with multiple functionalities. This monster of a vehicle is
+                truly
+                an ultimate, and comes as no surprise that it can tow up to 8200 pounds of load. You can take this ride
+                for
+                a spin and experience the premium driving experience by scheduling a test drive with us today. </p>
+
+            <p><b>Which Dealership Showcases the 2024 Yukon & Yukon XL in Irvine, CA?</b></p>
+
+            <p>This incredible ride is available at Laguna Niguel for testing. You can experience the premium feel of
+                this
+                beauty anytime anytime you want. Our financing options are also incredibly considered and you can check
+                it
+                out on our website. We have a loyal and committed team dedicated to enhancing customer experience. </p>
+
+            <p>When you take this ride for a spin, you get to experience the smooth feel of driving the Yukon XL
+                firsthand.
+                During normal commutes, the Yukon XL has the aerodynamics of a block due to its bulky build, but thanks
+                to
+                its low gear feature that allows it to have all of the horsepower available in its engine, so you don’t
+                experience the grainy gear transmissions as seen on many bulky vehicles, making the Yukon XL an
+                enjoyable
+                ride. </p>
+
+            <p><b>Where Can I Test Drive the 2024 Yukon & Yukon XL in Irvine, CA?</b></p>
+
+            <p>If you want to experience the quality feel of the Yukon XL, look no further than Laguna Niguel. We are
+                proud
+                of our commitment to excellent customer experience, and take pride in our knowledge of technological
+                innovation. If you're looking for financing options, we've got you covered and you can rest assured that
+                the
+                moment you step in, you will leave with your dream car. Schedule a test drive with us today and secure
+                the
+                car of your dreams.</p>
+
+        </div>
+        <div class="disc sns-f-20">
+            <p>*The Manufacturer’s Suggested Retail Price excludes destination freight charge, tax, title, license,
+                dealer
+                fees, and
+                optional equipment. Dealer sets final price. <a style="color: #000; "
+                    href="https://www.gmc.com/tools/destination-freightcharges">Click here
+                    to see all GMC vehicles’ destination freight charges.</a></p>
+
+            <p>*Bose is a registered trademark of the Bose Corporation in the U.S. and other countries.</p>
+
+            <p>*Functionality varies by model. Full functionality requires compatible Bluetooth<sup>®</sup> and
+                smartphone, and USB
+                connectivity for some devices.</p>
+
+            <p>*Safety or driver assistance features are no substitute for the driver’s responsibility to operate the
+                vehicle in a safe manner. Read the vehicle Owner’s Manual for important feature limitations and
+                information.
+                Some camera views require available accessory camera and installation. Not compatible with all trailers.
+                See
+                your dealer for details.</p>
+
+            <p>*Requires available accessory trailer camera and installation. Not compatible with all trailers. See your
+                dealer for details. Read the vehicle Owner’s Manual for important feature limitations and information.
+                Safety or driver assistance features are no substitute for the driver’s responsibility to operate the
+                vehicle in a safe manner.</p>
+
+            <p>*Requires available accessory trailer camera and installation. Requires compatible trailer.</p>
+
+        </div>
+    </div>
+
+
+</div>
+<scipt>
+    window.addEventListener('load', function () {
+    // Function to add a link to the head
+    function addLink(rel, href, crossorigin) {
+    var link = document.createElement('link');
+    link.rel = rel;
+    link.href = href;
+    if (crossorigin) {
+    link.crossOrigin = "anonymous";
+    }
+    document.head.appendChild(link);
+    }
+
+    // Add preconnect links
+    addLink('preconnect', 'https://fonts.googleapis.com');
+    addLink('preconnect', 'https://fonts.gstatic.com', true);
+
+    // Add stylesheet link
+    addLink('stylesheet',
+    'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&display=swap');
+    });
+</scipt>

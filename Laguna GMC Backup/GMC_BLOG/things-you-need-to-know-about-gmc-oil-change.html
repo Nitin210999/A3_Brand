@@ -1,0 +1,464 @@
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-family: "Lato", sans-serif;
+    }
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        width: 100%;
+    }
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        width: 100%;
+    }
+
+    #content-description {
+        display: none;
+    }
+
+    .page-content {
+        font-family: "Lato", sans-serif;
+        margin: 0px;
+        margin-top: 40px;
+    }
+
+    .page-content section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .page-content h3 {
+        margin: 0px;
+    }
+
+    .page-content table,
+    .page-content th,
+    .page-content td {
+        border: 1px solid;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .page-content table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .page-content td {
+        width: 50%;
+    }
+
+    .page-content .container {
+        width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1320px;
+    }
+
+    .page-content .row {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .page-content .row.flex-direction-column {
+        flex-direction: column;
+    }
+
+    .page-content .left {
+        flex: 0 0 65%;
+        max-width: 65%;
+        margin-right: auto;
+    }
+
+    .page-content .right {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-left: auto;
+    }
+
+    .page-content h1 {
+        font-size: 32px !important;
+        font-weight: 600;
+    }
+
+    .page-content h2 {
+        font-size: 20px;
+        color: #0f0f0f;
+        font-weight: 500;
+        padding-block: 2%;
+    }
+
+    .page-content p {
+        font-size: 16px;
+        line-height: 28px;
+        color: #0f0f0f;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+
+    .page-content ul {
+        list-style: none;
+        font-size: 18px;
+        line-height: 48px;
+        color: #0f0f0f;
+        font-weight: 400;
+        padding-left: 21px;
+        margin-top: 0px;
+    }
+
+    .page-content ul li::before {
+        content: "\2022";
+        color: #f47c08;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .page-content header {
+        background-color: #0f0f0f;
+        padding: 10px 0px;
+        margin-bottom: 50px;
+    }
+
+    .page-content header h1 {
+        color: #ffffff;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .page-content footer {
+        background-color: #0f0f0f;
+        padding: 20px 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .page-content footer p {
+        font-size: 18px;
+        line-height: 36px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .page-content .hero-image {
+        max-width: 100%;
+        /* height: 550px; */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-content .hero-image img {
+        width: 100%;
+    }
+
+    .page-content .card-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 15px;
+    }
+
+    .page-content .card .card-head {
+        background-color: #f47c08;
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        padding: 10px 0px;
+        align-items: center;
+    }
+
+    .page-content .card .card-head p {
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+
+    .page-content .card .card-body {
+        background-color: #f6f6f6;
+        border: 1px solid #e4e4e4;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .page-content .card .map-wrap {
+        padding: 0px;
+    }
+
+    .page-content .card .card-body p {
+        margin: 0px;
+        font-size: 19px;
+        line-height: 36px;
+        color: #0f0f0f;
+    }
+
+    .page-content .card .card-body .text-right {
+        text-align: right;
+    }
+
+    .page-content .menu {
+        background-color: #f47c08;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .page-content .menu a {
+        background-color: #ffffff;
+        padding: 20px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        width: 20%;
+        color: #0f0f0f;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 900px) {
+        .page-content h1 {
+            font-size: 22px !important;
+        }
+
+        .page-content h2 {
+            font-size: 17px;
+            color: #0f0f0f;
+            font-weight: 500;
+            padding-block: 2%;
+        }
+
+        .page-content .container {
+            width: unset;
+        }
+
+        .page-content .left {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .right {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .hero-image {
+            /* height: 340px; */
+        }
+
+        .page-content .hero-image img {
+            max-width: 100%;
+            height: unset;
+        }
+
+        .page-content .menu {
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .page-content .menu a {
+            padding: 20px 0px;
+            width: 100%;
+        }
+
+        .page-content .card .map-wrap iframe {
+            height: 400px;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+    }
+</style>
+<div class="page-content">
+    <header>
+        <div class="container">
+            <h1>Things You Need to Know About GMC Oil Change</h1>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="left">
+                    <div class="hero-image">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/1cec22fc48c74bdb9e4ec2907754b8c4.jpg"
+                            alt="" />
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/6aefe964df5541fe88539e7b8e76e540.png"
+                                    alt="" />
+                                <p>Hours of Operation</p>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    Saturday <br />Sunday <br />Monday <br />Tuesday
+                                    <br />Wednesday <br />Thursday <br />Friday
+                                </p>
+                                <p class="text-right">
+                                    9:00 AM - 7:00 PM <br />
+                                    10:00 AM - 6:00 PM <br />
+                                    9:00 AM - 8:00 PM<br />
+                                    9:00 AM - 8:00 PM<br />
+                                    9:00 AM - 8:00 PM <br />
+                                    9:00 AM - 8:00 PM<br />
+                                    9:00 AM - 8:00 PM
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/0d3c96086aca4dc2b2d61e56f078371a.png"
+                                    alt="" />
+                                <p>Find us here</p>
+                            </div>
+                            <div class="card-body map-wrap">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas">
+                                        <iframe width="100%" height="200" id="gmap_canvas"
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6650.1367330287385!2d-117.674!3d33.5516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceef68edc0001%3A0x1f695a52c0f5c75e!2sLaguna%20Niguel%20GMC!5e0!3m2!1sen!2sin!4v1701264111143!5m2!1sen!2sin"
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row flex-direction-column">
+                <h1 style="padding-block: 2%; color: #000">
+                    Things You Need to Know About GMC Oil Change</h1>
+
+                <p>
+                    Keeping your GMC vehicle running smoothly requires regular maintenance, and one crucial aspect is the oil change. An oil change involves draining out the old, worn-out oil from your vehicle's engine and replacing it with fresh, clean oil. This routine procedure is essential for ensuring optimal engine performance and longevity. Think of it as giving your car's engine a refreshing drink to keep running smoothly.
+                </p>
+
+                <p>
+                    Understanding the importance of an oil change is vital for any vehicle owner. Over time, engine oil becomes contaminated with dirt, debris, and other impurities, which can hinder its ability to lubricate engine components effectively. Without proper lubrication, friction increases, leading to accelerated wear and tear on vital engine parts. Signs that your GMC vehicle may be due for an oil change include engine knocking or ticking noises, decreased fuel efficiency, and the appearance of dark, gritty oil on the dipstick. Ignoring these signs can lead to costly repairs down the road.
+
+
+                </p>
+                <p>
+                    This article will cover everything you need to know about GMC oil changes, from understanding the process to recognizing the signs that your vehicle may need one. By the end, you will understand how regular oil changes can keep your GMC running smoothly and efficiently for years to come.
+                </p>
+
+                <h2>Signs That You Already Need an Oil Change
+                </h2>
+
+                <p>
+                    Regular maintenance is the key to keeping your GMC running smoothly, and one crucial aspect is knowing the signs you need an oil change. Your engine relies on clean oil to lubricate its moving parts and prevent wear and tear. One unmistakable oil change sign is the appearance of a dark, gritty texture on the dipstick when you check your oil level. This indicates that the oil has become contaminated with dirt and debris over time, losing its effectiveness. Additionally, if you notice an increase in engine noise or a persistent knocking sound, it could mean that your engine is not adequately lubricated, signaling it's time for an oil change.
+                </p>
+
+                <p>
+                    Another sign you need an oil change is a noticeable decrease in fuel efficiency. When your engine doesn't have enough clean oil, it has to work harder to perform, leading to increased fuel consumption. Keep an eye on your gas mileage – if you find yourself making more frequent trips to the pump without any apparent reason, it could be due to old or dirty oil. Furthermore, if you detect a burning smell from your engine compartment, it's wise to check your oil level promptly. A burnt odor could indicate that the oil has broken down and is no longer effectively lubricating the engine components, necessitating an oil change to prevent potential damage.
+                </p>
+                <h2>When Should You Get an Oil Change?
+                </h2>
+                <p>
+                    The Engine Oil Life System (OLS) streamlines the process for GMC vehicle owners. This advanced system constantly monitors driving speed, engine temperature, and other operating conditions to determine when it's time to schedule an oil and filter change. When the OLS light comes on, it's an indication that an oil change is necessary. This system not only helps save money by avoiding unnecessary oil changes, but it also contributes to reducing oil waste, which aligns with GMC's commitment to sustainability.
+                </p>
+                <p>
+                    For vehicles without the Engine Oil Life System, determining the best time for an oil change requires consulting the GMC Owner's Manual. The manual provides valuable guidance and outlines the manufacturer's suggested oil change interval. Mileage is a primary consideration, but it's essential to note that engine oil can degrade over time, which may necessitate a change even if the mileage hasn't been reached. By following the recommendations outlined in the Owner's Manual, you can ensure that your vehicle is maintained correctly and performs optimally.
+                </p>
+
+                <h2>Choosing the Right Oil</h2>
+
+                <p>
+                    GMC Certified Service experts offer different oil types tailored to meet your vehicle's requirements. You can choose from ACDelco Gold Conventional Oil, ACDelco dexos1™ Full Synthetic, or Mobil 1™ Full Synthetic. Each oil type has unique benefits ranging from improved engine wear and corrosion protection to excellent resistance against sludge formation and oxidation. Not sure which oil grade is best for your GMC model? You can consult GMC's experts or refer to your Owner's Manual for guidance.
+                </p>
+
+                <p>
+                    Choosing a trusted brand can significantly impact your engine's performance and longevity. ACDelco dexos1™ Full Synthetic oil is an engineered solution designed specifically for GM vehicles. It ensures your engine runs smoothly and efficiently, focusing on engine cleanliness, performance, and fuel efficiency - whether you're driving a new GM vehicle or a previous model. Similarly, Mobil 1™ motor oil has been a trusted brand for over 40 years, known for enhancing fuel efficiency and providing outstanding wear protection across a wide range of temperatures.
+                </p>
+                <h2>
+                    How to Check Your Oil Level
+                </h2>
+
+                <p>
+                    To ensure an accurate reading, following the correct procedure is crucial. Start by parking your car on level ground and turning off the engine. For the most precise measurement, it's recommended to check the oil level when the engine is cold, ideally after it has been off for at least two hours. However, if waiting isn't an option, letting the engine sit for at least 15 minutes after it's been warm or 30 minutes if it hasn't been warmed up can also provide an accurate reading. These simple steps, outlined in your GMC Owner's Manual, guarantee that you obtain the most accurate oil level reading possible, giving you confidence in the health of your engine.
+                </p>
+                <p>
+                    Once you're ready to check your oil level, locate the dipstick, typically labeled with a bright handle, for easy identification. Carefully remove the dipstick and wipe it clean with a cloth or paper towel. This ensures that any residual oil doesn't interfere with your reading. Then, reinsert the dipstick fully into its tube and withdraw it again to examine the oil level. The dipstick will have markings indicating the acceptable oil level range.
+                </p>
+                <h2>Should You Change Your Oil Every 3,000 Miles?
+                </h2>
+                <p>
+                    If you've ever wondered, "How long does an oil change take?" or questioned whether the 3,000-mile oil change rule still applies to modern GMC vehicles, you're not alone. The truth is many of today's GMC gasoline-powered vehicles come equipped with an advanced Engine Oil Life System. This innovative system allows for the continuous monitoring of oil condition, taking into account various factors such as vehicle age, driving habits, and road conditions. With the combination of advanced engines and high-quality oils, it's entirely possible that your GMC may not need an oil change every 3,000 miles, as previously thought. Instead, it's wise to monitor your oil level regularly and follow the guidance provided by your vehicle's Oil Life System.
+                </p>
+
+                <h2>Are Oil Changes Part of Pro Grade Protection?
+                </h2>
+
+                <p>
+                    Many GMC owners wonder if oil changes are included in the Pro Grade Protection program. The good news is that when you take your vehicle to a GMC Service center, you will receive the full benefits of this program. This includes your first required maintenance visit, as your vehicle's maintenance schedule outlines. This visit is not your ordinary service appointment but a comprehensive checkup that includes important tasks such as an oil change, tire rotation, and Multi-Point Vehicle Inspection. With skilled technicians at the helm, you can trust that your GMC will receive the best care possible to keep you confidently driving down the road.
+                </p>
+                <h2>
+                    Get Your Oil Changed at Laguna Niguel GMC
+                </h2>
+
+                <p>
+                    Looking for the best place to get an oil change or "GMC service near me" in or around Laguna Niguel? Look no further than Laguna Niguel GMC, conveniently located at 28332 Camino Capistrano, Laguna Niguel, CA. You can call them at (949) 545-9892. With their team of expert technicians dedicated to providing top-notch service, state-of-the-art facilities, and a commitment to customer satisfaction, you can rest assured that your GMC is in good hands. Don't settle for anything less than excellence. Choose Laguna Niguel GMC for all your GMC service needs and experience the difference.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>COPYRIGHT © 2024</p>
+        </div>
+    </footer>
+</div>

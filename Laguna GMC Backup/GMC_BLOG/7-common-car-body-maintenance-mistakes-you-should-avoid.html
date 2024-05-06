@@ -1,0 +1,465 @@
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-family: 'Lato', sans-serif;
+    }
+  
+    .mapouter {
+        position: relative;
+        text-align: right;
+        width: 100%;
+    }
+  
+  
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        width: 100%;
+    }
+  
+    #content-description {
+        display: none;
+    }
+  
+    .page-content {
+        font-family: 'Lato', sans-serif;
+        margin: 0px;
+        margin-top: 40px;
+    }
+  
+    .page-content section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+  
+    .page-content h3 {
+        margin: 0px;
+    }
+  
+    .page-content table,
+    .page-content th,
+    .page-content td {
+        border: 1px solid;
+        text-align: center;
+        padding: 2px;
+    }
+  
+    .page-content table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+  
+    .page-content td {
+        width: 50%;
+    }
+  
+    .page-content .container {
+        width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1320px;
+    }
+  
+    .page-content .row {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+  
+    .page-content .row.flex-direction-column {
+        flex-direction: column;
+    }
+  
+    .page-content .left {
+        flex: 0 0 65%;
+        max-width: 65%;
+        margin-right: auto;
+    }
+  
+    .page-content .right {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-left: auto;
+    }
+  
+    .page-content h1 {
+        font-size: 32px!important;
+        font-weight: 600;
+    }
+  
+    .page-content h2 {
+        font-size: 20px;
+        color: #0f0f0f;
+        font-weight: 500;
+        padding-block: 2%;
+    }
+  
+    .page-content p {
+        font-size: 16px;
+        line-height: 28px;
+        color: #0f0f0f;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+  
+    .page-content ul {
+        list-style: none;
+        font-size: 18px;
+        line-height: 48px;
+        color: #0f0f0f;
+        font-weight: 400;
+        padding-left: 21px;
+        margin-top: 0px;
+    }
+  
+    .page-content ul li::before {
+        content: "\2022";
+        color: #f47c08;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+  
+    .page-content header {
+        background-color: #0f0f0f;
+        padding: 10px 0px;
+        margin-bottom: 50px;
+    }
+  
+    .page-content header h1 {
+        color: #ffffff;
+        text-align: center;
+        margin: 0px;
+    }
+  
+    .page-content footer {
+        background-color: #0f0f0f;
+        padding: 20px 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+  
+    .page-content footer p {
+        font-size: 18px;
+        line-height: 36px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+  
+    .page-content .hero-image {
+        max-width: 100%;
+        /* height: 550px; */
+        position: relative;
+        overflow: hidden;
+    }
+  
+    .page-content .hero-image img {
+        width: 100%;
+    }
+  
+    .page-content .card-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 15px;
+    }
+  
+    .page-content .card .card-head {
+        background-color: #f47c08;
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        padding: 10px 0px;
+        align-items: center;
+    }
+  
+    .page-content .card .card-head p {
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+  
+    .page-content .card .card-body {
+        background-color: #f6f6f6;
+        border: 1px solid #e4e4e4;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+  
+    .page-content .card .map-wrap {
+        padding: 0px;
+    }
+  
+    .page-content .card .card-body p {
+        margin: 0px;
+        font-size: 19px;
+        line-height: 36px;
+        color: #0f0f0f;
+    }
+  
+    .page-content .card .card-body .text-right {
+        text-align: right;
+    }
+  
+    .page-content .menu {
+        background-color: #f47c08;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+  
+    .page-content .menu a {
+        background-color: #ffffff;
+        padding: 20px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        width: 20%;
+        color: #0f0f0f;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+  
+    @media screen and (max-width: 900px) {
+        .page-content h1 {
+            font-size: 22px!important;
+        }
+  
+        .page-content h2 {
+            font-size: 17px;
+            color: #0f0f0f;
+            font-weight: 500;
+            padding-block: 2%;
+        }
+  
+        .page-content .container {
+            width: unset;
+        }
+  
+        .page-content .left {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+  
+        .page-content .right {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+  
+        .page-content .hero-image {
+            /* height: 340px; */
+        }
+  
+        .page-content .hero-image img {
+            max-width: 100%;
+            height: unset;
+        }
+  
+        .page-content .menu {
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 10px;
+        }
+  
+        .page-content .menu a {
+            padding: 20px 0px;
+            width: 100%;
+        }
+  
+        .page-content .card .map-wrap iframe {
+            height: 400px;
+        }
+  
+        .card {
+            margin-top: 20px;
+        }
+    }
+  </style>
+  <div class="page-content">
+    <header>
+        <div class="container">
+            <h1>7 Common Car Body Maintenance Mistakes You Should Avoid
+  
+            </h1>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="left">
+                    <div class="hero-image">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/b18a6197b9b544bea601ccf3ee3a8797.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/6aefe964df5541fe88539e7b8e76e540.png"
+                                    alt="">
+                                <p>Hours of Operation</p>
+                            </div>
+                            <div class="card-body">
+                                <p>Saturday <br>Sunday <br>Monday <br>Tuesday <br>Wednesday <br>Thursday <br>Friday
+                                </p>
+                                <p class="text-right">9:00 AM - 7:00 PM <br> 10:00 AM - 6:00 PM <br> 9:00 AM - 8:00
+                                    PM<br> 9:00 AM - 8:00 PM<br> 9:00 AM - 8:00 PM <br> 9:00 AM - 8:00 PM<br> 9:00
+                                    AM -
+                                    8:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/0d3c96086aca4dc2b2d61e56f078371a.png"
+                                    alt="">
+                                <p>Find us here</p>
+                            </div>
+                            <div class="card-body map-wrap">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas"><iframe width="100%" height="200" id="gmap_canvas"
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6650.1367330287385!2d-117.674!3d33.5516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceef68edc0001%3A0x1f695a52c0f5c75e!2sLaguna%20Niguel%20GMC!5e0!3m2!1sen!2sin!4v1701264111143!5m2!1sen!2sin"
+                                            frameborder="0" scrolling="no" marginheight="0"
+                                            marginwidth="0"></iframe>
+  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row flex-direction-column">
+                <h1 style="padding-block: 2%; color: #000;">7 Common Car Body Maintenance Mistakes You Should Avoid
+  
+                </h1>
+  
+                <p>If you're a proud car owner, you know that your car's body is more than just a shell - it's a reflection of your taste and style. Maintaining your car's body not only turns heads on the road but also protects your vehicle from damage and keeps it looking great for years to come. However, many people make common car body maintenance mistakes without even realizing it.
+               </p>
+               <p>Your car's body is the first line of defense against the elements and the harsh conditions of the road. It shields the interior components and ensures your safety while driving. So, it's important to give it the care it deserves.
+  
+               </p>
+               <p>
+                Dents and scratches are often seen as minor issues, but they can be both an eyesore and a hidden danger. Ignoring them can lead to more significant problems down the line. Unaddressed dents may eventually cause rust and structural issues, while scratches may invite corrosion and diminish your car's overall appearance. Fixing these blemishes promptly will restore your car's visual appeal and prevent further damage, ensuring it stays aesthetically and functionally in top condition.
+               </p>
+               <p>This article will explore eight common car body maintenance mistakes and provide essential tips to help you avoid them, so you can keep your car looking its best.
+              </p>
+              <h2>Neglecting Regular Washing and Waxing
+              </h2>
+              <p>Regular washing and waxing are not just about keeping your car clean and looking good; they are essential for preserving the paint finish and protecting your car from environmental factors. Dirt and dust can accumulate on the surface, creating a layer that makes your car look dirty and creates micro-scratches as you drive. Furthermore, UV rays from the sun can fade the color of your car, making it appear dull and aged. Regular washing and waxing act as a protection layer by removing dirt and dust particles and providing a barrier against UV rays, preventing these damages from occurring.
+  
+              </p>
+                
+              <h2>Ignoring Dents and Scratches
+              </h2>
+              <p>
+                Ignoring dents and scratches on your car may seem like a minor issue, but it is one of the most common maintenance mistakes car owners make. Not only do they detract from the overall appearance of your vehicle, but they can also lead to more significant problems if left unaddressed. Dents and scratches expose the underlying metal or plastic, leaving it vulnerable to rust and corrosion. Furthermore, ignoring dents and scratches can diminish the resale value of your car. When it's time to sell or trade-in your vehicle, potential buyers will hesitate if they see visible damage. Even minor scratches can be off-putting and suggest that the car has not been well-maintained.
+             </p>
+             <h2>Using Abrasive Cleaning Materials
+            </h2>
+            <p>
+              Using abrasive cleaning materials on your car's body is a common maintenance mistake that can harm your vehicle's paintwork. It's important to avoid using harsh or abrasive materials, such as rough sponges, abrasive brushes, or cleaning solutions not specifically designed for automotive use. These materials can scratch, swirl, or even strip away the protective clear coat and paint, leaving your car's body vulnerable to further damage.
+            </p>
+            <p>Instead, opt for soft microfiber cloths and gentle brushes on the paint surface. Microfiber cloths are designed to grab and lift dirt and debris without causing any harm to the paint. They are also highly absorbent, effectively cleaning your car without leaving streaks or watermarks behind.
+           </p>
+           <h2>Skipping Regular Inspections
+          </h2>
+          <p>Regularly inspecting the exterior of your vehicle is essential for catching any signs of damage or wear early on. This includes checking for chips, cracks, or loose parts that may have occurred during everyday driving or parking.
+          </p>
+  
+          <p>In addition, regular inspections can also help you identify safety concerns. Loose or damaged parts, such as loose trim or damaged lights, can impair your visibility or pose a risk to yourself and others on the road. By conducting routine inspections, you can catch these issues early and ensure your car remains safe and roadworthy.
+          </p>
+          <h2>Parking in Direct Sunlight or Under Trees
+          </h2>
+  
+          <p>Exposure to the sun's heat can cause the paint on your car to fade and crack over time, leading to an unsightly appearance and expensive repainting or touch-up jobs. To protect your car from the harmful effects of the sun's UV rays, consider parking it in shaded areas or investing in high-quality car covers.
+          </p>
+  
+          <p>In addition, parking under trees may seem like a harmless solution, but it comes with risks. Tree sap, bird droppings, and falling branches can damage your car's body and paint. Tree sap is particularly stubborn and can leave difficult-to-remove stains. Bird droppings contain acidic substances that can corrode the clear coat and paint, causing irreversible damage.
+          </p>
+  
+          <h2>Neglecting Rust Prevention Measures
+          </h2>
+          <p>Rust is a common car issue, especially in regions with high humidity or salty road conditions. It can rapidly spread and weaken the structure of the car's body, leading to costly repairs or even rendering the vehicle unsafe to drive.
+          </p>
+  
+          <p>Applying a rust protection coating effectively prevents rust from taking hold in your car's body. This involves applying a layer of protective coating to the car's metal surfaces to inhibit rust formation. Rust protection coatings come in various forms, including sprays, waxes, and paints, and can be applied either by a professional maintenance mechanic, service center, auto body shop or as a DIY project. Regularly applying the coating and inspecting the car's body for any signs of rust can help keep your car's body in prime condition for longer.
+          </p>
+  
+          <h2>Using Automatic Car Washes with Brushes
+          </h2>
+  
+          <p>Although automatic car washes are convenient, they may cause damage to your car's body. The brushes used in these car washes can leave behind fine scratches and swirl marks, which can eventually diminish your car's appearance. To avoid such risks, it is recommended to either opt for touchless car washes or handwash your car.
+          </p>
+  
+          <h2>Takeaways</h2>
+  
+          <p>There are several common car body maintenance mistakes that you should avoid to keep your car looking its best. These mistakes include neglecting regular washing and waxing, ignoring dents and scratches, using abrasive cleaning materials, skipping regular inspections, parking in direct sunlight or under trees, neglecting rust prevention measures, and using automatic car washes with brushes.
+          </p>
+  
+          <p>Regular washing and waxing are essential for preserving the paint finish and protecting your car from environmental factors. Ignoring dents and scratches can lead to further damage and decrease the resale value of your car. Using abrasive cleaning materials can harm your car's paintwork, so it's important to use gentle materials designed for automotive use. Regular inspections can help catch signs of damage early on and ensure your car remains safe. Parking in direct sunlight or under trees can cause paint damage, and neglecting rust prevention measures can lead to costly repairs. Lastly, using automatic car washes with brushes can leave scratches and swirl marks on your car's body.
+          </p>
+  
+          <p>By avoiding these common mistakes and implementing proper car body maintenance practices, you can keep your car looking great and protect it from damage for years to come.
+          </p>
+  
+          <p>If your GMC oil change maintenance light is blinking, don't delay! It's time to have your scheduled maintenance. And if you're in or near Laguna Niguel, there's no better place to go than Laguna Niguel GMC. Visit them at 28332 Camino Capistrano, Laguna Niguel, CA or call (949) 545-9892 to book your appointment now! Keep your GMC running smoothly and efficiently with the trusted services of Laguna Niguel GMC.</p>
+  
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>COPYRIGHT © 2024</p>
+        </div>
+    </footer>
+  </div>

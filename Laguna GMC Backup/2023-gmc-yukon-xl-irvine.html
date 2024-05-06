@@ -1,0 +1,4288 @@
+<style>
+    /* Write your master css here */
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+    body {
+        margin: 0;
+    }
+
+    .main-div {
+        max-width: 100%;
+        width: 100%;
+        font-family: 'Lato' !important;
+    }
+
+    /* .main-div>sup {
+        font-size: inherit !important;
+        position: relative !important;
+        top: 0.3em !important;
+    } */
+
+    .main-div sup {
+        /* font-size: 0.8em; */
+        font-size: 0.9em;
+        position: relative;
+        top: 0.2em;
+        line-height: 0.1em;
+    }
+
+    .main-div>h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+        font-family: 'Lato' !important;
+    }
+
+    .main-div img {
+        max-width: 100%;
+        width: 100% !important;
+        /* display: block; */
+    }
+
+    :root {
+        --sns-btn-bg: #666 !important;
+        --sns-btn-back: #cc0001 !important;
+        --sns-black: #000 !important;
+        --sns-white: #fff !important;
+
+    }
+
+    .sns-color-black {
+        color: var(--sns-black) !important;
+    }
+
+    .sns-white {
+        color: var(--sns-white) !important;
+    }
+
+    .sns-gray {
+        background-color: #666 !important;
+    }
+
+
+
+    .sns-f-40 {
+        font-size: 2.1vw !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 6px !important;
+        line-height: normal !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-30 {
+        font-size: 1.6vw !important;
+        font-weight: 600 !important;
+        line-height: normal !important;
+        letter-spacing: 4.5px !important;
+        /* letter-spacing: 0.25em !important; */
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-26 {
+        font-size: 1.4vw !important;
+        font-weight: 400 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 8.84px !important;
+        /* letter-spacing: 0.50em !important; */
+        line-height: 1.4em !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-22 {
+        font-size: 1.15vw !important;
+        font-weight: 400;
+        line-height: normal !important;
+        letter-spacing: 3.0px !important;
+        /* letter-spacing: 0.15em; */
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-20 {
+        font-size: 1.1vw !important;
+        font-weight: 400;
+        line-height: normal !important;
+        letter-spacing: 3px !important;
+        /* letter-spacing: 0.15em; */
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-18 {
+        font-size: 1.0vw !important;
+        font-weight: 400;
+        line-height: normal !important;
+        letter-spacing: 2.7px !important;
+        /* letter-spacing: 0.169em; */
+        color: var(--sns-black) !important;
+    }
+
+
+    @media screen and (max-width: 890px) {
+        .sns-f-40 {
+            font-size: clamp(26px, 2.5vw, 40px) !important;
+            line-height: 1.5em !important;
+        }
+
+        .sns-f-30 {
+            font-size: clamp(24px, 1.9vw, 30px) !important;
+
+        }
+
+        .sns-f-26 {
+            font-size: clamp(22px, 1.7vw, 26px) !important;
+        }
+
+        .sns-f-22 {
+            font-size: clamp(18px, 1.4vw, 22px) !important;
+        }
+
+        .sns-f-20 {
+            font-size: clamp(18px, 1.1vw, 20px) !important;
+        }
+
+        .sns-f-18 {
+            font-size: clamp(16px, 1.0vw, 18px) !important;
+        }
+
+
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-f-40 {
+            letter-spacing: 3.9px !important;
+            line-height: normal !important;
+        }
+
+        .sns-f-30 {
+            letter-spacing: 3.6px !important;
+        }
+
+        .sns-f-26 {
+            letter-spacing: 7.48px !important;
+        }
+
+        .sns-f-22 {
+            letter-spacing: 2.7px !important;
+        }
+
+        .sns-f-20 {
+            letter-spacing: 2.7px !important;
+        }
+
+        .sns-f-18 {}
+    }
+
+
+
+    .sns-underline {
+        text-decoration: underline;
+        text-decoration-color: var(--sns-btn-back);
+        text-underline-offset: 17%;
+    }
+
+    .sns-mb-3 {
+        margin-block: 3% !important;
+    }
+
+    .sns-m-top-3 {
+        margin-top: 2.5%;
+    }
+
+    .sns-mt-4 {
+        margin-top: 5%;
+    }
+
+    .sns-mt-5 {
+        margin-top: 6% !important;
+    }
+
+    .sns-pt-5 {
+        padding-top: 5%;
+    }
+
+    .sns-mt-3 {
+        margin-top: 4%;
+    }
+
+    .sns-m-inline-20 {
+        margin-inline: 20%;
+    }
+
+    .sns-m-inline-19 {
+        margin-inline: 19%;
+    }
+
+    .sns-m-bot-2 {
+        margin-bottom: 2%;
+    }
+
+    .sns-padding-block-3 {
+        padding-block: 3%;
+    }
+
+    .sns-m-inline-25 {
+        margin-right: 25%;
+    }
+
+    .sns-ul-mb-3 {
+        margin-block: 3% !important;
+    }
+
+    .sns-margin-top {
+        margin-top: 4% !important;
+    }
+
+    /* .sns-m-r-14 {
+        margin-right: 10% !important;
+    } */
+
+    .sns-nic-r-20 {
+        margin-right: 20% !important;
+    }
+
+    .sns-nic-r-12 {
+        margin-right: 12% !important;
+    }
+
+    .sns-nic-mr-25 {
+        margin-right: 25% !important;
+    }
+
+    @media screen and (max-width: 890px) {
+        /* .sns-m-r-14 {
+            margin-right: 0% !important;
+        } */
+
+        .sns-nic-r-20 {
+            margin-right: 0% !important;
+        }
+
+        .sns-nic-r-12 {
+            margin-right: 0% !important;
+        }
+
+        .sns-nic-mr-25 {
+            margin-right: 0% !important;
+        }
+    }
+
+    @media screen and (max-width: 890px) {
+        .sns-tab-mt-5 {
+            margin-top: 5%;
+        }
+
+        .sns-tab-m-block {
+            margin-block: 3% !important;
+        }
+
+        .sns-tv-mt-3 {
+            margin-top: 3%;
+        }
+        .sns-m-inline-25 {
+            margin-right: 0%;
+        }
+        .sns-mv-mt-0 {
+            margin-top: 0 !important;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-mt-5 {
+            margin-top: 13% !important;
+        }
+
+        .sns-mb-3 {
+            margin-block: 7% !important;
+        }
+
+        .sns-margin-bottom-12 {
+            margin-bottom: 12%;
+        }
+
+        .sns-mv-padd-inline-2 {
+            padding-inline: 2%;
+        }
+
+        .sns-mv-mt-10 {
+            margin-top: 10% !important;
+        }
+
+        .sns-mv-mt-15 {
+            margin-top: 15% !important;
+        }
+
+        .sns-mv-mb-0 {
+            padding-bottom: 0 !important;
+        }
+
+        .sns-mv-margin-bottom-0 {
+            margin-bottom: 0 !important;
+        }
+
+        .sns-mv-mt-0 {
+            margin-top: 0 !important;
+        }
+
+        .sns-m-block-0 {
+            margin-block: 0 !important;
+        }
+
+
+        .sns-mv-padd-inline-10 {
+            padding-inline: 10% !important;
+        }
+
+        .sns-m-inline-25 {
+            margin-right: 0%;
+        }
+    }
+
+
+
+
+    /* Custom css */
+
+    /* The sns-d-flex becomes flexible by setting the display property to flex */
+    .sns-d-flex {
+        display: flex;
+    }
+
+    /* justify-content to align the item on the main axis ,center */
+    .sns-justify-content-center {
+        justify-content: center;
+    }
+
+    .sns-justify-center {
+        justify-content: center;
+    }
+
+    /* Distribute items evenly Start, in-between, and end gaps have equal sizes */
+    .sns-justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    /*Items will have space between them */
+    .sns-justify-content-space-between {
+        justify-content: space-between;
+    }
+
+    /*tems will have space before, between, and after them */
+    .sns-justify-content-space-around {
+        justify-content: space-around;
+    }
+
+    /* the align-items property to align our item on the cross axis, center*/
+    .sns-align-center {
+        align-items: center;
+    }
+
+    .sns-align-end {
+        align-items: end;
+    }
+
+    /* sets the items in row */
+    .sns-f-row {
+        flex-direction: row;
+    }
+
+    /* sets the items in column */
+    .sns-f-column {
+        flex-direction: column;
+    }
+
+    /* sns-flex-wrap property is used to specify whether flex items are forced into a single line or wrapped onto multiple lines.  */
+    .sns-flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    /* The flexbox items are aligned at the baseline of the cross axis. */
+    .sns-basline {
+        align-items: baseline;
+    }
+
+    .sns-wor {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .sns-text-center {
+        text-align: center;
+    }
+
+    .sns-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+
+
+
+
+
+
+
+    /* ====================== Width ==========================*/
+    .sns-w-25 {
+        width: 25%;
+    }
+
+    .sns-w-50 {
+        width: 50%;
+    }
+
+    .sns-w-75 {
+        width: 75%;
+    }
+
+    .sns-w-100 {
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* start */
+    .sns-desk-none {
+        display: none !important;
+    }
+
+    .sns-mob-none {
+        display: block !important;
+    }
+
+    /* End */
+
+
+    /* padding left and right top bottom in rem */
+    .sns--0 {
+        padding: 0;
+    }
+
+    .sns--1 {
+        padding: 0.25rem;
+    }
+
+    .sns--2 {
+        padding: 0.5rem;
+    }
+
+    .sns--3 {
+        padding: 1rem;
+    }
+
+    .sns--4 {
+        padding: 1.5rem;
+    }
+
+    .sns--5 {
+        padding: 3rem;
+    }
+
+    /* padding left and right top bottom in rem */
+
+
+
+
+    /* padding left and right in rem */
+    .sns-x-0 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .sns-x-1 {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+    }
+
+    .sns-x-2 {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .sns-x-3 {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .sns-x-4 {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .sns-px-5 {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+    /* padding left and right in rem */
+
+
+
+
+    /* padding -top and bottom in rem */
+    .sns-py-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .sns-py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .sns-py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .sns-py-3 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .sns-py-4 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .sns-py-5 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /* padding -top and bottom in rem */
+
+
+
+
+    /* padding -top in rem */
+
+
+
+
+
+
+    /* padding -right in rem */
+
+    .sns-pe-0 {
+        padding-right: 0;
+    }
+
+    .sns-pe-1 {
+        padding-right: 0.25rem;
+    }
+
+    .sns-pe-2 {
+        padding-right: 0.5rem;
+    }
+
+    .sns-pe-3 {
+        padding-right: 1rem;
+    }
+
+    .sns-pe-4 {
+        padding-right: 1.5rem;
+    }
+
+    .sns-pe-5 {
+        padding-right: 2rem;
+    }
+
+    .sns-pe-6 {
+        padding-right: 2.5rem;
+    }
+
+    .sns-pe-7 {
+        padding-right: 3rem;
+    }
+
+    .sns-pe-8 {
+        padding-right: 3.5rem;
+    }
+
+    .sns-pe-9 {
+        padding-right: 4rem;
+    }
+
+    /* padding -right in rem */
+
+
+
+
+    /* padding -bottom in rem */
+
+    .sns-pb-0 {
+        padding-bottom: 0;
+    }
+
+    .sns-pb-1 {
+        padding-bottom: 0.25rem;
+    }
+
+    .sns-pb-2 {
+        padding-bottom: 0.5rem;
+    }
+
+    .sns-pb-3 {
+        padding-bottom: 1rem;
+    }
+
+    .sns-pb-4 {
+        padding-bottom: 1.5rem;
+    }
+
+    .sns-pb-5 {
+        padding-bottom: 2rem;
+    }
+
+    .sns-pb-6 {
+        padding-bottom: 2.5rem;
+    }
+
+    .sns-pb-7 {
+        padding-bottom: 3rem;
+    }
+
+    .sns-pb-8 {
+        padding-bottom: 3.5rem;
+    }
+
+    .sns-pb-9 {
+        padding-bottom: 4rem;
+    }
+
+    /* padding -bottom in rem */
+
+
+
+
+
+    /* padding -left in rem */
+
+    .sns-ps-0 {
+        padding-left: 0;
+    }
+
+    .sns-ps-1 {
+        padding-left: 0.25rem;
+    }
+
+    .sns-ps-2 {
+        padding-left: 0.5rem;
+    }
+
+    .sns-ps-3 {
+        padding-left: 1rem;
+    }
+
+    .sns-ps-4 {
+        padding-left: 1.5rem;
+    }
+
+    .sns-ps-5 {
+        padding-left: 2rem;
+    }
+
+    .sns-ps-6 {
+        padding-left: 2.5rem;
+    }
+
+    .sns-ps-7 {
+        padding-left: 3rem;
+    }
+
+    .sns-ps-8 {
+        padding-left: 3.5rem;
+    }
+
+    .sns-ps-9 {
+        padding-left: 4rem;
+    }
+
+    /* padding -left in rem */
+
+
+
+
+
+    .sns-fw-100 {
+        font-weight: 100;
+    }
+
+    .sns-fw-200 {
+        font-weight: 200;
+    }
+
+    .sns-fw-300 {
+        font-weight: 300;
+    }
+
+    .sns-fw-400 {
+        font-weight: 400;
+    }
+
+    .sns-fw-500 {
+        font-weight: 500;
+    }
+
+    .sns-fw-600 {
+        font-weight: 600 !important;
+    }
+
+    .sns-fw-700 {
+        font-weight: 700;
+    }
+
+    .sns-fw-800 {
+        font-weight: 800;
+    }
+
+
+    /* font-weight normal italic bold */
+
+
+
+    .sns-text-start {
+        text-align: left;
+    }
+
+    .sns-text-end {
+        text-align: right;
+    }
+
+    .sns-text-center {
+        text-align: center;
+    }
+
+    .sns-text-decoration-none {
+        text-decoration: none;
+    }
+
+    .sns-text-decoration-underline {
+        text-decoration: underline;
+    }
+
+    .sns-text-decoration-line-through {
+        text-decoration: line-through;
+    }
+
+
+
+    /* .text-capitalize lowercase capitalize*/
+
+    .sns-text-lowercase {
+        text-transform: lowercase;
+    }
+
+    .sns-text-uppercase {
+        text-transform: uppercase;
+    }
+
+    .sns-text-capitalize {
+        text-transform: capitalize;
+    }
+
+    .sns-text-wrap {
+        white-space: normal;
+    }
+
+    .sns-text-nowrap {
+        white-space: nowrap;
+    }
+
+    /* .text-capitalize lowercase capitalize*/
+
+
+    .sns-col-4 {
+        width: calc(85%/4);
+    }
+
+    .sns-col-3 {
+        width: calc(88%/3);
+    }
+
+    .sns-col-1 {
+        width: calc(94%/1);
+    }
+
+
+    @media screen and (max-width: 480px) {
+        .sns-desk-none {
+            display: block !important;
+        }
+
+        .sns-mob-none {
+            display: none !important;
+        }
+
+        .sns-fw-600 {
+            font-weight: 600 !important;
+        }
+    }
+
+
+
+    .sns-d-flex {
+        display: flex;
+    }
+
+
+    .sns-four-button>.sns-BN {
+        display: flex;
+        flex-wrap: wrap;
+        /* padding: 3% 0; */
+        padding: 2.5% 0;
+        background-color: var(--sns-btn-bg);
+        margin-top: -1px;
+    }
+
+    .sns-BN>a {
+        color: var(--sns-white);
+        text-decoration: none !important;
+        letter-spacing: 0px;
+    }
+
+
+    .sns-BN>.sns-btn {
+        width: calc(85%/4);
+        padding: 1.5% 0;
+        box-sizing: border-box;
+    }
+
+    .justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    .sns-BN .sns-butn {
+        background-color: var(--sns-btn-back);
+        color: var(--sns-white);
+        font-size: 1.25vw;
+        font-weight: bold;
+        line-height: normal;
+        text-align: center;
+        /* border: 2px solid #FFFFFF; */
+        transition: 0.5s;
+        border-radius: 0;
+        text-transform: uppercase;
+    }
+
+    .sns-BN .sns-butn:hover {
+        background-color: var(--sns-white);
+        color: var(--sns-black);
+    }
+
+    @media screen and (max-width: 890px) {
+        .sns-BN>.sns-btn {
+            width: calc(91%/2);
+            /* margin: 1.5% auto; */
+            padding: 2% 0;
+        }
+
+        .sns-BN .sns-butn {
+            font-size: clamp(22px, 1vw, 20px) !important;
+        }
+
+        .sns-f-b {
+            margin-bottom: 3%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-BN>.sns-btn {
+            width: calc(80%/1);
+        }
+
+        .sns-four-button>.sns-BN {
+            padding: 10% 0;
+            background: var(--sns-btn-bg);
+        }
+
+        .sns-BN>.sns-btn {
+            padding: 5% 0;
+        }
+
+        .sns-f-b {
+            margin-bottom: 5%;
+        }
+
+        .sns-f-b-r {
+            margin-bottom: 5%;
+        }
+    }
+
+
+
+
+    .sns-acura_banner_sec {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        /* flex-direction: column; */
+    }
+
+    .sns-acura_banner_sec_imgs .sns-main_img {
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        line-height: 0;
+    }
+
+    .sns-acura_banner_sec_imgs .sns-main_img img {
+        width: 100%;
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+
+    .acura_banner_sec_imgs_cnt {
+        color: #fff;
+        top: 19%;
+        position: absolute;
+        left: 7.3%;
+        z-index: 2;
+    }
+
+    .acura_banner_sec_imgs_cnt>h5 {
+        font-size: 1.38vw;
+        font-weight: 400;
+        text-transform: initial;
+        color: var(--sns-white);
+    }
+
+    .acura_banner_sec_imgs_cnt2 {
+        color: var(--sns-white);
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+        z-index: 2;
+    }
+
+    .acura_banner_sec_imgs_cnt2>h5 {
+        font-size: 1.65vw;
+        font-weight: 400;
+        text-transform: initial;
+    }
+
+
+    .sns-acura_banner_sec_lft {
+        position: absolute;
+        z-index: 2;
+        top: 7%;
+        left: 6.5%;
+        color: #fff;
+        width: 17%;
+        display: flex;
+    }
+
+    .sns-acura_banner_sec_lft h1 {
+        font-weight: 400 !important;
+        font-size: 2.46vw;
+        margin-block: 0%;
+        text-transform: initial;
+        font-family: 'Lato' !important;
+    }
+
+    .sns-acura_banner_sec_lft p {
+        padding-bottom: 6%;
+        font-size: 1.15vw;
+        margin-block: 0%;
+        font-weight: 500;
+    }
+
+
+    .sns-desk-banner {
+        display: none;
+    }
+
+    .sns-mob-banner {
+        display: block;
+    }
+
+
+    @media screen and (max-width: 660px) {
+        .sns-acura_banner_sec_lft {
+            position: initial;
+            width: 90%;
+            text-align: center;
+            color: #000000;
+            display: inline;
+            margin-block: 12% 3%;
+            margin-inline: auto;
+        }
+
+        .acura_banner_sec_imgs_cnt {
+            position: initial;
+            color: #000000;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10%;
+        }
+
+        .acura_banner_sec_imgs_cnt2 {
+            position: initial;
+            color: #000000;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .sns-desk-banner {
+            display: block;
+        }
+
+        .sns-mob-banner {
+            display: none;
+        }
+
+        .sns-acura_banner_sec_lft h1 {
+            font-size: 40px;
+            line-height: 1.1em !important;
+            font-weight: 600 !important;
+        }
+
+
+        .acura_banner_sec_imgs_cnt>h5 {
+            font-size: 22px;
+            color: var(--sns-black) !important;
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .acura_banner_sec_imgs_cnt2 {
+            bottom: 4%;
+        }
+
+        .acura_banner_sec_imgs_cnt {
+            margin-bottom: 13%;
+        }
+
+    }
+
+
+
+
+    .no-gap-6x6 {
+        width: calc(100%/2);
+    }
+
+    .no-gap-6x6 .padd-6x6 {
+        padding-inline: 14% 13%;
+        /* padding-inline: 10% 8%; */
+    }
+
+    .no-gap-6x6 .padd-6x6-2 {
+        padding-inline: 8% 8%;
+    }
+
+    .no-gap-6x6 .padd-6x6-inner {
+        padding-inline: 6%;
+    }
+
+    .no-gap-6x6 .padd-6x6-1 {
+        padding-block: 3% 0;
+        /* padding-inline: 0 5%; */
+        padding-inline: 0%;
+
+    }
+
+    
+    .padd-6x6 ul {
+        padding-left: 3.5%;
+        padding-block: 3% 2%;
+        margin: 0 !important;
+    }
+    .padd-6x6-2 ul {
+        padding-left: 3.5%;
+        padding-block: 3% 2%;
+        margin: 0 !important;
+    }
+
+    
+    .padd-6x6 .ul-1 {
+        padding-right: 12%;
+    }
+    .padd-6x6-2 .ul-1 {
+        padding-right: 12%;
+    }
+
+    .padd-6x6-inner ul {}
+
+    .padd-6x6-inner ul li {
+        margin-bottom: 1%;
+    }
+
+
+    
+    .padd-6x6 ul li {
+        margin-bottom: 1%;
+    }
+    .padd-6x6-2 ul li {
+        margin-bottom: 1%;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .no-gap-6x6 .padd-6x6 {
+            padding-inline: 8%;
+        }
+
+        .no-gap-6x6 .padd-6x6-2 {
+            padding-inline: 3%;
+        }
+
+        .no-gap-6x6 .padd-6x6-inner {
+            padding-inline: 8%;
+        }
+    }
+
+    @media screen and (max-width: 890px) {
+        .no-gap-6x6 {
+            width: calc(100%/1);
+        }
+
+        
+        .padd-6x6 ul {
+            padding-left: 3.5%;
+            padding-block: 3%;
+        }
+        .padd-6x6-2 ul {
+            padding-left: 3.5%;
+            padding-block: 3%;
+        }
+
+        .no-gap-6x6 .padd-6x6 {
+            padding-inline: 5%;
+            padding-block: 5%;
+        }
+
+        .no-gap-6x6 .padd-6x6-2 {
+            padding-inline: 5%;
+            padding-block: 5%;
+        }
+
+        .no-gap-6x6 .padd-6x6-inner {
+            padding-inline: 5%;
+            padding-block: 5%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        
+        .padd-6x6 ul {
+            padding-left: 6.5%;
+            padding-block: 3%;
+        }
+        .padd-6x6-2 ul {
+            padding-left: 6.5%;
+            padding-block: 3%;
+        }
+    }
+
+
+
+
+
+
+
+    .border-left {
+        border-left: 3px solid #cc0001;
+        height: 4.2vw;
+        margin-top: 2%;
+        margin-right: 3%;
+    }
+
+    .sns-main-head-1 {
+        /* max-width: 50%;
+margin: 0 auto; */
+        text-align: center;
+        /* margin-top: 5%; */
+    }
+
+    .sns-sec-3 {
+        margin-inline: 20%;
+    }
+
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .sns-main-head-1 {
+            /* max-width: 80%; */
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-main-head-1 {
+            /* max-width: 90%; */
+        }
+    }
+
+    .with-gap-4x4 {
+        width: calc(89.5%/4);
+        text-align: center;
+        /* margin-block: 1.5%; */
+
+    }
+
+    .gap-4x4 {
+        /* gap: 2%; */
+        gap: 1.5%;
+    }
+
+    .with-gap-4x4 .with-gap-4x4-padd {
+        padding-inline: 3%;
+        padding-block: 5% 0;
+    }
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .with-gap-4x4 {
+            width: calc(92%/2);
+        }
+
+        .with-gap-4x4 .with-gap-4x4-padd {
+            padding-block: 5% 10%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .with-gap-4x4 {
+            width: calc(100%/1);
+
+        }
+
+        .with-gap-4x4 .with-gap-4x4-padd {
+            padding-inline: 5%;
+        }
+    }
+
+    .no-gap-2x2 {
+        width: calc(100%/2);
+        text-align: center;
+    }
+
+    .no-gap-2x2-back {
+        background-color: var(--sns-btn-bg);
+        color: var(--sns-white);
+    }
+
+    .no-gap-2x2 .padd-2x2 {
+        padding-inline: 10%;
+
+    }
+
+    .no-gap-2x2 .padd-2x2-1 {
+        padding-block: 3%;
+    }
+
+
+    @media screen and (max-width: 890px) {
+        .no-gap-2x2 {
+            width: calc(100%/1);
+        }
+
+        .no-gap-2x2 .padd-2x2 {
+            padding-inline: 5%;
+            padding-block: 3%;
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .no-gap-2x2 .padd-2x2 {
+            padding-block: 10% 7%;
+            padding-inline: 2%;
+        }
+
+        .no-gap-2x2 .padd-2x2-1 {}
+
+    }
+
+    .sns-sec-6 {
+        margin-inline: 25%;
+    }
+
+    .wheel-inner-div {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .wheels-3x3 {
+        width: calc(96%/3);
+    }
+
+    .wheel-gap-3x3 {
+        gap: 2%;
+    }
+
+    .wheels-3x3 .wheels-padd-3x3 {
+        padding-inline: 5%;
+        padding-block: 5% 10%;
+        text-align: center;
+    }
+
+
+
+    @media screen and (max-width: 890px) {
+        .wheels-3x3 {
+            width: calc(98%/2);
+
+        }
+
+        .wheels-3x3 .wheels-padd-3x3 {
+            padding-inline: 0% 3%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .wheels-3x3 {
+            width: calc(100%/1);
+
+        }
+
+        .wheels-3x3 .wheels-padd-3x3 {
+            /* padding-inline: 3%;
+    padding-block: 8% 12%; */
+
+        }
+    }
+
+    .sns-sec-8 {
+        margin-inline: 28%;
+    }
+
+    .with-gap-3x3 {
+        width: calc(91%/3);
+        text-align: center;
+        /* margin-block: 1.5%; */
+
+    }
+
+    .gap-3x3-div {
+        /* gap: 2%; */
+        gap: 1.5%;
+    }
+
+    .with-gap-3x3 .with-gap-3x3-padd {
+        padding-inline: 2%;
+        padding-block: 3% 15%;
+    }
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .with-gap-3x3 {
+            width: calc(92%/2);
+        }
+
+        .with-gap-3x3 .with-gap-3x3-padd {
+            padding-inline: 5%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .with-gap-3x3 {
+            width: calc(100%/1);
+
+        }
+
+        .with-gap-3x3 .with-gap-3x3-padd {
+            padding-block: 5% 10%;
+        }
+    }
+
+    /* This Secton was duplicated from Section 5. */
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 4. */
+    /* This Secton was duplicated from Section 3. */
+    /* section css */
+
+    .sns-calc1 {
+        width: calc(99%/1);
+    }
+
+    .sns-calc2 {
+        width: calc(95.72%/2);
+    }
+
+
+    .sns-w-47 {
+        width: 47.5%;
+    }
+
+
+    .sns-gallery-img {
+        overflow: hidden;
+
+    }
+
+    .sns-m-g {
+        margin: 0.5VW;
+    }
+
+    .sns-gallery-img img {
+        width: 100%;
+        transition: 0.3s;
+        vertical-align: bottom;
+    }
+
+    .sns-gallery-img img:hover {
+        transform: scale(1.2);
+    }
+
+    /* media */
+
+    @media screen and (max-width: 1100px) {
+        .sns-m-g {
+            margin: 0.48vw;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .sns-calc1 {
+            width: calc(100%);
+        }
+
+        .sns-calc2 {
+            width: calc(100%);
+        }
+
+        .sns-w-47 {
+            width: 100%;
+        }
+
+        .sns-m-g {
+            margin: 0;
+        }
+    }
+
+    /* This Secton was duplicated from Section 2. */
+    .sns-sec-16 {
+        margin-inline: 22.5%;
+    }
+
+    /* This Secton was duplicated from Section 4. */
+    .sns-sec-18 {
+        margin-inline: 22%;
+    }
+
+    /* This Secton was duplicated from Section 9. */
+    /* This Secton was duplicated from Section 5. */
+    .sns-sec-21 {
+        margin-inline: 22%;
+    }
+
+    .with-gap-1x1 {
+        width: calc(91.5%/2);
+        text-align: center;
+        /* margin-block: 1.5%; */
+
+    }
+
+    .gap-3x3-div-1x1 {
+        /* gap: 3%; */
+        gap: 2.5%;
+    }
+
+    .with-gap-1x1 .with-gap-1x1-padd {
+        padding-inline: 3%;
+        padding-block: 3% 10%;
+    }
+
+
+
+
+    @media screen and (max-width: 890px) {
+        /* .with-gap-1x1 {
+    width: calc(92%/2);
+}
+
+.with-gap-1x1 .with-gap-1x1-padd {
+    
+} */
+    }
+
+    @media screen and (max-width: 480px) {
+        .with-gap-1x1 {
+            width: calc(100%/1);
+
+        }
+
+        .with-gap-1x1 .with-gap-1x1-padd {
+            padding-block: 5% 10%;
+        }
+    }
+
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 5. */
+    /* This Secton was duplicated from Section 3. */
+
+
+    /* This Secton was duplicated from Section 25. */
+    /* This Secton was duplicated from Section 14. */
+    /* This Secton was duplicated from Section 15. */
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 27. */
+    .sns-sec-33 {
+        margin-inline: 28%;
+    }
+
+    /* This Secton was duplicated from Section 9. */
+    /* This Secton was duplicated from Section 27. */
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 27. */
+    /* This Secton was duplicated from Section 36. */
+    /* This Secton was duplicated from Section 37. */
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 39. */
+    /* This Secton was duplicated from Section 15. */
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 27. */
+    /* This Secton was duplicated from Section 27. */
+    /* This Secton was duplicated from Section 43. */
+    /* This Secton was duplicated from Section 27. */
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 9. */
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 27. */
+    /* This Secton was duplicated from Section 50. */
+    /* This Secton was duplicated from Section 4. */
+    /* This Secton was duplicated from Section 27. */
+    /* This Secton was duplicated from Section 15. */
+    /* This Secton was duplicated from Section 52. */
+    .sns-model {
+        width: calc(90%/3);
+        text-align: center;
+        border: 1px solid #CDCBCC;
+        background: #FFF;
+        margin-bottom: 2%;
+        padding-bottom: 2%;
+        /* margin-block: 1.5%; */
+
+    }
+
+    .model-gap {
+        gap: 2%;
+    }
+
+    .sns-model .sns-model-padd {
+        padding-inline: 3%;
+        padding-block: 3%;
+    }
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .sns-model {
+            width: calc(92%/2);
+        }
+
+        .sns-model .sns-model-padd {}
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-model {
+            width: calc(95%/1);
+            border: none;
+
+        }
+
+        .sns-model .sns-model-padd {}
+    }
+
+    /* This Secton was duplicated from Section 2. */
+    .seo-per {
+        padding: 4% 3% 0 3%;
+        background-color: #fff;
+        font-weight: 500;
+        color: var(--sns-black);
+    }
+
+    .seo-per p {
+        margin-bottom: 1.5%;
+        line-height: 1.3em !important;
+    }
+
+    .seo-per p a {
+        text-decoration-color: var(--sns-black);
+    }
+
+
+
+
+
+
+
+    .disc {
+        padding: 2% 3%;
+        background-color: var(--sns-white);
+        font-weight: 400;
+        line-height: 1.3em !important;
+        color: var(--sns-black);
+    }
+
+    .disc p {
+        margin-bottom: 1.5%;
+        line-height: 1.3em !important;
+    }
+
+    .disc a {
+        font-family: 'Lato' !important;
+        text-underline-offset: 10%;
+
+    }
+
+    @media screen and (max-width: 890px) {
+        .disc {
+            padding: 5% 3%;
+        }
+
+        .seo-per {
+            padding: 7% 3% 0 3%;
+        }
+
+        .seo-per p {
+            margin-bottom: 2%;
+        }
+
+        .disc p {
+            margin-bottom: 2%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .seo-per {
+            padding: 10% 3% 0 3%;
+        }
+
+        .seo-per p {
+            margin-bottom: 5%;
+        }
+
+        .disc {
+            padding: 10% 3%;
+
+        }
+
+        .disc p {
+            margin-bottom: 5%;
+            padding-inline: 0 0%;
+        }
+    }
+
+
+    @media screen and (max-width: 890px) {
+        .sns-sec-3 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-6 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-8 {
+            margin-inline: 5%;
+        }
+
+        .sns-m-inline-20 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-16 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-18 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-21 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-33 {
+            margin-inline: 5%;
+        }
+
+        .sns-m-inline-19 {
+            margin-inline: 5%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-border {
+            border-bottom: 3px solid var(--sns-btn-back);
+        }
+
+        .sns-sec-3 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-6 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-8 {
+            margin-inline: 6%;
+        }
+
+        .sns-m-inline-20 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-16 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-18 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-21 {
+            margin-inline: 5%;
+        }
+
+        .sns-sec-33 {
+            margin-inline: 5%;
+        }
+
+        .sns-m-inline-19 {
+            margin-inline: 5%;
+        }
+    }
+</style>
+<div class="main-div">
+    <div class="sns-acura_banner_sec sns-f-column">
+        <div class="sns-acura_banner_sec_imgs">
+            <figure class="sns-main_img"> <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/988d302775c247a8bd3c0abca540ad4c.png"
+                    alt="banner" class="sns-mob-banner">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/99cc40d06eac4e52b5ca55e0b3c73ab2.jpg"
+                    alt="mb-banner" class="sns-desk-banner">
+
+        </div>
+        <div class="sns-acura_banner_sec_lft">
+            <div class="border-left sns-mob-banner"></div>
+            <h1>2023 YUKON & YUKON XL</h1>
+        </div>
+        <div class="acura_banner_sec_imgs_cnt">
+            <h5>
+                STARTING AT $57,400*
+            </h5>
+        </div>
+    </div>
+    <div class="sns-four-button">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-f-b "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Yukon&year=2023">
+                <div>View Inventory</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b-r "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Choose Your Offer</div>
+            </a>
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-sec-3 sns-margin-bottom-12">
+            <h3 class="sns-f-26 sns-color-black">Exterior</h3>
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-color-black sns-mob-none">TAKE CHARGE</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-color-black sns-desk-none"><span class="sns-border">TAKE CHARGE</span>
+            </h2>
+            <p class="sns-f-22 sns-color-black ">The large and in charge sculpted exterior of the 2023 Yukon
+                full-size SUV features powerful proportions and
+                masterful design that continues to turn heads.</p>
+        </div>
+    </section>
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-4x4 sns-m-top-3">
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6ad1f0523c5a4edf9e0da286b672f0d7.png"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6ad1f0523c5a4edf9e0da286b672f0d7.png"
+                alt="">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20 sns-mv-mb-0">Denali Ultimate's Vader Chrome Signature Details Demand Attention
+                </p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6524e7a837ca49f291157f5b7c5161b6.png"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6524e7a837ca49f291157f5b7c5161b6.png"
+                alt="">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20">Denali and Denali Ultimate Dual Exhaust System with Dual Twin Polished
+                    Stainless-Steel
+                    Tips (Gas Engine Only)</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/33148648c4d34649bddde0dcf01c8a53.png"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/33148648c4d34649bddde0dcf01c8a53.png"
+                alt="">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20">Denali Badging</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/411f32c7d4df4f32a1e911ea7fa014cc.png"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/411f32c7d4df4f32a1e911ea7fa014cc.png"
+                alt="">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20">Satin-Chrome Multidimensional Denali Grille</p>
+            </div>
+        </div>
+        <!-- <div class="with-gap-4x4">
+  <img class="sns-mob-none" src="" alt="" >
+  <img class="sns-desk-none" src="" alt="" >
+  <div class="with-gap-4x4-padd">
+    <p class="sns-f-20"></p> 
+  </div>
+</div> -->
+    </div>
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center no-gap-2x2-back sns-mt-4">
+            <div class="no-gap-2x2">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a256e3fb89974c9388ccb71f0d2e789e.png"
+                    alt="DENALI DETAILS">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a256e3fb89974c9388ccb71f0d2e789e.png"
+                    alt="DENALI DETAILS">
+            </div>
+
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <h3 class="sns-f-30" style="color:#fff !important;">DENALI DETAILS</h3>
+                    <p class="sns-f-20 padd-2x2-1" style="color:#fff !important;">No matter where you go, the
+                        Denali’s sophisticated and refined exterior
+                        is crafted to make a confident entrance and capture attention. From GMC signature C-shaped
+                        LED
+                        lighting to polished satin-chrome accents, the Yukon Denali large SUV resonates premium
+                        style at
+                        every turn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-sec-6">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">PREMIUM WHEEL OPTIONS</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">PREMIUM WHEEL <br /><span class="sns-border">OPTIONS</span>
+            </h2>
+            <p class="sns-f-22">Yukon large SUV offers a multitude of available premium head-turning wheels that
+                match your
+                sense of style.</p>
+        </div>
+    </section>
+    <div class="wheel-inner-div">
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap wheel-gap-3x3 sns-m-top-3">
+            <div class="wheels-3x3">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/97fa8d295e5d4f9d85dccbb0135caeb5.jpg"
+                    alt="">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/97fa8d295e5d4f9d85dccbb0135caeb5.jpg"
+                    alt="">
+                <div class="wheels-padd-3x3">
+                    <h3 class="sns-f-20 sns-fw-600" style="font-weight: 600 !important;">18" 6-SPOKE MACHINED
+                        ALUMINUM WITH DARK GRAY METALLIC ACCENTS
+                    </h3>
+                    <p class="sns-f-18 sns-pt-5">STANDARD ON SLE</p>
+                </div>
+            </div>
+            <div class="wheels-3x3">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/77f71a9dc03241c5bff639e52b8cf043.jpg"
+                    alt="">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/77f71a9dc03241c5bff639e52b8cf043.jpg"
+                    alt="">
+                <div class="wheels-padd-3x3">
+                    <h3 class="sns-f-20 sns-fw-600" style="font-weight: 600 !important;">20" 6-SPOKE POLISHED
+                        ALUMINUM</h3>
+                    <p class="sns-f-18 sns-pt-5">STANDARD ON SLT & <br />AVAILABLE ON SLE</p>
+                </div>
+            </div>
+            <div class="wheels-3x3">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/90c6f2bf53cb4d98a60433828c5dea8f.jpg"
+                    alt="">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/90c6f2bf53cb4d98a60433828c5dea8f.jpg"
+                    alt="">
+                <div class="wheels-padd-3x3">
+                    <h3 class="sns-f-20 sns-fw-600" style="font-weight: 600 !important;">20" 6-SPOKE MACHINED
+                        ALUMINUM WITH CARBON GRAY METALLIC ACCENTS
+                    </h3>
+                    <p class="sns-f-18 sns-pt-5">STANDARD ON AT4</p>
+                </div>
+            </div>
+            <div class="wheels-3x3">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/337e96bbbcae49a9807bf9462f0320c3.jpg"
+                    alt="">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/337e96bbbcae49a9807bf9462f0320c3.jpg"
+                    alt="">
+                <div class="wheels-padd-3x3">
+                    <h3 class="sns-f-20 sns-fw-600" style="font-weight: 600 !important;">20" 6-SPOKE
+                        MULTI-DIMENSIONAL POLISHED ALUMINUM</h3>
+                    <p class="sns-f-18 sns-pt-5">STANDARD ON DENALI</p>
+                </div>
+            </div>
+            <div class="wheels-3x3">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/91da1fc57c87480f9e59f09da241f32e.jpg"
+                    alt="">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/91da1fc57c87480f9e59f09da241f32e.jpg"
+                    alt="">
+                <div class="wheels-padd-3x3">
+                    <h3 class="sns-f-20 sns-fw-600" style="font-weight: 600 !important;">22" 7-SPOKE
+                        ULTRA-<br />BRIGHT MACHINED WITH BRIGHT CHROME
+                        ACCENTS AND
+                        DARK PAINT</h3>
+                    <p class="sns-f-18 sns-pt-5">STANDARD ON DENALI ULTIMATE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="sns-main-head-1 sns-mt-3 sns-mb-2 sns-sec-8">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">DESIGNED FOR ADVENTURE</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">DESIGNED FOR <br /><span class="sns-border">ADVENTURE</span>
+            </h2>
+            <p class="sns-f-22">The Yukon AT4 exterior is built to handle the rugged terrain of your off-road
+                adventures
+                like a pro.</p>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div sns-m-top-3 sns-mv-mt-10">
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6ae0f9dd7be545668e4d8e46460062c2.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6ae0f9dd7be545668e4d8e46460062c2.jpg"
+                alt="">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20">AT4-Specific Front Design Featuring Front Skid Plate and Approach Angle of
+                    Nearly 32 Degrees</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/661bcbe0aed6423781c960f33582a334.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/661bcbe0aed6423781c960f33582a334.jpg"
+                alt="">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20">Horizontal Red Recovery Hooks*</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cc17a88578e445e699a8ba80c21ec016.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cc17a88578e445e699a8ba80c21ec016.jpg"
+                alt="">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20">20" 6-Spoke Machined Aluminum Wheels with Carbon Gray Metallic Accents and
+                    Goodyear<sup>®</sup> All-Terrain Tires</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center no-gap-2x2-back">
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <h3 class="sns-f-30" style="color:#fff !important;">ADVANCED LED LIGHTING</h3>
+                    <p class="sns-f-20 padd-2x2-1 sns-mv-padd-inline-2" style="color:#fff !important;">Make a
+                        statement and light the way
+                        with LED headlamps and taillamps featuring GMC signature C-shape design, plus daytime
+                        running lamps and LED fog lamps.</p>
+                </div>
+            </div>
+            <div class="no-gap-2x2">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4ef9b662f7ce4d01a66435e82357329a.jpg"
+                    alt="DENALI DETAILS">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4ef9b662f7ce4d01a66435e82357329a.jpg"
+                    alt="DENALI DETAILS">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-m-inline-20">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">NEXT-LEVEL CONVENIENCE</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">NEXT-LEVEL <br /><span class="sns-border">CONVENIENCE</span>
+            </h2>
+            <p class="sns-f-22">Experience elevated satisfaction with these purposeful features:</p>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-4x4 sns-m-top-3 sns-mv-mt-10">
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4b97d536d99e48f4b3be97f2ca9e4406.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4b97d536d99e48f4b3be97f2ca9e4406.jpg"
+                alt="">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20">Available Hands-Free Programmable Power Liftgate with GMC Logo Projection</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/57b2fdecdfe14db9a648d924a416d96c.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/57b2fdecdfe14db9a648d924a416d96c.jpg"
+                alt="">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20">Available Power-Retractable Assist Steps with Perimeter Lighting</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/643849393cb04103bae228df4db156d8.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/643849393cb04103bae228df4db156d8.jpg"
+                alt="">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20">Rainsense Front Wipers</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/84eb81da5e844353995fa98223d6c807.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/84eb81da5e844353995fa98223d6c807.jpg"
+                alt="">
+            <div class="with-gap-4x4-padd sns-mv-mb-0">
+                <p class="sns-f-20">Keyless Entry</p>
+            </div>
+        </div>
+        <!-- <div class="with-gap-4x4">
+  <img class="sns-mob-none" src="" alt="" >
+  <img class="sns-desk-none" src="" alt="" >
+  <div class="with-gap-4x4-padd">
+    <p class="sns-f-20"></p> 
+  </div>
+</div> -->
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">exterior gallery</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">exterior <br /><span class="sns-border">gallery</span></h2>
+        </div>
+    </section>
+
+
+    <div class="main-gallery-div sns-d-flex sns-flex-wrap sns-justify-content-center sns-mx-auto sns-mv-mt-10">
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/fc0f4a2f29a04b08aa42901e6e746077.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/26cbad526de94fb48af6996f80caee94.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/1c741b2b5bc44c9e8fb1ebaddea7f7bc.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/17ced590a0e34a1699a1b1e4c291e3fa.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4761d7297ef34269872705f052b60d4b.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c2e0e44eb5cc4ddc93e995e7adfa54ba.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b68056cec4e648b99c9ad1137c0389f1.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8114db6674e44819b174b7ca04bacb82.jpg"
+                            alt="" class="sns-desk-none">
+
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/460910bd1ecd4328888548952ad1811a.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b55e50fa9fb447f9b1bf29d86c8398d3.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c0df69d08cf84731b0db4e506877a2c2.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/501615f09de4419bad7558ab6ec00a1f.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/23874297bdc6448fb93b7a70d9f9fbd6.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/05dd63e33dcd41da8c7526ea6c3110bb.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ddf80796d85f4eeea3ba6e6c7a34d5c9.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cf9fd069bce444d8aa5ec7a08b2e5a9a.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-4 sns-mv-mt-15">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Yukon&year=2023">
+                <div>View Inventory</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-sec-16">
+            <h3 class="sns-f-26">interior</h3>
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none" style="font-size: 2.0vw !important;">CRAFTED TO PERFECTION</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">CRAFTED TO <br /><span class="sns-border">PERFECTION</span>
+            </h2>
+            <p class="sns-f-30">DISCOVER THE FIRST EVER YUKON DENALI ULTIMATE</p>
+            <p class="sns-f-22 sns-m-top-3">Immerse yourself in Denali’s most sophisticated interior yet. Designed
+                with premium features
+                such as the Bose<sup>®</sup> 18-speaker Performance Series sound system and the 16-way power
+                front seats with massaging
+                features, this full-size luxury SUV offers excellent comfort and convenience.</p>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-4x4 sns-m-top-3 sns-mv-mt-10">
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8d5cb881cf3e4d8c9bd2abd47f68abf6.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8d5cb881cf3e4d8c9bd2abd47f68abf6.jpg"
+                alt="">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20">Alpine Umber interior featuring laser-etched accents</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ccdb94bae9f54090a8c55bf2b93d10cd.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ccdb94bae9f54090a8c55bf2b93d10cd.jpg"
+                alt="">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20">Denali Ultimate laser-etched instrument panel decor with laser-etched
+                    topographical map on wood trims</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7bdc478f3fa0466bab31f970da14175e.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7bdc478f3fa0466bab31f970da14175e.jpg"
+                alt="">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20"><span style="text-transform: none;">Bose<sup>®</sup></span> 18-Speaker
+                    Performance Series</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/99094e2a795c42819c5b33abf45c577a.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/99094e2a795c42819c5b33abf45c577a.jpg"
+                alt="">
+            <div class="with-gap-4x4-padd sns-mv-mb-0">
+                <p class="sns-f-20">Denali Ultimate-exclusive Alpine Umber interior</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-sec-18">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">SOPHISTICATED DENALI INTERIOR</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">SOPHISTICATED <br /><span class="sns-border">DENALI
+                    INTERIOR</span></h2>
+            <p class="sns-f-22">Immerse yourself in an impeccable design with three available Denali-exclusive
+                interior color themes featuring premium perforated leather seating surfaces, Denali-exclusive
+                Fractal stitching and authentic wood details.</p>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div sns-m-top-3 sns-mv-mt-10">
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4ccd13ebdd8e4a778b48ce715d5dbc3e.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4ccd13ebdd8e4a778b48ce715d5dbc3e.jpg"
+                alt="">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">UNIQUE FRACTAL STITCHING</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0923b36d761c49599130ef572a0b9a2e.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0923b36d761c49599130ef572a0b9a2e.jpg"
+                alt="">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">AUTHENTIC WOOD DETAILS</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c2fb52963ff44358a7cb6c015eaf7f3e.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c2fb52963ff44358a7cb6c015eaf7f3e.jpg"
+                alt="">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">PIVOTING WOOD DOOR IN CENTER CUPHOLDER
+                    CONSOLE</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center no-gap-2x2-back">
+            <div class="no-gap-2x2">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4ca40bb2e1f5447b9254b11a858d0536.jpg"
+                    alt="DENALI DETAILS">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4ca40bb2e1f5447b9254b11a858d0536.jpg"
+                    alt="DENALI DETAILS">
+            </div>
+
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <h3 class="sns-f-30" style="color:#fff !important;">ATHLETIC AT4 INTERIOR</h3>
+                    <p class="sns-f-20 padd-2x2-1 " style="color:#fff !important;">The Yukon AT4 full-size SUV
+                        features an athletic Jet Black interior with AT4-exclusive Brandy accents and dark brushed
+                        aluminum details. Elevate every drive with heated and ventilated* driver and front-passenger
+                        perforated leather seating surfaces that include embroidered AT4 badging on the front-seat
+                        head restraints.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-sec-21">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">REFINED STYLINGS OF SLE AND SLT</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none sns-mv-padd-inline-10">REFINED STYLINGS OF SLE <br /><span
+                    class="sns-border">AND
+                    SLT</span></h2>
+            <p class="sns-f-22">The sleek interiors are designed with premium materials, including aluminum details,
+                accent
+                stitching throughout and first- and second-row perforated leather-appointed seating in SLT.</p>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div-1x1 sns-m-top-3 sns-mv-mt-10">
+        <div class="with-gap-1x1">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/505cd65d64a448f1a8f0e2201b7edae9.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/505cd65d64a448f1a8f0e2201b7edae9.jpg"
+                alt="">
+            <div class="with-gap-1x1-padd">
+                <p class="sns-f-20 sns-fw-600">DARK WALNUT/SLATE</p>
+            </div>
+        </div>
+        <div class="with-gap-1x1">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a0f492311e7c483cace5e7e9e63d3993.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a0f492311e7c483cace5e7e9e63d3993.jpg"
+                alt="">
+            <div class="with-gap-1x1-padd">
+                <p class="sns-f-20 sns-fw-600">JET BLACK</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mb-2 sns-sec-21">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">ELEVATE YOUR AMENITIES</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">ELEVATE YOUR <br /><span class="sns-border">AMENITIES</span>
+            </h2>
+            <p class="sns-f-22">No matter which trim you choose, the 2023 Yukon’s interior refinement, advanced
+                technologies
+                and welcoming features give you a premium driving experience.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div
+            class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center no-gap-2x2-back sns-m-top-3 sns-mv-mt-10">
+
+
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <h3 class="sns-f-30" style="color:#fff !important;">POWER-SLIDING CENTER CONSOLE</h3>
+                    <p class="sns-f-20 padd-2x2-1 " style="color:#fff !important;">At the touch and hold of a
+                        button, the available Power-Sliding Center Console conveniently slides back up to 10" to
+                        provide additional storage room for personal items. Standard on Denali Ultimate and Denali.
+                        Available on AT4 and SLT.</p>
+                </div>
+            </div>
+            <div class="no-gap-2x2">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4089997827704ee19cdf254e63780cb1.jpg"
+                    alt="DENALI DETAILS">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4089997827704ee19cdf254e63780cb1.jpg"
+                    alt="DENALI DETAILS">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">PREMIUM ACCOMMODATIONS</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">PREMIUM <br /><span class="sns-border">ACCOMMODATIONS</span>
+            </h2>
+
+        </div>
+    </section>
+
+
+
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ea6e7a074b7f4902a47660ba12316f85.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ea6e7a074b7f4902a47660ba12316f85.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">REFINED COMFORT</h3>
+                    <p class="sns-f-20 padd-6x6-1">Yukon’s comfortably crafted interior enhances your driving
+                        experience
+                        with the standard Tri-zone Automatic Climate Control. Additional available features include:
+                    </p>
+                    <ul class="ul-1">
+                        <li class="sns-f-20">Heated and Ventilated Front Seats* (Standard on Denali Ultimate,
+                            Denali, AT4 & SLT)</li>
+                        <li class="sns-f-20">Heated Steering Wheel (Standard on Denali Ultimate, Denali and AT4.
+                            Available on SLT)</li>
+                        <li class="sns-f-20">Heated Second-Row Outboard Seats (Standard on Denali Ultimate, Denali
+                            and AT4. Available on SLT)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">SPACIOUS VERSATILITY</h3>
+                    <p class="sns-f-20 padd-6x6-1">Experience flexible seating and storage options:</p>
+                    <ul>
+                        <li class="sns-f-20">Impressive Second-Row Fold-Flat Seats</li>
+                        <li class="sns-f-20">Second-Row Slide for Entry/Egress for Second and Third Row</li>
+                        <li class="sns-f-20">Available Second-Row Power-Release Fold-and-Tumble Bucket Seats</li>
+                        <li class="sns-f-20">Available Third-Row Power Fold-Flat Seats That Offer an Impressive Rear
+                            Opening and Load Floor for Cargo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/64c4f38957cc42d3af6f93b5bc5da911.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/64c4f38957cc42d3af6f93b5bc5da911.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/14ce2dc7e55448ab90b310d6d53622f5.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/14ce2dc7e55448ab90b310d6d53622f5.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30 ">10.2" DIAGONAL PREMIUM GMC INFOTAINMENT SYSTEM* WITH GOOGLE BUILT-IN*
+                        COMPATIBILITY</h3>
+                    <p class="sns-f-20 padd-6x6-1">Includes Google Maps*, Google Play* App Store and Google
+                        Assistant, and downloadable in-vehicle apps.*</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30">DENALI ULTIMATE-EXCLUSIVE 18-SPEAKER BOSE PERFORMANCE SERIES AUDIO SYSTEM
+                    </h3>
+                    <p class="sns-f-20 padd-6x6-1">Immerse yourself in the impressive sound quality of Bose* audio
+                        featuring the premium 18-speaker system.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6b59c6624fc74bd79ad5aa56b8d8e6f5.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6b59c6624fc74bd79ad5aa56b8d8e6f5.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/da6f2663de614b05904afcf41bb1bb30.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/da6f2663de614b05904afcf41bb1bb30.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30">PANORAMIC SUNROOF</h3>
+                    <p class="sns-f-20 padd-6x6-1">The panoramic sunroof features dual panes, tilt sliding with
+                        express-open and -close, and a power sunshade. Standard on Denali Ultimate.Available on
+                        Denali, AT4 and SLT.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30">DUAL 12.6" DIAGONAL REAR-SEAT MEDIA TOUCH SCREENS</h3>
+                    <p class="sns-f-20 padd-6x6-1">There is entertainment for your backseat passengers with the
+                        Rear-Seat Media System which offers access to streaming favorites like Hulu and YouTube.
+                        Standard on Denali Ultimate. Available on Denali, AT4 and SLT.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/db2c716020dc4a049c22fb5794ae06a3.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/db2c716020dc4a049c22fb5794ae06a3.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/eb966a1e2c9f4e8d917e3c19963af53a.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/eb966a1e2c9f4e8d917e3c19963af53a.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">AVAILABLE CHARGING STATIONS</h3>
+                    <ul class="sns-mb-3 sns-mv-margin-bottom-0">
+                        <li class="sns-f-20">Up to Six USB Ports*</li>
+                        <li class="sns-f-20">Two 110-Volt Power Outlets</li>
+                        <li class="sns-f-20">One 12-Volt Power Outlet</li>
+                        <li class="sns-f-20">Available Wireless Charging*</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-mv-mt-0">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">Interior gallery</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">Interior <br /><span class="sns-border">gallery</span></h2>
+
+        </div>
+    </section>
+
+
+    <div class="main-gallery-div sns-d-flex sns-flex-wrap sns-justify-content-center sns-mx-auto ">
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3c33002f565b4a1f9c08d44ef8170ae8.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/11bb068a46114430b3f8ad586842ee20.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9effd975cf8c4c6c9dcec13ba61834fe.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/dbe67dcea39644a8889f47f77b2df941.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9e8b29e031d04df4a7f6fc11130d1d44.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/345675f0a443409ba76385668f2249da.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a1794f303af54c09a84c2cf19f480cb3.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/66b6bedad36c4c6d9f7c3ef20f4d2990.jpg"
+                            alt="" class="sns-desk-none">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/53d8d4c2177d476283ebfa6fee83881d.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a830c45caeab4fb68e562cc06e7d0073.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/32f07ac468ca46ed99793a1f0f318d64.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8c2497f0dd8b410d9f7782724c34f127.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8dad8f101d1f438d86ab46f3559c8d08.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2fdd4fcc63034806ad2b87420b28546d.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-5 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-m-inline-20">
+            <h3 class="sns-f-26">Capability</h3>
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">POWER YOU CAN FEEL</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">POWER YOU <br /><span class="sns-border">CAN FEEL</span>
+            </h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/1e00e2c592b543cdb2a79ec1d160944e.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/1e00e2c592b543cdb2a79ec1d160944e.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">5.3L V8 ENGINE</h3>
+                    <ul class="sns-mb-3 sns-m-block-0">
+                        <li class="sns-f-20">355 Horsepower and 383 lb.-ft. of Torque</li>
+                        <li class="sns-f-20">10-Speed Automatic Transmission</li>
+                        <li class="sns-f-20">EPA-estimated MPG (2WD): 15 city/20 hwy*</li>
+                        <li class="sns-f-20">Direct Injection and Variable Valve Timing</li>
+                    </ul>
+                    <p class="sns-f-20">Standard on AT4, SLT and SLE.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">6.2L V8 ENGINE</h3>
+                    <ul class="sns-mb-3 sns-m-block-0">
+                        <li class="sns-f-20">420 Horsepower and 460 lb.-ft. of Torque</li>
+                        <li class="sns-f-20">10-Speed Automatic Transmission</li>
+                        <li class="sns-f-20">EPA-estimated MPG (2WD): 14 city/20 hwy*</li>
+                        <li class="sns-f-20">Direct Injection and Variable Valve Timing</li>
+
+                    </ul>
+                    <p class="sns-f-20 sns-m-inline-25">Standard on Denali Ultimate and Denali. Available on AT4.
+                    </p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/feb525429fbe43b6833dbba869160cbc.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/feb525429fbe43b6833dbba869160cbc.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/31faa066b15d467a8e7df6a810768bac.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/31faa066b15d467a8e7df6a810768bac.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30" style="text-transform: none!important;">3.0L Duramax<sup>®</sup> TURBO-DIESEL ENGINE</h3>
+                    <ul class="sns-mb-3 sns-m-block-0">
+                        <li class="sns-f-20">277 Horsepower and 460 lb.-ft. of Torque</li>
+                        <li class="sns-f-20">10-Speed Automatic Transmission</li>
+                        <li class="sns-f-20">Up to 756-mile range* on a full tank in Yukon XL</li>
+                        <li class="sns-f-20">5-Year/100K-Mile Limited Warranty*</li>
+
+                    </ul>
+                    <p class="sns-f-20">Available on Denali Ultimate, Denali, SLT and SLE.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-sec-33">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">ADVENTURE LIKE YOU MEAN IT</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">ADVENTURE LIKE <br /><span class="sns-border">YOU MEAN
+                    IT</span></h2>
+            <p class="sns-f-22">Yukon AT4 delivers rugged capability and exclusive adventure-ready features that
+                help you
+                journey off road.</p>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div sns-m-top-3 sns-mv-mt-10">
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4b3ab5529f7d409c8fde0dd6ec7ad229.jpg"
+                alt=" 20 Wheels with Goodyear<sup>®</sup> All-Terrain Tires">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4b3ab5529f7d409c8fde0dd6ec7ad229.jpg"
+                alt="20 Wheels with Goodyear<sup>®</sup> All-Terrain Tires">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">20" Wheels with Goodyear<sup>®</sup>
+                    All-Terrain Tires</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0c48fa39dbb3445e9f0c0e8b40457ae5.jpg"
+                alt="AT4-Specific Front-End Design with Front Skid Plate and Approach Angle of Nearly 32 Degrees">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0c48fa39dbb3445e9f0c0e8b40457ae5.jpg"
+                alt="AT4-Specific Front-End Design with Front Skid Plate and Approach Angle of Nearly 32 Degrees">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">AT4-Specific Front-End Design with Front
+                    Skid Plate and Approach Angle of Nearly
+                    32 Degrees</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ec29a01c41684310b7022d1adacef457.jpg"
+                alt="AT4 Grille and C-shaped Lighting">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ec29a01c41684310b7022d1adacef457.jpg"
+                alt="AT4 Grille and C-shaped Lighting">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">AT4 Grille and C-shaped Lighting</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center sns-gray">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/267bb7dc8a954c7b965c04a28e727f19.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/267bb7dc8a954c7b965c04a28e727f19.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30" style="color:#fff !important;">2-SPEED AUTOTRAC<sup>®</sup> TRANSFER
+                        CASE</h3>
+                    <p class="sns-f-20 padd-6x6-1" style="color:#fff !important;">Yukon large SUV adapts to driving
+                        conditions with the available 2-speed transfer case that allows you to conveniently switch
+                        into and out of four-wheel drive. Settings include:</p>
+                    <ul class="sns-tab-m-block">
+                        <li class="sns-f-20" style="color:#fff !important;">Neutral</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Two-Wheel-Drive High</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Automatic Four-Wheel Drive</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Four-Wheel-Drive High</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Four-Wheel-Drive Low</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">STATE-OF-THE-ART ADAPTABILITY</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">STATE-OF-THE-<br />ART <br /><span
+                    class="sns-border">ADAPTABILITY</span></h2>
+
+        </div>
+    </section>
+
+
+    <section>
+
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center sns-gray sns-mv-mt-10">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30" style="color:#fff !important;">FIRST-IN-CLASS FOUR-CORNER AIR RIDE ADAPTIVE
+                        SUSPENSION</h3>
+                        <div class="sns-nic-mr-25">
+                    <ul class="sns-mb-3 sns-tab-m-block ">
+                        <li class="sns-f-20" style="color:#fff !important;">Delivers a comfortable ride</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Refined driving dynamics by adjusting
+                            the suspension to the driving conditions</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Raises the vehicle up to 2" for
+                            increased clearance</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Standard on Denali Ultimate, available
+                            on Denali and AT4</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/601cf8bce3564117bd709288f907654e.jpg"
+                    alt="FIRST-IN-CLASS FOUR-CORNER AIR RIDE ADAPTIVE SUSPENSION" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/601cf8bce3564117bd709288f907654e.jpg"
+                    alt="FIRST-IN-CLASS FOUR-CORNER AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">OFF-ROAD READY</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none"><span class="sns-border">OFF-ROAD READY</span></h2>
+
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ba3a3a2e8c1341fcbd5a0d9dbab8f7ac.jpg"
+                    alt="TRACTION SELECT SYSTEM" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ba3a3a2e8c1341fcbd5a0d9dbab8f7ac.jpg"
+                    alt="TRACTION SELECT SYSTEM" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30">TRACTION SELECT SYSTEM</h3>
+                    <p class="sns-f-20 padd-6x6-1">Quickly switch between Sport Mode, Off-Road Mode (4WD modes only)
+                        or Tow/Haul Mode to optimize powertrain calibrations, traction control settings and
+                        stability control system calibrations.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30">ACTIVE RESPONSE 4WD<sup>™</sup> SYSTEM</h3>
+                    <p class="sns-f-20 padd-6x6-1">Confidently maneuver slick or off-road conditions while this
+                        feature seamlessly delivers optimal torque to each wheel to improve traction. Standard on
+                        Denali Ultimate. Available on Denali and AT4.</p>
+
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3d5b1fd01d19429bba3189ba478c18a2.jpg"
+                    alt="ACTIVE RESPONSE 4WD<sup>™</sup> SYSTEM" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3d5b1fd01d19429bba3189ba478c18a2.jpg"
+                    alt="ACTIVE RESPONSE 4WD<sup>™</sup> SYSTEM" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6e0875ac9a10498592ad9ed60314859d.jpg"
+                    alt="HILL DESCENT CONTROL" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6e0875ac9a10498592ad9ed60314859d.jpg"
+                    alt="HILL DESCENT CONTROL" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30">HILL DESCENT CONTROL</h3>
+                    <ul class="sns-mb-3 sns-m-block-0">
+                        <li class="sns-f-20">Activated by the push of a button on the instrument panel</li>
+                        <li class="sns-f-20">Uses antilock braking to help provide a more controlled descent on
+                            steep declines</li>
+                        <li class="sns-f-20">Standard on Denali Ultimate, Denali 4WD and AT4</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30">HILL START ASSIST</h3>
+                    <p class="sns-f-20 padd-6x6-1">Hill Start Assist holds the brakes momentarily to give you extra
+                        time to switch from the brake to the accelerator under certain conditions. Standard on all
+                        trims.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ef53fe25cf8e446e98392b792dfb279c.jpg"
+                    alt="HILL START ASSIST" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ef53fe25cf8e446e98392b792dfb279c.jpg"
+                    alt="HILL START ASSIST" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e12a8d2c20e64144a8ee21f97db1a880.jpg"
+                    alt="MAGNETIC RIDE CONTROL" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e12a8d2c20e64144a8ee21f97db1a880.jpg"
+                    alt="MAGNETIC RIDE CONTROL" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">MAGNETIC RIDE CONTROL</h3>
+                    <ul class="sns-mb-3 sns-m-block-0">
+                        <li class="sns-f-20">Precisely reads the road up to 1,000 times a seconds</li>
+                        <li class="sns-f-20">Helps provide a smooth and controlled ride</li>
+                        <li class="sns-f-20">Standard on Denali Ultimate, Denali and AT4</li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-sec-18 sns-mv-mt-0">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">TRAILER WITH CONFIDENCE</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">TRAILER WITH <br /><span
+                    class="sns-border">CONFIDENCE</span></h2>
+            <p class="sns-f-22">Trailer confidently with the available Max Trailering Package that delivers a max
+                available
+                towing capacity of 8,400 lbs.* and features an enhanced cooling radiator.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div
+            class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center sns-gray sns-m-top-3 sns-mv-mt-10">
+
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6-inner">
+                    <h3 class="sns-f-30 sns-mob-none" style="color:#fff !important;font-size: 1.2vw !important;">AVAILABLE PROGRADE<sup>™</sup>
+                        TRAILERING SYSTEM</h3>
+                    <h3 class="sns-f-30 sns-desk-none" style="color:#fff !important;">AVAILABLE PROGRADE<sup>™</sup>
+                        TRAILERING SYSTEM</h3>
+                    <p class="sns-f-20 padd-6x6-1" style="color:#fff !important;">Features include:</p>
+                    <ul class="sns-ul-mb-3">
+                        <li class="sns-f-20" style="color:#fff !important;">Hitch Guidance With Hitch View*</li>
+                        <li class="sns-f-20" style="color:#fff !important;">In-Vehicle Trailering App*</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Trailer Side Blind Zone Alert* (Not
+                            Available on SLE)</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Standard on Denali Ultimate</li>
+                    </ul>
+                    <h3 class="sns-f-30 sns-tab-mt-5 sns-mob-none" style="color:#fff !important;font-size: 1.2vw !important;">AVAILABLE ENHANCED TRAILERING </br>
+                        TECHNOLOGY
+                        PACKAGE*</h3>
+                    <h3 class="sns-f-30 sns-tab-mt-5 sns-desk-none" style="color:#fff !important;">AVAILABLE ENHANCED TRAILERING
+                        TECHNOLOGY
+                        PACKAGE*</h3>
+                    <p class="sns-f-20 padd-6x6-1" style="color:#fff !important;">Features include:</p>
+                    <ul class="sns-ul-mb-3">
+                        <li class="sns-f-20" style="color:#fff !important;">Trailer Camera Provisions</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Trailering Assist Guidelines</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Auxiliary Trailer Camera</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Available on Denali Ultimate, Denali and
+                            AT4</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/5b6aadd4cfc44b5ab98d4011cd8a1bb3.jpg"
+                    alt="AVAILABLE PROGRADE<sup>™</sup> TRAILERING SYSTEM" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/5b6aadd4cfc44b5ab98d4011cd8a1bb3.jpg"
+                    alt="AVAILABLE PROGRADE<sup>™</sup> TRAILERING SYSTEM" class="sns-desk-none">
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="sns-four-button sns-mt-3 sns-mv-mt-15">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Choose Your Offer</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-m-inline-20">
+            <h3 class="sns-f-26">TECHNOLOGY & SAFETY</h3>
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">STAY CONNECTED & DRIVE CONFIDENTLY</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">STAY CONNECTED & <br /><span class="sns-border">DRIVE
+                    CONFIDENTLY</span></h2>
+            <p class="sns-f-22">Excellent technology that’s packaged for exceptional convenience.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center sns-gray sns-m-top-3 sns-mv-mt-10">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/149870f5faef4063af808d9f3a61cedd.jpg"
+                    alt="Super Cruise<sup>™</sup>" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/149870f5faef4063af808d9f3a61cedd.jpg"
+                    alt="Super Cruise<sup>™</sup>" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6-inner">
+                    <h3 class="sns-f-30" style="color:#fff !important;">Super Cruise<sup>™</sup></h3>
+                    <p class="sns-f-20 padd-6x6-1" style="color:#fff !important;">Travel hands-free on more than
+                        400,000
+                        miles — and counting — of compatible roads in the U.S. and Canada with available Super
+                        Cruise*.
+                        Under the proper conditions with an attentive driver, Super Cruise driver assistance
+                        technology can
+                        permit hands-free operation of the vehicle.</p>
+                    <ul class="sns-margin-top">
+                        <li class="sns-f-20" style="color:#fff !important;">Allows hands-free automatic lane
+                            changing*</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Pull a trailer hands-free (only while
+                            automatic
+                            hands-free lane changing is disabled)</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Includes 3 years of connectivity to
+                            support
+                            functionality, after which a Connected Services* plan must be purchased</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Available on Denali Ultimate and Denali
+                        </li>
+                    </ul>
+                    <p class="sns-f-20 padd-6x6-1" style="color:#fff !important;">Always pay attention while driving
+                        and
+                        when using Super Cruise. Do not use a handheld device. Requires active Super Cruise plan or
+                        trial.
+                        Terms apply. Visit the Super Cruise page for compatible roads and full details. Automatic
+                        Lane
+                        Change and Lane Change on Demand are not available while trailering.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center sns-mt-3">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30"><span style="text-transform: none;">Bose<sup>®</sup></span> 18-SPEAKER
+                        PERFORMANCE SERIES SOUND</h3>
+                    <p class="sns-f-20 padd-6x6-1">Enjoy remarkable acoustic luxury thanks to Bose<sup>®</sup>
+                        Performance Series Sound’s 18 speakers throughout the full-size SUV's cabin — including
+                        front-seat head restraint speakers.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f3f869e5243c4a7d840bac1dee506730.jpg"
+                    alt="Bose<sup>®</sup> 18-SPEAKER PERFORMANCE SERIES SOUND" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f3f869e5243c4a7d840bac1dee506730.jpg"
+                    alt="Bose<sup>®</sup> 18-SPEAKER PERFORMANCE SERIES SOUND" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2ffcb3cd7ab14cbd9b54d47593994c26.jpg"
+                    alt="AVAILABLE HIGH DEFINITION SURROUNDVISION" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2ffcb3cd7ab14cbd9b54d47593994c26.jpg"
+                    alt="AVAILABLE HIGH DEFINITION SURROUNDVISION" class="sns-desk-none">
+            </div>
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30">AVAILABLE HIGH DEFINITION SURROUNDVISION</h3>
+                    <p class="sns-f-20 padd-6x6-1">High Definition Surround Vision* uses multiple cameras to display
+                        a digital overhead image of the area around your vehicle to help enhance your safety and
+                        visibility. You can select additional views on your camera display. Available on Denali
+                        Ultimate and Denali.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-m-r-14">
+                    <h3 class="sns-f-30">10.2" DIAGONAL GMC PREMIUM INFOTAINMENT CENTER</h3>
+
+                    <p class="sns-f-20 padd-6x6-1">Gain access to hundreds of apps and features without your hands
+                        leaving the wheel:</p>
+                    <ul>
+                        <li class="sns-f-20">Google built-in* Compatibility</li>
+                        <li class="sns-f-20">Available Amazon Alexa Built-In*</li>
+                        <li class="sns-f-20">Apple Carplay*</li>
+                        <li class="sns-f-20">Android Auto* Technologies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d331ad7169294824b4af7addb5268870.jpg"
+                    alt="10.2 DIAGONAL GMC PREMIUM INFOTAINMENT CENTER" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d331ad7169294824b4af7addb5268870.jpg"
+                    alt="10.2 DIAGONAL GMC PREMIUM INFOTAINMENT CENTER" class="sns-desk-none">
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">ELEVATE YOUR VIEW</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none"><span class="sns-border">ELEVATE YOUR VIEW</span></h2>
+
+        </div>
+    </section>
+
+
+    <section>
+
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center sns-gray">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6-inner">
+                    <h3 class="sns-f-30" style="color:#fff !important;">15" DIAGONAL HEAD-UP DISPLAY</h3>
+                    <p class="sns-f-20 padd-6x6-1" style="color:#fff !important;">Help keep your focus on the road
+                        with the available multicolor 15" diagonal Head-Up Display that projects customizable
+                        vehicle information directly onto the windshield, such as:</p>
+                    <ul class="sns-ul-mb-3">
+                        <li class="sns-f-20" style="color:#fff !important;">Super Cruise* (late availability);
+                            available on Denali Ultimate and Denali. Under the proper conditions with an attentive
+                            driver, Super Cruise driver assistance technology can permit hands-free operation of the
+                            vehicle.</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Speed Limit</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Driving Speed</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Audio</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Lane Departure Warning*</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Forward Collision Alert*</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Off-Road Inclinometer that measures fore
+                            and aft tilt, front tire angle, and left and right tilt</li>
+                        <li class="sns-f-20" style="color:#fff !important;">Standard on Denali Ultimate and Denali;
+                            Available on AT4</li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3244b7989f094ad387e2bbcbccd82faa.jpg"
+                    alt="15 DIAGONAL HEAD-UP DISPLAY" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3244b7989f094ad387e2bbcbccd82faa.jpg"
+                    alt="15 DIAGONAL HEAD-UP DISPLAY" class="sns-desk-none">
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-sec-18">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">UP TO 13 CAMERA VIEWS</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">UP TO 13 CAMERA <br /><span class="sns-border">VIEWS</span>
+            </h2>
+            <p class="sns-f-22">From the parking lot to the trail, the available 13 camera views* for the Yukon
+                full-size
+                SUV will give you a fresh point of view and help you confidently maneuver your surroundings.
+                Available on
+                Denali Ultimate and Denali.</p>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div sns-m-top-3 sns-mv-mt-10">
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0849d7f8a8f341f58ba341efd830ed59.jpg"
+                alt="HIGH-DEFINITION SURROUND VISION">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0849d7f8a8f341f58ba341efd830ed59.jpg"
+                alt="HIGH-DEFINITION SURROUND VISION">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">HIGH-DEFINITION SURROUND VISION</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/63dad0ddd8bc406980bb9002f1f88889.jpg"
+                alt="REAR CAMERA MIRROR">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/63dad0ddd8bc406980bb9002f1f88889.jpg"
+                alt="REAR CAMERA MIRROR">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">REAR CAMERA MIRROR</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/86e5bf9c069b42e0aa9cb6178be1ead2.jpg"
+                alt="FRONT CAMERA VIEW">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/86e5bf9c069b42e0aa9cb6178be1ead2.jpg"
+                alt="FRONT CAMERA VIEW">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">FRONT CAMERA VIEW</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/82eda2fd922a48988f6c9a60f465eb5d.jpg"
+                alt="REAR CAMERA VIEW">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/82eda2fd922a48988f6c9a60f465eb5d.jpg"
+                alt="REAR CAMERA VIEW">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">REAR CAMERA VIEW</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/bb7b15701ee040d6bb5b7b61dc8dd95c.jpg"
+                alt="FRONT TOP-DOWN VIEW">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/bb7b15701ee040d6bb5b7b61dc8dd95c.jpg"
+                alt="FRONT TOP-DOWN VIEW">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">FRONT TOP-DOWN VIEW</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ae07a073785a4b339526462d5339e941.jpg"
+                alt="REAR TOP-DOWN VIEW">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d60aeabe9e50454ba6982a3dd300bb1e.jpg"
+                alt="REAR TOP-DOWN VIEW">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">REAR TOP-DOWN VIEW</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/18e9427d26724ace9fdfcd1cf4534364.jpg"
+                alt="REAR SIDE VIEW">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/18e9427d26724ace9fdfcd1cf4534364.jpg"
+                alt="REAR SIDE VIEW">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">REAR SIDE VIEW</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f2e7176ffd0e4675ab88435f2dedca94.jpg"
+                alt="FRONT SIDE VIEW">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f2e7176ffd0e4675ab88435f2dedca94.jpg"
+                alt="FRONT SIDE VIEW">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-fw-600">FRONT SIDE VIEW</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e712b349ec42421996108256c5372305.jpg"
+                alt="HITCH GUIDANCE WITH HITCH VIEW">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e712b349ec42421996108256c5372305.jpg"
+                alt="HITCH GUIDANCE WITH HITCH VIEW">
+            <div class="with-gap-3x3-padd sns-mv-margin-bottom-0">
+                <p class="sns-f-20 sns-fw-600">HITCH GUIDANCE WITH HITCH VIEW</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mb-2 sns-sec-18">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">KNOW YOUR SURROUNDINGS</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">KNOW YOUR <br /><span class="sns-border">SURROUNDINGS</span>
+            </h2>
+            <p class="sns-f-22">Watch how High Definition Surround Vision* elevates your off-road experience by
+                helping you
+                avoid nearby objects when taking on the great outdoors. Standard on Denali Ultimate and Denali.
+                Available on
+                AT4 and SLT.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center sns-m-top-3 sns-mv-mt-10">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cb779722b54a4a8bbd8e808b224b640d.jpg"
+                    alt="Google<sup>™</sup> Built-In<sup>®</sup> COMPATIBILITY" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cb779722b54a4a8bbd8e808b224b640d.jpg"
+                    alt="Google<sup>™</sup> Built-In<sup>®</sup> COMPATIBILITY" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">Google<sup>™</sup> Built-In<sup>®</sup> COMPATIBILITY</h3>
+                    <p class="sns-f-20 padd-6x6-1">The key features for your GMC with Google built-in* compatibility
+                        include:</p>
+                    <ul>
+                        <li class="sns-f-20">Google Assistant</li>
+                        <li class="sns-f-20">Google Maps*</li>
+                        <li class="sns-f-20">Google Play* App Store Access</li>
+                        <li class="sns-f-20">100s of Downloadable Third-Party Apps*</li>
+                        <li class="sns-f-20">Continuous Real-Time Map Update</li>
+                        <li class="sns-f-20">3-Year Connectivity Subscription* Included (Standard on Denali
+                            Ultimate, Denali and AT4)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">12" DIAGONAL DRIVER INFORMATION CENTER</h3>
+                    <p class="sns-f-20 padd-6x6-1">Positioned between the vehicle’s gauges, the digital Driver
+                        Information Center presents important vehicle information.</p>
+                    <ul>
+                        <li class="sns-f-20">Convenient access to audio and phone functions</li>
+                        <li class="sns-f-20">All functions are controlled via the steering wheel</li>
+                        <li class="sns-f-20">Choose from four different themes to complement your style</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/97428125231447a9ba26bfa86cda0fd9.jpg"
+                    alt="12 DIAGONAL DRIVER INFORMATION CENTER" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/97428125231447a9ba26bfa86cda0fd9.jpg"
+                    alt="12 DIAGONAL DRIVER INFORMATION CENTER" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/92e67fd016584f6188e01b42fd30ea5f.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/92e67fd016584f6188e01b42fd30ea5f.jpg"
+                    alt="" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">ENTERTAINMENT EXCELLENCE</h3>
+                    <ul class="sns-tab-m-block">
+                        <li class="sns-f-20">12.6" Diagonal High-Definition Dual Rear-Seat Media Touchscreens</li>
+                        <li class="sns-f-20">Includes two Bluetooth<sup>®</sup>* Headphones</li>
+                        <li class="sns-f-20">Two HDMI ports located on the back of the center console</li>
+                        <li class="sns-f-20">Play video, audio and games on devices such as:
+                            PlayStation<sup>®</sup>, Apple TV<sup>®</sup>, Chromecast<sup>®</sup>,
+                            Roku<sup>®</sup>, Amazon Fire TV Stick<sup>®</sup>, or on any available
+                            streaming services</li>
+                        <li class="sns-f-20">With HD streaming* in the vehicle, you have access to a constantly
+                            growing selection of shows and movies on Hulu, YouTube and YouTube Kids (Standard on
+                            Denali Ultimate; Available on Denali, AT4 and SLT)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">myGMC MOBILE APP</h3>
+                    <p class="sns-f-20 padd-6x6-1">The available myGMC Mobile App* is a hand-held innovation to keep
+                        you moving forward.</p>
+                    <ul>
+                        <li class="sns-f-20">A personalized interface for you and your vehicle</li>
+                        <li class="sns-f-20">Access conveniently located Remote Commands* — right from your home
+                            screen</li>
+                        <li class="sns-f-20">Get Vehicle Status at a glance — right on your phone's home screen</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/16dd2344adf54789a789a6f0e531d8dd.jpg"
+                    alt="myGMC MOBILE APP" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/16dd2344adf54789a789a6f0e531d8dd.jpg"
+                    alt="myGMC MOBILE APP" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/33d4d36ce36949aeac9abba32d18dae0.jpg"
+                    alt="WIRELESS APPLE CARPLAY<sup>®</sup> COMPATIBILITY*" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/33d4d36ce36949aeac9abba32d18dae0.jpg"
+                    alt="WIRELESS APPLE CARPLAY<sup>®</sup> COMPATIBILITY*" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">WIRELESS APPLE CARPLAY<sup>®</sup> COMPATIBILITY*</h3>
+                    <p class="sns-f-20 padd-6x6-1">Wirelessly connect your iPhone for access to:</p>
+                    <ul>
+                        <li class="sns-f-20">Apple Music<sup>®</sup></li>
+                        <li class="sns-f-20">Apple Maps</li>
+                        <li class="sns-f-20">Siri<sup>®</sup> to send and receive hands-free text messages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">WIRELESS ANDROID AUTO<sup>™</sup> COMPATIBILITY*</h3>
+                    <p class="sns-f-20 padd-6x6-1 sns-mv-mb-0">Wirelessly connect your Android smartphone for access
+                        to:</p>
+                    <ul>
+                        <li class="sns-f-20">Google Assistant</li>
+                        <li class="sns-f-20">Google Maps</li>
+                        <li class="sns-f-20">Google Play</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/01ba92b303284bfeb5e3c74317edf8d5.jpg"
+                    alt="WIRELESS ANDROID AUTO<sup>™</sup> COMPATIBILITY" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/01ba92b303284bfeb5e3c74317edf8d5.jpg"
+                    alt="WIRELESS ANDROID AUTO<sup>™</sup> COMPATIBILITY" class="sns-desk-none">
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2 sns-m-inline-19 sns-mv-mt-0">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">SAFETY ASSIST HIGHLIGHTS</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none">SAFETY ASSIST <br /><span
+                    class="sns-border">HIGHLIGHTS</span></h2>
+            <p class="sns-f-22">The GMC Yukon is equipped with excellent technology and safety features help you
+                stay
+                connected, informed and aware of surrounding vehicles as you confidently navigate the open road.
+                Designed to
+                enhance confidence and help you avoid potential hazards, the available GMC Pro Safety Plus content
+                offers a
+                variety of driver-alert and active safety technologies.</p>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-4x4 sns-m-top-3 sns-mv-mt-10">
+        <div class="with-gap-4x4 sns-m-bot-2">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c6c96b2802ca45b6943d98b5fc0f808d.jpg"
+                alt="LANE CHANGE ALERT WITH SIDE BLIND ZONE ALERT">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c6c96b2802ca45b6943d98b5fc0f808d.jpg"
+                alt="LANE CHANGE ALERT WITH SIDE BLIND ZONE ALERT">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20 sns-fw-600">LANE CHANGE ALERT WITH SIDE BLIND ZONE ALERT</p>
+                <p class="sns-f-20 sns-pt-5">Google Maps</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4 sns-m-bot-2">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7695ed685a63424b82f8fae70f4645d0.jpg"
+                alt="LANE KEEP ASSIST WITH LANE DEPARTURE WARNING">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7695ed685a63424b82f8fae70f4645d0.jpg"
+                alt="LANE KEEP ASSIST WITH LANE DEPARTURE WARNING">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20 sns-fw-600">LANE KEEP ASSIST WITH LANE DEPARTURE WARNING</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4 sns-m-bot-2">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8f6a2139d0934f83a8d08d0e44b21338.jpg"
+                alt="FOLLOWING DISTANCE INDICATOR">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8f6a2139d0934f83a8d08d0e44b21338.jpg"
+                alt="FOLLOWING DISTANCE INDICATOR">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20 sns-fw-600">FOLLOWING DISTANCE INDICATOR</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4 sns-m-bot-2">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/98ec233ad0f54b1c89427cf5ee2ea0e5.jpg"
+                alt="FRONT PEDESTRIAN BRAKING">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/98ec233ad0f54b1c89427cf5ee2ea0e5.jpg"
+                alt="FRONT PEDESTRIAN BRAKING">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20 sns-fw-600">FRONT PEDESTRIAN BRAKING</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4 sns-m-bot-2">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/459e7939a313476bb27dd5bfddd0bf52.jpg"
+                alt="FORWARD COLLISON ALERT AND AUTOMATIC EMERGENCY BRAKING">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/459e7939a313476bb27dd5bfddd0bf52.jpg"
+                alt="FORWARD COLLISON ALERT AND AUTOMATIC EMERGENCY BRAKING">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20 sns-fw-600">FORWARD COLLISON ALERT AND AUTOMATIC EMERGENCY BRAKING</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4 sns-m-bot-2">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d9f96314ad9649649b9448b8e89b7c4e.jpg"
+                alt="REAR CROSS TRAFFIC ALERT">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d9f96314ad9649649b9448b8e89b7c4e.jpg"
+                alt="REAR CROSS TRAFFIC ALERT">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20 sns-fw-600">REAR CROSS TRAFFIC ALERT</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4 sns-m-bot-2">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e09da174794e4ba3ad8849c595b9c87c.jpg"
+                alt="REAR PARK ASSIST">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e09da174794e4ba3ad8849c595b9c87c.jpg"
+                alt="REAR PARK ASSIST">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20 sns-fw-600">REAR PARK ASSIST</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4 sns-m-bot-2">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3123bd9909df4d43bd4d69668383e966.jpg"
+                alt="INTELLIBEAM<sup>®</sup> AUTO HIGH BEAMS">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3123bd9909df4d43bd4d69668383e966.jpg"
+                alt="INTELLIBEAM<sup>®</sup> AUTO HIGH BEAMS">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20 sns-fw-600">INTELLIBEAM<sup>®</sup> AUTO HIGH BEAMS</p>
+            </div>
+        </div>
+
+        <!-- <div class="with-gap-4x4">
+  <img class="sns-mob-none" src="" alt="" >
+  <img class="sns-desk-none" src="" alt="" >
+  <div class="with-gap-4x4-padd">
+    <p class="sns-f-20"></p> 
+  </div>
+</div> -->
+    </div>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center sns-mt-3">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/80bebdf5f6a64ef79723163ac92c87cc.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/80bebdf5f6a64ef79723163ac92c87cc.jpg"
+                    alt="" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6-2">
+                    <h3 class="sns-f-30">ADVANCED SECURITY PACKAGE</h3>
+                    <p class="sns-f-20 padd-6x6-1">Help protect your Yukon with an advanced vehicle security system.
+                        Standard on Denali Ultimate, available on Denali. Features include:</p>
+                    <ul>
+                        <li class="sns-f-20">Glass break sensors</li>
+                        <li class="sns-f-20">Ultrasonic motion detectors</li>
+                        <li class="sns-f-20">An inclination sensor that trips an alarm before a tire leaves the
+                            ground,
+                            helping to prevent wheel or vehicle theft when your vehicle is in park</li>
+                        <li class="sns-f-20">A high-pitched, self-powered siren that sounds completely different
+                            from the
+                            vehicle horn. This will sound when the vehicle alarm sounds or if the battery cable is
+                            cut</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6-2">
+                    <h3 class="sns-f-30">OnStar<sup>®</sup> & GMC CONNECTED SERVICES</h3>
+                    <p class="sns-f-20 padd-6x6-1">Receive three years of the OnStar and GMC Connected Services
+                        Premium Plan
+                        with your new 2023 Yukon, including the Connected Vehicle Plan* and the OnStar Safety &
+                        Security
+                        Plan.*</p>
+                    <ul>
+                        <li class="sns-f-20">Connected Vehicle Plan includes connectivity for available In-Vehicle
+                            apps,*
+                            Remote Access Plan* and In-Vehicle Wi-Fi Hotspot* data.</li>
+                        <li class="sns-f-20">Connected Vehicle Plan is standard with Denali Ultimate, Denali and AT4
+                        </li>
+                        <li class="sns-f-20">OnStar Safety & Security Plan includes access to the OnStar Guardian
+                            App,*
+                            Automatic Crash Response,* Emergency Services,* Crisis Assist,* Roadside Assistance* and
+                            Stolen
+                            Vehicle Assistance.*</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/144d1faa747e4900a8ceb554198edbb5.jpg"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/144d1faa747e4900a8ceb554198edbb5.jpg"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+        </div>
+
+
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/675804e263564efab02afbad7106ddc9.png"
+                    alt="" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/675804e263564efab02afbad7106ddc9.png"
+                    alt="AIR RIDE ADAPTIVE SUSPENSION" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6-2">
+                    <h3 class="sns-f-30">TEEN DRIVER
+                    </h3>
+                    <p class="sns-f-20 padd-6x6-1">This built-in system helps encourage better driving habits for
+                        new
+                        drivers. If equipped, it automatically activates certain safety systems and allows parents
+                        to set
+                        limits on other features. There is even an in-vehicle report card that parents can access to
+                        help
+                        with coaching their teen driver.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="sns-four-button sns-mt-3 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 sns-mt-5 sns-mb-2">
+
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">YUKON TRIMS</h2>
+            <h2 class="sns-f-40 sns-mb-3 sns-desk-none"><span class="sns-border">YUKON TRIMS</span></h2>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div model-gap">
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cf7e8f98475f4d6e9d73a114fc87f36b.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cf7e8f98475f4d6e9d73a114fc87f36b.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">SLE</p>
+                <p class="sns-f-20 sns-padding-block-3" style="color: #565656 !important;">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: normal !important;">$57,400*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0e053e2c38db4f36a20825e7e24a1a1b.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0e053e2c38db4f36a20825e7e24a1a1b.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">SLT</p>
+                <p class="sns-f-20 sns-padding-block-3" style="color: #565656 !important;">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: normal !important;">$64,100*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7073e988282646d892e32133af25a7c5.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7073e988282646d892e32133af25a7c5.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">AT4</p>
+                <p class="sns-f-20 sns-padding-block-3" style="color: #565656 !important;">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: normal !important;">$70,705*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/24c7bd62df074fa29b98d47fdde05bce.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/24c7bd62df074fa29b98d47fdde05bce.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">DENALI</p>
+                <p class="sns-f-20 sns-padding-block-3" style="color: #565656 !important;">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: normal !important;">$74,805*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7735901154fe4bf79885cf24811e6e74.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7735901154fe4bf79885cf24811e6e74.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">DENALI ULTIMATE</p>
+                <p class="sns-f-20 sns-padding-block-3" style="color: #565656 !important;">Starting at</p>
+                <p class="sns-f-40" style="letter-spacing: normal !important;">$96,755*</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-3">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-f-b "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Yukon&year=2023">
+                <div>View Inventory</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b-r "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Choose Your Offer</div>
+            </a>
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="seo">
+        <div class="seo-per sns-f-20">
+            <p><b>Introducing the 2023 GMC Yukon & Yukon XL, in Irvine, CA, from Laguna Niguel GMC</b></p>
+            <p>Laguna Niguel GMC dealership is ecstatic to announce the 2023 Yukon and Yukon XL 7-passenger and
+                8-passenger
+                SUVs
+                designed with first-class features and cutting-edge technology that offer convenience, luxury, and
+                comfort.
+                These SUVs
+                boast captivating exteriors that stand out among other large SUVs. Their powerful and bold wheels
+                allow you
+                to maintain
+                control of the road while turning heads in every way.</p>
+            <p>The interiors are perfected with impeccable colors, themes, and designs. The comfortable interior
+                enhances
+                your driving
+                experience and skills. With the Bose<sup>®</sup> 18-speaker Performance Series sound system, you
+                can enjoy great music
+                with friends
+                and families while driving and smoothly move your body on the premium perforated leather seats.
+                You'll
+                indeed have a fun
+                and relaxing time behind the wheel.</p>
+            <p>Experience the excitement of hands-free traveling on more than 400,000 miles thanks to the Super
+                Cruise
+                Driver
+                Assistance Technology. Moreover, the 2023 GMC Yukon & Yukon XL offers an Advanced Security System
+                featuring
+                glass break
+                sensors, inclination sensors, and ultrasonic motion detectors. To test drive the 2023 Yukon & Yukon
+                XL in
+                Irvine, CA,
+                feel free to reach out to us at Laguna Niguel GMC today.</p>
+            <p><b>Which GMC Dealers have the 2023 GMC Yukon & Yukon XL in Irvine, CA, for test drives?</b></p>
+            <p>Laguna Niguel GMC is your trusted GMC vehicle dealership you can rely on. We possess an impressive
+                inventory
+                of new and
+                certified pre-owned GMC models, including the 2023 Yukon & Yukon XL, all set and prepared for a test
+                drive.
+                You can
+                willingly explore our website to search through the full lineup of quality GMC vehicles, parts, and
+                service
+                options we
+                offer at Laguna Niguel GMC.</p>
+            <p>You can also arrange a test drive, gather additional information regarding our finance options, and
+                receive
+                clarity on
+                your questions. The 2023 Yukon & Yukon XL from Irvine, CA, has the High-Definition Surround Vision
+                that uses
+                multiple
+                cameras to display an overhead image of the area around your vehicle. This excellent technology
+                magnifies
+                your
+                visibility and enhances your safety by ensuring you stay safe and aware of cars nearby.</p>
+            <p>The 2023 Yukon & Yukon XL are designed to enhance your confidence as you navigate the open roads,
+                stay alert,
+                and avoid
+                potential hazards. Laguna Niguel GMC dealership delivers top-notch customer service and technical
+                know-how.
+                We are sure
+                to exceed your high expectations. We eagerly await your visit to our showroom and service center in
+                Irvine.
+            </p>
+            <p><b>Where can I test drive a 2023 GMC Yukon & Yukon XL in Irvine, CA?</b></p>
+            <p>Test driving a car allows you to become familiar with and understand its features. Taking it for a
+                spin is
+                undoubtedly
+                the best approach to learning if the vehicle suits your requirements. At Laguna Niguel GMC, we can
+                help you
+                with that
+                first-time experience behind the wheel of the exceptional 2023 Yukon & Yukon XL in Irvine, CA. You
+                can
+                discover why this
+                SUV is impeccable by scheduling a test drive.</p>
+            <p>At Laguna Niguel GMC, we make it easy to get the best auto deals and discover budget-friendly
+                vehicles with
+                our flexible
+                financing options. Our credit experts possess the patience and expertise to enroll you in the
+                financing
+                program that
+                aligns with your budget and needs. Our goal is to transform your dream vehicle into a reality.
+                Contact us
+                today to test
+                drive the 2023 Yukon & Yukon XL.</p>
+        </div>
+        <div class="disc sns-f-20">
+            <p>*The Manufacturer’s Suggested Retail Price excludes destination freight charge, tax, title, license,
+                dealer
+                fees, and
+                optional equipment. Dealer sets final price. <a
+                    href="https://www.gmc.com/tools/destination-freightcharges">Click here
+                    to see all GMC vehicles’ destination freight charges.</a></p>
+
+            <p>*To avoid the risk of injury, never use Recovery Hooks to tow a vehicle. For more information, see
+                the
+                Recovery Hooks
+                section of your Owner's Manual.</p>
+
+            <p>*Feature will not function on certain models without dealer retrofit; see dealer for details.</p>
+
+            <p>*Functionality varies by model. Full functionality requires compatible Bluetooth<sup>®</sup> and
+                smartphone, and USB
+                connectivity
+                for some devices.</p>
+
+            <p>*Google built-in services are subject to limitations and availability may vary by vehicle,
+                infotainment
+                system and
+                location. Select service plan required. Certain Google actions and functionality may require account
+                linking. User
+                terms
+                and privacy statements apply. Google, Google Play, and Google Maps are trademarks of Google LLC.</p>
+
+            <p>*Google Maps is a trademark of Google, Inc. Google, Google Play, and Google Maps are trademarks of
+                Google
+                LLC.</p>
+
+            <p>*Available on select 2017 model year and newer GM vehicles with compatible hardware. Third-party
+                trademarks
+                are the
+                property of their respective third-party owners and used under agreement. Requires active service
+                plan and
+                paid AT&T
+                vehicle data plan. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for
+                details
+                and
+                limitations.</p>
+
+            <p>*Bose<sup>®</sup> is a registered trademark of the Bose Corporation in the U.S. and other
+                countries.</p>
+
+            <p>*Not compatible with all devices.</p>
+
+            <p>*Feature may not be available on certain vehicles. See dealer for feature availability. The system
+                wirelessly
+                charges
+                one compatible mobile device. Some phones have built-in wireless charging technology and others
+                require a
+                special
+                adapter/back cover. To check for phone or other device compatibility, see <a
+                    href="https://www.gmc.com/owners">my.gmc.com/learn</a> or consult
+                your carrier.</p>
+
+            <p>*EPA-estimated 15 city/20 hwy mpg (Yukon 2WD with 5.3L V8 Engine.)</p>
+
+            <p>*EPA-estimated 14 city/20 hwy mpg (Yukon 2WD with 6.2L V8 Engine.)</p>
+
+            <p>*Based on fuel tank capacity for Yukon XL with available 3.0L Duramax Turbo-Diesel engine and EPA
+                est. 27 hwy
+                mpg
+                (2WD).
+                Your range may be less.</p>
+
+            <p>*Whichever comes first. See dealer for limited warranty details.</p>
+
+            <p>*Requires Yukon 2WD with 5.3L gas engine and available Max Trailering Package. Before you buy a
+                vehicle or
+                use it for
+                trailering, carefully review the trailering section of the Owner’s Manual. The weight of passengers,
+                cargo
+                and options
+                or accessories may reduce the amount you can tow.</p>
+
+            <p>*Safety or driver assistance features are no substitute for the driver’s responsibility to operate
+                the
+                vehicle in a
+                safe
+                manner. Read the vehicle Owner’s Manual for important feature limitations and information.</p>
+
+            <p>*Device data connection required. Available on select Apple and Android devices. Some features
+                require active
+                service
+                plan and working electrical system. Service availability, features and functionality vary by
+                vehicle. Terms
+                and
+                limitations apply.</p>
+
+            <p>*Always pay attention while driving and when using Super Cruise. Do not use a handheld device.
+                Requires
+                active Super
+                Cruise plan or trial. Terms apply. Visit <a
+                    href="https://www.gmc.com/connectivity-technology/super-cruise">gmc.com/connectivity-technology/super-cruise</a>
+                for
+                compatible
+                roads and full
+                details.</p>
+
+            <p>*Lane Change on Demand and Automatic Lane Change not available while trailering. Always pay attention
+                while
+                driving
+                and
+                when using Super Cruise. Do not use a hand-held device. Requires active Super Cruise plan or trial.
+                Terms
+                apply. Visit
+                <a
+                    href="https://www.gmc.com/connectivity-technology/super-cruise">gmc.com/connectivity-technology/super-cruise</a>
+                for compatible roads and full details.
+            </p>
+
+            <p>*After initial 3-year period, an eligible Connected Services plan must be purchased. Connected
+                Services vary
+                by
+                vehicle
+                and model and require active service plan, working electrical system, cell reception and GPS signal.
+                Does
+                not include
+                safety services. Super Cruise vehicles are connected to emergency services. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+            </p>
+
+            <p>*Safety or driver assistance features are no substitute for the driver’s responsibility to operate
+                the
+                vehicle in a
+                safe
+                manner. The driver should remain attentive to traffic, surroundings and road conditions at all
+                times.
+                Visibility,
+                weather and road conditions may affect feature performance. Read the vehicle Owner’s Manual for more
+                important feature
+                limitations and information.</p>
+
+            <p>*Google built-in services are subject to limitations and availability may vary by vehicle,
+                infotainment
+                system and
+                location. Select service plan required. Certain Google actions and functionality may require account
+                linking. User
+                terms
+                and privacy statements apply. Google, Android Auto, Google Play, and Google Maps are trademarks of
+                Google
+                LLC.</p>
+
+            <p>*Functionality is subject to limitations and varies by vehicle, infotainment system, and location.
+                Select
+                service
+                plan
+                required. Certain Alexa skills require account linking to use. Certain Alexa functionality is
+                dependent on
+                smart home
+                technology. Amazon, Alexa and all related logos are trademarks of Amazon.com, Inc. or its
+                affiliates. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for
+                additional details.</p>
+
+            <p>*Vehicle user interface is a product of Apple, and its terms and privacy statements apply. Requires
+                compatible
+                iPhone<sup>®</sup>,
+                and data plan rates apply. Apple CarPlay<sup>®</sup> is a trademark of Apple Inc.
+                Siri<sup>®</sup>, iPhone<sup>®</sup> and iTunes<sup>®</sup> are
+                trademarks of
+                Apple Inc., registered in the U.S. and other countries.</p>
+
+            <p>*To use Android Auto on your car display, you need a compatible Android smartphone with an active
+                data plan.
+                You can
+                check which smartphones are compatible at <a
+                    href="https://support.google.com/androidauto/answer/6348019?hl=en&ref_topic=6106969">g.co/androidauto/requirements.</a>
+                Google, Android and Android
+                Auto are trademarks
+                of Google LLC.</p>
+
+            <p>*Safety or driver assistance features are no substitute for the driver’s responsibility to operate
+                the
+                vehicle in a
+                safe
+                manner. Read the vehicle Owner’s Manual for important feature limitations and information. Some
+                camera views
+                require
+                available accessory camera and installation. Not compatible with all trailers. See your dealer for
+                details.
+            </p>
+
+            <p>*Connected services vary by vehicle model and require active service plan, working electrical system,
+                cell
+                reception
+                and
+                GPS signal. Does not include emergency or security services. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+            </p>
+
+            <p>*Go to <a href="https://www.gmc.com/support/vehicle/smartphone-connections/bluetooth-wifi"
+                    style="overflow-wrap: break-word;">https://www.gmc.com/support/vehicle/smartphone-connections/bluetooth-wifi</a>
+                to find out which
+                phones are compatible
+                with the vehicle. Full Bluetooth feature functionality varies by device, model, and software
+                version.</p>
+
+            <p>*Services are subject to limitations, and availability may vary by vehicle, infotainment system,
+                location and
+                active
+                service plan. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details
+                and
+                limitations.
+            </p>
+
+            <p>*Available on select Apple and Android devices. Service availability, features and functionality vary
+                by
+                vehicle,
+                device
+                and the plan you are enrolled in. Terms apply. Device data connection required. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and
+                limitations.</p>
+
+            <p>*Requires paid plan. Lock/unlock feature requires automatic locks. Remote start requires GM
+                factory-installed
+                and
+                enabled remote start system. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for
+                details
+                and limitations.</p>
+
+            <p>*Vehicle user interface is a product of Google, and its terms and privacy statements apply. Requires
+                the
+                Android Auto
+                app on Google Play and a compatible Android<sup>™</sup> smartphone. Data plan rates apply. You
+                can check which
+                smartphones are
+                compatible at <a
+                    href="https://support.google.com/androidauto/answer/6348019?hl=en&ref_topic=6106969">g.co/androidauto/requirements.</a>
+                Android Auto is a trademark of Google LLC.</p>
+
+            <p>*Connected Vehicle Plan does not include emergency or security services. Service varies with
+                conditions and
+                location.
+                Data plans provided by AT&T<sup>®</sup>. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">https://www.onstar.com</a>
+                for details and limitations.</p>
+
+            <p>*OnStar plan, working electrical system, cell reception and GPS signal required. OnStar links to
+                emergency
+                services.
+                See
+                <a href="https://www.onstar.com/?evar25=gmc_disclosure">https://www.onstar.com</a> for details and
+                limitations.
+                Automatic Crash Response: not all vehicles may
+                transmit all crash
+                data. Roadside services provided by Allstate Roadside Service for vehicles only. Limitations and
+                restrictions apply.
+                Stolen Vehicle Assistance requires armed GM factory-installed theft-deterrent system, contact method
+                on file
+                and
+                enrollment to receive alerts. Additional messaging and data rates may apply. Services are intended
+                to assist
+                with
+                vehicle recovery and do not prevent theft or protect against damage or loss.
+            </p>
+
+            <p>*Requires subscription to Remote Access Plan or Unlimited Access Plan. Services are subject to user
+                terms and
+                limitations, and vary by vehicle model. Unlock feature requires automatic locks. Remote start
+                requires GM
+                factory-installed and enabled remote start system. Check <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">here</a> for more details.</p>
+
+            <p>*Service varies with conditions and location. Requires active service and paid AT&T data plan. Visit
+                <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for
+                details and limitations.
+            </p>
+
+            <p>*U.S. and Canada only. Available on select Apple and Android devices. Mobile Crash Response services
+                are
+                intended for
+                use in vehicles only and can connect automatically on Android devices only. Service coverage varies
+                with
+                conditions
+                and
+                location. Service availability, features and functionality vary by device and software version.
+                Device
+                permissions are
+                required for app to operate properly. OnStar links to emergency services. Device and app may not
+                transmit
+                all crash
+                data. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">https://www.onstar.com</a> for
+                details and
+                limitations.</p>
+
+            <p>*Automatic Crash Response: OnStar plan, working electrical system, cell reception and GPS signal
+                required.
+                OnStar
+                links
+                to emergency services. Not all vehicles may transmit all crash data. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+                OnStar
+                Emergency-Certified Advisors: Certified by the International Academies of Emergency Dispatch.</p>
+
+            <p>*OnStar plan, working electrical system, cell reception and GPS signal required. OnStar links to
+                emergency
+                services.
+                See
+                <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+            </p>
+
+            <p>*OnStar plan, working electrical system, cell reception, and GPS signal required. OnStar links to
+                emergency
+                services.
+                See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for coverage map,
+                details, and
+                system
+                limitations. Limited-time offer. Services provided by OnStar in its
+                sole discretion.</p>
+
+            <p>*Roadside services provided by Allstate Roadside Service for vehicles only. Limitations and
+                restrictions
+                apply.</p>
+
+            <p>*OnStar plan, working electrical system, cell reception and GPS signal required. OnStar links to
+                emergency
+                services.
+                See
+                <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+                Stolen
+                Vehicle
+                Assistant requires armed GM factory-installed theft-deterrent
+                system, contact method on file and enrollment to receive alerts. Additional messaging and data rates
+                may
+                apply.
+                Services
+                are intended to assist with vehicle recovery and do not prevent theft or protect against damage or
+                loss.
+            </p>
+        </div>
+    </div>
+
+
+</div>
+<script>
+window.addEventListener('load-complete' || 'load', function () {
+    // Function to add a link to the head
+function addLink(rel, href, crossorigin) {
+var link = document.createElement('link');
+link.rel = rel;
+link.href = href;
+if (crossorigin) {
+link.crossOrigin = "anonymous";
+}
+document.head.appendChild(link);
+}
+
+// Add preconnect links
+addLink('preconnect', 'https://fonts.googleapis.com');
+addLink('preconnect', 'https://fonts.gstatic.com', true);
+
+// Add stylesheet link
+addLink('stylesheet', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&display=swap');
+});
+</script>
+https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap
+https://fonts.googleapis.com
+https://fonts.gstatic.com
+https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap

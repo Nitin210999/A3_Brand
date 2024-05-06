@@ -1,0 +1,744 @@
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900");
+
+  .main-div {
+    font-family: "Montserrat", sans-serif !important;
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .main-div p,
+  h1,
+  h2,
+  span {
+    letter-spacing: initial !important;
+    font-family: "Montserrat", sans-serif !important;
+  }
+
+  .main-div a {
+    text-decoration: underline;
+    font-family: "Montserrat", sans-serif !important;
+  }
+
+  .sns-container {
+    margin-right: auto;
+    margin-left: auto;
+
+    max-width: 1440px !important;
+  }
+
+  .sns-container h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5 {
+    padding-block: 0.2em !important;
+  }
+
+  .sns-mt-0 {
+    padding-top: 0 !important;
+  }
+
+  .sns-container {
+    padding: 0 !important;
+  }
+
+  /* .sns-container h2{
+           line-height: 2em;
+        } */
+  .sns-mb-2 {
+    margin-bottom: 15px;
+  }
+
+  .services a {
+    text-decoration: underline !important;
+  }
+
+  .italic {
+    font-style: italic;
+    line-height: 1em !important;
+  }
+
+  .header-text {
+    background: #93ccc9;
+    text-align: center;
+    padding: 20px 0px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 99%;
+    margin-inline: auto;
+  }
+
+  .header-text h1 {
+    font-size: clamp(23px, 2vw, 30px);
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    line-height: 30px;
+    color: #ffffff;
+    margin: 0px;
+    font-weight: 400;
+  }
+
+  .banner {
+    background-image: url(https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-cad/about_messages/ceb4d7e088e9421c90b7a43b774b925f.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+    align-items: center;
+  }
+
+  .banner h1 {
+    color: #fff;
+    font-size: clamp(14px, 3vw, 50px);
+    letter-spacing: 1px;
+    margin-bottom: 0.5em !important;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  .banner a {
+    background-color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none !important;
+    padding: 7px 20px;
+    white-space: nowrap;
+  }
+
+  .sns-main-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .ptt {
+    text-align: center !important;
+    white-space: nowrap;
+  }
+
+  .hours-wrap table {
+    max-width: 100%;
+    width: 300px;
+    border: none;
+  }
+
+  .sns-container table td {
+    padding: 0em !important;
+  }
+
+  .mapouter {
+    position: relative;
+    text-align: right;
+  }
+
+  .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+  }
+
+  .gmap_canvas iframe {
+    margin-bottom: -6px;
+    height: 500px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .banner {
+      height: calc(41vw + 0vh);
+    }
+  }
+
+  @media screen and (max-width: 776px) {
+    .call-us h1 a::before {
+      bottom: 0px !important;
+      height: 4px !important;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .banner a {
+      font-size: 8px;
+      padding: 3px 3px;
+    }
+
+    .banner h1 {
+      font-size: clamp(10px, 3vw, 50px);
+    }
+
+    .dealership-name h1 {
+      font-size: 16px !important;
+    }
+
+    .sns-main-20 {
+      padding-left: 9px;
+      padding-right: 9px;
+    }
+  }
+
+  .services-wrap .services-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  .services-wrap .services {
+    text-decoration-color: #000 !important;
+    flex: 0 0 auto;
+    width: 26%;
+    background-color: #ffffff;
+    border: 1px solid #e5e6eb;
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+
+  .services-wrap .services .services-img {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .services-wrap .services p {
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    /* position: relative !important; */
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  /* .services-wrap .services p::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: #000000;
+        } */
+
+  @media screen and (max-width: 1110px) {
+    .services-wrap .services-row {
+      justify-content: space-around;
+    }
+
+    .services-wrap .services {
+      width: 33%;
+    }
+  }
+
+  @media screen and (max-width: 866px) {
+    .services-wrap .services-row {
+      justify-content: space-between;
+    }
+
+    .services-wrap .services {
+      width: 28%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .services-wrap .services {
+      width: 47%;
+      padding: 5px;
+    }
+
+    .header-text h1 {
+      padding: 0 7px;
+      font-size: clamp(15px, 0.8vw, 23px);
+    }
+
+    .main-text h2 {
+      font-size: 16px !important;
+    }
+
+    .main-text p {
+      font-size: 14px !important;
+    }
+
+    .services-wrap .services .services-img {
+      min-height: auto;
+    }
+
+    .services-wrap .services p {
+      font-size: clamp(10px, 3vw, 14px);
+    }
+
+    table > tbody > tr > td {
+      font-size: 14px;
+    }
+
+    .services-wrap .services-row {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .call-us h1 {
+      font-size: 20px !important;
+    }
+
+    .call-us h1 a {
+      font-size: 25px !important;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 600px) {
+    .banner a {
+      font-size: 16px;
+      padding: 3px 3px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .services-wrap .services {
+      width: 47%;
+    }
+  }
+
+  .dealership-name {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .dealership-name h1 {
+    font-size: 33px;
+    letter-spacing: 0px;
+    color: #000000;
+    font-weight: 400;
+    text-align: center;
+    margin: 0px;
+    text-transform: capitalize;
+  }
+
+  @media screen and (max-width: 866px) {
+    .dealership-name h1 {
+      font-size: 30px;
+    }
+  }
+
+  .container-max-md {
+    padding: 0 !important;
+  }
+
+  .main-text {
+    background-color: #ffffff;
+    color: #000;
+    border: 2px solid #e5e6eb;
+    padding: 40px;
+  }
+
+  .main-text .image {
+    /* height: 470px; */
+    overflow: hidden;
+  }
+
+  /* .main-text .image img {
+        position: relative;
+        top: 50%;
+        transform: translate(0px, -50%);
+        width: 100%;
+    } */
+
+  .main-text h2 {
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: initial;
+  }
+
+  .main-text p {
+    font-size: 17px;
+    line-height: 1.37;
+  }
+
+  @media screen and (max-width: 866px) {
+    .main-text {
+      padding: 30px;
+    }
+
+    .main-text .image {
+      height: unset;
+    }
+  }
+
+  @media screen and (max-width: 866px) {
+    .main-text {
+      padding: 20px;
+    }
+
+    .main-text .image img {
+      transform: unset;
+    }
+  }
+
+  .call-us {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .call-us h1 {
+    font-size: 27px;
+    letter-spacing: 3px;
+    color: #000000;
+    font-weight: 400;
+    text-align: center;
+    margin: 0px;
+    line-height: 2em !important;
+  }
+
+  .call-us h1 a {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    color: #000;
+    text-decoration: none;
+    font-size: 70px;
+    letter-spacing: 0.4rem;
+    position: relative;
+  }
+
+  .call-us h1 a::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+  }
+
+  /* .call-us h1 a {
+            text-decoration: underline !important;
+        } */
+
+  @media screen and (max-width: 800px) {
+    .call-us h1 {
+      font-size: 25px;
+    }
+
+    .call-us h1 a {
+      font-size: 30px;
+    }
+  }
+
+  .info {
+    display: flex;
+    margin-bottom: 50px;
+    border: 2px solid #e5e6eb;
+  }
+
+  .hours-wrap {
+    width: 50%;
+    color: #000;
+    background-color: #ffffff;
+  }
+
+  .hours-wrap .hours {
+    margin-top: auto;
+    display: block;
+    top: 50%;
+    position: relative;
+    transform: translate(0px, -50%);
+    padding-left: 50px;
+  }
+
+  .hours-wrap .hours .sales-hours {
+    color: #000;
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+  .map-wrap {
+    width: 50%;
+  }
+
+  .mapouter {
+    position: relative;
+    text-align: right;
+  }
+
+  .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+  }
+
+  .gmap_canvas iframe {
+    margin-bottom: -6px;
+    height: 500px;
+  }
+
+  @media screen and (max-width: 866px) {
+    .hours-wrap {
+      width: 100%;
+      border: 0px;
+    }
+
+    .hours-wrap .hours {
+      transform: unset;
+      padding: 20px;
+    }
+
+    .map-wrap {
+      width: 100%;
+    }
+
+    .info {
+      flex-direction: column;
+    }
+  }
+</style>
+<div class="sns-container">
+    <div class="main-div">
+      <section class="header-text">
+        <h1 aria-level="2">GMC Dеalеrship Buena Park, CA</h1>
+      </section>
+  
+      <main
+        class="sns-mt-0 sns-main-20"
+        role="presentation"
+        tabindex="-1"
+        id="ae-skip-to-content"
+      >
+        <div>
+          <div class="banner">
+            <div style="flex: 2; padding-left: 4%">
+              <h1>Why We Choose Laguna Niguel GMC</h1>
+              <a class="BnrBtn" href="https://www.lagunaniguelgmc.com/">
+                CLICK HERE
+              </a>
+            </div>
+            <div style="flex: 3"></div>
+          </div>
+  
+          <section class="services-wrap">
+            <div class="services-row">
+              <a
+                class="services Create"
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=loaner"
+              >
+                <div class="services-img">
+                  <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/22bf4bc3c8f24e37a66348a9a6a468c2.png"
+                    alt="create my deal"
+                  />
+                </div>
+                <p>Create My Deal</p>
+              </a>
+              <a
+                class="services Inventore"
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new"
+              >
+                <div class="services-img">
+                  <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/936471520e1f429e831b6c0470157e15.png"
+                    alt="view new model"
+                  />
+                </div>
+                <p>view new models</p>
+              </a>
+              <a
+                class="services Usinv"
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=preowned"
+              >
+                <div class="services-img">
+                  <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e5de3cf9d3dd4017b5b96e7c81a91e71.png"
+                    alt="view used models"
+                  />
+                </div>
+                <p>view used models</p>
+              </a>
+              <a
+                class="services Pre_apr"
+                href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp"
+              >
+                <div class="services-img">
+                  <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c5db7fedb83a40999e58b27660eb9f03.png"
+                    alt="get pre"
+                  />
+                </div>
+                <p>get a pre-approved</p>
+              </a>
+              <a
+                class="services Ur_way"
+                href="https://www.lagunaniguelgmc.com/QuickQuoteForm"
+              >
+                <div class="services-img">
+                  <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d2b202c07c1c411b9ee1378368aefb8a.png"
+                    alt="request"
+                  />
+                </div>
+                <p>request a quote</p>
+              </a>
+              <a
+                class="services Glob_inc"
+                href="https://www.lagunaniguelgmc.com/buick-gmc-lease-deals"
+              >
+                <div class="services-img">
+                  <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d53d2651e31c4768bcd433833288408d.png"
+                    alt="special"
+                  />
+                </div>
+                <p>special offers</p>
+              </a>
+            </div>
+          </section>
+  
+          <section class="dealership-name">
+            <h1 aria-level="2">GMC Dеalеrship Buena Park, CA</h1>
+          </section>
+  
+          <section class="main-text">
+            <div class="image sns-mb-2">
+              <img
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9ed4dd3d839c4e728121749470dbc045.jpg"
+                alt=""
+              />
+            </div>
+            <h2>GMC Dеalеrship Buena Park, CA</h2>
+            <p class="italic" style="font-weight: bold; color: grey">
+              A trusted Buena Park GMC dealer
+            </p>
+            <p>
+              Buena Park, CA, is a city bursting with entertainment and adventure. Buena Park is the place for you if you're seeking a weekend getaway or family vacation. Explore trendy eateries, enjoy thrilling rides, and experience its vibrant culture. Kick-start your Buena Park journey with a visit to the renowned Knott's Berry Farm, which offers thrilling roller coaster rides and other exciting activities.
+            </p>
+            <p>
+              Knott's Soak City, a seasonal water park, is just across the street from Knott's Berry Farm. Dive into a world of aquatic fun with family and friends when you explore its thrilling waterslides. Another exciting location that offers various activities for kids and adults alike is the Big Air Trampoline Park. Bounce to your heart's content on a massive jumping area or challenge yourself on the climbing wall.
+            </p>
+            <p>
+              Whatever itinerary you have planned, having a reliable car in good working conditions is crucial. Pop by our dealership serving Buena Park, CA, to ensure your vehicle is in excellent condition. Laguna Niguel GMC Buena Park, CA, has seasoned technicians who will ensure your car is returned to peak conditions. Visit our dealership today or browse our online page for our remarkable selection of GMC vehicles.
+            </p>
+            <h2>
+              GMC Service and GMC Parts in a GMC Dealership near Buena Park, CA
+            </h2>
+            <p>
+              Regular maintenance from skilled technicians with original and durable parts is vital for a long-lasting vehicle. Keeping your car in tip-top condition allows you to focus on creating memorable experiences and engaging in fun activities in Buena Park. Laguna Niguel GMC Buena Park, CA, has a team of trained professionals who use genuine and authentic OEM parts alongside high-tech equipment in our Service Department to give your vehicle the care it needs.
+            </p>
+            <p>
+              Our technicians perform various services, from routine maintenance, such as oil and tire rotations, to intricate repairs and genuine part replacements. Our Parts Department stocks only the highest quality OEM parts, and you can always find parts and accessories specific to your GMC car model.
+            </p>
+            <p>
+              Schedule a service appointment online or by phone with our Buena Park, CA dealership to keep your vehicle running smoothly. You can always trust us to provide the best results possible.
+            </p>
+            <h2>GMC Lease and GMC Finance Offers Buena Park, CA</h2>
+            <p>
+              Our targeted financing options have made buying or leasing your dream GMC easier. Laguna Niguel GMC in Buena Park, CA, has a full range of specials and discounts on different models in our inventory. We offer flexible financing options and competitive interest rates so you can drive home with the vehicle of your choice without breaking the bank.
+            </p>
+            <p>
+              Our dedicated financial staff is ready to assist and guide you through your car application process. Call us to learn more, or step into our dealership today.
+            </p>
+            <h2>GMC Dealership in Buena Park, CA</h2>
+            <p>
+              Discover GMC vehicles' automotive excellence and unbeatable performance when shopping at Laguna Niguel GMC Buena Park, CA. Our trained sales staff is ready to showcase the impressive capability of the GMC vehicles in our lot while offering expert guidance to help you make an informed choice. Contact our GMC dealership in Buena Park, CA, today and drive home in your dream car.
+            </p>
+            <div class="image">
+              <img
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2767ab0825354256b076ba4cf2eb2386.jpg"
+                alt=""
+              />
+            </div>
+          </section>
+  
+          <section class="call-us">
+            <h1 aria-level="2">
+              CALL US TODAY AT:
+              <a href="tel:+9493287559&_renderer=mobile"
+                ><span
+                  style="display: none"
+                  class="ae-compliance-indent ae-reader-visible"
+                >
+                  Phone Number </span
+                >(949) 328-7559</a
+              >
+            </h1>
+          </section>
+  
+          <section class="info">
+            <div class="hours-wrap">
+              <div class="hours">
+                <p class="sales-hours">SALES HOURS</p>
+                <table>
+                  <tbody style="font-size: 18px">
+                    <tr>
+                      <td width="70px;" style="padding: 0 !important">Monday</td>
+                      <td class="ptt">9:00AM - 8:00PM</td>
+                    </tr>
+                    <tr>
+                      <td width="70px;" style="padding: 0 !important">Tuesday</td>
+                      <td class="ptt">9:00AM - 8:00PM</td>
+                    </tr>
+                    <tr>
+                      <td width="70px;" style="padding: 0 !important">
+                        Wednesday
+                      </td>
+                      <td class="ptt">9:00AM - 8:00PM</td>
+                    </tr>
+                    <tr>
+                      <td width="70px;" style="padding: 0 !important">
+                        Thursday
+                      </td>
+                      <td class="ptt">9:00AM - 8:00PM</td>
+                    </tr>
+                    <tr>
+                      <td width="70px;" style="padding: 0 !important">Friday</td>
+                      <td class="ptt">9:00AM - 8:00PM</td>
+                    </tr>
+                    <tr>
+                      <td width="70px;" style="padding: 0 !important">
+                        Saturday
+                      </td>
+                      <td class="ptt">9:00AM - 7:00PM</td>
+                    </tr>
+                    <tr>
+                      <td width="70px;" style="padding: 0 !important">Sunday</td>
+                      <td class="ptt">10:00AM - 6:00PM</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="map-wrap">
+              <div class="mapouter">
+                <div class="gmap_canvas">
+                  <iframe
+                    width="100%"
+                    height="500"
+                    id="gmap_canvas"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.0903037512694!2d-117.67356369999999!3d33.551030000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceef68edc0001%3A0x1f695a52c0f5c75e!2sLaguna%20Niguel%20GMC!5e0!3m2!1sen!2sin!4v1709045043283!5m2!1sen!2sin"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    aria-hidden="false"
+                    role="presentation"
+                    title="Google Maps Frame"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>

@@ -1,0 +1,460 @@
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        width: 100%;
+    }
+
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        width: 100%;
+    }
+
+    #content-description {
+        display: none;
+    }
+
+    .page-content {
+        font-family: 'Lato', sans-serif;
+        margin: 0px;
+        margin-top: 40px;
+    }
+
+    .page-content section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .page-content h3 {
+        margin: 0px;
+    }
+
+    .page-content table,
+    .page-content th,
+    .page-content td {
+        border: 1px solid;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .page-content table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .page-content td {
+        width: 50%;
+    }
+
+    .page-content .container {
+        width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1320px;
+    }
+
+    .page-content .row {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .page-content .row.flex-direction-column {
+        flex-direction: column;
+    }
+
+    .page-content .left {
+        flex: 0 0 65%;
+        max-width: 65%;
+        margin-right: auto;
+    }
+
+    .page-content .right {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-left: auto;
+    }
+
+    .page-content h1 {
+        font-size: 32px!important;
+        font-weight: 600;
+    }
+
+    .page-content h2 {
+        font-size: 20px;
+        color: #0f0f0f;
+        font-weight: 500;
+        padding-block: 2%;
+    }
+
+    .page-content p {
+        font-size: 16px;
+        line-height: 28px;
+        color: #0f0f0f;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+
+    .page-content ul {
+        list-style: none;
+        font-size: 18px;
+        line-height: 48px;
+        color: #0f0f0f;
+        font-weight: 400;
+        padding-left: 21px;
+        margin-top: 0px;
+    }
+
+    .page-content ul li::before {
+        content: "\2022";
+        color: #f47c08;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .page-content header {
+        background-color: #0f0f0f;
+        padding: 10px 0px;
+        margin-bottom: 50px;
+    }
+
+    .page-content header h1 {
+        color: #ffffff;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .page-content footer {
+        background-color: #0f0f0f;
+        padding: 20px 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .page-content footer p {
+        font-size: 18px;
+        line-height: 36px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .page-content .hero-image {
+        max-width: 100%;
+        /* height: 550px; */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-content .hero-image img {
+        width: 100%;
+    }
+
+    .page-content .card-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 15px;
+    }
+
+    .page-content .card .card-head {
+        background-color: #f47c08;
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        padding: 10px 0px;
+        align-items: center;
+    }
+
+    .page-content .card .card-head p {
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+
+    .page-content .card .card-body {
+        background-color: #f6f6f6;
+        border: 1px solid #e4e4e4;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .page-content .card .map-wrap {
+        padding: 0px;
+    }
+
+    .page-content .card .card-body p {
+        margin: 0px;
+        font-size: 19px;
+        line-height: 36px;
+        color: #0f0f0f;
+    }
+
+    .page-content .card .card-body .text-right {
+        text-align: right;
+    }
+
+    .page-content .menu {
+        background-color: #f47c08;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .page-content .menu a {
+        background-color: #ffffff;
+        padding: 20px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        width: 20%;
+        color: #0f0f0f;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 900px) {
+        .page-content h1 {
+            font-size: 22px!important;
+        }
+
+        .page-content h2 {
+            font-size: 17px;
+            color: #0f0f0f;
+            font-weight: 500;
+            padding-block: 2%;
+        }
+
+        .page-content .container {
+            width: unset;
+        }
+
+        .page-content .left {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .right {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .hero-image {
+            /* height: 340px; */
+        }
+
+        .page-content .hero-image img {
+            max-width: 100%;
+            height: unset;
+        }
+
+        .page-content .menu {
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .page-content .menu a {
+            padding: 20px 0px;
+            width: 100%;
+        }
+
+        .page-content .card .map-wrap iframe {
+            height: 400px;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+    }
+</style>
+<div class="page-content">
+    <header>
+        <div class="container">
+            <h1>What Makes the 2024 Acura RDX the Best Premium Crossover
+            </h1>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="left">
+                    <div class="hero-image">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/28b044c848f243dc8bbefc58764d4d49.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/6aefe964df5541fe88539e7b8e76e540.png"
+                                    alt="">
+                                <p>Hours of Operation</p>
+                            </div>
+                            <div class="card-body">
+                                <p>Saturday <br>Sunday <br>Monday <br>Tuesday <br>Wednesday <br>Thursday <br>Friday
+                                </p>
+                                <p class="text-right">9:00 AM - 7:00 PM <br> 10:00 AM - 6:00 PM <br> 9:00 AM - 8:00
+                                    PM<br> 9:00 AM - 8:00 PM<br> 9:00 AM - 8:00 PM <br> 9:00 AM - 8:00 PM<br> 9:00
+                                    AM -
+                                    8:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/0d3c96086aca4dc2b2d61e56f078371a.png"
+                                    alt="">
+                                <p>Find us here</p>
+                            </div>
+                            <div class="card-body map-wrap">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas"><iframe width="100%" height="200" id="gmap_canvas"
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6650.1367330287385!2d-117.674!3d33.5516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceef68edc0001%3A0x1f695a52c0f5c75e!2sLaguna%20Niguel%20GMC!5e0!3m2!1sen!2sin!4v1701264111143!5m2!1sen!2sin"
+                                            frameborder="0" scrolling="no" marginheight="0"
+                                            marginwidth="0"></iframe>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row flex-direction-column">
+                <h1 style="padding-block: 2%;color: #000;">What Makes the 2024 Acura RDX the Best Premium Crossover</h1>
+
+<p>In the world of premium crossovers, the 2024 Acura RDX emerges as a beacon of automotive excellence, setting new standards in the pursuit of automotive perfection. With a powerful 2.0-liter VTEC turbo engine at its core, this luxurious crossover seamlessly marries performance and sophistication.</p>
+
+<p>Join us on a journey as we take a closer look into the intricacies of power, design, and cutting-edge technology that collectively propel the 2024 Acura RDX to the summit of the premium crossover hierarchy. Buckle up as we explore the features that make this vehicle a paragon of automotive engineering and a compelling choice for those who demand nothing short of the best in their driving experience.</p>
+
+<h2>A Roadworthy Machine</h2>
+
+<p>The 2024 Acura RDX offers impressive power and road performance with its 2-liter VTEC turbo aluminum-alloy 4-cylinder engine. With 272 horsepower and 280 lb.-ft. of torque, this engine provides a thrilling driving experience. Additionally, the RDX has a maximum towing capacity of 1500 lbs., making it capable of handling smaller trailers or equipment.</p>
+
+<p>The 10-speed automatic transmission with paddle shifters adds to the RDX's performance capabilities. This transmission allows for quick and seamless gear changes, further enhancing the driving experience. The super handling all-wheel drive system ensures optimal traction and stability in various road conditions, providing confidence and control.</p>
+
+<p>In terms of driving styles, the 2024 Acura RDX offers four unique options: Comfort, Normal, Snow, and Sport. These driving modes allow drivers to adapt the performance of the RDX to suit their preferences and current conditions. Whether you prefer a smooth and comfortable ride or a more dynamic and sporty experience, the RDX can accommodate your driving style.</p>
+
+<p>Handling is another standout feature of the Acura RDX 2024. The available Adaptive Damper system has been retuned to be more dynamic, resulting in improved responsiveness and agility. This engineering gives the RDX a poised and controlled feel on the road, making it a joy to drive.</p>
+
+<p>The steering of the RDX also contributes to its engaging drive. The dual-pinion, variable ratio electric power steering provides maximized control, allowing for precise and accurate steering inputs. By selecting Comfort Mode, drivers can enjoy easier steering inputs for effortless maneuvering, while Sport Mode enhances firmness and provides increased feedback for a more spirited driving experience.</p>
+
+<p>Safety is a crucial aspect of road performance, and the 2024 Acura RDX excels in this area as well. The retuned iBooster braking system offers improved stopping power, inspiring confidence behind the wheel. The firmer pedal feel in the RDX creates a better connection between the road and the driver, enhancing control and responsiveness during braking.</p>
+
+<h2>Notable Design Elements</h2>
+
+<p>The 2024 Acura RDX interior boasts an overall luxurious design, using premium materials throughout. The serene cabin of the RDX has a bespoke feel, featuring brushed aluminum and open-pore wood accents. Full-grain Premium Milano leather seating further adds to the crafted quality of the RDX. The front 12-way power seats with power lumbar support, heated front seats, and leather-wrapped steering wheel contribute to a comfortable and luxurious driving experience.</p>
+
+<p>Cargo space is also a highlight of the 2024 Acura RDX. The RDX has up to 79.8 cu.ft. of max cargo capacity when the 60/40-split rear seats are folded down, providing ample space for storage. The intelligently engineered rear cargo underfloor storage can be accessed in any seat configuration, enhancing the versatility of the RDX to meet the demands of any journey.</p>
+
+<p>In terms of exterior design, the 2024 Acura RDX has an aggressive and dynamic appearance. The sleek body lines and striking Diamond Pentagon grille draw the eyes along to the sculpted rear, exuding a sense of motion even when the vehicle is at rest.</p>
+
+<p>The Jewel Eye LED Headlights of the 2024 Acura RDX are another standout feature, providing bright and natural illumination for superior down-road visibility. Even when off, these headlights maintain their jewel-like appearance, adding to the overall luxurious design of the RDX. Chicane LED DRLs round off the vehicle's design for a striking and memorable signature look.</p>
+
+<p>In addition, the premium paint of the 2024 Acura RDX is another aspect worth mentioning. The available colors, such as Performance Red Pearl, Liquid Carbon Metallic, and Apex Blue Pearl, are applied in a series of tinted clear coats, resulting in brilliant chromatic color that has a deep, rich finish.</p>
+
+<h2>Tech and Connectivity</h2>
+
+<p>The 2024 Acura RDX stands out as a tech-forward and connected luxury SUV, offering a host of features that enhance the driving experience. At the center of the vehicle's tech suite is the 10.2-inch HD dual-content infotainment display, providing a visually stunning and user-friendly interface. Complementing this is a 7-inch multi-information display (MID), which keeps drivers informed about important vehicle data and settings.</p>
+
+<p>The True Touchpad Interface is a standout feature, using absolute positioning to seamlessly control the infotainment display. This innovative touchpad ensures a more intuitive and distraction-free interaction, allowing drivers to stay focused on the road while navigating through various functions.</p>
+
+<p>Connectivity is a strong suit of the 2024 RDX, offering a Wi-Fi hotspot capability that keeps occupants connected on the go. The inclusion of Apple CarPlay and Android Auto allows seamless integration of smartphones, providing access to navigation, music, and other essential apps directly through the vehicle's infotainment system. Additionally, Alexa built-in adds voice-activated convenience, enhancing hands-free control for a wide range of functions. The wireless charging pad is another practical feature, ensuring that compatible devices stay charged without the hassle of cords, contributing to a clean and organized interior.</p>
+
+<p>The ELS Studio Premium Audio System elevates the cabin of the Acura RDX 2024. Engineered by Grammy Award-winning recording producer Elliot Scheiner, this system delivers an immersive audio experience through 16 speakers, including four in the headliner. The result is an immaculate sound quality that enhances the driving experience, turning the RDX into a rolling concert hall. Whether enjoying your favorite music, podcasts, or audiobooks, the ELS Studio Premium Audio System ensures a premium auditory experience for all occupants.</p>
+
+<h2>Safety and Driver Assistance</h2>
+
+<p>The 2024 Acura RDX prioritizes safety with a comprehensive suite of innovative features under the AcuraWatch umbrella. These technologies are designed to enhance driver awareness and assist in avoiding collisions, reflecting Acura's commitment to providing a secure driving experience. Here are some if its features:</p>
+
+<ul>
+<li>Collision Mitigation Braking System (CMBS) – engineered to alert drivers when a potential frontal impact is detected, going beyond mere warnings by actively applying the brakes to help avoid or reduce the impact of a collision.</li>
+
+<li>Road Departure Mitigation (RDM) – alerts the driver when an unintentional departure from a detected lane or roadway is detected. Moreover, RDM can apply steering torque and braking to assist in keeping the vehicle on its intended path. This feature is particularly valuable for preventing accidents related to lane departure.</li>
+
+<li>Adaptive Cruise Control (ACC) with Low-Speed Follow – this is integrated into the RDX's safety arsenal to help reduce driver fatigue. ACC maintains a set speed and distance from the vehicle detected ahead, enhancing convenience during long drives. The low-speed follow feature takes this a step further by bringing the vehicle to a complete stop if the detected vehicle ahead slows to a stop.</li>
+</ul>
+
+<p>In addition to AcuraWatch, available supplementary driver-assistive technologies contribute to bolstering overall driver awareness from every angle of the vehicle.</p>
+
+<ul>
+<li>Blind Spot Information System</li>
+<li>Rear Cross Traffic Monitor</li>
+<li>Surround-View Camera</li>
+<li>Low Speed Braking Control</li>
+</ul>
+
+<p>Even with the above safety tech features, keep in mind that you as a driver are still accountable for the safe operation of the vehicle and preventing collisions.</p>
+
+<h2>Final Thoughts</h2>
+
+<p>The 2024 Acura RDX undeniably secures its position as the best premium crossover through a harmonious blend of power, luxury, technology, and safety. From its potent turbo engine to the meticulously crafted interior featuring authentic materials and cutting-edge tech, the RDX caters to both performance enthusiasts and those seeking refined elegance.</p>
+
+<p>Thinking of googling “acura rdx for sale” or “used acura rdx”? No need! Just give us a call today and our awesome team will answer all your Acura-related questions! Our number is 904-544-3517. You can also visit us at 7200 Blanding Blvd, Jacksonville, FL 32244.</p>
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>COPYRIGHT © 2024</p>
+        </div>
+    </footer>
+</div>

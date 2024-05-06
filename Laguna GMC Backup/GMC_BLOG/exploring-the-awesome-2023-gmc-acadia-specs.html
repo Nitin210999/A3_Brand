@@ -1,0 +1,508 @@
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      font-family: "Lato", sans-serif;
+    }
+  
+    .mapouter {
+      position: relative;
+      text-align: right;
+      width: 100%;
+    }
+  
+    .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      width: 100%;
+    }
+  
+    #content-description {
+      display: none;
+    }
+  
+    .page-content {
+      font-family: "Lato", sans-serif;
+      margin: 0px;
+      margin-top: 40px;
+    }
+  
+    .page-content section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  
+    .page-content h3 {
+      margin: 0px;
+    }
+  
+    .page-content table,
+    .page-content th,
+    .page-content td {
+      border: 1px solid;
+      text-align: center;
+      padding: 2px;
+    }
+  
+    .page-content table {
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    .page-content td {
+      width: 50%;
+    }
+  
+    .page-content .container {
+      width: 100%;
+      padding-right: 12px;
+      padding-left: 12px;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 1320px;
+    }
+  
+    .page-content .row {
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      overflow: hidden;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  
+    .page-content .row.flex-direction-column {
+      flex-direction: column;
+    }
+  
+    .page-content .left {
+      flex: 0 0 65%;
+      max-width: 65%;
+      margin-right: auto;
+    }
+  
+    .page-content .right {
+      flex: 0 0 30%;
+      max-width: 30%;
+      margin-left: auto;
+    }
+  
+    .page-content h1 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  
+    .page-content h2 {
+      font-size: 20px;
+      color: #0f0f0f;
+      font-weight: 500;
+      padding-block: 2%;
+    }
+  
+    .page-content p {
+      font-size: 16px;
+      line-height: 28px;
+      color: #0f0f0f;
+      font-weight: 400;
+      margin-top: 0px;
+    }
+  
+    .page-content ul {
+      list-style: none;
+      font-size: 18px;
+      line-height: 48px;
+      color: #0f0f0f;
+      font-weight: 400;
+      padding-left: 21px;
+      margin-top: 0px;
+    }
+  
+    .page-content ul li::before {
+      content: "\2022";
+      color: #f47c08;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  
+    .page-content header {
+      background-color: #0f0f0f;
+      padding: 10px 0px;
+      margin-bottom: 50px;
+    }
+  
+    .page-content header h1 {
+      color: #ffffff;
+      text-align: center;
+      margin: 0px;
+    }
+  
+    .page-content footer {
+      background-color: #0f0f0f;
+      padding: 20px 0px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  
+    .page-content footer p {
+      font-size: 18px;
+      line-height: 36px;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 0px;
+    }
+  
+    .page-content .hero-image {
+      max-width: 100%;
+      /* height: 550px; */
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .page-content .hero-image img {
+      width: 100%;
+    }
+  
+    .page-content .card-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      gap: 15px;
+    }
+  
+    .page-content .card .card-head {
+      background-color: #f47c08;
+      display: flex;
+      justify-content: center;
+      gap: 17px;
+      padding: 10px 0px;
+      align-items: center;
+    }
+  
+    .page-content .card .card-head p {
+      color: #ffffff;
+      margin-bottom: 0px;
+    }
+  
+    .page-content .card .card-body {
+      background-color: #f6f6f6;
+      border: 1px solid #e4e4e4;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+  
+    .page-content .card .map-wrap {
+      padding: 0px;
+    }
+  
+    .page-content .card .card-body p {
+      margin: 0px;
+      font-size: 19px;
+      line-height: 36px;
+      color: #0f0f0f;
+    }
+  
+    .page-content .card .card-body .text-right {
+      text-align: right;
+    }
+  
+    .page-content .menu {
+      background-color: #f47c08;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+  
+    .page-content .menu a {
+      background-color: #ffffff;
+      padding: 20px 20px;
+      text-decoration: none;
+      font-size: 20px;
+      width: 20%;
+      color: #0f0f0f;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+    @media screen and (max-width: 900px) {
+      .page-content h1 {
+        font-size: 15px;
+      }
+  
+      .page-content h2 {
+        font-size: 17px;
+        color: #0f0f0f;
+        font-weight: 500;
+        padding-block: 2%;
+      }
+  
+      .page-content .container {
+        width: unset;
+      }
+  
+      .page-content .left {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+  
+      .page-content .right {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+  
+      .page-content .hero-image {
+        /* height: 340px; */
+      }
+  
+      .page-content .hero-image img {
+        max-width: 100%;
+        height: unset;
+      }
+  
+      .page-content .menu {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 10px;
+      }
+  
+      .page-content .menu a {
+        padding: 20px 0px;
+        width: 100%;
+      }
+  
+      .page-content .card .map-wrap iframe {
+        height: 400px;
+      }
+  
+      .card {
+        margin-top: 20px;
+      }
+    }
+  </style>
+  <div class="page-content">
+    <header>
+      <div class="container">
+        <h1>Exploring the Awesome 2023 GMC Acadia Specs</h1>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="left">
+            <div class="hero-image">
+              <img
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/9e57b813772b4a818f453e6069dd7437.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="right">
+            <div class="card-wrap">
+              <div class="card">
+                <div class="card-head">
+                  <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-cad/undefined/ff5220627e1340bfba2b5bdda6b93571.png"
+                    alt=""
+                  />
+                  <p>Hours of Operation</p>
+                </div>
+                <div class="card-body">
+                  <p>
+                    Saturday <br />Sunday <br />Monday <br />Tuesday
+                    <br />Wednesday <br />Thursday <br />Friday
+                  </p>
+                  <p class="text-right">
+                    9:00 AM - 7:00 PM <br />
+                    10:00 AM - 6:00 PM <br />
+                    9:00 AM - 8:00 PM<br />
+                    9:00 AM - 8:00 PM<br />
+                    9:00 AM - 8:00 PM <br />
+                    9:00 AM - 8:00 PM<br />
+                    9:00 AM - 8:00 PM
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-head">
+                  <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-cad/undefined/b89cf55782ed40c29fce796d1fb780d2.png"
+                    alt=""
+                  />
+                  <p>Find us here</p>
+                </div>
+                <div class="card-body map-wrap">
+                  <div class="mapouter">
+                    <div class="gmap_canvas">
+                      <iframe
+                        width="100%"
+                        height="200"
+                        id="gmap_canvas"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6650.1367330287385!2d-117.674!3d33.5516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceef68edc0001%3A0x1f695a52c0f5c75e!2sLaguna%20Niguel%20GMC!5e0!3m2!1sen!2sin!4v1701264111143!5m2!1sen!2sin"
+                        frameborder="0"
+                        scrolling="no"
+                        marginheight="0"
+                        marginwidth="0"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="menu">
+            <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults"
+              >View Inventory</a
+            >
+            <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm"
+              >Get a Quote</a
+            >
+            <a href="https://www.cadillacoflagunaniguel.com/ServiceApptForm"
+              >Schedule Service</a
+            >
+            <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row flex-direction-column">
+          <h1 style="padding-block: 2%">
+            Exploring the Awesome 2023 GMC Acadia Specs
+          </h1>
+  
+          <p>
+            Embarking on a journey of exploration into the automotive realm, enthusiasts and curious minds alike are in for a treat as we delve into the remarkable features of the 2023 GMC Acadia. This mid-size SUV, a beacon of innovation and performance, beckons us to uncover its awesome specifications that define a new standard in the realm of versatile driving experiences.
+          </p>
+  
+          <p>
+            From its powerful engine options to the intricacies of its interior design, the Acadia promises a symphony of technology, style, and safety that transforms each drive into an adventure. Join us on this exhilarating ride as we unravel the intricacies of the 2023 GMC Acadia, showcasing why it stands tall among its peers in the automotive landscape.
+          </p>
+          <h2>
+              Power Under the Hood
+          </h2>
+          <p>
+            The 2023 Acadia is known for its smooth and stable rides, providing a comfortable driving experience. The vehicle offers two engine options to cater to different power preferences. The first option is a 2-liter turbo engine paired with a 9-speed automatic transmission. This engine delivers 228 horsepower and 258 lb.-ft. of torque. It is equipped with a twin-scroll turbocharger, which enhances its performance. With the trailer package, the 2-liter turbo engine can tow up to 3500 lbs.
+          </p>
+          <p>
+            For those seeking more power, the 2023 Acadia also offers a 3.6-liter V6 engine. This engine generates an impressive 310 horsepower and 271 lb.-ft. of torque. It comes with active fuel management, further optimizing its efficiency. With the trailer package, the 3.6-liter V6 engine has a towing capacity of up to 4000 lbs.
+          </p>
+          <p>
+            To enhance control and performance, the 2023 Acadia features an Active Torque Control AWD System. This system directs power to the rear of the vehicle during acceleration through corners or turns, ensuring the vehicle stays on its intended path. This feature is standard on the AT4 model.
+          </p>
+          <p>
+              Additional performance features include Hill Descent Control, which provides a smooth and controlled descent in rough terrains by utilizing antilock braking. Hill Start Assist is also available, holding the brakes under specific conditions to prevent movement during the transition from brake pedal to accelerator.
+          </p>
+          <p>
+              In the Acadia Denali, the available Adaptive Ride Control system further enhances the driving experience. Incorporating Continuous Damping Control, this system adjusts to the road conditions every two milliseconds, delivering a confident and comfortable ride. The Adaptive Ride Control feature is standard for the Denali Ultimate Package with AWD.
+          </p>
+          <p>
+              Overall, the 2023 GMC Acadia specs has power options and performance features to ensure a smooth and controlled driving experience. Whether opting for the 2-liter turbo engine or the 3.6-liter V6 engine, users can expect a powerful and efficient performance from this mid size SUV.
+          </p>
+  
+          <h2>Distinctive Style</h2>
+  
+          <p>
+            The 2023 Acadia boasts a distinctive style both inside and out. Starting with the interior, it offers refined craftsmanship and a comfortable cabin. The seating options can accommodate either 6 or 7 people, depending on the configuration. The interior features real aluminum trim and soft-touch surfaces, adding a touch of elegance to the overall design. The Smart Slide second-row seats make accessing the third row effortless, ensuring convenience for passengers.
+          </p>
+          <p>
+            Additionally, the fold-flat second and third-row seats provide up to 79.0 cu. ft. of maximum cargo space, allowing for versatile storage options. Convenient storage solutions are also available, including a large pass-through under-console storage, a second-row storage drawer in the back of the center console, and covered under-floor cargo-area storage.
+          </p>
+          <p>
+            Higher trims offer luxurious interior options such as a heated steering wheel, heated and ventilated front seats, and leather-appointed seating for both the first and second rows. The premium cloth or available leather-appointed seating comes in Jet Black with exclusive trim and Kalahari accents. The interior is further enhanced with ash wood accents and warm-tone burnished aluminum trim, adding sophistication and refinement to the Acadia's interior.
+          </p>
+          <p>
+            On the exterior, this mid size SUV carries a bold and striking design. It features a black grille insert and surround, along with heated side mirrors. The GMC signature C-shaped LED headlights stand out, providing both style and excellent visibility. The vehicle showcases black mirror caps and gloss-black roof rails, emphasizing its sleek and modern aesthetic. It rides on 20-inch aluminum painted wheels with a gloss-black finish, paired with all-season blackwall tires for a distinct look.
+          </p>
+          <p>
+            For those seeking an even more exclusive exterior, the Denali Black Diamond Edition offers additional features such as 20-inch aluminum painted wheels with an after-midnight finish and an Ebony Twilight Metallic exterior. The dual SkyScape 2-panel power sunroof adds a touch of luxury to this edition.
+          </p>
+  
+          <h2>Technology Features</h2>
+  
+          <p>
+            The 2023 Acadia is a tech-forward SUV that is packed with innovative and user-friendly features.
+          </p>
+          <p>
+            Starting with the driver's cockpit, the Acadia has a 4.2-inch drive information screen that provides an overview of essential vehicle information. In addition, the SUV boasts an 8-inch diagonal GMC Infotainment System that incorporates features like Apple CarPlay, Android Auto, and Alexa built-in, making it easy for drivers to stay connected while on-the-go. Additionally, a Wi-Fi hotspot keeps passengers entertained and connected on long journeys. There is also a 6-speaker audio system to enjoy music, podcasts, and audiobooks or listen to news or radio stations.
+          </p>
+          <p>
+            Higher trims of the Acadia include even more advanced tech features that provide greater convenience and luxury. The 8-inch diagonal GMC Infotainment System with navigation is available, along with 8-inch reconfigurable driver information screen enhances the driving experience, displaying customizable information that can be tailored to the driver's preferences. The available 6-inch diagonal head-up display projects important driving information directly onto the windshield, reducing distractions and keeping drivers focused on the road.
+          </p>
+          <p>
+            The Bose Premium 8-Speaker sound system on higher trims provides immersive sound quality for an even more enjoyable driving experience. For those who prefer satellite radio, SiriusXM is an option that provides an extensive range of entertainment channels, news, and sports. Additionally, a wireless charging pad is available for convenient charging of phones, tablets, and other electronic devices.
+          </p>
+          <p>
+            The 2023 Acadia also has features that make entering and starting the vehicle simple and convenient. Keyless open and start is included, allowing drivers to start the vehicle with the push of a button and get on with their journey. Power door locks add extra convenience and enhance the vehicle's security features, ensuring that the doors remain locked even during potential danger.
+          </p>
+  
+          <h2>Driver and Passenger Safety</h2>
+  
+          <p>
+            The 2023 Acadia prioritizes safety with a comprehensive set of features designed to keep both drivers and passengers secure on the road. The SUV incorporates strategically placed airbags and adjustable seatbelts, forming the baseline for occupant protection.
+          </p>
+          <p>
+            The Acadia Pro Safety Plus package takes safety to the next level with an array of advanced features. This safety system includes: Forward Collision Alert, Following Distance Indicator, Automatic Emergency Braking, Lane Change Alert with Side Blind Zone Alert, Lane Keep Assist with Lane Departure Warning, Rear Cross Traffic Alert, Front Pedestrian Braking, and IntelliBeam Auto High Beams.
+          </p>
+          <p>
+            For those opting for the GMC Pro Safety Plus package, it has all the safety features above with Front and Rear Park Assist added.​​
+          </p>
+          <p>
+            While these safety and driver assistance features are crucial aids, GMC emphasizes that they are not substitutes for the driver's responsibility to operate the vehicle safely.
+          </p>
+  
+          <h2>Conclusion</h2>
+  
+          <p>
+            As we close the chapter on our journey through the 2023 Acadia's specs, one cannot help but appreciate the meticulous craftsmanship and engineering prowess that have gone into creating a vehicle that meets expectations. Whether you're drawn to its distinctive style, advanced technology, or the assurance of its safety features, the Acadia stands as a compelling choice for those seeking a versatile and dynamic driving experience.
+          </p>
+          <p>
+            If you have been googling “MSRP of 2023 GMC Acadia” or “2023 GMC acadia for sale” and can’t seem to get an appropriate result, know that Laguna Niguel GMC is here! Our awesome staff will gladly answer all your GMC-related questions. Contact us today at (949) 328-7559 or visit us at 28332 Camino Capistrano, Laguna Niguel, CA 92677.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="menu">
+            <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults"
+              >View Inventory</a
+            >
+            <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm"
+              >Get a Quote</a
+            >
+            <a href="https://www.cadillacoflagunaniguel.com/ServiceApptForm"
+              >Schedule Service</a
+            >
+            <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>COPYRIGHT © 2023</p>
+      </div>
+    </footer>
+  </div>

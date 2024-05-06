@@ -1,0 +1,454 @@
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        width: 100%;
+    }
+
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        width: 100%;
+    }
+
+    #content-description {
+        display: none;
+    }
+
+    .page-content {
+        font-family: 'Lato', sans-serif;
+        margin: 0px;
+        margin-top: 40px;
+    }
+
+    .page-content section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .page-content h3 {
+        margin: 0px;
+    }
+
+    .page-content table,
+    .page-content th,
+    .page-content td {
+        border: 1px solid;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .page-content table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .page-content td {
+        width: 50%;
+    }
+
+    .page-content .container {
+        width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1320px;
+    }
+
+    .page-content .row {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .page-content .row.flex-direction-column {
+        flex-direction: column;
+    }
+
+    .page-content .left {
+        flex: 0 0 65%;
+        max-width: 65%;
+        margin-right: auto;
+    }
+
+    .page-content .right {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-left: auto;
+    }
+
+    .page-content h1 {
+        font-size: 32px !important;
+        font-weight: 600;
+    }
+
+    .page-content h2 {
+        font-size: 20px;
+        color: #0f0f0f;
+        font-weight: 500;
+        padding-block: 2%;
+    }
+
+    .page-content p {
+        font-size: 16px;
+        line-height: 28px;
+        color: #0f0f0f;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+
+    .page-content ul {
+        list-style: none;
+        font-size: 18px;
+        line-height: 48px;
+        color: #0f0f0f;
+        font-weight: 400;
+        padding-left: 21px;
+        margin-top: 0px;
+    }
+
+    .page-content ul li::before {
+        content: "\2022";
+        color: #f47c08;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .page-content header {
+        background-color: #0f0f0f;
+        padding: 10px 0px;
+        margin-bottom: 50px;
+    }
+
+    .page-content header h1 {
+        color: #ffffff;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .page-content footer {
+        background-color: #0f0f0f;
+        padding: 20px 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .page-content footer p {
+        font-size: 18px;
+        line-height: 36px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .page-content .hero-image {
+        max-width: 100%;
+        /* height: 550px; */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-content .hero-image img {
+        width: 100%;
+    }
+
+    .page-content .card-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 15px;
+    }
+
+    .page-content .card .card-head {
+        background-color: #f47c08;
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        padding: 10px 0px;
+        align-items: center;
+    }
+
+    .page-content .card .card-head p {
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+
+    .page-content .card .card-body {
+        background-color: #f6f6f6;
+        border: 1px solid #e4e4e4;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .page-content .card .map-wrap {
+        padding: 0px;
+    }
+
+    .page-content .card .card-body p {
+        margin: 0px;
+        font-size: 19px;
+        line-height: 36px;
+        color: #0f0f0f;
+    }
+
+    .page-content .card .card-body .text-right {
+        text-align: right;
+    }
+
+    .page-content .menu {
+        background-color: #f47c08;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .page-content .menu a {
+        background-color: #ffffff;
+        padding: 20px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        width: 20%;
+        color: #0f0f0f;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 900px) {
+        .page-content h1 {
+            font-size: 22px !important;
+        }
+
+        .page-content h2 {
+            font-size: 17px;
+            color: #0f0f0f;
+            font-weight: 500;
+            padding-block: 2%;
+        }
+
+        .page-content .container {
+            width: unset;
+        }
+
+        .page-content .left {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .right {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .hero-image {
+            /* height: 340px; */
+        }
+
+        .page-content .hero-image img {
+            max-width: 100%;
+            height: unset;
+        }
+
+        .page-content .menu {
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .page-content .menu a {
+            padding: 20px 0px;
+            width: 100%;
+        }
+
+        .page-content .card .map-wrap iframe {
+            height: 400px;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+    }
+</style>
+<div class="page-content">
+    <header>
+        <div class="container">
+            <h1>A Closer Look at the 2024 GMC Yukon AT4</h1>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="left">
+                    <div class="hero-image">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/bdf8334745c0465f91d9e2456aaaf0f2.jpg"
+                            alt="A Closer Look">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/6aefe964df5541fe88539e7b8e76e540.png"
+                                    alt="">
+                                <p>Hours of Operation</p>
+                            </div>
+                            <div class="card-body">
+                                <p>Saturday <br>Sunday <br>Monday <br>Tuesday <br>Wednesday <br>Thursday <br>Friday
+                                </p>
+                                <p class="text-right">9:00 AM - 7:00 PM <br> 10:00 AM - 6:00 PM <br> 9:00 AM - 8:00
+                                    PM<br> 9:00 AM - 8:00 PM<br> 9:00 AM - 8:00 PM <br> 9:00 AM - 8:00 PM<br> 9:00
+                                    AM -
+                                    8:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/0d3c96086aca4dc2b2d61e56f078371a.png"
+                                    alt="">
+                                <p>Find us here</p>
+                            </div>
+                            <div class="card-body map-wrap">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas"><iframe width="100%" height="200" id="gmap_canvas"
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6650.1367330287385!2d-117.674!3d33.5516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceef68edc0001%3A0x1f695a52c0f5c75e!2sLaguna%20Niguel%20GMC!5e0!3m2!1sen!2sin!4v1701264111143!5m2!1sen!2sin"
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row flex-direction-column">
+                <h1 style="padding-block: 2%;color: #000;">A Closer Look at the 2024 GMC Yukon AT4
+</h1>
+
+                <p>The 2024 GMC Yukon AT4 is a high-performance trim level designed to conquer any terrain easily. With a rugged exterior and finely tuned off-road capabilities, this vehicle is a testament to the blend of luxury and off-road prowess that GMC is renowned for. Equipped with features tailored for off-road enthusiasts, such as a robust suspension system, all-terrain tires, and an advanced four-wheel-drive system, the Yukon AT4 is engineered to tackle the toughest trails with confidence.
+                </p>
+
+                <p>The 2024 GMC Yukon AT4 is a high-performance trim level designed to conquer any terrain easily. With a rugged exterior and finely tuned off-road capabilities, this vehicle is a testament to the blend of luxury and off-road prowess that GMC is renowned for. Equipped with features tailored for off-road enthusiasts, such as a robust suspension system, all-terrain tires, and an advanced four-wheel-drive system, the Yukon AT4 is engineered to tackle the toughest trails with confidence.
+                </p>
+                <h2>Capability
+                </h2>
+
+                <p>The GMC Yukon AT4 comes equipped with two powerful engine options. The standard 5.3L V8 engine provides 355 horsepower and 383 lb.-ft. of torque, while the available 6.2L V8 engine delivers an impressive 420 horsepower and 460 lb.-ft. of torque. Both engines are paired with a 10-speed automatic transmission to provide a smooth driving experience and responsive acceleration.
+                </p>
+
+                <p>The Yukon AT4 also features a four-corner air ride adaptive suspension system that can adjust to any driving condition, ensuring a comfortable ride regardless of the terrain. The suspension system provides unmatched stability and control, making it ideal for both highway cruising and off-road adventures. Additionally, the Active Response 4WD system enhances traction in slick or challenging off-road conditions.
+                </p>
+
+                <p>The 2024 Yukon AT4 has other features to enhance its off-road capabilities, such as the Magnetic Ride Control, which reads the road up to 1,000 times a second for a smooth and controlled ride. The Autotrac® Two-Speed Transfer Case is another feature that allows drivers to switch seamlessly between two-wheel and four-wheel drive as needed.
+                </p>
+
+                <h2>Exterior
+                </h2>
+
+                <p>The 2024 GMC Yukon AT4 makes a bold statement with its assertive styling and rugged exterior features. Exclusive AT4 accents, such as the signature black chrome grille and horizontal red recovery hooks, add a touch of sophistication and highlight the vehicle's off-road capabilities. The GMC AT4 Yukon front fascia is designed for adventure, boasting a high-approach angle of nearly 32 degrees and a front skid plate that provides essential underbody protection, ensuring peace of mind when tackling challenging terrain.
+                </p>
+                <p>
+                    Complementing its aggressive stance are the 20" 6-spoke machined aluminum wheels with Carbon Gray Metallic accents, paired with Goodyear all-terrain tires. Not only do these wheels enhance the Yukon AT4's rugged aesthetic, but they also provide exceptional traction on various surfaces, making it ready to tackle any adventure with confidence. For added convenience and functionality, available power-retractable assist steps with LED perimeter lighting and textured step pads ensure secure footing when entering and exiting the vehicle, even in low-light conditions.
+                </p>
+                <p>
+                    Moreover, the 2024 Yukon AT4 offers a range of exterior colors to suit every taste and preference, including Summit White, Onyx Black, Midnight Blue Metallic, White Frost, Sterling Metallic, Volcanic Red, and Titanium Rush. Whether you prefer a classic look or want to make a bold statement on the road, these color options allow drivers to personalize their Yukon AT4 to reflect their individual style.
+                </p>
+                <h2>
+                    Interior
+                </h2>
+
+                <p>Step inside the 2024 GMC Yukon AT4 and experience a blend of luxury and practicality designed to elevate every journey. Sink into the Jet Black perforated leather seating surfaces, heated and ventilated for ultimate comfort, with stylish Brandy accents adding a touch of sophistication.
+                </p>
+
+                <p>Exclusive AT4 badging adorns the front-seat head restraints and sill plates, showcasing the vehicle's distinctive identity. These subtle yet distinctive touches serve as a reminder of the Yukon AT4's rugged capabilities and adventurous spirit, ready to conquer any terrain with confidence. Meanwhile, the available panoramic sunroof floods the cabin with natural light, offering breathtaking views of the surrounding landscape and enhancing the overall sense of spaciousness and openness within the GMC Yukon interior.
+                </p>
+                <p>
+                    Moreover, the Yukon AT4 offers unparalleled versatility to suit your ever-changing needs. With features like the Power-Sliding Center Console, second-row fold-flat seats, and third-row power-flat seats, you'll have ample storage space and flexibility to accommodate passengers and cargo easily. Stay connected and powered up on the go with up to six USB ports, two 120-volt power outlets, one 12-volt power outlet, and wireless charging capabilities, ensuring everyone stays charged and connected throughout the journey.
+                </p>
+                <h2>Technology</h2>
+                <p>
+                    In the 2024 GMC Yukon AT4, technology isn't just an add-on; it's seamlessly integrated into every aspect of the driving experience. Take, for instance, the reconfigurable 10.2" diagonal color touchscreen of the GMC Infotainment System. This intuitive interface serves as your command center, providing easy access to your favorite entertainment options, navigation, and vehicle settings. Whether adjusting the climate controls or selecting your favorite playlist, the Yukon AT4's infotainment system puts everything you need right at your fingertips, ensuring a connected and enjoyable journey every time you hit the road.
+                </p>
+                <p>
+                    But the technology in the Yukon AT4 isn't limited to entertainment and convenience—it's also designed to enhance safety and awareness on the road. With the available Head-Up Display, key vehicle information is projected onto the windshield, allowing you to stay informed without taking your eyes off the road ahead. From speed and navigation instructions to safety alerts, this customizable display keeps you in the know, helping you to navigate with confidence and peace of mind.
+                </p>
+                <p>
+                    Additionally, the Yukon AT4 offers advanced features like the High Definition Surround Vision system, which provides a comprehensive view of your surroundings to assist with parking and maneuvering. With multiple cameras strategically placed around the vehicle, you'll have a clear view of obstacles and potential hazards, making navigating tight spaces and tricky driving situations easier than ever.
+                </p>
+
+                <h2>Safety</h2>
+
+                <p>When it comes to safety, the GMC Yukon 2024 doesn't compromise. With the standard GMC Pro Safety Plus suite, drivers can enjoy peace of mind knowing that advanced collision avoidance and driver assistance technologies are working to enhance their awareness on the road. Features like Lane Change Alert with Side Blind Zone Alert help drivers stay aware of vehicles in their blind spots. At the same time, Lane Keep Assist with Lane Departure Warning provides gentle steering corrections to help prevent unintentional drifting out of lanes. Additionally, Rear Cross Traffic Alert acts as an extra set of eyes when reversing out of parking spaces, alerting drivers to approaching vehicles or pedestrians.
+                </p>
+
+                <p>The Yukon AT4's commitment to safety extends beyond just collision avoidance. With Automatic Emergency Braking and Forward Collision Alert, the vehicle can detect potential frontal collisions and apply brakes if necessary to mitigate or avoid accidents altogether. Front and Rear Park Assist and the Following Distance Indicator offer additional assistance in navigating tight spaces and maintaining a safe distance from other vehicles. Plus, features like Front Pedestrian Braking and IntelliBeam enhance safety by helping drivers avoid collisions with pedestrians and automatically adjusting headlights for optimal visibility in varying driving conditions.
+                </p>
+
+                <h2>Fina Note</h2>
+
+                <p>The 2024 GMC Yukon AT4 is a standout off-road SUV with impressive performance, rugged capabilities, a luxurious interior, cutting-edge technology, and comprehensive safety features. Equipped with robust engine options, adaptive suspension, and a versatile interior designed for both comfort and practicality, the Yukon AT4 is well-prepared to tackle any terrain with confidence and ease. Additionally, the Yukon AT4's advanced technology, such as its intuitive infotainment systems and advanced driver assistance features, further elevates its driving experience both on and off the road. With its commitment to safety through the GMC Pro Safety Plus suite, the 2024 Yukon AT4 emerges as the best off road SUV for drivers seeking adventure without compromising comfort, capability, or peace of mind.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>COPYRIGHT © 2024</p>
+        </div>
+    </footer>
+</div>

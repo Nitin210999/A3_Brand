@@ -1,0 +1,492 @@
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        width: 100%;
+    }
+
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        width: 100%;
+    }
+
+    #content-description {
+        display: none;
+    }
+
+    .page-content {
+        font-family: 'Lato', sans-serif;
+        margin: 0px;
+        margin-top: 40px;
+    }
+
+    .page-content section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .page-content h3 {
+        margin: 0px;
+    }
+
+    .page-content table,
+    .page-content th,
+    .page-content td {
+        border: 1px solid;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .page-content table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .page-content td {
+        width: 50%;
+    }
+
+    .page-content .container {
+        width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1320px;
+    }
+
+    .page-content .row {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .page-content .row.flex-direction-column {
+        flex-direction: column;
+    }
+
+    .page-content .left {
+        flex: 0 0 65%;
+        max-width: 65%;
+        margin-right: auto;
+    }
+
+    .page-content .right {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-left: auto;
+    }
+
+    .page-content h1 {
+        font-size: 32px!important;
+        font-weight: 600;
+    }
+
+    .page-content h2 {
+        font-size: 20px;
+        color: #0f0f0f;
+        font-weight: 500;
+        padding-block: 2%;
+    }
+
+    .page-content p {
+        font-size: 16px;
+        line-height: 28px;
+        color: #0f0f0f;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+
+    .page-content ul {
+        list-style: none;
+        font-size: 18px;
+        line-height: 48px;
+        color: #0f0f0f;
+        font-weight: 400;
+        padding-left: 21px;
+        margin-top: 0px;
+    }
+
+    .page-content ul li::before {
+        content: "\2022";
+        color: #f47c08;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .page-content header {
+        background-color: #0f0f0f;
+        padding: 10px 0px;
+        margin-bottom: 50px;
+    }
+
+    .page-content header h1 {
+        color: #ffffff;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .page-content footer {
+        background-color: #0f0f0f;
+        padding: 20px 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .page-content footer p {
+        font-size: 18px;
+        line-height: 36px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .page-content .hero-image {
+        max-width: 100%;
+        /* height: 550px; */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-content .hero-image img {
+        width: 100%;
+    }
+
+    .page-content .card-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 15px;
+    }
+
+    .page-content .card .card-head {
+        background-color: #f47c08;
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        padding: 10px 0px;
+        align-items: center;
+    }
+
+    .page-content .card .card-head p {
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+
+    .page-content .card .card-body {
+        background-color: #f6f6f6;
+        border: 1px solid #e4e4e4;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .page-content .card .map-wrap {
+        padding: 0px;
+    }
+
+    .page-content .card .card-body p {
+        margin: 0px;
+        font-size: 19px;
+        line-height: 36px;
+        color: #0f0f0f;
+    }
+
+    .page-content .card .card-body .text-right {
+        text-align: right;
+    }
+
+    .page-content .menu {
+        background-color: #f47c08;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .page-content .menu a {
+        background-color: #ffffff;
+        padding: 20px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        width: 20%;
+        color: #0f0f0f;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 900px) {
+        .page-content h1 {
+            font-size: 22px!important;
+        }
+
+        .page-content h2 {
+            font-size: 17px;
+            color: #0f0f0f;
+            font-weight: 500;
+            padding-block: 2%;
+        }
+
+        .page-content .container {
+            width: unset;
+        }
+
+        .page-content .left {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .right {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .hero-image {
+            /* height: 340px; */
+        }
+
+        .page-content .hero-image img {
+            max-width: 100%;
+            height: unset;
+        }
+
+        .page-content .menu {
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .page-content .menu a {
+            padding: 20px 0px;
+            width: 100%;
+        }
+
+        .page-content .card .map-wrap iframe {
+            height: 400px;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+    }
+</style>
+<div class="page-content">
+    <header>
+        <div class="container">
+            <h1>Why is the 2024 GMC Sierra HD the Most Reliable Pickup Truck
+            </h1>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="left">
+                    <div class="hero-image">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/98b6cf1bc0a54b86bfbc7b8e1c196bff.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/6aefe964df5541fe88539e7b8e76e540.png"
+                                    alt="">
+                                <p>Hours of Operation</p>
+                            </div>
+                            <div class="card-body">
+                                <p>Saturday <br>Sunday <br>Monday <br>Tuesday <br>Wednesday <br>Thursday <br>Friday
+                                </p>
+                                <p class="text-right">9:00 AM - 7:00 PM <br> 10:00 AM - 6:00 PM <br> 9:00 AM - 8:00
+                                    PM<br> 9:00 AM - 8:00 PM<br> 9:00 AM - 8:00 PM <br> 9:00 AM - 8:00 PM<br> 9:00
+                                    AM -
+                                    8:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/0d3c96086aca4dc2b2d61e56f078371a.png"
+                                    alt="">
+                                <p>Find us here</p>
+                            </div>
+                            <div class="card-body map-wrap">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas"><iframe width="100%" height="200" id="gmap_canvas"
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6650.1367330287385!2d-117.674!3d33.5516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceef68edc0001%3A0x1f695a52c0f5c75e!2sLaguna%20Niguel%20GMC!5e0!3m2!1sen!2sin!4v1701264111143!5m2!1sen!2sin"
+                                            frameborder="0" scrolling="no" marginheight="0"
+                                            marginwidth="0"></iframe>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row flex-direction-column">
+                <h1 style="padding-block: 2%;color: #000;">Why is the 2024 GMC Sierra HD the Most Reliable Pickup Truck
+                </h1>
+
+<p>Are you on the hunt for a reliable and heavy-duty pickup truck? Look no further than the 2024 GMC Sierra HD. This exceptional truck offers unmatched durability, power, and advanced safety features, making it the top choice for any task or adventure. Whether you're transporting construction materials, towing a boat to the lake, or venturing off-road, the GMC Sierra HD has you covered.
+</p>
+
+<p>One of the most remarkable features of the 2024 GMC Sierra HD is its towing capacity. Designed to tackle the toughest challenges with ease, this truck is perfect for heavy-duty workloads. Moreover, the Sierra HD is equipped with advanced safety features such as the Sierra HD Pro Safety and adaptive cruise control with trailing, providing peace of mind and ensuring your safe arrival at each destination.
+</p>
+
+<p>Beyond its exceptional capabilities, the 2024 GMC Sierra HD showcases a bold and contemporary design destined to make heads turn, whether at a job site or on the open road. With its striking new LED projector headlamps and signature lighting, this truck leaves a lasting impression. The spacious and comfortable interior offers plenty of storage and technology options, delivering functionality and style. Whether you're hauling heavy loads, towing recreational equipment, or taking a road trip, the GMC Sierra HD has your back.
+</p>
+
+<h2>Powertrain and Performance
+</h2>
+
+<p>The 2024 GMC Sierra HD is a force to be reckoned with when it comes to powertrain and performance. With its exceptional towing capabilities, this pickup truck sets the bar high for reliability. Offering best-in-class towing capabilities, the Sierra HD goes above and beyond to ensure you can handle any hauling task effortlessly. With an available 2500 crew cab max towing of up to 22,070 lbs and a 3500 max towing of up to 36,000 lbs, this truck is built for heavy-duty work.
+</p>
+
+<p>Under the hood, the 2024 Sierra HD boasts an available 6.6L Duramax Turbo Diesel V8 that is a true marvel. Equipped with a new turbocharger and an Allison 10-speed transmission, this powertrain is a force to be reckoned with. Boasting an impressive 975 lb-ft of torque and 470 horsepower, this engine delivers unmatched performance and responsiveness. Not only that, but the Sierra HD also showcases a 25% increase in low-end torque over its previous model year, offering even greater power and towing capabilities.
+</p>
+
+<p>When it comes to control and safety, the 2024 Sierra HD leaves no room for compromise. It has enhanced exhaust brake performance, improving control when towing heavy loads. Additionally, the addition of a more powerful turbo vane actuator and uprated valve springs ensures improved engine braking, making it safer to navigate steep downhill descents.
+</p>
+
+<h2>Advanced Trailering
+</h2>
+
+<p>With its ProGrade™ Trailering Tech suite of intelligent technologies, this truck makes the hitching and towing process safer, more streamlined, and more confident, making it a reliable pickup truck. Its advanced features include Trailer Tire Pressure and Temperature Monitoring, Adaptive Cruise Control with Trailering, Trailer Sway Control, Trailer Theft Detection, and more. With these safety features, you can enjoy a more secure and stress-free trailering experience.
+</p>
+
+<p>In addition, the 2024 Sierra HD offers up to 14 available camera views, including a transparent trailer view, to provide enhanced visibility and confidence when towing. With its Transparent Trailer View technology, this truck is compatible with most gooseneck and fifth-wheel trailers, providing a complete view of your trailer and its surroundings. The camera views also include the Hitch View, Cargo Bed View, and Surround View, allowing you to monitor every angle of your vehicle and trailer.
+</p>
+
+<p>The 2024 GMC Sierra HD also has an Adaptive Cruise Control with Trailering. This all-new technology allows the truck's Adaptive Cruise Control to account for additional drag and increased braking distances when towing a trailer. This feature ensures that your truck maintains a safe distance from the vehicle in front of you, even when towing.
+</p>
+
+<h2>Advanced Technology</h2>
+
+<p>With the most trailering-assistance tech available, this truck is designed to enhance your towing experience and provide the utmost confidence and control. From features like Trailer Tire Pressure and Temperature Monitoring to Trailer Brake Controller and Trailer Light Test, the Sierra HD has your back when it comes to trailering, ensuring that you have all the necessary tools to make your towing adventures safe and successful.
+</p>
+
+<p>Step inside the cabin of the Sierra HD, and you'll encounter the largest touch-screen in its class—a vast 13.4" diagonal tablet-style touch-screen. This customizable, high-tech centerpiece lets you easily access and control various functions, from navigation and audio to vehicle settings and trailering features. With this advanced touch-screen technology at your fingertips, you can enjoy a seamless and intuitive user experience, further enhancing the reliability and convenience of your Sierra HD.
+</p>
+
+<p>Traveling in the Sierra HD means traveling with style and comfort. The spacious cabin has innovative driver-centric technologies like the Bose Premium Sound System with a Richbass woofer. This high-quality audio system ensures you can enjoy your favorite music with exceptional clarity and depth, enhancing your driving experience.
+</p>
+
+<h2>Safety Features
+</h2>
+
+<p>The Sierra HD Pro Safety suite offers a range of active safety and driver-assistance technologies to ensure peace of mind when driving or trailing. This suite includes several features, such as a Forward Collision Alert to notify you of potential frontal collisions, the Following Distance Indicator to maintain a safe distance from the vehicle ahead, and Front Pedestrian Braking to detect pedestrians and automatically apply brakes if a collision is imminent.
+</p>
+
+<p>The IntelliBeam technology adjusts the headlights' brightness based on surrounding vehicles' proximity, making it easier for you to see and enhancing the safety of other drivers on the road. Lane Departure Warning alerts you if you unintentionally drift from your lane, helping you to stay on course and avoid potential accidents.
+</p>
+
+<p>The Sierra HD is also equipped with Automatic Emergency Braking, which applies the brakes automatically to mitigate or prevent a collision if the system detects a potential front-end collision with a vehicle. With these comprehensive safety features working together, the 2024 Sierra HD provides the peace of mind and confidence you need to navigate the roads and trails, making it the most reliable companion on the road.
+</p>
+
+<h2>Premium Interior
+</h2>
+
+<p>Step inside the cabin of the Sierra HD, and you'll encounter the largest touch-screen in its class—a vast 13.4" diagonal tablet-style touch-screen. This customizable, high-tech centerpiece lets you easily access and control various functions, from navigation and audio to vehicle settings and trailering features. With this advanced touch-screen technology at your fingertips, you can enjoy a seamless and intuitive user experience, further enhancing the reliability and convenience of your Sierra HD.
+</p>
+
+<p>Traveling in the Sierra HD means traveling with style and comfort. The spacious cabin has innovative driver-centric technologies like the Bose Premium Sound System with a Richbass woofer. This high-quality audio system ensures you can enjoy your favorite music with exceptional clarity and depth, enhancing your driving experience.
+</p>
+
+<h2>Bold Exterior</h2>
+
+<p>The 2024 Sierra HD now features new LED projector headlamps with animated sequences that not only boost visibility but also bring a touch of elegance to the truck's front end. These stylish and contemporary headlamps add to the truck's daring exterior design, making a strong statement wherever you go.
+</p>
+
+<p>To make it even more unique, the Sierra HD has a new front bumper, fascia, and a redesigned Denali chrome grille available. These bold updates give the truck's exterior an air of presence and confidence, making it impossible to ignore.
+</p>
+
+<p>Apart from its attractive exterior, the Sierra HD features the innovative MultiPro Tailgate, which offers six functions for added convenience and versatility. Loading, unloading, and accessing the cargo bed is now a breeze, whether hauling equipment for work or packing up for a fun weekend adventure. The MultiPro Tailgate ensures you can complete tasks more efficiently and effortlessly.
+</p>
+
+<h2>Specs</h2>
+
+<p>The 2024 GMC Sierra HD offers two powerful and capable models: the GMC Sierra 2500 HD and the Sierra 3500 HD. These trucks epitomize reliability and performance, making them the top choice for those seeking a dependable and powerful pickup truck.
+</p>
+
+<p>Both models offer six different trims to choose from, which include the PRO, SLE, SLT, AT4, Denali, and Denali Ultimate. The PRO, SLE, and SLT versions are available in either two-wheel drive or four-wheel drive, while the AT4, Denali, and Denali Ultimate trims come standard with four-wheel drive.
+</p>
+<p>
+    The 2024 GMC Sierra 2500HD and the 2024 GMC Sierra 3500HD are built with strength and durability in mind. With a sturdy frame, advanced suspension systems, and a suite of available trailering technologies, these trucks are designed to handle the toughest jobs and road conditions.
+</p>
+<h2>Takeaways</h2>
+<p>
+    The 2024 GMC Sierra HD is undeniably the most reliable pickup truck on the market today. Its exceptional towing capacity, advanced safety features, and powerful powertrain make it the perfect companion for any task or adventure. Whether you need a heavy-duty truck for work or leisure, the Sierra HD has you covered.
+</p>
+<p>The powertrain and performance of the Sierra HD are unmatched. With its impressive towing capabilities and a new 6.6L Duramax Turbo Diesel V8 engine, this truck delivers exceptional power, torque, and responsiveness. It also offers advanced control and safety features, such as enhanced exhaust brake performance and improved engine braking, ensuring a safe and confident towing experience.
+</p>
+<p>
+    When it comes to trailering, the Sierra HD sets the standard with its ProGrade™ Trailering Tech suite of intelligent technologies. From trailer tire pressure monitoring to adaptive cruise control with trailering, this truck provides the tools you need to tow with confidence. It also offers up to 14 available camera views, including a transparent trailer view, to enhance visibility and make hitching and towing easier.
+</p>
+<p>Safety is a top priority in the Sierra HD, with features like forward collision alert, lane departure warning, and automatic emergency braking keeping you and your passengers protected on the road. The Sierra HD Pro Safety suite offers a comprehensive range of active safety and driver-assistance technologies, providing peace of mind on every journey.
+</p>
+<p>
+    Not only does the Sierra HD excel in performance and safety, but it also boasts a bold and contemporary design. With its new LED projector headlamps, redesigned front bumper and grille, and innovative MultiPro Tailgate, this truck turns heads wherever it goes.
+</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>COPYRIGHT © 2024</p>
+        </div>
+    </footer>
+</div>

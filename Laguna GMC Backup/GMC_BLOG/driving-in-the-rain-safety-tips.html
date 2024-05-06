@@ -1,0 +1,555 @@
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        width: 100%;
+    }
+
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        width: 100%;
+    }
+
+    #content-description {
+        display: none;
+    }
+
+    .page-content {
+        font-family: 'Lato', sans-serif;
+        margin: 0px;
+        margin-top: 40px;
+    }
+
+    .page-content section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .page-content h3 {
+        margin: 0px;
+    }
+
+    .page-content table,
+    .page-content th,
+    .page-content td {
+        border: 1px solid;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .page-content table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .page-content td {
+        width: 50%;
+    }
+
+    .page-content .container {
+        width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1320px;
+    }
+
+    .page-content .row {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .page-content .row.flex-direction-column {
+        flex-direction: column;
+    }
+
+    .page-content .left {
+        flex: 0 0 65%;
+        max-width: 65%;
+        margin-right: auto;
+    }
+
+    .page-content .right {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-left: auto;
+    }
+
+    .page-content h1 {
+        font-size: 32px!important;
+        font-weight: 600;
+    }
+
+    .page-content h2 {
+        font-size: 20px;
+        color: #0f0f0f;
+        font-weight: 500;
+        padding-block: 2%;
+    }
+
+    .page-content p {
+        font-size: 16px;
+        line-height: 28px;
+        color: #0f0f0f;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+
+    .page-content ul {
+        list-style: none;
+        font-size: 18px;
+        line-height: 48px;
+        color: #0f0f0f;
+        font-weight: 400;
+        padding-left: 21px;
+        margin-top: 0px;
+    }
+
+    .page-content ul li::before {
+        content: "\2022";
+        color: #f47c08;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .page-content header {
+        background-color: #0f0f0f;
+        padding: 10px 0px;
+        margin-bottom: 50px;
+    }
+
+    .page-content header h1 {
+        color: #ffffff;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .page-content footer {
+        background-color: #0f0f0f;
+        padding: 20px 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .page-content footer p {
+        font-size: 18px;
+        line-height: 36px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .page-content .hero-image {
+        max-width: 100%;
+        /* height: 550px; */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-content .hero-image img {
+        width: 100%;
+    }
+
+    .page-content .card-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 15px;
+    }
+
+    .page-content .card .card-head {
+        background-color: #f47c08;
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        padding: 10px 0px;
+        align-items: center;
+    }
+
+    .page-content .card .card-head p {
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+
+    .page-content .card .card-body {
+        background-color: #f6f6f6;
+        border: 1px solid #e4e4e4;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .page-content .card .map-wrap {
+        padding: 0px;
+    }
+
+    .page-content .card .card-body p {
+        margin: 0px;
+        font-size: 19px;
+        line-height: 36px;
+        color: #0f0f0f;
+    }
+
+    .page-content .card .card-body .text-right {
+        text-align: right;
+    }
+
+    .page-content .menu {
+        background-color: #f47c08;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .page-content .menu a {
+        background-color: #ffffff;
+        padding: 20px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        width: 20%;
+        color: #0f0f0f;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 900px) {
+        .page-content h1 {
+            font-size: 22px!important;
+        }
+
+        .page-content h2 {
+            font-size: 17px;
+            color: #0f0f0f;
+            font-weight: 500;
+            padding-block: 2%;
+        }
+
+        .page-content .container {
+            width: unset;
+        }
+
+        .page-content .left {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .right {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .page-content .hero-image {
+            /* height: 340px; */
+        }
+
+        .page-content .hero-image img {
+            max-width: 100%;
+            height: unset;
+        }
+
+        .page-content .menu {
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .page-content .menu a {
+            padding: 20px 0px;
+            width: 100%;
+        }
+
+        .page-content .card .map-wrap iframe {
+            height: 400px;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+    }
+</style>
+<div class="page-content">
+    <header>
+        <div class="container">
+            <h1>Driving in the Rain Safety Tips
+            </h1>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="left">
+                    <div class="hero-image">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/43f15831e946490d9d11267d2ed33e17.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/6aefe964df5541fe88539e7b8e76e540.png"
+                                    alt="">
+                                <p>Hours of Operation</p>
+                            </div>
+                            <div class="card-body">
+                                <p>Saturday <br>Sunday <br>Monday <br>Tuesday <br>Wednesday <br>Thursday <br>Friday
+                                </p>
+                                <p class="text-right">9:00 AM - 7:00 PM <br> 10:00 AM - 6:00 PM <br> 9:00 AM - 8:00
+                                    PM<br> 9:00 AM - 8:00 PM<br> 9:00 AM - 8:00 PM <br> 9:00 AM - 8:00 PM<br> 9:00
+                                    AM -
+                                    8:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/blogs/0d3c96086aca4dc2b2d61e56f078371a.png"
+                                    alt="">
+                                <p>Find us here</p>
+                            </div>
+                            <div class="card-body map-wrap">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas"><iframe width="100%" height="200" id="gmap_canvas"
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6650.1367330287385!2d-117.674!3d33.5516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceef68edc0001%3A0x1f695a52c0f5c75e!2sLaguna%20Niguel%20GMC!5e0!3m2!1sen!2sin!4v1701264111143!5m2!1sen!2sin"
+                                            frameborder="0" scrolling="no" marginheight="0"
+                                            marginwidth="0"></iframe>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row flex-direction-column">
+                <h1 style="padding-block: 2%; color: #000;">Driving in the Rain Safety Tips
+                </h1>
+
+                <p>Rain, the gentle caress of nature, can quickly turn into a treacherous adversary when you find
+                    yourself behind the wheel. Driving in the rain demands a heightened level of skill, focus, and
+                    caution to navigate the slippery surfaces and reduced visibility it brings. It's during these
+                    moments that we must remember that driving is not just a convenience, but a responsibility that
+                    requires vigilance to protect ourselves and others.
+
+
+
+                </p>
+
+                <p>In this guide, we will talk about the essential tips for driving in the rain to ensure your journey
+                    through the water-soaked roads is as secure as possible. Whether you're an experienced driver
+                    seeking a refresher or a new road adventurer preparing for your first rainy day challenge, this
+                    article is your go-to resource!
+
+
+                </p>
+
+                <h2>Be Informed About the Weather
+
+                </h2>
+
+                <p>Being well-informed about the weather before embarking on a journey is important. Forecasts provide
+                    valuable insights into the intensity and duration of rainfall, enabling drivers to make informed
+                    decisions about when to travel, which routes to take, and how to prepare for the journey. This
+                    awareness empowers individuals to plan ahead, choosing optimal departure times and routes that may
+                    minimize exposure to the more treacherous aspects of bad weather.
+
+
+
+                </p>
+                <p>Severe weather conditions can pose significant risks on the road, such as flash floods, strong winds,
+                    or poor visibility. By staying up-to-date with the weather forecast, drivers can assess the
+                    potential hazards and determine if it is advisable to postpone their trip or find alternative means
+                    of transportation.
+                </p>
+
+                <h2>Be Cautious of Hydroplaning
+
+                </h2>
+
+                <p>Hydroplaning, also known as aquaplaning, occurs when a layer of water builds up between the road
+                    surface and the tires of your vehicle. This layer of water causes the tires to lose traction on the
+                    road, making it difficult for the driver to steer or stop the vehicle. Hydroplaning can happen in
+                    just a few inches of standing water, and the effects can be daunting, causing you to lose control of
+                    your vehicle. Therefore, it is essential to remain cautious of hydroplaning when driving in the
+                    rain.
+
+                </p>
+                <p>Being cautious of hydroplaning is important because it improves safety on the road. To avoid
+                    hydroplaning, drivers should reduce speed and avoid sudden braking or acceleration, maintain
+                    adequate tire tread depth, and stay on the tracks of the vehicle in front of them. This reduces the
+                    risk of skidding and losing control of your car, which can result in accidents.
+
+
+                </p>
+                <p>Additionally, regular vehicle maintenance can help prevent hydroplaning. Tires should be properly
+                    inflated, regularly rotated to maintain excellent traction and alignment, ensuring the brakes are
+                    working correctly, and having the car's suspension system checked to ensure it's operating
+                    appropriately. Taking these precautions can reduce the risk of hydroplaning, offering an added layer
+                    of safety when driving in the rain.
+                </p>
+
+                <h2>Avoid the Cruise Control Feature
+
+
+
+                </h2>
+
+                <p>Cruise control is designed to maintain a consistent speed set by the driver, but in rainy weather,
+                    this feature can become a liability. Rain-slicked roads are prone to patches of reduced traction,
+                    and using cruise control may impede a driver's ability to respond quickly to changing conditions.
+                    When engaged, cruise control may not react as promptly as a human driver would to variations in road
+                    surface, increasing the risk of skidding or hydroplaning.
+
+                </p>
+                <p>Another reason to steer clear of cruise control in the rain is that it can make it less likely for
+                    drivers to remain alert and attentive behind the wheel. Using cruise control can create a false
+                    sense of comfort and relaxation, leading to decreased focus on the road and potential hazards. In
+                    wet conditions, it's important to be fully engaged in driving, constantly assessing the road
+                    conditions and adjusting speed and acceleration accordingly.
+                </p>
+
+
+                <h2>Slow Down and Maintain a Safe Distance
+
+                </h2>
+
+                <p>Slowing down and maintaining a safe following distance are paramount when traversing rain-soaked
+                    roads. Rain creates a slippery film on the road surface, diminishing tire traction and increasing
+                    the likelihood of accidents. So, by reducing the vehicle speed, drivers mitigate the risk of
+                    hydroplaning and skidding, allowing their tires to maintain better contact with the road.
+
+
+                </p>
+                <p>Also crucial is the art of maintaining a safe following distance, which is essentially a buffer
+                    against potential disasters. In wet conditions, vehicles require more space to come to a stop due to
+                    decreased friction. Keep a safe distance from the vehicle ahead to give you an extra margin for
+                    reaction time and braking distance.
+
+                </p>
+
+
+                <p>A prudent combination of reduced speed and an ample following distance transforms the act of driving
+                    in the rain from a potentially perilous endeavor into a responsible and considerate approach that
+                    contributes to overall road safety.
+
+                </p>
+                <h2>Avoid Distractions
+                </h2>
+                <p>Driving in the rain requires extra vigilance to maintain control and respond to unexpected
+                    situations. Therefore, avoiding distraction when behind the wheel in wet conditions is crucial.
+                    Distractions can be anything that takes your attention away from the road, including texting,
+                    talking on the phone, adjusting the radio, or eating. All of these behaviors can increase the risk
+                    of accidents, but the danger is magnified in rainy conditions, where the road surface may be slick,
+                    and visibility limited.
+                </p>
+                <p>Another good reason to avoid distractions when driving in the rain is the increased likelihood of
+                    losing control of the vehicle. With decreased visibility and reduced traction, drivers need to
+                    remain alert to changes in road and weather conditions. If a driver is distracted by other
+                    activities, it can be challenging to respond quickly to hazards or adjust to changes in traffic
+                    flow. This is why when driving in rain you must maintain your focus on the road, not on unnecessary
+                    things.
+                </p>
+                <h2>Stay Away from Flooded Areas
+                </h2>
+                <p>Driving through standing water or flooded areas can pose a significant risk to both the driver and
+                    the vehicle. Flooded roads can hide dangers such as potholes, debris, or even washed-out sections of
+                    the road. This can cause damage to the vehicle's suspension, tires, or even lead to a loss of
+                    control, resulting in accidents. Moreover, standing water can also impair the vehicle's braking
+                    ability, making it harder to come to a complete stop or skid on the slippery surface.
+                </p>
+                <p>Secondly, driving through flooded areas puts the driver and passengers at the risk of being stranded
+                    or stuck in the water. It is challenging to judge the depth of water on the road, and what may seem
+                    harmless could quickly become a hazardous situation. An ample amount of water can be enough to stall
+                    the engine or cause the vehicle to float or be swept away by the force of the water.
+                </p>
+                <h2>Turn the Headlights and Wipers On
+                </h2>
+                <p>Turning on headlights and wipers when driving in the rain is crucial for several reasons. First and
+                    foremost, headlights significantly improve visibility, allowing both the driver and other road users
+                    to see and be seen more effectively. Rain, especially heavy rainfall, reduces visibility, making it
+                    more difficult to see the road, obstacles, other vehicles, and pedestrians.
+                </p>
+                <p>Equally important is the use of windshield wipers to maintain a clear field of vision. Rainfall can
+                    quickly accumulate on the windshield, obstructing the driver's view and leading to hazardous
+                    conditions. Wipers efficiently sweep away rainwater, preventing it from forming a film that distorts
+                    vision. Clear visibility is essential for timely reactions to changes in traffic, road conditions,
+                    and unexpected obstacles.
+                </p>
+                <p>Just remember that when driving in fog, rain, or snow, use your vehicle lights responsibly in a way
+                    that you are not confusing or blinding other road users.
+                </p>
+                <h2>Conclusion</h2>
+                <p>There you have it, some safety tips for driving in the rain! Through these insights, we hope to
+                    instill a mindset of preparedness and caution, ensuring that every journey is not just a commute but
+                    a safe and controlled passage. Stay informed, stay vigilant, and embrace the road with the
+                    confidence. Drive safely in the rain!
+                </p>
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <a href="https://www.lagunaniguelgmc.com/VehicleSearchResults">View
+                        Inventory</a>
+                    <a href="https://www.lagunaniguelgmc.com/QuickQuoteForm">Get a Quote</a>
+                    <a href="https://www.lagunaniguelgmc.com/ServiceApptForm">Schedule Service</a>
+                    <a onclick="window.open('tel:949-328-7559', '_self');">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>COPYRIGHT © 2023</p>
+        </div>
+    </footer>
+</div>

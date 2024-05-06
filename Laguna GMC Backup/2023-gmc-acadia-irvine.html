@@ -1,0 +1,3572 @@
+<style>
+    /* Write your master css here */
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+    body {
+        margin: 0;
+    }
+
+    .main-div {
+        max-width: 100%;
+        font-family: 'Lato' !important;
+    }
+
+    .main-div>h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+        font-family: 'Lato' !important;
+    }
+
+    .main-div  img {
+        max-width: 100%;
+        width: 100% !important;
+    }
+
+    :root {
+        --sns-btn-bg: #666 !important;
+        --sns-btn-back: #cc0001 !important;
+        --sns-black: #000 !important;
+        --sns-white: #fff !important;
+
+    }
+
+    .sns-color-black {
+        color: var(--sns-black) !important;
+    }
+
+    .sns-white {
+        color: var(--sns-white) !important;
+    }
+
+    .sns-gray {
+        background-color: #666 !important;
+    }
+
+
+
+    .sns-f-40 {
+        font-size: 2.1vw !important;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 6px !important;
+        line-height: normal !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-30 {
+        font-size: 1.6vw !important;
+        font-weight: 600 !important;
+        line-height: normal !important;
+        letter-spacing: 4.5px !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-26 {
+        font-size: 1.4vw !important;
+        font-weight: 400 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 8.84px !important;
+        line-height: normal !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-22 {
+        font-size: 1.15vw !important;
+        font-weight: 400 !important;
+        line-height: normal !important;
+        letter-spacing: 3.3px !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-20 {
+        font-size: 1.1vw !important;
+        font-weight: 400;
+        line-height: normal !important;
+        letter-spacing: 2.4px !important;
+        color: var(--sns-black) !important;
+    }
+
+    .sns-f-18 {
+        font-size: 1.0vw !important;
+        font-weight: 400 !important;
+        line-height: normal !important;
+        letter-spacing: 2.7px !important;
+        color: var(--sns-black) !important;
+    }
+
+
+    @media screen and (max-width: 890px) {
+        .sns-f-40 {
+            line-height: 1.4em !important;
+        }
+    }
+
+    @media screen and (max-width: 660px) {
+        .sns-f-40 {
+
+            letter-spacing: 3px !important;
+
+        }
+
+        .sns-f-22 {
+            letter-spacing: 2.8px !important;
+        }
+
+        .sns-f-20 {
+            letter-spacing: 2.8px !important;
+        }
+
+        .sns-f-30 {
+
+            letter-spacing: 4.5px !important;
+
+        }
+
+        .sns-f-40 {
+            line-height: 1.3em !important;
+        }
+
+        .sns-f-40 {
+            font-weight: 600 !important;
+
+        }
+
+        .sns-f-30 {
+            font-weight: 600 !important;
+        }
+
+        .sns-f-26 {
+            font-weight: 600 !important;
+
+        }
+
+        .sns-f-22 {
+            font-weight: 600 !important;
+        }
+
+        .sns-f-20 {
+            font-weight: 400;
+        }
+
+        .sns-f-18 {
+            font-weight: 600 !important;
+        }
+
+
+
+    }
+
+    @media screen and (max-width: 890px) {
+        .sns-f-40 {
+            font-size: clamp(26px, 2.5vw, 40px) !important;
+        }
+
+        .sns-f-30 {
+            font-size: clamp(24px, 1.9vw, 30px) !important;
+
+        }
+
+        .sns-f-26 {
+            font-size: clamp(22px, 1.7vw, 26px) !important;
+        }
+
+        .sns-f-22 {
+            font-size: clamp(18px, 1.4vw, 22px) !important;
+        }
+
+        .sns-f-20 {
+            font-size: clamp(18px, 1.1vw, 20px) !important;
+        }
+
+        .sns-f-18 {
+            font-size: clamp(16px, 1.0vw, 18px) !important;
+        }
+
+
+
+    }
+
+
+
+
+    .sns-underline {
+        text-decoration: underline;
+        text-decoration-color: var(--sns-btn-back);
+        text-underline-offset: 17%;
+    }
+
+    .sns-mb-3 {
+        margin-block: 1.5% !important;
+    }
+
+    .sns-m-top-3 {
+        margin-top: 2.5% !important;
+    }
+
+    .sns-m-top-cu {
+        margin-top: 1.2% !important;
+    }
+
+    .sns-mt-4 {
+        margin-top: 4% !important;
+    }
+
+    .sns-mt-5 {
+        margin-top: 5% !important;
+    }
+
+    .sns-mb-5 {
+        margin-bottom: 5% !important;
+    }
+
+    .sns-mb-10 {
+        margin-bottom: 8% !important;
+    }
+
+    .pad-r-9 {
+        padding-right: 8% !important;
+    }
+
+    .main-div sup {
+        font-size: 0.8em;
+        line-height: 0.9em;
+    }
+
+    /* margin for heading sections */
+    .mar-29 {
+        margin-inline: 29%;
+    }
+
+    .mar-27 {
+        margin-inline: 27%;
+    }
+
+    .mar-23 {
+        margin-inline: 23%;
+    }
+
+    .mar-b-0 {
+        margin-bottom: -1% !important;
+    }
+
+    .sns-mb-2 {
+        margin-bottom: 2% !important;
+    }
+
+    .sns-mb-3c {
+        margin-bottom: 3% !important;
+    }
+
+    .sns-pad-in-16{
+         padding-inline: 14% 5% !important;
+    }
+
+    
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .mar-29 {
+            margin-inline: 10% !important;
+        }
+
+        .mar-27 {
+            margin-inline: 10% !important;
+        }
+
+        .mar-23 {
+            margin-inline: 10% !important;
+        }
+
+        .sns-pb-0-t {
+            padding-bottom: 0 !important;
+        }
+
+    }
+
+    @media screen and (max-width: 660px) {
+        .mar-29 {
+            margin-inline: 1% !important;
+        }
+
+        .sns-mt-5 {
+            margin-top: 13% !important;
+        }
+
+        .mar-27 {
+            margin-inline: 1% !important;
+        }
+
+        .mar-23 {
+            margin-inline: 1% !important;
+        }
+
+        .sns-mb-3 {
+            margin-block: 4.5% !important;
+        }
+
+        .sns-mb-5 {
+            margin-bottom: 11% !important;
+        }
+
+        .mar-0-m {
+            margin-bottom: 0 !important;
+        }
+
+        .sns-pb-0-t {
+            padding-bottom: 0 !important;
+        }
+
+        .sns-underline {
+
+            text-decoration-thickness: 3px;
+        }
+
+        .sns-mar-bc{
+            margin-bottom: 5% !important;
+        }
+
+    }
+
+
+
+    /* Custom css */
+
+    /* The sns-d-flex becomes flexible by setting the display property to flex */
+    .sns-d-flex {
+        display: flex;
+    }
+
+    /* justify-content to align the item on the main axis ,center */
+    .sns-justify-content-center {
+        justify-content: center;
+    }
+
+    .sns-justify-center {
+        justify-content: center;
+    }
+
+    /* Distribute items evenly Start, in-between, and end gaps have equal sizes */
+    .sns-justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    /*Items will have space between them */
+    .sns-justify-content-space-between {
+        justify-content: space-between;
+    }
+
+    /*tems will have space before, between, and after them */
+    .sns-justify-content-space-around {
+        justify-content: space-around;
+    }
+
+    /* the align-items property to align our item on the cross axis, center*/
+    .sns-align-center {
+        align-items: center;
+    }
+
+    .sns-align-end {
+        align-items: end;
+    }
+
+    /* sets the items in row */
+    .sns-f-row {
+        flex-direction: row;
+    }
+
+    /* sets the items in column */
+    .sns-f-column {
+        flex-direction: column;
+    }
+
+    /* sns-flex-wrap property is used to specify whether flex items are forced into a single line or wrapped onto multiple lines.  */
+    .sns-flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    /* The flexbox items are aligned at the baseline of the cross axis. */
+    .sns-basline {
+        align-items: baseline;
+    }
+
+    .sns-wor {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .sns-text-center {
+        text-align: center;
+    }
+
+    .sns-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+
+
+
+
+
+
+
+    /* ====================== Width ==========================*/
+    .sns-w-25 {
+        width: 25%;
+    }
+
+    .sns-w-50 {
+        width: 50%;
+    }
+
+    .sns-w-75 {
+        width: 75%;
+    }
+
+    .sns-w-100 {
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* start */
+    .sns-desk-none {
+        display: none;
+    }
+
+    .sns-mob-none {
+        display: block;
+    }
+
+    /* End */
+
+
+    /* padding left and right top bottom in rem */
+    .sns--0 {
+        padding: 0;
+    }
+
+    .sns--1 {
+        padding: 0.25rem;
+    }
+
+    .sns--2 {
+        padding: 0.5rem;
+    }
+
+    .sns--3 {
+        padding: 1rem;
+    }
+
+    .sns--4 {
+        padding: 1.5rem;
+    }
+
+    .sns--5 {
+        padding: 3rem;
+    }
+
+    /* padding left and right top bottom in rem */
+
+
+
+
+    /* padding left and right in rem */
+    .sns-x-0 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .sns-x-1 {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+    }
+
+    .sns-x-2 {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .sns-x-3 {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .sns-x-4 {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .sns-px-5 {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+    /* padding left and right in rem */
+
+
+
+
+    /* padding -top and bottom in rem */
+    .sns-py-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .sns-py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .sns-py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .sns-py-3 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .sns-py-4 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .sns-py-5 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /* padding -top and bottom in rem */
+
+
+
+
+    /* padding -top in rem */
+    .sns-pt-0 {
+        padding-top: 0;
+    }
+
+    .sns-pt-1 {
+        padding-top: 0.25rem;
+    }
+
+    .sns-pt-2 {
+        padding-top: 0.5rem;
+    }
+
+    .sns-pt-3 {
+        padding-top: 1rem;
+    }
+
+    .sns-pt-4 {
+        padding-top: 1.5rem;
+    }
+
+    .sns-pt-5 {
+        padding-top: 2rem;
+    }
+
+    .sns-pt-6 {
+        padding-top: 2.5rem;
+    }
+
+    .sns-pt-7 {
+        padding-top: 3rem;
+    }
+
+    .sns-pt-8 {
+        padding-top: 3.5rem;
+    }
+
+    .sns-pt-9 {
+        padding-top: 4rem;
+    }
+
+    /* padding -top in rem */
+
+
+
+
+
+    /* padding -right in rem */
+
+    .sns-pe-0 {
+        padding-right: 0;
+    }
+
+    .sns-pe-1 {
+        padding-right: 0.25rem;
+    }
+
+    .sns-pe-2 {
+        padding-right: 0.5rem;
+    }
+
+    .sns-pe-3 {
+        padding-right: 1rem;
+    }
+
+    .sns-pe-4 {
+        padding-right: 1.5rem;
+    }
+
+    .sns-pe-5 {
+        padding-right: 2rem;
+    }
+
+    .sns-pe-6 {
+        padding-right: 2.5rem;
+    }
+
+    .sns-pe-7 {
+        padding-right: 3rem;
+    }
+
+    .sns-pe-8 {
+        padding-right: 3.5rem;
+    }
+
+    .sns-pe-9 {
+        padding-right: 4rem;
+    }
+
+    /* padding -right in rem */
+
+
+
+
+    /* padding -bottom in rem */
+
+    .sns-pb-0 {
+        padding-bottom: 0;
+    }
+
+    .sns-pb-1 {
+        padding-bottom: 0.25rem;
+    }
+
+    .sns-pb-2 {
+        padding-bottom: 0.5rem;
+    }
+
+    .sns-pb-3 {
+        padding-bottom: 1rem;
+    }
+
+    .sns-pb-4 {
+        padding-bottom: 1.5rem;
+    }
+
+    .sns-pb-5 {
+        padding-bottom: 2rem;
+    }
+
+    .sns-pb-6 {
+        padding-bottom: 2.5rem;
+    }
+
+    .sns-pb-7 {
+        padding-bottom: 3rem;
+    }
+
+    .sns-pb-8 {
+        padding-bottom: 3.5rem;
+    }
+
+    .sns-pb-9 {
+        padding-bottom: 4rem;
+    }
+
+    /* padding -bottom in rem */
+
+
+
+
+
+    /* padding -left in rem */
+
+    .sns-ps-0 {
+        padding-left: 0;
+    }
+
+    .sns-ps-1 {
+        padding-left: 0.25rem;
+    }
+
+    .sns-ps-2 {
+        padding-left: 0.5rem;
+    }
+
+    .sns-ps-3 {
+        padding-left: 1rem;
+    }
+
+    .sns-ps-4 {
+        padding-left: 1.5rem;
+    }
+
+    .sns-ps-5 {
+        padding-left: 2rem;
+    }
+
+    .sns-ps-6 {
+        padding-left: 2.5rem;
+    }
+
+    .sns-ps-7 {
+        padding-left: 3rem;
+    }
+
+    .sns-ps-8 {
+        padding-left: 3.5rem;
+    }
+
+    .sns-ps-9 {
+        padding-left: 4rem;
+    }
+
+    /* padding -left in rem */
+
+
+
+
+
+    .sns-fw-100 {
+        font-weight: 100;
+    }
+
+    .sns-fw-200 {
+        font-weight: 200;
+    }
+
+    .sns-fw-300 {
+        font-weight: 300;
+    }
+
+    .sns-fw-400 {
+        font-weight: 400;
+    }
+
+    .sns-fw-500 {
+        font-weight: 500;
+    }
+
+    .sns-fw-600 {
+        font-weight: 600;
+    }
+
+    .sns-fw-700 {
+        font-weight: 700;
+    }
+
+    .sns-fw-800 {
+        font-weight: 800;
+    }
+
+
+    /* font-weight normal italic bold */
+
+
+
+    .sns-text-start {
+        text-align: left;
+    }
+
+    .sns-text-end {
+        text-align: right;
+    }
+
+    .sns-text-center {
+        text-align: center;
+    }
+
+    .sns-text-decoration-none {
+        text-decoration: none;
+    }
+
+    .sns-text-decoration-underline {
+        text-decoration: underline;
+    }
+
+    .sns-text-decoration-line-through {
+        text-decoration: line-through;
+    }
+
+
+
+    /* .text-capitalize lowercase capitalize*/
+
+    .sns-text-lowercase {
+        text-transform: lowercase;
+    }
+
+    .sns-text-uppercase {
+        text-transform: uppercase;
+    }
+
+    .sns-text-capitalize {
+        text-transform: capitalize;
+    }
+
+    .sns-text-wrap {
+        white-space: normal;
+    }
+
+    .sns-text-nowrap {
+        white-space: nowrap;
+    }
+
+    /* .text-capitalize lowercase capitalize*/
+
+
+    .sns-col-4 {
+        width: calc(85%/4);
+    }
+
+    .sns-col-3 {
+        width: calc(88%/3);
+    }
+
+    .sns-col-1 {
+        width: calc(94%/1);
+    }
+
+
+    @media screen and (max-width: 480px) {
+        .sns-desk-none {
+            display: block;
+        }
+
+        .sns-mob-none {
+            display: none;
+        }
+    }
+
+
+
+    .sns-d-flex {
+        display: flex;
+    }
+
+    .sns-mt-3 {
+        margin-top: 0rem;
+    }
+
+    .sns-four-button>.sns-BN {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2.5% 0;
+        background-color: var(--sns-btn-bg);
+        margin-top: -1px;
+    }
+
+    .sns-BN>a {
+        color: var(--sns-white);
+        text-decoration: none !important;
+        letter-spacing: 0px;
+    }
+
+
+    .sns-BN>.sns-btn {
+        width: calc(80%/4);
+        padding: 1.5% 0;
+        box-sizing: border-box;
+    }
+
+    .justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    .sns-BN .sns-butn {
+        background-color: var(--sns-btn-back);
+        color: var(--sns-white);
+        font-size: 1.25vw;
+        font-weight: bold;
+        line-height: normal;
+        text-align: center;
+        /* border: 2px solid #FFFFFF; */
+        transition: 0.5s;
+        border-radius: 0;
+        text-transform: uppercase;
+    }
+
+    .sns-BN .sns-butn:hover {
+        background-color: var(--sns-white);
+        color: var(--sns-black);
+    }
+
+    @media screen and (max-width: 890px) {
+        .sns-BN>.sns-btn {
+            width: calc(91%/2);
+            /* margin: 1.5% auto; */
+            padding: 2% 0;
+        }
+
+        .sns-BN .sns-butn {
+            font-size: clamp(18px, 1vw, 20px) !important;
+        }
+
+        .sns-f-b {
+            margin-bottom: 3%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-BN>.sns-btn {
+            width: calc(85%/1);
+        }
+
+        .sns-four-button>.sns-BN {
+            padding: 10% 0;
+            background: var(--sns-btn-bg);
+        }
+
+        .sns-BN>.sns-btn {
+            padding: 5% 0;
+        }
+
+        .sns-BN .sns-butn {
+            font-size: 23px !important;
+        }
+
+        .sns-f-b {
+            margin-bottom: 5%;
+        }
+
+        .sns-f-b-r {
+            margin-bottom: 5%;
+        }
+
+        .sns-mar-b-cu{
+            margin-block: 10% !important;
+        }
+    }
+
+
+
+
+
+
+    .sns-main-head-1 {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        margin-block: 6% 3%;
+    }
+
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .sns-main-head-1 {
+            max-width: 98%;
+
+            margin-block: 8% 5%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-main-head-1 {
+            max-width: 96%;
+
+            margin-block: 13% 13%;
+        }
+
+        .sns-mb-2 {
+            margin-bottom: 13% !important;
+        }
+    }
+
+
+
+
+    .with-gap-3x3 {
+        width: calc(91%/3);
+        text-align: center;
+        /* margin-block: 1.5%; */
+
+    }
+
+
+
+    .gap-3x3-div {
+        gap: 1.5%;
+    }
+
+    .with-gap-3x3 .with-gap-3x3-padd {
+        padding-inline: 2%;
+        padding-block: 3.5% 5%;
+    }
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .with-gap-3x3 {
+            width: calc(92%/2);
+        }
+
+        .with-gap-3x3 .with-gap-3x3-padd {}
+    }
+
+    @media screen and (max-width: 660px) {
+
+
+        .with-gap-3x3 .with-gap-3x3-padd {
+            padding-inline: 3%;
+            padding-block: 3% 9%;
+        }
+
+        .sns-text-l {
+            text-align: left !important;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .with-gap-3x3 {
+            width: calc(100%/1);
+
+        }
+
+    }
+
+
+
+
+    .with-gap-1x1 {
+        width: calc(91.5%/2);
+        text-align: center;
+        /* margin-block: 1.5%; */
+
+    }
+
+    .gap-3x3-div-1x1 {
+        gap: 2.5%;
+    }
+
+    .with-gap-1x1 .with-gap-1x1-padd {
+        padding-inline: 18%;
+        padding-block: 3%;
+    }
+
+
+
+
+    @media screen and (max-width: 890px) {
+        /* .with-gap-1x1 {
+            width: calc(92%/2);
+        }
+    
+        .with-gap-1x1 .with-gap-1x1-padd {
+            
+        } */
+    }
+
+
+    @media screen and (max-width: 480px) {
+        .with-gap-1x1 {
+            width: calc(100%/1);
+
+        }
+
+        .with-gap-1x1 .with-gap-1x1-padd {
+            padding-inline: 3%;
+            padding-block: 7% 9%;
+        }
+    }
+
+
+
+
+    .no-gap-2x2 {
+        width: calc(100%/2);
+    }
+
+    .no-gap-2x2-back {
+        background-color: var(--sns-btn-bg);
+        color: var(--sns-white);
+    }
+
+    .no-gap-2x2 .padd-2x2 {
+        padding-inline: 15%;
+
+    }
+
+    .no-gap-2x2 .padd-2x2-1 {
+        padding-block: 3%;
+    }
+
+    .padd-2x2 ul {
+        padding-left: 3.5%;
+        margin-block: 2.5%;
+    }
+
+    .padd-2x2 ul li {
+        margin-bottom: 1.5%;
+    }
+
+
+    @media screen and (max-width: 890px) {
+        .no-gap-2x2 {
+            width: calc(100%/1);
+        }
+
+        .no-gap-2x2 .padd-2x2 {
+            padding-inline: 5%;
+            padding-block: 3%;
+        }
+
+        .padd-2x2 ul {
+            padding-left: 2.5%;
+            margin-block: 2.5%;
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .no-gap-2x2 .padd-2x2 {
+            padding-inline: 5% 3%;
+            padding-block: 10%;
+        }
+
+        .no-gap-2x2 .padd-2x2-1 {}
+
+        .padd-6x6 ul {
+            padding-left: 6.5%;
+        }
+
+        .padd-2x2 ul {
+            padding-left: 4.5%;
+            margin-block: 5.5%;
+        }
+
+    }
+
+
+
+
+    .sns-acura_banner_sec {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        /* flex-direction: column; */
+    }
+
+    .sns-acura_banner_sec_imgs .sns-main_img {
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        line-height: 0;
+    }
+
+    .sns-acura_banner_sec_imgs .sns-main_img img {
+        width: 100%;
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+
+    .acura_banner_sec_imgs_cnt {
+        color: #fff !important;
+        top: 15.6%;
+        position: absolute;
+        left: 6%;
+        z-index: 2;
+    }
+
+    .acura_banner_sec_imgs_cnt>h5 {
+        font-size: 1.38vw;
+        font-weight: 400;
+        text-transform: initial;
+    }
+
+    .acura_banner_sec_imgs_cnt2 {
+        color: #fff;
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+        z-index: 2;
+    }
+
+    .acura_banner_sec_imgs_cnt>h5 {
+        font-size: 1.38vw;
+        font-weight: 400;
+        text-transform: initial;
+        color: #fff !important;
+    }
+
+
+    .sns-acura_banner_sec_lft {
+        position: absolute;
+        z-index: 2;
+        top: 8%;
+        left: 5.5%;
+        color: #fff;
+        width: 17%;
+        display: flex;
+    }
+
+    .sns-acura_banner_sec_lft h1 {
+        font-weight: 400 !important;
+        font-size: 2.46vw;
+        margin-block: 0%;
+        text-transform: initial;
+        font-family: 'Lato';
+    }
+
+    .sns-acura_banner_sec_lft p {
+        padding-bottom: 6%;
+        font-size: 1.15vw;
+        margin-block: 0%;
+        font-weight: 500;
+    }
+
+
+    .sns-desk-banner {
+        display: none;
+    }
+
+    .sns-mob-banner {
+        display: block;
+    }
+
+
+    @media screen and (max-width: 660px) {
+        .sns-acura_banner_sec_lft {
+            position: initial;
+            width: 73%;
+            text-align: center;
+            color: #000000;
+            display: inline;
+            margin-block: 12% 3%;
+            margin-inline: auto;
+        }
+
+        .acura_banner_sec_imgs_cnt>h5 {
+
+            color: #000000 !important;
+        }
+
+        .acura_banner_sec_imgs_cnt {
+            position: initial;
+            color: #000000;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10%;
+            margin-top: 2%;
+        }
+
+        .acura_banner_sec_imgs_cnt2 {
+            position: initial;
+            color: #000000;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .sns-desk-banner {
+            display: block;
+        }
+
+        .sns-mob-banner {
+            display: none;
+        }
+
+        .sns-acura_banner_sec_lft h1 {
+            font-size: 40px;
+            font-weight: 600 !important;
+        }
+
+
+        .acura_banner_sec_imgs_cnt>h5 {
+            font-size: 22px;
+
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        .acura_banner_sec_imgs_cnt2 {
+            bottom: 4%;
+        }
+
+        .acura_banner_sec_imgs_cnt {
+            bottom: 9%;
+        }
+    }
+
+    .border-left {
+        border-left: 3px solid #cc0001;
+        height: 1.86vw;
+        margin-top: 1.8%;
+        margin-right: 2%;
+    }
+
+
+
+
+    .no-gap-6x6 {
+        width: calc(100%/2);
+    }
+
+    .no-gap-6x6 .padd-6x6 {
+        padding-inline: 14%;
+    }
+
+    .no-gap-6x6 .padd-6x6-1 {
+        padding-block: 2%;
+        padding-inline: 0 2%;
+    }
+
+    .padd-6x6 ul {
+        padding-left: 3.5%;
+        margin-top: 2%;
+    }
+
+    .padd-6x6 ul li {
+        margin-bottom: 1.25%;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .no-gap-6x6 .padd-6x6 {
+            padding-inline: 8%;
+        }
+        .sns-pad-in-16{
+            padding-inline: 8% !important;
+        }
+    }
+
+    @media screen and (max-width: 890px) {
+        .no-gap-6x6 {
+            width: calc(100%/1);
+        }
+
+        .no-gap-6x6 .padd-6x6 {
+            padding-inline: 5%;
+            padding-block: 5%;
+        }
+
+        .sns-pad-in-16{
+            padding-inline: 5% !important;
+            padding-block: 5%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .padd-6x6 ul {
+            padding-left: 6.5%;
+        }
+
+        .no-gap-6x6 .padd-6x6 {
+            padding-inline: 5% 3%;
+        
+        }
+
+        .sns-pad-in-16{
+            padding-inline: 5% 3% !important;
+        }
+    }
+
+
+
+
+
+
+    /* section css */
+
+    .sns-calc1 {
+        width: calc(99%/1);
+    }
+
+    .sns-calc2 {
+        width: calc(95.72%/2);
+    }
+
+
+    .sns-w-47 {
+        width: 47.5%;
+    }
+
+
+    .sns-gallery-img {
+        overflow: hidden;
+
+    }
+
+    .sns-m-g {
+        margin: 0.5VW;
+    }
+
+    .sns-gallery-img img {
+        width: 100%;
+        transition: 0.3s;
+        vertical-align: bottom;
+    }
+
+    .sns-gallery-img img:hover {
+        transform: scale(1.2);
+    }
+
+    /* media */
+
+    @media screen and (max-width: 1100px) {
+        .sns-m-g {
+            margin: 0.48vw;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .sns-calc1 {
+            width: calc(100%);
+        }
+
+        .sns-calc2 {
+            width: calc(100%);
+        }
+
+        .sns-w-47 {
+            width: 100%;
+        }
+
+        .sns-m-g {
+            margin: 0;
+        }
+    }
+
+
+
+
+    .sns-d-flex {
+        display: flex;
+    }
+
+    .sns-mt-3 {
+        margin-top: 0rem;
+    }
+
+    .sns-four-button>.sns-BN {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3% 0;
+        background-color: var(--sns-btn-bg);
+        margin-top: -1px;
+    }
+
+    .sns-BN>a {
+        color: var(--sns-white);
+        text-decoration: none !important;
+        letter-spacing: 0px;
+    }
+
+
+    .sns-BN>.sns-btn {
+        width: calc(85%/4);
+        padding: 1.5% 0;
+        box-sizing: border-box;
+    }
+
+    .justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    .sns-BN .sns-butn {
+        background-color: var(--sns-btn-back);
+        color: var(--sns-white);
+        font-size: 1.25vw;
+        font-weight: bold;
+        line-height: normal;
+        text-align: center;
+        /* border: 2px solid #FFFFFF; */
+        transition: 0.5s;
+        border-radius: 0;
+        text-transform: uppercase;
+    }
+
+    .sns-BN .sns-butn:hover {
+        background-color: var(--sns-white);
+        color: var(--sns-black);
+    }
+
+    @media screen and (max-width: 890px) {
+        .sns-BN>.sns-btn {
+            width: calc(91%/2);
+            /* margin: 1.5% auto; */
+            padding: 2% 0;
+        }
+
+        .sns-BN .sns-butn {
+            font-size: clamp(18px, 1vw, 20px) !important;
+        }
+
+        .sns-f-b {
+            margin-bottom: 3%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-BN>.sns-btn {
+            width: calc(85%/1);
+        }
+
+        .sns-four-button>.sns-BN {
+            padding: 10% 0;
+            background: var(--sns-btn-bg);
+        }
+
+        .sns-BN>.sns-btn {
+            padding: 4% 0;
+        }
+
+        .sns-f-b {
+            margin-bottom: 5%;
+        }
+
+        .sns-f-b-r {
+            margin-bottom: 5%;
+        }
+
+        .sns-BN .sns-butn{
+            font-size: 21px !important;
+        }
+    }
+
+    /* This Secton was duplicated from Section 2. */
+
+
+
+
+    .with-gap-4x4 {
+        width: calc(88%/4);
+        text-align: center;
+        margin-bottom: 1.5%;
+
+    }
+
+    .gap-4x4 {
+        gap: 2%;
+    }
+
+    .with-gap-4x4 .with-gap-4x4-padd {
+        padding-inline: 3%;
+        padding-block: 5% 7%;
+    }
+
+
+
+
+    @media screen and (max-width: 890px) {
+        .with-gap-4x4 {
+            width: calc(92%/2);
+        }
+
+        .with-gap-4x4 .with-gap-4x4-padd {
+            padding-block: 3% 7%;
+            padding-inline: 4%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .with-gap-4x4 {
+            width: calc(100%/1);
+            margin-bottom: 0.5%;
+
+        }
+
+        .with-gap-4x4 .with-gap-4x4-padd {
+            padding-block: 7% 8%;
+            padding-inline: 7%;
+        }
+    }
+
+
+
+
+    .sns-model {
+        width: calc(65%/2);
+        text-align: center;
+        border: 1px solid #CDCBCC;
+        background: #FFF;
+        margin-top: 2%;
+        /* margin-block: 1.5%; */
+        padding-bottom: 2%;
+
+    }
+
+    .model-gap {
+        gap: 2%;
+    }
+
+    .sns-model .sns-model-padd {
+        padding-inline: 3%;
+        padding-block: 3%;
+    }
+
+    .sns-mbl-2 {
+        margin-block: 3%;
+    }
+
+
+
+    @media screen and (max-width: 890px) {
+        .sns-model {
+            width: calc(92%/2);
+        }
+
+        .sns-model .sns-model-padd {}
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-model {
+            width: calc(100%/1);
+
+        }
+
+        .sns-model {
+
+            border: 0px solid #CDCBCC;
+        }
+
+        .sns-model .sns-model-padd {}
+    }
+
+
+
+
+    .seo-per {
+        padding: 4% 3% 0 3%;
+        background-color: #fff;
+        font-weight: 500;
+        color: var(--sns-black);
+    }
+
+    .seo-per p {
+        margin-bottom: 1.5%;
+        line-height: 1.3em !important;
+    }
+
+    .seo-per p a {
+        text-decoration-color: var(--sns-black);
+    }
+
+
+
+
+
+
+
+    .disc {
+        padding: 2% 3%;
+        background-color: var(--sns-white);
+        font-weight: 400;
+        line-height: 1.3em !important;
+        color: var(--sns-black);
+    }
+
+    .disc p {
+        margin-bottom: 1.5%;
+        line-height: 1.3em !important;
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .seo-per {
+            padding: 10% 3% 0 3%;
+        }
+
+        .seo-per p {
+            margin-bottom: 7%;
+        }
+
+        .disc {
+            padding: 16% 3%;
+
+        }
+
+        .disc p {
+            margin-bottom: 7%;
+            padding-inline: 0 5%;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 4. */
+    /* This Secton was duplicated from Section 5. */
+    /* This Secton was duplicated from Section 6. */
+
+    /* This Secton was duplicated from Section 9. */
+    /* This Secton was duplicated from Section 10. */
+    /* This Secton was duplicated from Section 11. */
+    /* This Secton was duplicated from Section 4. */
+
+    /* This Secton was duplicated from Section 13. */
+
+
+    /* This Secton was duplicated from Section 16. */
+    /* This Secton was duplicated from Section 12. */
+    /* This Secton was duplicated from Section 19. */
+    /* This Secton was duplicated from Section 15. */
+    /* This Secton was duplicated from Section 21. */
+    /* This Secton was duplicated from Section 17. */
+    /* This Secton was duplicated from Section 18. */
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 22. */
+    /* This Secton was duplicated from Section 20. */
+    /* This Secton was duplicated from Section 14. */
+    /* This Secton was duplicated from Section 25. */
+    /* This Secton was duplicated from Section 3. */
+    /* This Secton was duplicated from Section 10. */
+
+    /* This Secton was duplicated from Section 31. */
+    /* This Secton was duplicated from Section 27. */
+    /* This Secton was duplicated from Section 34. */
+    /* This Secton was duplicated from Section 35. */
+    /* This Secton was duplicated from Section 36. */
+    /* This Secton was duplicated from Section 37. */
+    /* This Secton was duplicated from Section 30. */
+    /* This Secton was duplicated from Section 38. */
+
+    /* This Secton was duplicated from Section 2. */
+</style>
+<div class="main-div">
+    <div class="sns-acura_banner_sec sns-f-column">
+        <div class="sns-acura_banner_sec_imgs">
+            <figure class="sns-main_img"> <img
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e9a7b9f4089347d5bea0cab270db0e8b.jpg"
+                    alt="banner" class="sns-mob-banner">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9db840ac4fa74926a65de5821fa1f6a6.jpg"
+                    alt="mb-banner" class="sns-desk-banner">
+
+        </div>
+        <div class="sns-acura_banner_sec_lft">
+            <div class="border-left sns-mob-banner"></div>
+            <h1>2023 ACADIA</h1>
+        </div>
+        <div class="acura_banner_sec_imgs_cnt">
+            <h5>
+                STARTING AT $36,800*
+            </h5>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-3 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-f-b "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia&year=2023">
+                <div>View Inventory</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b-r "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Choose Your Offer</div>
+            </a>
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1">
+            <h3 class="sns-f-26 sns-mar-b-cu">Exterior</h3>
+            <h2 class="sns-f-40 sns-underline sns-mb-3">BUILT BY BOLDNESS</h2>
+            <p class="sns-f-22 sns-mb-3 mar-29">Distinct exterior design combines exceptional functionality and powerful
+                details to create a striking presence.</p>
+            <h3 class="sns-f-30 sns-mob-none">AT4-EXCLUSIVE DETAILS</h3>
+            <h3 class="sns-f-30 sns-desk-none">AT4-EXCLUSIVE </br>DETAILS</h3>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div sns-m-top-3">
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/18046a2415a24642bb40b7cce2297e86.jpg"
+                alt="Black Chrome Grille">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/1de94876f86548dcb15c03166ebb6d6c.png"
+                alt="Black Chrome Grille">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20">Black Chrome Grille</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9b17f58b7e41423f8186c0eb5264cfa2.jpg"
+                alt="17” Gloss Black Wheels with All-Terrain Tires">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/fab1ec6d51e24b9e97b9521ecf5d1500.jpg"
+                alt="17” Gloss Black Wheels with All-Terrain Tires">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20">17” Gloss Black Wheels with All-Terrain Tires</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/753ba26233084e07ba6bd593d6ea51f0.jpg"
+                alt="Black-Capped Outside Mirrors">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/54e6ea12535544819b998aeac4a4ff56.jpg"
+                alt="Black-Capped Outside Mirrors">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20">Black-Capped Outside Mirrors</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div-1x1 sns-m-top-cu">
+        <div class="with-gap-1x1">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0aae7c2ff0f74cdfb1c90c276e8a723a.jpg"
+                alt="Gloss-Black Roof Rails">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cf7d71e8780e4dffb1a8a76e0e4b99a5.jpg"
+                alt="Gloss-Black Roof Rails">
+            <div class="with-gap-1x1-padd">
+                <p class="sns-f-20">Gloss-Black Roof Rails</p>
+            </div>
+        </div>
+        <div class="with-gap-1x1">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/10a92f2dc27f43dba09b4b6df19f2fd1.jpg"
+                alt="AT4 Badging and Black Chrome Accents">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/643815011ebc47a3883285eb12a31d8d.jpg"
+                alt="AT4 Badging and Black Chrome Accents">
+            <div class="with-gap-1x1-padd sns-pb-0-t">
+                <p class="sns-f-20">AT4 Badging and Black Chrome Accents</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1">
+            <h3 class="sns-f-30 sns-mb-3">EXCLUSIVE DENALI DESIGN</h3>
+            <p class="sns-f-22 mar-27">The refined details and precision-crafted design give the Acadia Denali its
+                exceptionally bold exterior.</p>
+
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div sns-m-top-3">
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b3f99aeeed174e1eae0b480a76332104.jpg"
+                alt="Chrome Denali Grille">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4ce6d784d7cb46c0bc5da1d78b05113b.jpg"
+                alt="Chrome Denali Grille">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20">Chrome Denali Grille</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4d202570bafa488889e7f3bdee106b29.jpg"
+                alt="20” Ultra-Bright Machined Aluminum Wheels">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8df03cdaee8c40f19d3b4c62cf43be4c.jpg"
+                alt="20” Ultra-Bright Machined Aluminum Wheels">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20">20” Ultra-Bright Machined Aluminum Wheels</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cc753658e1a3408f9cb70b2b929ac7c2.jpg"
+                alt="Exclusive Denali Badging">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/1a93db106c7e42878e9e4e8507637a5a.jpg"
+                alt="Exclusive Denali Badging">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20">Exclusive Denali Badging</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div-1x1 sns-m-top-cu">
+        <div class="with-gap-1x1">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/173141b6cb1748cda2d77111c1cb5a5c.jpg"
+                alt="Chrome Accents on Door Handles and Bodyside Molding">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b68056af3a3844eaafa89fb61c0cc2d8.jpg"
+                alt="Chrome Accents on Door Handles and Bodyside Molding">
+            <div class="with-gap-1x1-padd">
+                <p class="sns-f-20">Chrome Accents on Door Handles and Bodyside Molding</p>
+            </div>
+        </div>
+        <div class="with-gap-1x1">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b46286f6ecc547f3ac475eda8f234508.jpg"
+                alt="20” Aluminum Painted Wheels with After Midnight Finish on Denali Black Diamond Editions">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/29214cf5517d470eba141e09ffb17c5c.jpg"
+                alt="20” Aluminum Painted Wheels with After Midnight Finish on Denali Black Diamond Editions">
+            <div class="with-gap-1x1-padd sns-pb-0-t">
+                <p class="sns-f-20">20” Aluminum Painted Wheels with After Midnight Finish on Denali Black Diamond
+                    Editions</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 ">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">ELEVATION EDITION</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">ELEVATION </br> <span class="sns-underline">EDITION</span></h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center no-gap-2x2-back sns-m-top-3">
+            <div class="no-gap-2x2">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e9a05dd32a234038b7070c63f72c202f.jpg"
+                    alt="ELEVATION EDITION">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7d1d2629bf304dbcb6ae300e7976b893.jpg"
+                    alt="ELEVATION EDITION">
+            </div>
+
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <p class="sns-f-20" style="color: #fff !important;">Acadia Elevation Edition includes:</p>
+                    <ul>
+                        <li class="sns-f-20" style="color: #fff !important;">Black Grille Insert and Surround</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Black Mirror Caps and Gloss Black Roof
+                            Rails</li>
+                        <li class="sns-f-20" style="color: #fff !important;">20" Aluminum Painted Gloss Black Wheels
+                        </li>
+                        <li class="sns-f-20" style="color: #fff !important;">20" All-Season Blackwall Tires</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Available Black GMC Emblems</li>
+                    </ul>
+                    <p class="sns-f-20" style="color: #fff !important;">Only available on SLE & SLT.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">DENALI BLACK DIAMOND EDITION*</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">DENALI BLACK </br>DIAMOND </br> <span
+                    class="sns-underline">EDITION*</span></h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div
+            class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center sns-wrap-reverse no-gap-2x2-back sns-m-top-3">
+
+
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <p class="sns-f-20" style="color: #fff !important;">Package includes:</p>
+                    <ul>
+                        <li class="sns-f-20" style="color: #fff !important;">20" Aluminum Painted Wheels with After
+                            Midnight Finish</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Ebony Twilight Metallic Exterior</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Dual SkyScape 2-Panel Power Sunroof</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Adaptive Ride Control Available on AWD</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Denali Technology Package*: HD Surround
+                            Vision, Adaptive Cruise Control, Enhanced Automatic Emergency Braking*, Rear Camera Mirror
+                            with Washer</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Trailering Package includes:
+                            Factory-Installed Hitch, Max. Available Towing 4,000 lbs.,* 7-Pin Wiring Harness, Class III
+                            Hitch, Heavy-Duty Cooling System, 170-Amp Alternator and Hitch Guidance with Hitch View*
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-2x2">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6c96dad6274044e9897b0f833418785d.jpg"
+                    alt="DENALI BLACK DIAMOND EDITION*">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cf9fcc7ef0204818aeb738800aad43ca.png"
+                    alt="DENALI BLACK DIAMOND EDITION*">
+
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">SIGNATURE WHEELS</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">SIGNATURE </br><span class="sns-underline"> WHEELS</span></h2>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div sns-m-top-3 sns-mb-5">
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/011ea383702d49f6a485342f963e09a2.jpg"
+                alt="Black Chrome Grille">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/74c6a4ef476344a6bc877b0737078c5e.png"
+                alt="Black Chrome Grille">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-mb-3 sns-fw-800">17" GLOSS-BLACK ALUMINUM WHEELS</p>
+                <p class="sns-f-18">Standard on AT4.</p>
+
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a25a607df8f649a787b0370e14706ddf.jpg"
+                alt="17” Gloss Black Wheels with All-Terrain Tires">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6a5ce7e610b843cb9f7438eb8a870a3e.jpg"
+                alt="17” Gloss Black Wheels with All-Terrain Tires">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-mb-3 sns-fw-800">18" & 20" WHEEL OPTIONS</p>
+                <p class="sns-f-18 sns-mob-none">18" options: Standard on SLT and SLE.</p>
+                <p class="sns-f-18 sns-mob-none">20" options: Available on SLT and SLE.</p>
+                <p class="sns-f-18 sns-desk-none sns-mar-bc">18" options: </br> Standard on SLT and SLE.</p>
+                <p class="sns-f-18 sns-desk-none">20" options: </br> Available on SLT and SLE.</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a82607c3b30a447087dc716da6f9633a.jpg"
+                alt="Black-Capped Outside Mirrors">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2692ad502e074d54b70f3f997d8649c9.jpg"
+                alt="Black-Capped Outside Mirrors">
+            <div class="with-gap-3x3-padd sns-pb-0-t">
+                <p class="sns-f-20 sns-mb-3 sns-fw-800">20" ULTRA BRIGHT MACHINED ALUMINUM WHEELS</p>
+                <p class="sns-f-18">Standard on Denali.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a1c6cc116c0347b68824ebb0ad2a82fa.jpg"
+                    alt="HANDS-FREE, PROGRAMMABLE POWER LIFTGATE" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/50a67f476394454e98b68f289c007683.jpg"
+                    alt="HANDS-FREE, PROGRAMMABLE POWER LIFTGATE" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">HANDS-FREE, PROGRAMMABLE POWER LIFTGATE</h3>
+                    <p class="sns-f-20 padd-6x6-1">To help make loading cargo more convenient, the hands-free
+                        programmable power liftgate can be activated simply by kicking your foot over the projected GMC
+                        logo, underneath the left-hand side of the rear bumper. Standard on Denali, AT4 and SLT.
+                        Available on SLE.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">HEATED, POWER-ADJUSTABLE, POWER-FOLDING MIRRORS</h3>
+                    <p class="sns-f-20 padd-6x6-1">Heated, power-adjustable, power-folding outside mirrors feature
+                        integrated LED turn signals. Standard on Denali. Available on AT4 and SLT.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/59294857bdfd40fda257a202a80e587b.jpg"
+                    alt="HEATED, POWER-ADJUSTABLE, POWER-FOLDING MIRRORS" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c1c63cdfaae44f53bdc94d471ac9cce4.jpg"
+                    alt="HEATED, POWER-ADJUSTABLE, POWER-FOLDING MIRRORS" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9fc62cc7a83841799d60c72d589c9de6.jpg"
+                    alt="GMC SIGNATURE LED LIGHTING" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/68142e70715944ffa90123006c8babfe.jpg"
+                    alt="GMC SIGNATURE LED LIGHTING" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">GMC SIGNATURE LED LIGHTING</h3>
+                    <ul class="sns-mob-none">
+                        <li class="sns-f-20">LED Headlamps and Taillamps with GMC </br> signature C-shape design</li>
+                        <li class="sns-f-20">LED daytime running lamps</li>
+                        <li class="sns-f-20">Standard on all trims</li>
+                    </ul>
+                    <ul class="sns-desk-none">
+                        <li class="sns-f-20">LED Headlamps and Taillamps with GMC signature C-shape design</li>
+                        <li class="sns-f-20">LED daytime running lamps</li>
+                        <li class="sns-f-20">Standard on all trims</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-pb-0-t">
+                    <h3 class="sns-f-30">KEYLESS OPEN AND START</h3>
+                    <p class="sns-f-20 padd-6x6-1">When walking toward the vehicle with the key fob in hand or in your
+                        purse or pocket, you can unlock all four doors and start the vehicle with the push of a button.
+                        Once the system is enabled by the driver in the vehicle's Settings menu, you can leave the
+                        vehicle with the key fob and it automatically locks the doors within several seconds of the last
+                        door being closed.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8f20db56f2bb49e492b972a19f496679.jpg"
+                    alt="KEYLESS OPEN AND START" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/5283745d374c4ea19b027c0ea4fa19a4.jpg"
+                    alt="KEYLESS OPEN AND START" class="sns-desk-none">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1  sns-mb-2">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">exterior gallery</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">exterior </br><span class="sns-underline"> gallery</span></h2>
+        </div>
+    </section>
+
+
+    <div class="main-gallery-div sns-d-flex sns-flex-wrap sns-justify-content-center sns-mx-auto sns-mb-5">
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7704944a590a43568b2d8702611c20bc.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0aa9cb657a2e47a49ffaae67202e7565.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/367564d29eca4247ab40a5a29a2d78e4.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3cf66bb285ef401ea21dd4b6967072f6.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0101739c6bfd41729f47f9874043f655.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d780a33a82a641fba7a18a01099e0e1f.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d35eb7a43a4f4af092c5946cad3c3c73.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/80f33f40e7f04a9fbe8e3da27030bb06.jpg"
+                            alt="" class="sns-desk-none">
+
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/211ce1388965498ca771c091626a5ca4.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/80a08ad089d04207bdaaf91f4e98ba74.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/9707f19913994ee092e6c2d892140b9a.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7084ecc4ee7a481ca17bfc0de79e2bf2.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/5e154a82e0d34c9eba62c76a294a0e35.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/623a8e4b8c8a4546a5d20518cb7e6140.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/0085c61ed498422f950e855f5a5dabff.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/066cf57815a64112bb0543014a0e8386.jpg"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-3 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia&year=2023">
+                <div>View Inventory</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1">
+            <h3 class="sns-f-26 ">interior</h3>
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">COME ONE, COME ALL</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">COME ONE,</br><span class="sns-underline"> COME ALL</span></h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center no-gap-2x2-back sns-m-top-3">
+
+            <div class="no-gap-2x2">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2612fd8b0bad4a1a915e9e738eef30ee.jpg"
+                    alt="DENALI BLACK DIAMOND EDITION*">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b36e2617fbd64bffb329f1be0b68306d.jpg"
+                    alt="DENALI BLACK DIAMOND EDITION*">
+            </div>
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <ul>
+                        <li class="sns-f-20" style="color: #fff !important;">Seating options for 6 or 7 people</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Smart Slide second-row seats provide easy
+                            third-row access</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Third-row 50/50 split seats fold flat for
+                            extra cargo storage</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Second-row passenger-side tip option slides
+                            the seat forward and angles it slightly, even while an empty forward-facing child seat is in
+                            place using the LATCH system</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1 ">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">DISTINCT DESIGN ACCENTS</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">DISTINCT DESIGN </br> <span
+                    class="sns-underline">ACCENTS</span></h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2e20cf277a39478185fbc640d71a007a.jpg"
+                    alt="HANDS-FREE, PROGRAMMABLE POWER LIFTGATE" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b87585f9c56e4ddda357307f3565755e.jpg"
+                    alt="HANDS-FREE, PROGRAMMABLE POWER LIFTGATE" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">SLE/SLT</h3>
+                    <p class="sns-f-20 padd-6x6-1">Acadia SLE and Acadia SLT both feature real aluminum trim and
+                        soft-touch
+                        surfaces. Acadia SLE has premium cloth seating while Acadia SLT upgrades to leather-appointed
+                        first
+                        and second row seating.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">AT4</h3>
+                    <p class="sns-f-20 padd-6x6-1">Acadia AT4 offers a unique interior in either Jet Black premium cloth
+                        or
+                        available Jet Black leather-appointed seating with exclusive trim and Kalahari accents.
+                        Front-seat
+                        head restraints are stitched with the AT4 logo, while sill plates prominently display an
+                        embossed
+                        AT4 badge.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/19f9bf541043416890ade3f75756f328.jpg"
+                    alt="AT4" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8be3fe2bda1c47be8683b89ef91f019d.jpg"
+                    alt="AT4" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b140e9a5505a4ef0a10daf4c883054b8.jpg"
+                    alt="DENALI" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c631bacdb0dc4d47b8f08c49dd9baa3f.jpg"
+                    alt="DENALI" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">DENALI</h3>
+                    <p class="sns-f-20 padd-6x6-1">Acadia Denali mid-size SUV features real ash wood accents and
+                        warm-tone
+                        burnished aluminum trim. Refinements continue with seats accentuated with French seam stitching,
+                        embroidered Denali front-seat head restraints and Denali embossed sill plates.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30 sns-mob-none">ADVANCED TEMPERATURE CONTROL</h3>
+                    <h3 class="sns-f-30 sns-desk-none">ADVANCED TEMPERATURE </br>CONTROL</h3>
+                    <p class="sns-f-20 padd-6x6-1">Control multiple temperature settings using tri-zone climate controls
+                        that utilize strategically placed sensors to help ensure all passengers are comfortable.
+                        Standard on
+                        all models.
+                    </p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/afbfc05919ba4b8b82d1295a62f6c8ea.jpg"
+                    alt="ADVANCED TEMPERATURE CONTROL" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d7fb5de6f996450ba645ce9f0f8250ee.jpg"
+                    alt="ADVANCED TEMPERATURE CONTROL" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/dca41a887dc4434f874fb368b29bbfc6.jpg"
+                    alt="HEATED AND VENTILATED LEATHER-APPOINTED FRONT SEATING" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/59f8e2d3ae0746bcb70c4b21d7bf4a4f.jpg"
+                    alt="HEATED AND VENTILATED LEATHER-APPOINTED FRONT SEATING" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">HEATED AND VENTILATED LEATHER-APPOINTED FRONT SEATING</h3>
+                    <p class="sns-f-20 padd-6x6-1">Stay comfortable with heated/ventilated* driver and front-passenger
+                        perforated leather-appointed seat cushions and seatbacks. Standard on Denali. Available on AT4
+                        and
+                        SLT.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">HEATED STEERING WHEEL</h3>
+                    <p class="sns-f-20 padd-6x6-1">The premium, heated steering wheel,* features real aluminum trim,
+                        mounted
+                        controls for audio, phone, Driver Information Center and more. Standard on Denali. Available on
+                        AT4
+                        and SLT.
+                    </p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c145c418e5fd4ca2801b5478d9033e0c.jpg"
+                    alt="HEATED STEERING WHEEL" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/fca33b637871485b9300523fb74bd49a.jpg"
+                    alt="HEATED STEERING WHEEL" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/397f575c1fdc4aa3b3cd6b9ab9ba42ca.jpg"
+                    alt="GMC SIGNATURE LED LIGHTING" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f5265632ce804f44b7f8a210416ed5e4.jpg"
+                    alt="GMC SIGNATURE LED LIGHTING" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">CARGO & STORAGE OPTIONS</h3>
+                    <ul>
+                        <li class="sns-f-20">Fold-flat second- and third-row seats provide up to 79.0 cu. ft.* of
+                            maximum
+                            cargo space</li>
+                        <li class="sns-f-20">Large pass-through under-console storage</li>
+                        <li class="sns-f-20">Second-row storage drawer in the back of the center console</li>
+                        <li class="sns-f-20">Covered under-floor cargo-area storage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-pb-0-t">
+                    <h3 class="sns-f-30">DUAL SKYSCAPE SUNROOF</h3>
+                    <p class="sns-f-20 padd-6x6-1">Two panels, one over the front seats and another over the second row
+                    </p>
+                    <ul>
+                        <li class="sns-f-20">Fully open the front panel slides at the touch of a button</li>
+                        <li class="sns-f-20">Fixed rear panel with a sunshade to control brightness</li>
+                        <li class="sns-f-20">Available on all trims</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8b5a3448d66942e2a8e2c7d95cdb7766.jpg"
+                    alt="DUAL SKYSCAPE SUNROOF" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/32ad29943d64415fab151e6aad8b94c5.jpg"
+                    alt="DUAL SKYSCAPE SUNROOF" class="sns-desk-none">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1  sns-mb-2">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">Interior gallery</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">Interior </br><span class="sns-underline">gallery</span></h2>
+        </div>
+    </section>
+
+
+    <div class="main-gallery-div sns-d-flex sns-flex-wrap sns-justify-content-center sns-mx-auto  sns-mb-5">
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6b654979e4b041779beadbf8bf5202d4.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/773b49d2be534d39a66530235a6db213.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4cb6e1f241e54f7eaa420b0936fa2bef.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/71d2ce6751a74ddd9e6607d235c6c430.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6d62ab8fc9334bb3b8ecde57059e3df3.png"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6bc931786f9f4da9a18a9ce5f16f6a11.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f2882add54ce404bb1e527b216a7d19a.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/1b1a468355c0409a989399ddb7878df9.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section sns-w-47">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-space-between">
+
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7c2a54e87c7a4b2e89279e25671e3a40.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b4ac669566794aaf87e9260a800324dd.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc2 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/12e11540ee324bf0a30e48c04a19d98e.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/93852b075fa64190ae149c3be4823a4e.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class="sns-calc1 sns-m-g">
+                    <div class="sns-gallery-img">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/49d4a34d176846c98cfa1365e510b2b4.jpg"
+                            alt="Gallary_1" class="sns-mob-none">
+                        <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/dade050d941a4ec18bb61632708eebb3.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-3 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1 ">
+            <h3 class="sns-f-26 sns-mar-b-cu">Capability</h3>
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">ADVANCED PERFORMANCE AND EFFICIENCY</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">ADVANCED </br>PERFORMANCE AND </br><span
+                    class="sns-underline">EFFICIENCY </span></h2>
+            <p class="sns-f-22 sns-mb-3 mar-27">The powerfully efficient Acadia mid-size SUV offers advanced performance
+                to
+                help you confidently conquer the road.</p>
+            <h3 class="sns-f-30 sns-mb-3">ENGINES & TRANSMISSIONS</h3>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/bf1f406103dd4bcf815b56071a5ddbc5.png"
+                    alt="2.0L TURBO ENGINE" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ac21991151254281bc858d4c6e6be96c.png"
+                    alt="2.0L TURBO ENGINE" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">2.0L TURBO ENGINE</h3>
+                    <ul>
+                        <li class="sns-f-20">9-Speed Automatic Transmission</li>
+                        <li class="sns-f-20">228 horsepower and 258 lb.-ft. of torque</li>
+                        <li class="sns-f-20">Max. available towing 3,500 lbs.* of max towing capability</li>
+                        <li class="sns-f-20">Up to 29 MPG hwy*</li>
+                        <li class="sns-f-20">Twin-scroll turbocharger</li>
+                        <li class="sns-f-20">Stop/Start technology with deactivation switch</li>
+                        <li class="sns-f-20">Standard on SLT and SLE; available on Denali</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">3.6L V6 ENGINE</h3>
+                    <ul>
+                        <li class="sns-f-20">9-Speed Automatic Transmission</li>
+                        <li class="sns-f-20">310 horsepower and 271 lb.-ft. of torque</li>
+                        <li class="sns-f-20">Up to 27 MPG hwy*</li>
+                        <li class="sns-f-20">Active Fuel Management</li>
+                        <li class="sns-f-20">Stop/Start technology with deactivation switch</li>
+                        <li class="sns-f-20">Available towing up to 4,000 lbs.*</li>
+                        <li class="sns-f-20">Standard on Denali and AT4; available on SLT</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8ec94de7521440f086732f21b7cd7c1c.png"
+                    alt="3.6L V6 ENGINE" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/edd9fcf7ee80448ba053480982f9c7bd.png"
+                    alt="3.6L V6 ENGINE" class="sns-desk-none">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center no-gap-2x2-back sns-m-top-3">
+
+            <div class="no-gap-2x2">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/89adc7447e4e44b7a7d848cc0203d55f.jpg"
+                    alt="DENALI BLACK DIAMOND EDITION*">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e5949602039f4c6485098a77afa01c0f.png"
+                    alt="DENALI BLACK DIAMOND EDITION*">
+            </div>
+            <div class="no-gap-2x2">
+                <div class="padd-2x2">
+                    <h3 class="sns-f-30 sns-mb-3c " style="color: #fff !important;">TRACTION SELECT SYSTEM</h3>
+                    <p class="sns-f-20" style="color: #fff !important;">Acadia’s Traction Select System provides added
+                        confidence by allowing you to switch among up to five specific modes (depending on the model) to
+                        tailor your ride to differing road conditions. Standard on all trims.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div sns-mt-5 sns-mb-5">
+        <div class="with-gap-3x3 sns-text-l">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b7c389ce13474b97bf73ec03d1a0697b.jpg"
+                alt="ACTIVE TORQUE CONTROL AWD SYSTEM">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cea6f3d12cb844fc8f11c1371a742067.jpg"
+                alt="ACTIVE TORQUE CONTROL AWD SYSTEM">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-mb-3 sns-fw-600 sns-mob-none">ACTIVE TORQUE CONTROL AWD SYSTEM</p>
+                <p class="sns-f-30 sns-mb-3 sns-fw-600 sns-desk-none">ACTIVE TORQUE CONTROL AWD SYSTEM</p>
+                <p class="sns-f-18">Increases control in driving events that require acceleration through a corner or
+                    turn by sending power to the rear of the vehicle help to keep the vehicle on its intended path.
+                    Standard on AT4.</p>
+
+            </div>
+        </div>
+        <div class="with-gap-3x3 sns-text-l">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6afb62fd8b554a05bf8eb105980943d6.jpg"
+                alt="ENHANCED TOWING POWER">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/bce0a3e622b34bc5adddacd1bcae1ce0.jpg"
+                alt="ENHANCED TOWING POWER">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-mb-3 sns-fw-600 sns-mob-none">ENHANCED TOWING POWER</p>
+                <p class="sns-f-30 sns-mb-3 sns-fw-600 sns-desk-none">ENHANCED TOWING POWER</p>
+                <p class="sns-f-18">Tackle your next adventure with GMC Acadia’s exceptional available towing capability
+                    of up to 4,000 lbs.*</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3 sns-text-l">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b348021a94e5434aa9349e020e4c6d1f.jpg"
+                alt="HILL DESCENT CONTROL">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/817765456a894a5591599d4677aa2fa1.jpg"
+                alt="HILL DESCENT CONTROL">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-mb-3  sns-fw-600 sns-mob-none">HILL DESCENT CONTROL</p>
+                <p class="sns-f-30 sns-mb-3  sns-fw-600 sns-desk-none">HILL DESCENT CONTROL</p>
+                <p class="sns-f-18">When activated, Hill Descent Control uses antilock braking to help provide a smooth
+                    and controlled descent in rough terrain. Standard on AT4.</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3 sns-text-l">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/865ccdd4470b4d68ae3fb02c36754dd8.jpg"
+                alt="HILL START ASSIST">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7c2baa75c46d43458201268415f567d0.jpg"
+                alt="HILL START ASSIST">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-mb-3  sns-fw-600 sns-mob-none">HILL START ASSIST</p>
+                <p class="sns-f-30 sns-mb-3  sns-fw-600 sns-desk-none">HILL START ASSIST</p>
+                <p class="sns-f-18">Helps hold the brakes under certain conditions while the driver shifts his or her
+                    foot from the brake pedal to the accelerator, helping prevent movement during the transition.
+                    Standard on AT4.</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3 sns-text-l">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/169d25de81194b5a916422c412052fa7.jpg"
+                alt="ADAPTIVE RIDE CONTROL">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6b4ce966ccda4eb29af568e5878b610b.jpg"
+                alt="ADAPTIVE RIDE CONTROL">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-mb-3  sns-fw-600 sns-mob-none">ADAPTIVE RIDE CONTROL</p>
+                <p class="sns-f-30 sns-mb-3  sns-fw-600 sns-desk-none">ADAPTIVE RIDE CONTROL</p>
+                <p class="sns-f-18">The 3-row Acadia Denali's available Adaptive Ride Control uses a Continuous Damping
+                    Control system that adjusts to the road every two milliseconds to deliver a confident and
+                    comfortable ride. Standard for the Denali Ultimate Package with AWD.</p>
+            </div>
+        </div>
+        <div class="with-gap-3x3 sns-text-l">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2c6a7cf34e314a6489b05285dae5abd0.jpg"
+                alt="HITCH GUIDANCE WITH HITCH VIEW*">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/dcad29c835df41bbba7ff74d14d067c9.jpg"
+                alt="HITCH GUIDANCE WITH HITCH VIEW*">
+            <div class="with-gap-3x3-padd">
+                <p class="sns-f-20 sns-mb-3  sns-fw-600 sns-mob-none">HITCH GUIDANCE WITH HITCH VIEW*</p>
+                <p class="sns-f-30 sns-mb-3  sns-fw-600 sns-desk-none">HITCH GUIDANCE WITH HITCH VIEW*</p>
+                <p class="sns-f-18">This available feature displays a guideline on the Rear Vision Camera view when
+                    you’re in reverse to help line up your hitch to your trailer and allows drivers to zoom in on the
+                    hitch for careful maneuvering. When driving, the system also allows you to briefly check your
+                    trailer using a camera view. Available on all trims.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-3 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Choose Your Offer</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1">
+            <h3 class="sns-f-26 sns-mar-b-cu sns-mob-none">TECHNOLOGY & SAFETY</h3>
+            <h3 class="sns-f-26 sns-mar-b-cu sns-desk-none">TECHNOLOGY </br> & SAFETY</h3>
+            <h2 class="sns-f-40 sns-underline sns-mb-3">SAFETY PACKAGES</h2>
+            <p class="sns-f-22 sns-mb-3 mar-23">The mid-size Acadia SUV’s next-level technology and safety features help
+                you to
+                stay connected, informed and aware of surrounding vehicles as you confidently navigate the open road.
+                Acadia Pro Safety Plus† is standard on the SLE, SLT and AT4 trims and GMC Pro Safety Plus† is standard
+                on Denali.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center no-gap-2x2-back sns-m-top-3">
+            <div class="no-gap-2x2">
+                <img class="sns-mob-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/dacdc3da26a64b87ab310c2df797183f.jpg"
+                    alt="ELEVATION EDITION">
+                <img class="sns-desk-none"
+                    src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e457e664f4e2476d9c45e02fb20bb693.png"
+                    alt="ELEVATION EDITION">
+            </div>
+
+            <div class="no-gap-2x2">
+                <div class="padd-2x2 pad-r-9">
+                    <h3 class="sns-f-30 " style="color: #fff !important;">ACADIA PRO SAFETY PLUS INCLUDES:</h3>
+                    <ul>
+                        <li class="sns-f-20" style="color: #fff !important;">Forward Collision Alert</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Following Distance Indicator</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Automatic Emergency Braking</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Lane Change Alert with Side Blind Zone
+                            Alert</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Lane Keep Assist with Lane Departure
+                            Warning</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Rear Cross Traffic Alert</li>
+                        <li class="sns-f-20" style="color: #fff !important;">Front Pedestrian Braking</li>
+                        <li class="sns-f-20" style="color: #fff !important;">IntelliBeam<sup>®</sup> Auto High Beams
+                        </li>
+                    </ul>
+                    <p class="sns-f-20" style="color: #fff !important;">GMC Pro Safety Plus includes all features listed
+                        above with Front and Rear Park Assist added.​​</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-4x4 sns-mt-5">
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f93ba26891024b55b05404e026086bca.jpg"
+                alt="FRONT & REAR PARK ASSIST">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6d7f4c25bb364f6eb82dd5eeac7a3b50.jpg"
+                alt="FRONT & REAR PARK ASSIST">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20  sns-fw-600">FRONT & REAR PARK ASSIST</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ecb8c782ae9a4ebb84e70ac927a18249.jpg"
+                alt="FORWARD COLLISION ALERT & EMERGENCY BRAKING">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/165485b05d45426bb7c7c3e12250d227.jpg"
+                alt="FORWARD COLLISION ALERT & EMERGENCY BRAKING">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20  sns-fw-600">FORWARD COLLISION ALERT & EMERGENCY BRAKING</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/5641795b17cc4251b26cc5fc5768d0cd.jpg"
+                alt="LANE CHANGE ALERT WITH SIDE BLIND ZONE ALERT">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f7368bf2b4a8483aba25e2cc7a87508c.jpg"
+                alt="LANE CHANGE ALERT WITH SIDE BLIND ZONE ALERT">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20  sns-fw-600">LANE CHANGE ALERT WITH SIDE BLIND ZONE ALERT</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8fffbbfa69cb46ac99d60a9804f1ff7d.jpg"
+                alt="FRONT PEDESTRIAN BRAKING">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/495279695c824b70913598d5e5b5221a.jpg"
+                alt="FRONT PEDESTRIAN BRAKING">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20  sns-fw-600">FRONT PEDESTRIAN BRAKING</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c501e759a5234a8ea7be784b11287a8a.jpg"
+                alt="REAR CROSS TRAFFIC ALERT">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d88d12ceb4b6461ea9adf5fe8e91407f.jpg"
+                alt="REAR CROSS TRAFFIC ALERT">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20  sns-fw-600">REAR CROSS TRAFFIC ALERT</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/5dacc815ee684b5e8809e674d61f03e1.jpg"
+                alt="FOLLOWING DISTANCE INDICATOR">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/91621e3c0046476289ec2a317a656a8f.jpg"
+                alt="FOLLOWING DISTANCE INDICATOR">
+            <div class="with-gap-4x4-padd">
+                <p class="sns-f-20  sns-fw-600">FOLLOWING DISTANCE INDICATOR</p>
+            </div>
+        </div>
+        <div class="with-gap-4x4 sns-pb-0-t">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8f9c1c39e81c4116b4732507a4de7fa0.jpg"
+                alt="INTELLIBEAM AUTO HIGH BEAMS">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/053887b70a444844b54c505fc5656d06.jpg"
+                alt="INTELLIBEAM AUTO HIGH BEAMS">
+            <div class="with-gap-4x4-padd sns-pb-0-t">
+                <p class="sns-f-20  sns-fw-600">INTELLIBEAM AUTO HIGH BEAMS</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">SAFETY AND DRIVER ASSISTANCE TECHNOLOGY</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">SAFETY AND DRIVER </br>ASSISTANCE</br><span
+                    class="sns-underline"> TECHNOLOGY</span></h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/45f74e0405064bffbc5c9b55f564e824.jpg"
+                    alt="ADAPTIVE CRUISE CONTROL" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/74df0552cf614571b627c28779a6dcfc.jpg"
+                    alt="ADAPTIVE CRUISE CONTROL" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">ADAPTIVE CRUISE CONTROL</h3>
+                    <p class="sns-f-20 padd-6x6-1">The available Adaptive Cruise Control can automatically maintain a
+                        driver-selected gap time from the detected vehicle you’re following while you steer. This
+                        feature reduces the need for you to frequently brake and accelerate when you’re driving.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">SAFETY ALERT SEAT</h3>
+                    <p class="sns-f-20 padd-6x6-1">The available Safety Alert Seat uses left, right, or both-side driver
+                        seat vibration pulses to help you identify the direction of potential crashes so you can quickly
+                        take action. You can also switch to beeping crash avoidance alerts.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/f9391dc5e7424457a6d0ec77870ca55a.jpg"
+                    alt="SAFETY ALERT SEAT" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3ae056e05f514cf5bb8f604af8aafdcb.png"
+                    alt="SAFETY ALERT SEAT" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/038b83d4da824a76b421ac898f6ca4d8.jpg"
+                    alt="REAR SEAT REMINDER" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/038b83d4da824a76b421ac898f6ca4d8.jpg"
+                    alt="REAR SEAT REMINDER" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">REAR SEAT REMINDER</h3>
+                    <p class="sns-f-20 padd-6x6-1">The Rear Seat Reminder† is designed to play audible chimes and
+                        display a visual message within the Driver Information Center when the vehicle is turned off,
+                        under certain conditions, which can help remind the driver to take a look at the rear seat
+                        before departing.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-pb-0-t">
+                    <h3 class="sns-f-30">TEEN DRIVER</h3>
+                    <p class="sns-f-20 padd-6x6-1">Standard Teen Driver helps encourage better driving habits for new
+                        drivers. It automatically activates certain available safety systems and allows parents to set
+                        limits on other features. There is even an in-vehicle report card that parents can access to
+                        help with coaching their teen driver.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d827d4c4dee44f3bae6b300b5435912e.jpg"
+                    alt="TEEN DRIVER" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/d827d4c4dee44f3bae6b300b5435912e.jpg"
+                    alt="TEEN DRIVER" class="sns-desk-none">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">CONVENIENT CONNECTIVITY</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">CONVENIENT </br><span class="sns-underline">CONNECTIVITY</span>
+            </h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/8b6f35e9600d4d9aa2efe299688d1dd1.jpg"
+                    alt="6 DIAGONAL HEAD-UP DISPLAY" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/23dc5c8e3a6b4a2e89730b558ed89b14.png"
+                    alt="6 DIAGONAL HEAD-UP DISPLAY" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">6" DIAGONAL HEAD-UP DISPLAY</h3>
+                    <p class="sns-f-20 padd-6x6-1">Projects key information directly onto the windshield so you can keep
+                        your eyes on the road. Standard on Denali. Available on AT4 and SLT. Includes but not limited
+                        to:
+                    </p>
+                    <ul>
+                        <li class="sns-f-20">Speed</li>
+                        <li class="sns-f-20">Audio</li>
+                        <li class="sns-f-20">Phone</li>
+                        <li class="sns-f-20">Navigation*</li>
+                        <li class="sns-f-20">Forward Collision Alert*</li>
+                        <li class="sns-f-20">Lane Departure Warning*</li>
+                        <li class="sns-f-20">Cruise Control</li>
+                        <li class="sns-f-20">Low Fuel</li>
+                        <li class="sns-f-20">Tachometer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">8" DIAGONAL GMC INFOTAINMENT SYSTEM WITH NAVIGATION*</h3>
+                    <p class="sns-f-20 padd-6x6-1">Make hands-free, voice-activated, calls; send and receive messages;
+                        and listen to music — all while keeping your hands on the wheel and your eyes on the road.
+                        Standard on Denali, AT4 and SLT. Available on SLE.</p>
+                    <ul>
+                        <li class="sns-f-20">Multicolor 8" diagonal touch screen*</li>
+                        <li class="sns-f-20">Download select in-vehicle apps*</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/7470ff95c94649828bc908bb5b3ac9cb.jpg"
+                    alt="8 DIAGONAL GMC INFOTAINMENT SYSTEM WITH NAVIGATION*" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/402d79419f124c059babe49ef35252bd.png"
+                    alt="8 DIAGONAL GMC INFOTAINMENT SYSTEM WITH NAVIGATION*" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/4246538fb32c4a15bb57d9f5d7f656dc.jpg"
+                    alt="REAR CAMERA MIRROR" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/af191c58e02b46efb86aba5d6d9a31bb.jpg"
+                    alt="REAR CAMERA MIRROR" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">REAR CAMERA MIRROR</h3>
+                    <p class="sns-f-20 padd-6x6-1">Rear Camera Mirror uses a camera to provide you with a wide and less
+                        obstructed view behind the vehicle while you’re driving. You can switch between the camera view
+                        and
+                        a traditional rear-view mirror. The feature also allows brightness, vertical tilt and zoom
+                        adjustments. Available on Denali.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-pb-0-t">
+                    <h3 class="sns-f-30">HIGH DEFINITION SURROUND VISION</h3>
+                    <p class="sns-f-20 padd-6x6-1">High Definition Surround Vision uses multiple cameras to display a
+                        digital overhead image of the area around your vehicle along with Rear Vision Camera or front
+                        views.
+                        It works at low speeds and may help you park and avoid nearby objects. You can select additional
+                        views on your camera display. Available on Denali, AT4 and SLT.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a5272a341aa84f2aab4769587339c263.jpg"
+                    alt="HIGH DEFINITION SURROUND VISION" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/cdd6c1179a944fd88df0ce7c0d5bd90e.jpg"
+                    alt="HIGH DEFINITION SURROUND VISION" class="sns-desk-none">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-main-head-1">
+            <h2 class="sns-f-40 sns-underline sns-mb-3 sns-mob-none">IN-VEHICLE ENTERTAINMENT & SECURITY</h2>
+            <h2 class="sns-f-40  sns-mb-3 sns-desk-none">IN-VEHICLE </br> ENTERTAINMENT & </br><span
+                    class="sns-underline">SECURITY</span></h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/27a812adb05c47f6af191e9347575b9e.jpg"
+                    alt="BOSE<sup>®</sup>* PREMIUM 8-SPEAKER SOUND" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/83ad4a49ecc04d17a0a0ca2f62826853.jpg"
+                    alt="BOSE<sup>®</sup>* PREMIUM 8-SPEAKER SOUND" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">BOSE<sup>®</sup>* PREMIUM 8-SPEAKER SOUND</h3>
+                    <p class="sns-f-20 padd-6x6-1">This sound system brings life to your in-vehicle entertainment with
+                        its rich, spacious sound, and its eight carefully placed high-performance speakers. Standard on
+                        Denali, AT4 and SLT. Available on SLE.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">APPLE CARPLAY<sup>®</sup> COMPATIBILITY*</h3>
+                    <p class="sns-f-20 padd-6x6-1">With Apple CarPlay compatibility you can access
+                        iPhone<sup>®</sup> features such as hands-free phone calls, messaging, Apple
+                        Music™, Apple Maps and more. Standard on all trims.</p>
+
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/3a6831bb86f244a988d171b9451d9d99.jpg"
+                    alt="APPLE CARPLAY<sup>®</sup> COMPATIBILITY*" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/e3360eca2ff34e3998548900f058c825.jpg"
+                    alt="APPLE CARPLAY<sup>®</sup> COMPATIBILITY*" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/eced269c74fa418b9ba3dd705f668e2b.jpg"
+                    alt="ANDROID AUTO<sup>™</sup>* COMPATIBILITY" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/2ee7c6e7599643529c392f2c00c6826d.jpg"
+                    alt="ANDROID AUTO<sup>™</sup>* COMPATIBILITY" class="sns-desk-none">
+            </div>
+
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30 sns-mob-none">ANDROID AUTO<sup>™</sup>* COMPATIBILITY</h3>
+                    <h3 class="sns-f-30 sns-desk-none">ANDROID AUTO™* COMPATIBILITY</h3>
+                    <p class="sns-f-20 padd-6x6-1">Android Auto seamlessly connects your compatible smartphone so you
+                        can get directions using Google Maps, listen to music via YouTube Music and more.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">AMAZON ALEXA BUILT-IN*</h3>
+                    <p class="sns-f-20 padd-6x6-1">With Alexa Built-In, the same functionality in your home is now
+                        available in your Acadia. With Alexa you can play your favorite music or audiobooks, place
+                        calls, check the weather, control smart home devices, get directions, find parking and more.
+                        Available on all trims.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/22e3c14fcbce40a595398e23b79f12ec.jpg"
+                    alt="AMAZON ALEXA BUILT-IN*" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/c86bd6492c5a43e48e4c89772a8b7dc7.jpg"
+                    alt="AMAZON ALEXA BUILT-IN*" class="sns-desk-none">
+            </div>
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-flex-wrap sns-align-center">
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b655a0e038914aefb6aa5229c575650a.jpg"
+                    alt="ONSTAR<sup>®</sup> & GMC CONNECTED SERVICES" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b655a0e038914aefb6aa5229c575650a.jpg"
+                    alt="ONSTAR<sup>®</sup> & GMC CONNECTED SERVICES" class="sns-desk-none">
+            </div>
+            <div class="no-gap-6x6">
+                <div class="padd-6x6 sns-pad-in-16">
+                    <h3 class="sns-f-30">ONSTAR<sup>®</sup> & GMC CONNECTED SERVICES</h3>
+                    <p class="sns-f-20 padd-6x6-1">Receive three years of the OnStar and Connected Services Premium Plan
+                        with your new 2023 Acadia, including the Connected Vehicle Plan* and the OnStar Safety &
+                        Security Plan.*</p>
+                    <ul>
+                        <li class="sns-f-20">Connected Vehicle Plan includes connectivity for available In-Vehicle
+                            apps,* Remote Access Plan* and In-Vehicle Wi-Fi Hotspot* data.</li>
+                        <li class="sns-f-20">OnStar Safety & Security Plan includes access to the OnStar Guardian App,*
+                            Automatic Crash Response,* Emergency Services,* Crisis Assist,* Roadside Assistance,* and
+                            Stolen Vehicle Assistance.*</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="sns-d-flex sns-justify-center sns-wrap-reverse sns-align-center sns-mb-5">
+            <div class="no-gap-6x6">
+                <div class="padd-6x6">
+                    <h3 class="sns-f-30">STAY CHARGED ON THE GO</h3>
+                    <p class="sns-f-20 padd-6x6-1">Keep your compatible smartphone charged with wireless charging† pad.
+                        Standard on Denali.</p>
+                </div>
+            </div>
+            <div class="no-gap-6x6">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/ff421f297e30433baa3f15f575cbea98.jpg"
+                    alt="STAY CHARGED ON THE GO" class="sns-mob-none">
+                <img src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/bed670c9d68b483e896b90d500ea72d9.jpg"
+                    alt="STAY CHARGED ON THE GO" class="sns-desk-none">
+            </div>
+        </div>
+    </section>
+
+
+    <div class="sns-four-button sns-mt-3 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="sns-main-head-1  mar-0-m mar-b-0">
+            <h2 class="sns-f-40 sns-underline sns-mb-3">acadia TRIMS</h2>
+        </div>
+    </section>
+
+
+    <div class="sns-d-flex sns-justify-center sns-flex-wrap gap-3x3-div model-gap sns-mb-10">
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a26c54c9a9864a19ae2358c0d928a10c.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/a26c54c9a9864a19ae2358c0d928a10c.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">SLE</p>
+                <p class="sns-f-20 sns-mbl-2" style="color: #565656 !important;">Starting at</p>
+                <p class="sns-f-40 sns-mob-none" style="letter-spacing: normal !important ;">$36,800*</p>
+                <p class="sns-f-40 sns-desk-none">$36,800*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6a15a6d5188b4766b429f83453acaeb7.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/6a15a6d5188b4766b429f83453acaeb7.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">SLT</p>
+                <p class="sns-f-20 sns-mbl-2" style="color: #565656 !important;">Starting at</p>
+                <p class="sns-f-40 sns-mob-none" style="letter-spacing: normal !important ;">$41,100*</p>
+                <p class="sns-f-40 sns-desk-none">$41,100*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/b860c8acd68d444da8d61858ca9d5224.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/39353e47dc944217962a73f4481f86dd.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">AT4</p>
+                <p class="sns-f-20 sns-mbl-2" style="color: #565656 !important;">Starting at</p>
+                <p class="sns-f-40 sns-mob-none" style="letter-spacing: normal !important ;">$43,400*</p>
+                <p class="sns-f-40 sns-desk-none">$43,400*</p>
+            </div>
+        </div>
+        <div class="sns-model">
+            <img class="sns-mob-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/447d01d5557d4fb8bfb28688de244e58.jpg"
+                alt="">
+            <img class="sns-desk-none"
+                src="https://media.assets.ansira.net/websites/content/gmps-laguna-niguel-bg/about_messages/447d01d5557d4fb8bfb28688de244e58.jpg"
+                alt="">
+            <div class="sns-model-padd">
+                <p class="sns-f-30">DENALI</p>
+                <p class="sns-f-20 sns-mbl-2" style="color: #565656 !important;">Starting at</p>
+                <p class="sns-f-40 sns-mob-none" style="letter-spacing: normal !important ;">$48,600*</p>
+                <p class="sns-f-40 sns-desk-none">$48,600*</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sns-four-button sns-mt-3 ">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-f-b "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia&year=2023">
+                <div>View Inventory</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b " href="https://www.lagunaniguelgmc.com/QuickQuoteForm">
+                <div>Get A Quote</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b-r "
+                href="https://www.lagunaniguelgmc.com/VehicleSearchResults?search=new&make=GMC&model=Acadia,Sierra%201500%20Limited,Terrain&year=2022&cs%3Aa%3Ai=GMC_Sierra_1500_Limited_APR_NTL_0322_OEM10">
+                <div>Choose Your Offer</div>
+            </a>
+            <a class="sns-btn sns-butn " href="https://www.lagunaniguelgmc.com/PartnerPage?700credit_quickapp">
+                <div>Get Pre-Approved</div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="seo">
+        <div class="seo-per sns-f-20">
+            <p><b>Introducing the 2023 GMC Acadia in Irvine, CA, from Laguna Niguel GMC</b></p>
+
+            <p>Laguna Niguel GMC dealership is pleased to showcase the 2023 GMC Acadia model – a mini-sized SUV that
+                combines impeccable features with exceptional functionality. It has distinct interior and exterior
+                designs
+                with contemporary technology to create a striking presence for comfort and convenience. This mid-size
+                GMC
+                SUV has impressive and striking wheels ample to announce your presence and maintain control of the road.
+            </p>
+
+            <p>The 2023 GMC Acadia from Laguna Niguel GMC possesses an 8" Diagonal GMC Infotainment System with
+                Navigation
+                that allows you to carry out activities like receiving calls and messages or listening to music without
+                taking your hands off the wheel or eyes off the road. Its Adaptive Cruise Control can automatically
+                maintain
+                a specific gap from the detected vehicle in front of you while you drive.</p>
+
+            <p>This feature reduces frequent braking or acceleration while driving. You'll indeed have a relaxing time
+                behind the wheel. Moreover, the 2023 GMC Acadia offers Pro Safety features such as front pedestrian
+                braking,
+                automatic emergency braking, rear cross-traffic alert, and forward collision alert. To test drive the
+                2023
+                GMC Acadia in Irvine, CA, feel free to reach out to us at Laguna Niguel GMC today. We deliver top-notch
+                customer service.</p>
+
+            <p><b>Which GMC dealers have the 2023 GMC Acadia in Irvine, CA, for test drives?</b></p>
+
+            <p>Laguna Niguel GMC possesses a breathtaking catalog of new and certified pre-owned GMC models, including
+                the
+                2023 GMC Acadia, available and prepared for a test drive. We are the trusted GMC vehicle dealership you
+                can
+                count on. You can find out more about our services by exploring our website and arranging a test drive
+                so we
+                can provide you with financing options.</p>
+
+            <p>You can also check out our entire inventory of quality GMC vehicles, parts, and service options we offer
+                at
+                Laguna Niguel GMC, and you're welcome to get in touch with us if you have any questions. The 2023 GMC
+                Acadia
+                from Irvine, CA, incorporates a High-Definition Surround Vision that utilizes multiple cameras to
+                display an
+                overhead image of the area around your vehicle.</p>
+
+            <p>This unconventional technology enhances your visibility and safety by alerting you of nearby cars. The
+                2023
+                GMC Acadia is designed to improve your confidence as you navigate the city, ensure alertness, and avoid
+                potential hazards. Laguna Niguel GMC dealership is sure to meet and exceed your high expectations. We
+                are
+                eager to receive you in our showroom in Irvine.
+            </p>
+            <p><b>Where can I test drive a 2023 GMC Acadia in Irvine, CA?</b></p>
+            <p>Test driving a car lets you become comfortable, familiar with, and understand its features. Taking it for
+                a
+                spin is undoubtedly the best approach to learning if the vehicle fits your needs and lifestyle. At
+                Laguna
+                Niguel GMC, we offer you the chance to experience that first-time feeling behind the wheel of the
+                thrilling
+                2023 GMC Acadia in Irvine, CA. Schedule a test drive to discover why this SUV is exquisite for you.</p>
+
+            <p>We make acquiring the best auto deals and discovering budget-friendly vehicles stress-free with our
+                flexible
+                financing options. Our finance experts possess the patience and expertise to provide a financing program
+                that aligns with your budget and lifestyle, no matter your past credit report. We aim to transform your
+                dream GMC vehicle into a reality. To test drive the 2023 GMC Acadia, schedule a test drive with us today.
+            </p>
+        </div>
+        <div class="disc sns-f-20">
+            <p>*The Manufacturer’s Suggested Retail Price excludes destination freight charge, tax, title, license,
+                dealer
+                fees, and optional equipment. Dealer sets final price. <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">Click here to see all GMC vehicles’ destination
+                    freight charges.</a>
+            </p>
+
+            <p>*Only available on Denali.</p>
+
+            <p>*Safety or driver assistance features are no substitute for the driver’s responsibility to operate the
+                vehicle in a safe manner. Read the vehicle Owner’s Manual for important feature limitations and
+                information.
+            </p>
+
+            <p>*Replaces Automatic Emergency Braking</p>
+
+            <p>*Requires 3.6L V6 Engine with 9-speed Automatic Transmission. With available trailering package. Maximum
+                trailering ratings are intended for comparison purposes only. Before you buy a vehicle or use it for
+                trailering, carefully review the Trailering section of the Owner’s Manual. The trailering capacity of
+                your
+                specific vehicle may vary. The weight of passengers, cargo and options or accessories may reduce the
+                amount
+                you can tow.</p>
+
+            <p>*Feature will not function on certain models without dealer retrofit; see dealer for details.</p>
+
+            <p>*Cargo and load capacity limited by weight and distribution. Requires seats folded down.</p>
+
+            <p>*With available trailering package. Maximum trailering ratings are intended for comparison purposes only.
+                Before you buy a vehicle or use it for trailering, carefully review the Trailering section of the
+                Owner’s
+                Manual. The trailering capacity of your specific vehicle may vary. The weight of passengers, cargo and
+                options or accessories may reduce the amount you can tow.</p>
+
+            <p>*EPA-estimated 22 city/29 hwy mpg (FWD) for the 2.0L 4-cylinder turbo engine with 9-speed automatic
+                transmission. EPA-estimated 22 city/27 hwy (AWD) mpg for the 2.0L 4-cylinder turbo engine with 9-speed
+                automatic transmission.</p>
+
+            <p>*EPA-estimated 19 city/27 hwy (FWD) mpg for the 3.6L V6 engine with 9-speed automatic transmission.
+                EPA-estimated 19 city/26 hwy (AWD) mpg for the 3.6L V6 engine with 9-speed automatic transmission.</p>
+
+            <p>*Requires 3.6L V6 Engine and available Trailering Package.</p>
+
+            <p>*Safety or driver assistance features are no substitute for the driver's responsibility to operate the
+                vehicle in a safe manner. The driver should remain attentive to traffic, surroundings and road
+                conditions at
+                all times. Visibility, weather, and road conditions may affect feature performance. Read the vehicle's
+                owner's manual for more important feature limitations and information.</p>
+
+            <p>*Includes Automatic Emergency Braking, Lane Keep Assist with Lane Departure Warning, Forward Collision
+                Alert,
+                Front Pedestrian Braking, Following Distance Indicator, IntelliBeam, Lane Change Alert with Side Blind
+                Zone
+                Alert, and Rear Cross Traffic Alert. Safety or driver assistance features are no substitute for the
+                driver’s
+                responsibility to operate the vehicle in a safe manner. Read the vehicle Owner’s Manual for important
+                feature limitations and information.</p>
+
+            <p>*Includes Automatic Emergency Braking, Lane Keep Assist with Lane Departure Warning, Forward Collision
+                Alert,
+                Front Pedestrian Braking, Following Distance Indicator, IntelliBeam, Lane Change Alert with Side Blind
+                Zone
+                Alert, Rear Cross Traffic Alert, and Rear Park Assist. Safety or driver assistance features are no
+                substitute for the driver’s responsibility to operate the vehicle in a safe manner. Read the vehicle
+                Owner’s
+                Manual for important feature limitations and information.</p>
+
+            <p>*Does not detect people or items. Always check the rear seat before exiting.</p>
+
+            <p>*Map coverage available in the United States, Puerto Rico and Canada.</p>
+
+            <p>*Functionality varies by model. Full functionality requires compatible Bluetooth and smartphone, and USB
+                connectivity for some devices. Map coverage available in the United States, Puerto Rico and Canada.</p>
+
+            <p>*Available on select 2017 model year and newer GM vehicles with compatible hardware. Third-party
+                trademarks
+                are the property of their respective third-party owners and used under agreement. Requires active
+                service
+                plan and paid AT&T vehicle data plan. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.</p>
+
+            <p>*Bose<sup>®</sup> is a registered trademark of the Bose Corporation in the U.S. and other countries.
+            </p>
+
+            <p>*Vehicle user interface is a product of Apple, and its terms and privacy statements apply. Requires
+                compatible iPhone<sup>®</sup>, and data plan rates apply. Apple CarPlay<sup>®</sup> is a
+                trademark of Apple Inc. Siri<sup>®</sup>, iPhone<sup>®</sup>
+                and iTunes<sup>®</sup> are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
+
+            <p>*Vehicle user interface is a product of Google, and its terms and privacy statements apply. Requires the
+                Android Auto app on Google Play and a compatible Android<sup>™</sup> smartphone. Data plan rates
+                apply. You can check
+                which smartphones are compatible at <a
+                    href="https://support.google.com/androidauto/answer/6348019?hl=en&ref_topic=6106969">g.co/androidauto/requirements</a>.
+                Android Auto is a trademark of Google
+                LLC.</p>
+
+            <p>*Functionality is subject to limitations and varies by vehicle, infotainment system, and location. Select
+                service plan required. Certain Alexa skills require account linking to use. Certain Alexa functionality
+                is
+                dependent on smart home technology. Amazon, Alexa and all related logos are trademarks of Amazon.com,
+                Inc.
+                or its affiliates. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for
+                additional details.</p>
+
+            <p>*Connected Vehicle Plan does not include emergency or security services. Service varies with conditions
+                and
+                location. Data plans provided by AT&T<sup>®</sup>. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">https://www.onstar.com</a> for details and
+                limitations.</p>
+
+            <p>*OnStar plan, working electrical system, cell reception and GPS signal required. OnStar links to
+                emergency
+                services. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">https://www.onstar.com</a> for
+                details and limitations. Automatic Crash Response: not all vehicles
+                may transmit all crash data. Roadside services provided by Allstate Roadside Service for vehicles only.
+                Limitations and restrictions apply. Stolen Vehicle Assistance requires armed GM factory-installed
+                theft-deterrent system, contact method on file and enrollment to receive alerts. Additional messaging
+                and
+                data rates may apply. Services are intended to assist with vehicle recovery and do not prevent theft or
+                protect against damage or loss.</p>
+
+            <p>*Requires subscription to Remote Access Plan or Unlimited Access Plan. Services are subject to user terms
+                and
+                limitations, and vary by vehicle model. Unlock feature requires automatic locks. Remote start requires
+                GM
+                factory-installed and enabled remote start system. Check <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">here</a> for more details.</p>
+
+            <p>*Service varies with conditions and location. Requires active service and paid AT&T data plan. Visit
+                <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and limitations.
+            </p>
+
+            <p>*U.S. and Canada only. Available on select Apple and Android devices. Mobile Crash Response services are
+                intended for use in vehicles only and can connect automatically on Android devices only. Service
+                coverage
+                varies with conditions and location. Service availability, features and functionality vary by device and
+                software version. Device permissions are required for app to operate properly. OnStar links to emergency
+                services. Device and app may not transmit all crash data. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">https://www.onstar.com</a> for details and
+                limitations.</p>
+
+            <p>*Automatic Crash Response: OnStar plan, working electrical system, cell reception and GPS signal
+                required.
+                OnStar links to emergency services. Not all vehicles may transmit all crash data. See <a
+                    href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details
+                and limitations. OnStar Emergency-Certified Advisors: Certified by the International Academies of
+                Emergency
+                Dispatch.
+            </p>
+
+            <p>*OnStar plan, working electrical system, cell reception and GPS signal required. OnStar links to
+                emergency
+                services. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and
+                limitations.
+            </p>
+
+            <p>*OnStar plan, working electrical system, cell reception, and GPS signal required. OnStar links to
+                emergency
+                services. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for coverage map,
+                details, and system limitations. Limited-time offer. Services
+                provided by OnStar in its sole discretion.</p>
+
+            <p>*Roadside services provided by Allstate Roadside Service for vehicles only. Limitations and restrictions
+                apply.</p>
+
+            <p>*OnStar plan, working electrical system, cell reception and GPS signal required. OnStar links to
+                emergency
+                services. See <a href="https://www.onstar.com/?evar25=gmc_disclosure">onstar.com</a> for details and
+                limitations. Stolen Vehicle Assistant requires armed GM
+                factory-installed theft-deterrent system, contact method on file and enrollment to receive alerts.
+                Additional messaging and data rates may apply. Services are intended to assist with vehicle recovery and
+                do
+                not prevent theft or protect against damage or loss.</p>
+
+            <p>*The system wirelessly charges one compatible mobile device. Some phones have built-in wireless charging
+                technology and others require a special adapter/back cover. To check for phone or other device
+                compatibility, see my.gm.com/learn or consult your carrier.</p>
+
+
+        </div>
+    </div>
+
+
+</div>
+<scipt>
+    // Function to add a link to the head
+function addLink(rel, href, crossorigin) {
+  var link = document.createElement('link');
+  link.rel = rel;
+  link.href = href;
+  if (crossorigin) {
+    link.crossOrigin = "anonymous";
+  }
+  document.head.appendChild(link);
+}
+
+// Add preconnect links
+addLink('preconnect', 'https://fonts.googleapis.com');
+addLink('preconnect', 'https://fonts.gstatic.com', true);
+
+// Add stylesheet link
+addLink('stylesheet', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&display=swap');
+</scipt>
