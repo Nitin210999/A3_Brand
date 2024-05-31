@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Write your master css here */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.page-bd .page-section .container-max-md {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+#page-body .mobile {
+    width: 100% !important;
+}
+
+body {
+    margin: 0;
+}
+
+.main-div {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-color: #fff;
+}
+
+.main-div h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+.main-div img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+.main-div sup {
+    line-height: 0.3em;
+}
+
+:root {
+    --sns-btn-bg: #2A2A2A;
+    --sns-btn-back: #3786E3;
+    --sns-blue: #3786E3;
+    --sns-black: #000;
+    --sns-white: #fff;
+    --sns-lite-blue: #EDF1F5;
+}
+
+.sns-f-48 {
+    font-size: 2.5vw;
+    font-weight: 600;
+    color: #000000;
+}
+
+.sns-f-36-fw-600 {
+    font-size: 1.86vw;
+    font-weight: 600;
+    color: #3786E3;
+}
+
+.sns-f-36-fw-700 {
+    font-size: 1.8vw;
+    font-weight: 700;
+    color: #87BEFE;
+    /* line-height: 1.5em; */
+}
+
+.sns-f-30 {
+    font-size: 1.563vw;
+    font-weight: 700;
+    color: #87BEFE;
+}
+
+.sns-f-20 {
+    font-size: 1.042vw;
+    font-weight: 500;
+    color: #2E2D2D;
+    line-height: 1.5em;
+}
+
+.sns-f-22 {
+    font-size: 1.146vw;
+    font-weight: 500;
+    color: #2E2D2D;
+}
+
+.sns-f-head-26 {
+    font-size: 1.354vw;
+    font-weight: 500;
+    color: #2E2D2D;
+    line-height: 1.5em;
+}
+
+.sns-f-26 {
+    font-size: 1.354vw;
+    font-weight: 500;
+    color: #2E2D2D;
+    line-height: 1.5em;
+}
+
+.sns-f-26-msrp {
+    font-size: 1.354vw;
+    font-weight: 500;
+    color: #2E2D2D;
+}
+
+@media screen and (max-width: 890px) {
+    .sns-f-48 {
+        font-size: clamp(28px, 2.5vw, 48px);
+    }
+
+    .sns-f-36-fw-600 {
+        font-size: clamp(24px, 1.875vw, 36px);
+    }
+
+    .sns-f-36-fw-700 {
+        font-size: clamp(20px, 1.875vw, 36px);
+    }
+
+    .sns-f-30 {
+        font-size: clamp(20px, 1.563vw, 30px);
+    }
+
+    .sns-f-20 {
+        font-size: clamp(16px, 1.042vw, 20px);
+    }
+
+    .sns-f-22 {
+        font-size: clamp(14px, 1.146vw, 22px);
+    }
+
+    .sns-f-head-26 {
+        font-size: clamp(18px, 1.354vw, 26px);
+    }
+
+    .sns-f-26 {
+        font-size: clamp(16px, 1.354vw, 26px);
+    }
+
+    .sns-f-26-msrp {
+        font-size: clamp(20px, 1.354vw, 26px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sns-f-36-fw-700 {
+        line-height: 1.5em;
+    }
+}
+
+.sns-mt-1 {
+    margin-top: 1%;
+}
+
+.sns-mt-2 {
+    margin-top: 2%;
+}
+
+.sns-mt-3 {
+    margin-top: 3%;
+}
+
+.sns-mt-4 {
+    margin-top: 4%;
+}
+
+.sns-mt-5 {
+    margin-top: 5%;
+}
+
+.sns-mb-1 {
+    margin-bottom: 1%;
+}
+
+.sns-mb-2 {
+    margin-bottom: 2%;
+}
+
+.sns-mb-3 {
+    margin-bottom: 3%;
+}
+
+.sns-mb-4 {
+    margin-bottom: 4%;
+}
+
+.sns-mb-5 {
+    margin-bottom: 5%;
+}
+
+.sns-pt-1 {
+    padding-top: 1%;
+}
+
+.sns-pt-2 {
+    padding-top: 2%;
+}
+
+.sns-pt-3 {
+    padding-top: 3%;
+}
+
+.sns-pt-4 {
+    padding-top: 4%;
+}
+
+.sns-pt-5 {
+    padding-top: 5%;
+}
+
+.sns-pb-1 {
+    padding-bottom: 1%;
+}
+
+.sns-pb-2 {
+    padding-bottom: 2%;
+}
+
+.sns-pb-3 {
+    padding-bottom: 3%;
+}
+
+.sns-pb-4 {
+    padding-bottom: 4%;
+}
+
+.sns-pb-5 {
+    padding-bottom: 5%;
+}
+
+@media screen and (max-width: 480px) {
+    .sns-mb-3 {
+        margin-bottom: 5%;
+    }
+
+    .sns-mt-2 {
+        margin-top: 4%;
+    }
+
+    .sns-mt-3 {
+        margin-top: 5%;
+    }
+
+    .sns-mb-nic-0 {
+        margin-top: 0 !important;
+    }
+}
+
+/* Custom css */
+/* The sns-d-flex becomes flexible by setting the display property to flex */
+.sns-d-flex {
+    display: flex;
+}
+
+/* justify-content to align the item on the main axis ,center */
+.sns-justify-content-center {
+    justify-content: center;
+}
+
+.sns-justify-center {
+    justify-content: center;
+}
+
+/* Distribute items evenly Start, in-between, and end gaps have equal sizes */
+.sns-justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+/*Items will have space between them */
+.sns-justify-content-space-between {
+    justify-content: space-between;
+}
+
+/*tems will have space before, between, and after them */
+.sns-justify-content-space-around {
+    justify-content: space-around;
+}
+
+/* the align-items property to align our item on the cross axis, center*/
+.sns-align-center {
+    align-items: center;
+}
+
+.sns-align-end {
+    align-items: end;
+}
+
+/* sets the items in row */
+.sns-f-row {
+    flex-direction: row;
+}
+
+/* sets the items in column */
+.sns-f-column {
+    flex-direction: column;
+}
+
+/* sns-flex-wrap property is used to specify whether flex items are forced into a single line or wrapped onto multiple lines.  */
+.sns-flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* The flexbox items are aligned at the baseline of the cross axis. */
+.sns-basline {
+    align-items: baseline;
+}
+
+.sns-text-center {
+    text-align: center;
+}
+
+.sns-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* start */
+.sns-desk-none {
+    display: none !important;
+}
+
+.sns-mob-none {
+    display: block !important;
+}
+
+/* End */
+.sns-fw-100 {
+    font-weight: 100;
+}
+
+.sns-fw-200 {
+    font-weight: 200;
+}
+
+.sns-fw-300 {
+    font-weight: 300;
+}
+
+.sns-fw-400 {
+    font-weight: 400;
+}
+
+.sns-fw-500 {
+    font-weight: 500;
+}
+
+.sns-fw-600 {
+    font-weight: 600;
+}
+
+.sns-fw-700 {
+    font-weight: 700;
+}
+
+.sns-fw-800 {
+    font-weight: 800;
+}
+
+/* font-weight normal italic bold */
+.sns-text-start {
+    text-align: left;
+}
+
+.sns-text-end {
+    text-align: right;
+}
+
+.sns-text-center {
+    text-align: center;
+}
+
+.sns-text-decoration-none {
+    text-decoration: none;
+}
+
+.sns-text-decoration-underline {
+    text-decoration: underline;
+}
+
+.sns-text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+/* .text-capitalize lowercase capitalize*/
+.sns-text-lowercase {
+    text-transform: lowercase;
+}
+
+.sns-text-uppercase {
+    text-transform: uppercase;
+}
+
+.sns-text-capitalize {
+    text-transform: capitalize;
+}
+
+.sns-text-wrap {
+    white-space: normal;
+}
+
+.sns-text-nowrap {
+    white-space: nowrap;
+}
+
+/* .text-capitalize lowercase capitalize*/
+@media screen and (max-width: 480px) {
+    .sns-desk-none {
+        display: block !important;
+    }
+
+    .sns-mob-none {
+        display: none !important;
+    }
+}
+
+.s-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.s-banner .s-banner-txt {
+    position: absolute;
+    bottom: 6%;
+    left: 3%;
+}
+
+.s-banner-txt h1 {
+    font-size: 3.75vw;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.s-banner-txt p {
+    font-size: 1.875vw;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 0.8%;
+    margin-right: 72vw;
+}
+
+@media screen and (max-width: 890px) {
+    .s-banner-txt p {
+        font-size: clamp(18px, 1.875vw, 36px);
+        margin-right: 0;
+    }
+
+    .s-banner-txt h1 {
+        font-size: clamp(32px, 3.75vw, 72px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .s-banner {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+
+    .s-banner .s-banner-txt {
+        position: initial;
+        padding: 5%;
+    }
+
+    .s-banner-txt p {
+        color: #000000;
+        padding-bottom: 2%;
+    }
+
+    .s-banner-txt h1 {
+        color: #000000;
+    }
+}
+
+.sns-button>.sns-BN {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3% 0;
+    background-color: var(--sns-btn-bg);
+    justify-content: space-evenly;
+    /* margin-top: -1px; */
+}
+
+.sns-BN>a {
+    color: var(--sns-white);
+    text-decoration: none !important;
+    padding: 2%;
+}
+
+.sns-BN>.sns-btn {
+    width: calc(85%/4);
+    padding: 1.2% 0;
+    box-sizing: border-box;
+}
+
+.sns-BN .sns-butn {
+    background-color: var(--sns-btn-back);
+    color: #fff;
+    font-size: 1.25vw;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sns-btn-m-in-15 {
+    margin-inline: 15%;
+}
+
+.sns-BN .sns-butn:hover {
+    background-color: var(--sns-white);
+    color: var(--sns-black);
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 890px) {
+    .sns-button>.sns-BN {
+        padding: 3% 0;
+    }
+
+    .sns-BN>.sns-btn {
+        width: calc(91%/2);
+        padding: 1.5% 0;
+    }
+
+    .sns-BN .sns-butn {
+        font-size: clamp(16px, 1.25vw, 24px);
+    }
+
+    .sns-f-b {
+        margin-bottom: 3%;
+    }
+
+    .sns-btn-m-in-15 {
+        margin-inline: 3%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sns-BN>.sns-btn {
+        width: calc(89%/1);
+        margin: 3%;
+        padding-block: 6%;
+    }
+
+    .sns-button>.sns-BN {
+        padding: 4% 0;
+    }
+}
+
+.s-head {
+    text-align: center;
+}
+
+.s-head .s-box {
+    margin-inline: 20.5vw;
+    background-color: #EEEEEE;
+    padding-block: 1%;
+}
+
+.s-head .m-inline-16 {
+    margin-inline: 16vw;
+}
+
+.s-head .m-inline-15 {
+    margin-inline: 15.5vw;
+}
+
+@media screen and (max-width: 890px) {
+    .s-head {
+        padding-inline: 5%;
+    }
+
+    .s-head .s-box {
+        margin-inline: 0vw;
+        background-color: #fff;
+    }
+
+    .s-head .m-inline-16 {
+        margin-inline: 0vw;
+    }
+
+    .s-head .m-inline-15 {
+        margin-inline: 0vw;
+    }
+}
+
+.card-1x1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-1x1 .body-1x1 {
+    width: calc(94%/1);
+    text-align: center;
+}
+
+.body-1x1 .card-p {}
+
+.card-3x3 {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    background-color: #fff;
+    padding-top: 3%;
+    flex-wrap: wrap;
+    /* margin-inline: 3%; */
+}
+
+.card-3x3 .body-3x3 {
+    width: calc(91%/2);
+    text-align: center;
+}
+
+.card-3x3 .body-3x3-gap {
+    width: calc(88%/3);
+    text-align: center;
+}
+
+.img-3x3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-inline: 3%; */
+}
+
+.img-3x3-body {
+    width: calc(94%/3);
+}
+
+@media screen and (max-width: 890px) {
+    .card-3x3 .body-3x3 {
+        width: calc(94%/1);
+    }
+
+    .card-3x3 .body-3x3-gap {
+        width: calc(91%/2);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-1x1 .body-1x1 {
+        width: calc(90%/1);
+        padding-top: 1%;
+    }
+
+    .body-1x1 .card-p {
+        /* padding: 3%; */
+    }
+
+    .card-1x1 .body-1x1 p {
+        color: #000 !important;
+    }
+
+    .card-3x3 {
+        padding-top: 5%;
+        margin-inline: 0;
+    }
+
+    .card-3x3 .body-3x3 {
+        width: calc(90%/1);
+    }
+    .card-3x3 .body-3x3-gap {
+        width: calc(94%/1);
+    }
+
+    .card-3x3 .body-3x3 p {
+        color: #000;
+    }
+
+    .img-3x3-body {
+        width: calc(94%/1);
+    }
+}
+
+.sns-BN1 {
+    padding-block: 8% !important;
+    justify-content: flex-start !important;
+    /* margin-left: 5%; */
+}
+
+.car {
+    position: absolute;
+    top: -5%;
+    right: 0;
+    width: 55%;
+}
+
+.car-btn {
+    margin-bottom: 10%;
+}
+
+@media screen and (max-width: 890px) {
+    .car {
+        top: 16%;
+        right: 0;
+    }
+
+    .sns-BN1>a {
+        padding-block: 2% !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .car {
+        width: 92%;
+        left: 5%;
+        top: 45%;
+    }
+
+    .sns-BN1 {
+        margin-left: unset;
+        padding-bottom: 22% !important;
+        justify-content: center !important;
+        padding-block: 3% 30% !important;
+    }
+
+    .sns-BN1>a {
+        padding-block: 5% !important;
+        width: 90% !important;
+    }
+
+    .car-btn {
+        margin-bottom: 15%;
+    }
+}
+
+/* This Secton was duplicated from Section 4. */
+.card-con-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-inline: 3%;
+    gap: 3%;
+    background-color: #fff;
+}
+
+.card-con-img .body-con-img {
+    width: calc(97%/2);
+}
+
+.card-con-img .body-con-img h3 {
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 890px) {
+    .card-con-img .body-con-img {
+        width: calc(100%/1);
+        text-align: center;
+    }
+
+    .card-con-img .body-con-img .card-p-2 {
+        padding: 3%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-con-img {
+        margin-inline: 0%;
+    }
+
+    .card-con-img .body-con-img .card-p-2 {
+        padding: 5% 0%;
+    }
+
+    .card-con-img .body-con-img {
+        width: calc(90%/1);
+        text-align: center;
+    }
+}
+
+/* This Secton was duplicated from Section 5. */
+/* This Secton was duplicated from Section 3. */
+.s-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.s-img .img-body {
+    width: calc(94%/3);
+}
+
+@media screen and (max-width: 480px) {
+    .s-img .img-body {
+        width: calc(90%/1);
+        margin-bottom: 2%;
+    }
+}
+
+/* This Secton was duplicated from Section 6. */
+/* Custom css */
+.sns-d-flex {
+    display: flex;
+}
+
+.sns-justify-content-center {
+    justify-content: center;
+}
+
+.sns-justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+.sns-align-center {
+    align-items: center;
+}
+
+.sns-f-row {
+    flex-direction: row;
+}
+
+.sns-f-column {
+    flex-direction: column;
+}
+
+.sns-flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* section css */
+.sns-img-g {
+    width: calc(100%/2);
+}
+
+.sns-gallery-img {
+    overflow: hidden;
+}
+
+.sns-gallery-img img {
+    width: 100%;
+    transition: 0.3s;
+    vertical-align: bottom;
+}
+
+.sns-gallery-img img:hover {
+    transform: scale(1.2);
+}
+
+/* media */
+@media screen and (max-width: 640px) {
+    .sns-img-g {
+        width: calc(100%/2);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sns-img-g {
+        width: calc(100%/1);
+    }
+}
+
+/* This Secton was duplicated from Section 7. */
+/* This Secton was duplicated from Section 8. */
+/* This Secton was duplicated from Section 10. */
+/* This Secton was duplicated from Section 11. */
+/* This Secton was duplicated from Section 8. */
+/* This Secton was duplicated from Section 6. */
+/* This Secton was duplicated from Section 2. */
+.s-mrp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    margin-inline: 15%;
+}
+
+.s-mrp .mrp-card {
+    width: calc(90%/3);
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.s-mrp .mrp-card h4 {
+    margin-top: 3%;
+}
+
+.s-mrp .mrp-card p {
+    margin-top: 3%;
+}
+
+@media screen and (max-width: 890px) {
+    .s-mrp {
+        margin-inline: 15%;
+    }
+
+    .s-mrp .mrp-card {
+        width: calc(95%/2);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .s-mrp .mrp-card {
+        width: calc(90%/1);
+    }
+
+    .s-pb-0 {
+        padding-bottom: 0 !important;
+    }
+
+    .s-mb-0 {
+        margin-bottom: 0 !important;
+    }
+
+    .s-pb-mob-5 {
+        padding-bottom: 5% !important;
+    }
+}
+
+.s-seo {
+    padding: 4% 3%;
+}
+
+.s-seo p {
+    margin-bottom: 1.5%;
+    line-height: 1.3em;
+}
+
+.s-disc {
+    padding: 0% 3% 4% 3%;
+}
+
+.s-disc p {
+    margin-bottom: 1.5%;
+    line-height: 1.3em;
+}
+
+.sns-bg-white {
+    background-color: #EEEEEE !important;
+}
+
+@media screen and (max-width: 480px) {
+    .s-seo {
+        padding: 4% 5%;
+    }
+
+    .s-disc {
+        padding: 0% 5% 4% 5%;
+    }
+
+    .sns-bg-white {
+        background-color: #fff !important;
+    }
+
+    .sns-pt-nic-0 {
+        padding-top: 0 !important;
+    }
+}
+    
+</style>
+
+<body>
+
+
+    <div class="main-div">
+        <div class="s-banner">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/a9cf2ec1a7a54286b8a608d3fa3f1613.png"
+                alt="banenr" class="sns-mob-none">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/a9cf2ec1a7a54286b8a608d3fa3f1613.png"
+                alt="banner" class="sns-desk-none">
+            <div class="s-banner-txt">
+                <p>The Most Advanced Subaru Ever, Featuring Faster Charging and Enhanced Safety Technologies</p>
+                <h1>2024 Solterra</h1>
+            </div>
+        </div>
+        <section class="sns-button">
+            <div class="sns-BN justify-content-evenly ">
+                <a class="sns-btn sns-butn sns-f-b"
+                    href="https://www.rimrocksubaru.com/new-inventory/index.htm?year=2024&model=Outback&sortBy=year%20asc">
+                    <div>View Inventory</div>
+                </a>
+                <a class="sns-btn sns-butn sns-f-b " href="https://www.rimrocksubaru.com/contact-rimrock-subaru.htm">
+                    <div>get a quote</div>
+                </a>
+                <a class="sns-btn sns-butn sns-f-b-r " href="https://www.rimrocksubaru.com/buy-or-trade-online.htm">
+                    <div>value your trade</div>
+                </a>
+                <a class="sns-btn sns-butn " href="https://www.rimrocksubaru.com/financing/index.htm">
+                    <div>get pre-approved</div>
+                </a>
+            </div>
+        </section>
+        <div class="s-head sns-mt-4 sns-mb-4">
+            <h2 class="sns-f-48 s-box">The most advanced Subaru we’ve ever built.</h2>
+            <p class="sns-f-head-26 m-inline-16 sns-mt-2">
+                The 2024 Subaru Solterra gives you a new way to explore our world. It features an advanced all-electric,
+                zero-emission StarDrive® electric powertrain and uses the e-Subaru Global Platform. Plus, Solterra is
+                the first AWD electric vehicle to feature our legendary standard Symmetrical All-Wheel Drive. It’s also
+                our most advanced SUV ever, featuring a charge time reduced by about half and improved cold-weather
+                charging for 2024*. There’s state-of-the-art technology like a stunning available 12.3-inch touchscreen
+                and a standard DriverFocus® Distraction Mitigation System*, along with the segment-leading capability of
+                8.3 inches of ground clearance.
+            </p>
+        </div>
+        <div class="section-3" style="background-color: #EEEEEE;">
+            <div class="s-head sns-pt-5 sns-pb-5">
+                <!-- <h3 class="sns-f-36-fw-600 sns-pt-4">Capability</h3> -->
+                <h2 class="sns-f-48 ">Love Your Subaru and the Earth</h2>
+                <p class="sns-f-head-26 m-inline-16 sns-mt-2" style="font-weight: 800 !important;">The Solterra is our
+                    first zero-emission all-electric SUV.</p>
+                <p class="sns-f-head-26 m-inline-16 sns-pb-5">
+
+                    The Solterra lets you explore the outdoors and help protect it at the same time. The advanced
+                    StarDrive electric powertrain means no tailpipe emissions and no need for gasoline or oil changes,
+                    so every mile has significantly less impact on the environment. The Solterra is the latest example
+                    of our commitment to safeguarding the natural world we all share through sustainable transportation
+                    — and it’s just the beginning.
+                </p>
+                <div style="margin-inline: 3%;">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d6682094bf8f4389b85cfe5c6700775d.png"
+                        alt="">
+                </div>
+
+
+            </div>
+        </div>
+        <div class="section-3 sns-pb-3 s-pb-0" style="background-color: #fff;">
+            <div class="s-head sns-pt-5 sns-pb-5">
+                <h2 class="sns-f-48 ">Eco-Friendly with Upgraded Charging</h2>
+            </div>
+            <div class="card-1x1">
+                <div class="body-1x1">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/e7e78f86076a4cb499c19dbdbed4762c.png"
+                        class="sns-mob-none" alt="Capability">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/e7e78f86076a4cb499c19dbdbed4762c.png"
+                        class="sns-desk-none" alt="Capability">
+                    <div class="card-p sns-mb-5">
+                        <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Improved DC Fast Charging</h3>
+                        <p class="sns-f-26 sns-mt-2">
+                            The 2024 Solterra can fast-charge in about half the time as the previous model, now taking
+                            about 35 minutes to charge from 10% to 80% using its built-in fast-charge capability*. The
+                            StarDrive powertrain gives Solterra an EPA-estimated range of up to 227 miles* with standard
+                            Symmetrical All-Wheel Drive as well as a variety of options for fast and convenient
+                            charging, both at home and on the go. The Solterra comes with a charger that works with any
+                            standard 120V outlet for Level 1 charging. You can also have a 240V Level 2 charger
+                            installed at home so you can plug in overnight and wake up each morning with a full charge*.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-1x1">
+                <div class="body-1x1">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/e8cbf3c9b2354578a350eba876e86f81.png"
+                        class="sns-mob-none" alt="Stability">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/e8cbf3c9b2354578a350eba876e86f81.png"
+                        class="sns-desk-none" alt="Stability">
+                    <div class="card-p sns-mb-5">
+                        <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Improved Cold-Weather Charging</h3>
+                        <p class="sns-f-26 sns-mt-2">
+                            Charging your Solterra is fast and easy even when you’re heading out for cold-weather fun.
+                            The upgraded charging system on the 2024 Solterra now charges two times faster at 32 degrees
+                            and four times faster at 14 degrees*, helping keep you on the go no matter the conditions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-1x1">
+                <div class="body-1x1">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/12b85f8aed9b4ebf8d1972106a505bc3.png"
+                        class="sns-mob-none" alt="Fuel Efficiency and Durability">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/12b85f8aed9b4ebf8d1972106a505bc3.png"
+                        class="sns-desk-none" alt="Fuel Efficiency and Durability">
+                    <div class="card-p sns-mb-3">
+                        <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Free Subaru Just Drive Car Rentals</h3>
+                        <p class="sns-f-26 sns-mt-2">
+                            For extended cross-country road trips or backcountry expeditions way off the grid, Solterra
+                            owners get 10 free days of Subaru Just Drive car rentals. With Just Drive, you can choose
+                            from a selection of vehicles in the Subaru fleet and rent directly from a participating
+                            Subaru retailer. With Just Drive, you’re not just getting a rental car; you’re getting the
+                            extra peace of mind that comes with all the safety, capability, and quality Subaru vehicles
+                            are known for.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-1x1">
+                <div class="body-1x1">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/667f750e677f46c18ee52f0f66175782.png"
+                        class="sns-mob-none" alt="Fuel Efficiency and Durability">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/667f750e677f46c18ee52f0f66175782.png"
+                        class="sns-desk-none" alt="Fuel Efficiency and Durability">
+                    <div class="card-p sns-mb-3">
+                        <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Conserving Our Parks</h3>
+                        <p class="sns-f-26 sns-mt-2">
+                            As the largest corporate donor to the National Park Foundation, Subaru has a long history of
+                            commitment to protecting our nation’s greatest treasures, helping conserve over 85 million
+                            acres of land in America’s more than 400 national parks. Subaru has provided over $70
+                            million to organizations working to conserve our parks, helping fund efforts such as
+                            recycling, composting, and waste reduction operations. Subaru has also donated its
+                            zero-landfill expertise and funding to the parks to help them become more sustainable
+                            through the Subaru “Don’t Feed the Landfills” initiative.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="car-btn" style="position: relative;">
+            <div class="sns-button" style="background-color: #2A2A2A;">
+                <div class="sns-BN1 sns-BN" style="background-color:unset;">
+                    <a class="sns-btn sns-butn sns-btn-m-in-15"
+                        href="https://www.rimrocksubaru.com/new-inventory/index.htm?year=2024&model=Outback&sortBy=year%20asc">
+                        <div>View Inventory</div>
+                    </a>
+                </div>
+            </div>
+            <div style="overflow: hidden;">
+                <div class="car">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/76e99fceb71f44eab43962d4b60c9fe3.png"
+                        alt="view inventory" class="sns-mob-none">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/76e99fceb71f44eab43962d4b60c9fe3.png"
+                        alt="view inventory" class="sns-desk-none">
+                </div>
+            </div>
+        </div>
+        <div class="s-head">
+            <h3 class="sns-f-36-fw-600 sns-pt-3">Subaru Safe</h3>
+        </div>
+        <div class="card-con-img sns-mt-3 sns-mb-2 sns-mb-nic-0">
+            <div class="body-con-img">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/df186e24e31e463e9a909ed119d3704f.png"
+                    alt="" class="sns-mob-none">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/df186e24e31e463e9a909ed119d3704f.png"
+                    alt="" class="sns-desk-none">
+            </div>
+            <div class="body-con-img">
+                <div class="card-p-2 s-pb-0">
+                    <h3 class="sns-f-36-fw-700">Quality Engineering</h3>
+                    <p class="sns-f-26 sns-mt-3 sns-mb-3">
+                        It may be the first of its kind, but the Solterra is still a Subaru at heart. You can trust a
+                        Subaru vehicle for miles and miles of adventure — 96% of Subaru vehicles sold in the last 10
+                        years are still on the road today, more than Honda or Toyota brands*.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-3" style="background-color: #fff;">
+            <div class="s-head">
+
+                <h2 class="sns-f-48 sns-pt-4 sns-pb-4">Standard EyeSight® Driver Assist Technologies</h2>
+            </div>
+            <div class="card-1x1">
+                <div class="body-1x1">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/41342f2cbcc34d4d8def9b5b15498f7c.png"
+                        class="sns-mob-none" alt="Subaru EyeSight">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/41342f2cbcc34d4d8def9b5b15498f7c.png"
+                        class="sns-desk-none" alt="Subaru EyeSight">
+                    <div class="card-p sns-mb-5">
+                        <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Subaru EyeSight</h3>
+                        <p class="sns-f-26 sns-mt-2">
+                            Every 2024 Solterra features standard EyeSight Driver Assist Technologies, which act like an
+                            extra set of eyes on the road and, if need be, an extra foot on the brake when you drive7.
+                            These advanced active safety systems monitor traffic movement, optimize cruise control, and
+                            warn you when you’re swaying outside your lane.*
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-1x1">
+                <div class="body-1x1">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/9a55f5592c4c42eba64acd0aaa2b24e2.png"
+                        class="sns-mob-none" alt="Pre-Collision Braking">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/9a55f5592c4c42eba64acd0aaa2b24e2.png"
+                        class="sns-desk-none" alt="Pre-Collision Braking">
+                    <div class="card-p sns-mb-5">
+                        <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Pre-Collision system</h3>
+                        <p class="sns-f-26 sns-mt-2">
+                            The Pre-Collision System* can apply full braking force and bring you to a complete stop in
+                            emergency situations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-1x1">
+                <div class="body-1x1">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0de15e14b9474a89b925022d1725f9f0.png"
+                        class="sns-mob-none" alt="Adaptive Cruise Control">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0de15e14b9474a89b925022d1725f9f0.png"
+                        class="sns-desk-none" alt="Adaptive Cruise Control">
+                    <div class="card-p sns-mb-5">
+                        <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Traffic Jam Assist</h3>
+                        <p class="sns-f-26 sns-mt-2">
+                            Traffic Jam Assist* helps make traveling through congestion safer and easier by providing
+                            hands-free steering assistance with driver supervision in low-speed traffic jams (up to 25
+                            MPH) on most major highways. Dynamic Radar Cruise Control* and Lane Tracing Assist* can take
+                            some of the stress out of driving by helping with steering, braking, and throttle control —
+                            both in daily traffic and on long road trips.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card-3x3 sns-mb-1" style="background-color:#EEEEEE;">
+            <div class="body-3x3">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0ce5c2b205aa403680171e25a67e4edd.png"
+                    class="sns-mob-none" alt="Up to 9.5 Inches of Ground Clearance and X-MODE<sup>®</sup>">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/fbb6e0fdd4f246cbbd884124f0dc9736.png"
+                    class="sns-desk-none" alt="Up to 9.5 Inches of Ground Clearance and X-MODE<sup>®</sup>">
+                <div class="card-p sns-mb-3">
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">All-Around Awareness Technologies</h3>
+                    <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                        The 2024 Outback features an entire suite of available safety technologies to help protect
+                        you and
+                        your passengers. The Blind-Spot Detection* system warns you with a visual indicator on each
+                        side
+                        mirror if it senses a vehicle in your blind spots. Rear Cross-Traffic Alert* helps warn you
+                        of
+                        traffic approaching from the side as you back up. With available Reverse Automatic Braking,
+                        your
+                        vehicle can even stop itself to help avoid objects behind you*. A Smart Rear-View Mirror
+                        with
+                        auto-dimming, compass, and HomeLink<sup>®</sup> is available to give you a wide-angle
+                        view of objects behind
+                        you.
+                    </p>
+                    <p class="sns-f-20 sns-mb-5">
+                        Blind-Spot Detection and Rear Cross-Traffic Alert standard on: Onyx Edition, Limited,
+                        Touring, Onyx
+                        Edition XT, Wilderness, Limited XT, Touring XT
+                        Available on: Premium<br>
+                        Reverse Automatic Braking standard on: Onyx Edition, Limited, Touring, Onyx Edition XT,
+                        Limited XT,
+                        Touring XT<br>
+                        Available on: Wilderness<br>
+                        Smart Rear-View Mirror standard on: Touring, Touring XT
+                    </p>
+                </div>
+            </div>
+            <div class="body-3x3">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/5122e78cf45744168343dfb8d89356f7.png"
+                    class="sns-mob-none" alt="Direct-Injection SUBARU BOXER<sup>®</sup> Engines">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d95922c75155498c8e3f4db30c8d40cf.png"
+                    class="sns-desk-none" alt="Direct-Injection SUBARU BOXER<sup>®</sup> Engines">
+                <div class="card-p sns-mb-3">
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase sns-mob-none">SUBARU
+                        STARLINK<sup>®</sup> Safety
+                        and Security
+                    </h3>
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase sns-desk-none">SUBARU
+                        STARLINK<sup>®</sup> Safety<br>
+                        and Security
+                    </h3>
+                    <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                        STARLINK Safety and Security* offers an array of connected services to help keep you and
+                        your
+                        Outback safe whether you're in your vehicle, at your computer, or on your smartphone.
+                        Advanced
+                        Automatic Collision Notification will alert an operator in the event of an accident, and SOS
+                        Emergency Assistance can get you roadside help at the push of a button. Remote Engine Start
+                        with
+                        Climate Control, accessible via your smartphone, ensures your Outback is always ready and
+                        comfortable*. There are also STARLINK Concierge services for personal assistance with tasks
+                        like
+                        navigation, restaurant reservations, and scheduling service appointments.
+                    </p>
+                    <p class="sns-f-20 sns-mb-5 sns-mob-none">
+                        Standard on: Premium, Onyx Edition, Limited, Touring, Onyx Edition XT, Wilderness, Limited
+                        XT,
+                        Touring XT
+                    </p>
+                </div>
+            </div>
+            <div class="body-3x3">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/6a1f6635b47142ee8099d941f1161f43.png"
+                    class="sns-mob-none" alt="Subaru DriverFocus<sup>®</sup> Distraction Mitigation System">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/de74a23879a74a8d87bf1396c137b905.png"
+                    class="sns-desk-none" alt="Subaru DriverFocus<sup>®</sup> Distraction Mitigation System">
+                <div class="card-p sns-mb-3">
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase sns-mob-none">Subaru<br>
+                        DriverFocus<sup>®</sup> Distraction Mitigation System</h3>
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase sns-desk-none">Subaru<br>
+                        DriverFocus<sup>®</sup> Distraction Mitigation System</h3>
+                    <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                        The 2024 Outback features a state-of-the-art system to help reduce distracted driving for
+                        both new
+                        and experienced drivers. Each day in the United States more than 1,000 people are injured in
+                        crashes
+                        reported to have involved a distracted driver*. Working with our award-winning EyeSight
+                        Driver
+                        Assist Technology, the DriverFocus system is like having an attentive co-pilot along for the
+                        ride,
+                        available to give a helpful alert if a driver becomes distracted or drowsy*. For added
+                        convenience,
+                        DriverFocus can also recognize up to five different drivers and remember their preferences,
+                        including seat position, climate control settings, and outside mirror position.
+                    </p>
+                    <p class="sns-f-20 sns-mb-5 sns-mob-none">
+                        Optional on: Limited<br>
+                        Standard on: Touring, Limited XT, Touring XT
+                    </p>
+                    <p class="sns-f-20 sns-mb-5 sns-desk-none">
+                        Optional on: Limited Standard on: Touring, Limited XT, Touring XT
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <div class="card-3x3">
+        <div class="body-3x3">
+            <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/306076c8c2f3410ab908e30733219244.png"
+                class="sns-mob-none" alt="Up to 9.5 Inches of Ground Clearance and X-MODE">
+            <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/b5105f94816d4a699a3b6fa0b84a14b9.png"
+                class="sns-desk-none" alt="Up to 9.5 Inches of Ground Clearance and X-MODE">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">Up to 9.5 Inches of Ground Clearance
+                    and
+                    X-MODE<sup>®</sup></h3>
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    With up to 9.5 inches of ground clearance and standard X-MODE, the Outback is a midsize
+                    SUV
+                    that can take you almost anywhere. X-MODE works by optimizing the Symmetrical <span
+                        style="white-space: nowrap;">All-Wheel</span> Drive system for maximum traction on
+                    slippery surfaces and Hill Descent Control gives
+                    you
+                    extra stability and confidence when descending more difficult grades.
+                </p>
+                <p class="sns-f-20 sns-mb-5">
+                    X-MODE standard on: All trims<br>
+                    Dual-function X-MODE standard on: Onyx Edition, Onyx Edition XT, Wilderness
+                </p>
+            </div>
+        </div>
+        <div class="body-3x3">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/6f5f3e51f5584a6d93bd5b8c82080a10.png"
+                class="sns-mob-none" alt="Direct-Injection SUBARU BOXER<sup>®</sup> Engines">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/1af3076ef21b471883ade6f89876ab91.png"
+                class="sns-desk-none" alt="Direct-Injection SUBARU BOXER<sup>®</sup> Engines">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">Direct-Injection SUBARU
+                    BOXER<sup>®</sup> Engines
+                </h3>
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    The standard direct-injection SUBARU BOXER engine delivers 182 horsepower and impressive
+                    mileage around town with its Auto Start-Stop Technology. Paired with a Lineartronic
+                    Continuously Variable Transmission (CVT), it can reach up to 32 MPG highway with almost
+                    590
+                    miles of range*. A 260-horsepower direct-injection turbocharged SUBARU BOXER engine is
+                    also
+                    available, providing 277 pound-feet of torque for extra power and exciting daily
+                    driving.
+                </p>
+                <p class="sns-f-20 sns-mb-5">
+                    Direct-injection SUBARU BOXER engine standard on: Base, Premium, Onyx Edition, Limited,
+                    Touring<br>
+                    Direct-injection turbocharged SUBARU BOXER engine standard on: Onyx Edition XT,
+                    Wilderness,
+                    Limited XT, Touring XT
+                </p>
+            </div>
+        </div>
+        <div class="body-3x3">
+            <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/49fad2abd13849258bba677137e2e14d.png"
+                class="sns-mob-none" alt="3,500-Pound Towing Capacity*">
+            <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/abf277663d0e46088fcc0160708be712.png"
+                class="sns-desk-none" alt="3,500-Pound Towing Capacity*">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">3,500-Pound Towing Capacity*</h3>
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    With up to 3,500 pounds of towing capacity and an available accessory trailer hitch, the
+                    2024 Outback lets you bring all the bikes, kayaks, or other gear you need to make your
+                    adventures even better.
+                </p>
+                <p class="sns-f-20 sns-mb-5">
+                    Standard on: Onyx Edition XT, Wilderness, Limited XT, Touring XT
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="section-3" style="background-color: #fff;">
+        <div class="s-head">
+            <h3 class="sns-f-36-fw-600 sns-pt-3">The Safest Outback Yet</h3>
+            <h2 class="sns-f-48 sns-pt-4 sns-pb-4">Standard EyeSight<sup>®</sup> Driver Assist Technology</h2>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/af47dbcf44da46c7b7718cd43b74a6c2.png"
+                    class="sns-mob-none" alt="Subaru EyeSight">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/53b455a0f5bd4ff486ac16e5a7944cb1.png"
+                    class="sns-desk-none" alt="Subaru EyeSight">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Subaru EyeSight</h3>
+                    <p class="sns-f-26 sns-mt-2">Outback safety features include standard EyeSight Driver Assist
+                        Technology,
+                        which acts like an extra set of eyes on the road and, if need be, an extra foot on the brake
+                        when
+                        you drive*. EyeSight includes a number of advanced active safety systems to protect you and
+                        your
+                        family on every drive. Automatic Emergency Steering can help you avoid a collision by
+                        providing
+                        automatic steering and pre-collision braking support if it determines there’s enough space
+                        to
+                        intervene*.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/1b5a4c7771bd4d0bac5d5ad9f6117089.png"
+                    class="sns-mob-none" alt="Pre-Collision Braking">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/ee88584d217e4bc987e85a53f9004d72.png"
+                    class="sns-desk-none" alt="Pre-Collision Braking">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Pre-Collision Braking</h3>
+                    <p class="sns-f-26 sns-mt-2">Automatic Pre-Collision Braking* helps avoid or reduce frontal
+                        impacts by
+                        alerting you and applying full braking force in emergency situations. Pre-Collision Throttle
+                        Management can reduce the power from the engine to help minimize the possible impact force
+                        and
+                        frontal impact damage.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/ad8c2ed927f449e69aa8faad29f7cb4d.png"
+                    class="sns-mob-none" alt="Adaptive Cruise Control">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/159ed9ef332a48498c78084bd18b1531.png"
+                    class="sns-desk-none" alt="Adaptive Cruise Control">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Adaptive Cruise Control</h3>
+                    <p class="sns-f-26 sns-mt-2">Advanced Adaptive Cruise Control with Lane Centering* adds extra
+                        convenience and safety on every trip. Just choose the distance you want to keep from the car
+                        in
+                        front of you and it can take some of the stress out of everyday driving by helping with
+                        steering,
+                        braking, and throttle control while maintaining a safe distance ahead.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-3x3 sns-mb-1" style="background-color:#EEEEEE;">
+            <div class="body-3x3">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0ce5c2b205aa403680171e25a67e4edd.png"
+                    class="sns-mob-none" alt="Up to 9.5 Inches of Ground Clearance and X-MODE<sup>®</sup>">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/fbb6e0fdd4f246cbbd884124f0dc9736.png"
+                    class="sns-desk-none" alt="Up to 9.5 Inches of Ground Clearance and X-MODE<sup>®</sup>">
+                <div class="card-p sns-mb-3">
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">All-Around Awareness Technologies</h3>
+                    <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                        The 2024 Outback features an entire suite of available safety technologies to help protect
+                        you and
+                        your passengers. The Blind-Spot Detection* system warns you with a visual indicator on each
+                        side
+                        mirror if it senses a vehicle in your blind spots. Rear Cross-Traffic Alert* helps warn you
+                        of
+                        traffic approaching from the side as you back up. With available Reverse Automatic Braking,
+                        your
+                        vehicle can even stop itself to help avoid objects behind you*. A Smart Rear-View Mirror
+                        with
+                        auto-dimming, compass, and HomeLink<sup>®</sup> is available to give you a wide-angle
+                        view of objects behind
+                        you.
+                    </p>
+                    <p class="sns-f-20 sns-mb-5">
+                        Blind-Spot Detection and Rear Cross-Traffic Alert standard on: Onyx Edition, Limited,
+                        Touring, Onyx
+                        Edition XT, Wilderness, Limited XT, Touring XT
+                        Available on: Premium<br>
+                        Reverse Automatic Braking standard on: Onyx Edition, Limited, Touring, Onyx Edition XT,
+                        Limited XT,
+                        Touring XT<br>
+                        Available on: Wilderness<br>
+                        Smart Rear-View Mirror standard on: Touring, Touring XT
+                    </p>
+                </div>
+            </div>
+            <div class="body-3x3">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/5122e78cf45744168343dfb8d89356f7.png"
+                    class="sns-mob-none" alt="Direct-Injection SUBARU BOXER<sup>®</sup> Engines">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d95922c75155498c8e3f4db30c8d40cf.png"
+                    class="sns-desk-none" alt="Direct-Injection SUBARU BOXER<sup>®</sup> Engines">
+                <div class="card-p sns-mb-3">
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase sns-mob-none">SUBARU
+                        STARLINK<sup>®</sup> Safety
+                        and Security
+                    </h3>
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase sns-desk-none">SUBARU
+                        STARLINK<sup>®</sup> Safety<br>
+                        and Security
+                    </h3>
+                    <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                        STARLINK Safety and Security* offers an array of connected services to help keep you and
+                        your
+                        Outback safe whether you're in your vehicle, at your computer, or on your smartphone.
+                        Advanced
+                        Automatic Collision Notification will alert an operator in the event of an accident, and SOS
+                        Emergency Assistance can get you roadside help at the push of a button. Remote Engine Start
+                        with
+                        Climate Control, accessible via your smartphone, ensures your Outback is always ready and
+                        comfortable*. There are also STARLINK Concierge services for personal assistance with tasks
+                        like
+                        navigation, restaurant reservations, and scheduling service appointments.
+                    </p>
+                    <p class="sns-f-20 sns-mb-5 sns-mob-none">
+                        Standard on: Premium, Onyx Edition, Limited, Touring, Onyx Edition XT, Wilderness, Limited
+                        XT,
+                        Touring XT
+                    </p>
+                </div>
+            </div>
+            <div class="body-3x3">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/6a1f6635b47142ee8099d941f1161f43.png"
+                    class="sns-mob-none" alt="Subaru DriverFocus<sup>®</sup> Distraction Mitigation System">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/de74a23879a74a8d87bf1396c137b905.png"
+                    class="sns-desk-none" alt="Subaru DriverFocus<sup>®</sup> Distraction Mitigation System">
+                <div class="card-p sns-mb-3">
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase sns-mob-none">Subaru<br>
+                        DriverFocus<sup>®</sup> Distraction Mitigation System</h3>
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase sns-desk-none">Subaru<br>
+                        DriverFocus<sup>®</sup> Distraction Mitigation System</h3>
+                    <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                        The 2024 Outback features a state-of-the-art system to help reduce distracted driving for
+                        both new
+                        and experienced drivers. Each day in the United States more than 1,000 people are injured in
+                        crashes
+                        reported to have involved a distracted driver*. Working with our award-winning EyeSight
+                        Driver
+                        Assist Technology, the DriverFocus system is like having an attentive co-pilot along for the
+                        ride,
+                        available to give a helpful alert if a driver becomes distracted or drowsy*. For added
+                        convenience,
+                        DriverFocus can also recognize up to five different drivers and remember their preferences,
+                        including seat position, climate control settings, and outside mirror position.
+                    </p>
+                    <p class="sns-f-20 sns-mb-5 sns-mob-none">
+                        Optional on: Limited<br>
+                        Standard on: Touring, Limited XT, Touring XT
+                    </p>
+                    <p class="sns-f-20 sns-mb-5 sns-desk-none">
+                        Optional on: Limited Standard on: Touring, Limited XT, Touring XT
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="car-btn" style="position: relative;margin-top:2px;">
+        <div class="sns-button" style="background-color: #2A2A2A;">
+            <div class="sns-BN1 sns-BN" style="background-color:unset;">
+                <a class="sns-btn sns-butn sns-btn-m-in-15"
+                    href="https://www.rimrocksubaru.com/contact-rimrock-subaru.htm">
+                    <div>get a quote</div>
+                </a>
+            </div>
+        </div>
+        <div style="overflow: hidden;">
+            <div class="car">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/f5cc2d7cd1ea4100880ea60d3d0798b0.png"
+                    alt="view inventory" class="sns-mob-none">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/61adb24613b94a27af5eb65eee202991.png"
+                    alt="view inventory" class="sns-desk-none">
+            </div>
+        </div>
+    </div>
+    <div class="s-head sns-mt-4 sns-mb-2">
+        <h2 class="sns-f-36-fw-600 sns-pt-3">Interior</h2>
+        <h2 class="sns-f-48 sns-mt-5">Comfortable and Flexible Cabin</h2>
+        <p class="sns-f-head-26 m-inline-15 sns-mt-2">The 2024 Outback is a 5-seater SUV that offers long-distance
+            comfort
+            and high-tech convenience for every passenger. The available 12-way power front driver’s seat includes a
+            four-way power lumbar adjustment and cargo pockets on the back of each front seat help you keep small
+            items
+            organized. Front and back passengers can access available USB-C charging ports in addition to the
+            traditional
+            USB-A ports for future device compatibility. In back, the rear gate has an available integrated LED lamp
+            to help
+            illuminate cargo as well as the area behind the Outback. There’s also soft genuine Nappa leather
+            upholstery,
+            heated and ventilated front seats, and a heated steering wheel all available for a premium experience on
+            every
+            trip.</p>
+    </div>
+    <div class="s-img">
+        <div class="img-body">
+            <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/e4c2efa5454c4be190816f33db3a724c.png" alt=""
+                class="sns-mob-none">
+            <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/a534551e2dab460b9edde753d42095f4.png" alt=""
+                class="sns-desk-none">
+        </div>
+        <div class="img-body">
+            <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/acde3728a4624b66b8db47e9e5bd1220.png" alt=""
+                class="sns-mob-none">
+            <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/f6e56f2e0e14489f8efc78d7fdec7311.png" alt=""
+                class="sns-desk-none">
+        </div>
+        <div class="img-body">
+            <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/f3c2eaed90af4708a847b1f8c2ff4918.png" alt=""
+                class="sns-mob-none">
+            <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/b48368c2ab1544a282d0ce7e67be7419.png" alt=""
+                class="sns-desk-none">
+        </div>
+    </div>
+    <div class="section-3 sns-mt-4 sns-mb-4 s-mb-0" style="background-color: #fff;">
+        <div class="card-3x3" style="background-color:#EEEEEE;">
+            <div class="body-3x3">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d2560469a0004dc6abfb6d1974840bb2.png"
+                    class="sns-mob-none" alt="Up to 9.5 Inches of Ground Clearance and X-MODE<sup>®</sup>">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/011ff1506fa54bb3bb73c68850c03dc4.png"
+                    class="sns-desk-none" alt="Up to 9.5 Inches of Ground Clearance and X-MODE<sup>®</sup>">
+                <div class="card-p sns-mb-3">
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">Passenger and Cargo Space</h3>
+                    <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                        The 2024 Outback is a midsize SUV that gives you up to 109 cubic feet of roomy passenger
+                        comfort in
+                        both the front and rear seats. It’s a 5-seater SUV with more passenger space than the Honda
+                        CR-V,
+                        Toyota RAV4, or Jeep Grand Cherokee*. Even full of passengers, you still get 32.6 cubic feet
+                        of
+                        cargo space. The available cargo area release levers make it even easier to fold the rear
+                        seats
+                        down, giving you up to 75.6 cubic feet of volume to haul more gear. Loading all that cargo
+                        is a
+                        cinch with the available Hands-Free Power Rear Gate, which allows automatic opening even
+                        when your
+                        arms are full and lets you close and lock the entire vehicle with a single touch of the gate
+                        button.
+                    </p>
+                </div>
+            </div>
+            <div class="body-3x3">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/65127de1325d4b30a54fac0b8b56be76.png"
+                    class="sns-mob-none" alt="Direct-Injection SUBARU BOXER<sup>®</sup> Engines">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/785082d9a11745399bcb1eb1802eaa24.png"
+                    class="sns-desk-none" alt="Direct-Injection SUBARU BOXER<sup>®</sup> Engines">
+                <div class="card-p sns-mb-3">
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">
+                        SUBARU STARLINK<sup>®</sup> Multimedia with Wireless Apple CarPlay<sup>®</sup> and
+                        Android Auto<sup>™</sup>
+                    </h3>
+                    <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                        The 2024 Outback features a SUBARU STARLINK Multimedia system with available wireless Apple
+                        CarPlay<sup>®</sup> and Android Auto<sup>™</sup> integration*, which lets you view
+                        and control your navigation, music,
+                        podcasts, and other content and apps without needing to plug in your smartphone. A
+                        high-resolution
+                        11.6-inch touchscreen is also available for intuitive control of your entertainment and
+                        navigation.
+                        Wireless Bluetooth<sup>®</sup> pairing and hands-free smartphone operation allow for
+                        safe and easy connection
+                        to your favorite apps and content.
+                    </p>
+                    <p class="sns-f-20 sns-mb-5">
+                        11.6-inch touchscreen and wireless Apple CarPlay<sup>®</sup> and Android
+                        Auto<sup>™</sup> standard on: Premium, Onyx
+                        Edition, Limited, Touring, Onyx Edition XT, Wilderness, Limited XT, Touring XT
+                    </p>
+                </div>
+            </div>
+            <div class="body-3x3">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/788c642067604e5bba4e425339aeddb1.png"
+                    class="sns-mob-none" alt="3,500-Pound Towing Capacity*">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/3e69c76418a441da8a1726bff4211491.png"
+                    class="sns-desk-none" alt="3,500-Pound Towing Capacity*">
+                <div class="card-p sns-mb-3">
+                    <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">Harman Kardon<sup>®</sup> Premium
+                        Audio</h3>
+                    <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                        The Harman Kardon premium audio system captures detail-rich acoustics through enhanced sound
+                        control
+                        and superior high sound output. At the heart of the system lies a high-performance 8-Channel
+                        class-D
+                        amplifier pumping out 576 equivalent watts of power. The amplifier works to efficiently
+                        distribute
+                        clean audio signals to the vehicle’s 12-speaker sound system – including a dedicated center
+                        channel
+                        speaker and subwoofer. Harman’s Clari-Fi<sup>™</sup> Technology restores and corrects
+                        audio fidelity, resulting
+                        in musical reproduction that sounds clearer, crisper, and more dynamic.
+                    </p>
+                    <p class="sns-f-20 sns-mb-5">
+                        Standard on: Onyx Edition, Limited, Touring, Onyx Edition XT, Wilderness, Limited XT,
+                        Touring XT
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sns-gallery-section">
+        <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-center">
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/94441f533d9a4a8f82fbacc32bd23839.png" alt=""
+                        class="sns-mob-none">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/b6ecb450462b474abc3110ff77b67a51.png" alt=""
+                        class="sns-desk-none">
+                </div>
+            </div>
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/6928886584814d02825fc6d71ae9ecd3.png" alt=""
+                        class="sns-mob-none">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/6d8a9d90dad54432b8111a1b7f998548.png" alt=""
+                        class="sns-desk-none">
+                </div>
+            </div>
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/76f0eba52a5540fd81ab7432740f4f7b.png" alt=""
+                        class="sns-mob-none">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/b0a8b6dbc4bf433695a29bc266878c1a.png" alt=""
+                        class="sns-desk-none">
+                </div>
+            </div>
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/4226ec7cfe84435aa3690a21f664c1dc.png" alt=""
+                        class="sns-mob-none">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/30faf9ca2f14437fa8967e1c8446c974.png" alt=""
+                        class="sns-desk-none">
+                </div>
+            </div>
+        </div>
+        <div class="car-btn" style="position: relative;">
+            <div class="sns-button" style="background-color: #2A2A2A;">
+                <div class="sns-BN1 sns-BN" style="background-color:unset;">
+                    <a class="sns-btn sns-butn sns-btn-m-in-15"
+                        href="https://www.rimrocksubaru.com/buy-or-trade-online.htm">
+                        <div>value your trade</div>
+                    </a>
+                </div>
+            </div>
+            <div style="overflow: hidden;">
+                <div class="car">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/d7b5c6963d8c41a5959f5d2e0a38b22c.png"
+                        alt="view inventory" class="sns-mob-none">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/f808342898104e5792c5939dc34c915b.png"
+                        alt="view inventory" class="sns-desk-none">
+                </div>
+            </div>
+        </div>
+        <div class="s-head sns-mt-4 sns-mb-3">
+            <h2 class="sns-f-36-fw-600 sns-pt-2">Exterior</h2>
+            <h2 class="sns-f-48 sns-mt-4 s-pb-mob-5">Tough, Sophisticated Style</h2>
+            <p class="sns-f-head-26 m-inline-15 sns-mt-2">With rugged features like protective cladding and raised
+                ground
+                clearance, the Outback always looks ready for your next adventure. At the same time, details like
+                contrasting
+                trim, chrome accents, and flowing lines all create a modern, composed style that turns heads on any
+                street. In
+                every sense, the 2024 Outback is designed to take you anywhere.</p>
+        </div>
+        <div class="s-img">
+            <div class="img-body">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/7688107f15ac417c94fb797037daaa57.png" alt=""
+                    class="sns-mob-none">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/ab5dfbaa27ab480fb7f6ef3bf7ca3879.png" alt=""
+                    class="sns-desk-none">
+            </div>
+            <div class="img-body">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/b00a9d876522409ca43ff828dd3cd9fe.png" alt=""
+                    class="sns-mob-none">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/195d6489a8484f8a8c74497a950f7b98.png" alt=""
+                    class="sns-desk-none">
+            </div>
+            <div class="img-body">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/d142a699c23843e0a05f15819d5937a8.png" alt=""
+                    class="sns-mob-none">
+                <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/3c3e5d9d119146ad9e87bcefba56fde9.png" alt=""
+                    class="sns-desk-none">
+            </div>
+        </div>
+        <div class="section-3 sns-mt-4 sns-mb-4" style="">
+            <div class="card-con-img">
+                <div class="body-con-img">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/c9018477bc6040b9ae6feeab0ad883da.png" alt=""
+                        class="sns-mob-none">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/2189d7f169c944778b3cd4a8f2539f98.png" alt=""
+                        class="sns-desk-none">
+                </div>
+                <div class="body-con-img">
+                    <div class="card-p-2 s-pb-0">
+                        <h3 class="sns-f-36-fw-700">Standard Raised Roof Rails with Tie-Downs</h3>
+                        <p class="sns-f-26 sns-mt-3 sns-mb-3">
+                            Standard raised roof rails provide additional versatility for equipment like kayaks,
+                            bikes, skis,
+                            and cargo carriers, and the integrated crossbars can fold away when not in use for
+                            maximum
+                            efficiency. Plus, built-in tie-downs give you even more flexibility and make it easier
+                            to secure
+                            your cargo.
+                        </p>
+                        <p class="sns-f-20 sns-mt-3 sns-mb-3 s-mb-0">Standard on: Base, Premium, Onyx Edition,
+                            Limited,
+                            Touring, Onyx
+                            XT, Limited XT, Touring XT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sns-gallery-section">
+            <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-center">
+                <div class=" sns-img-g">
+                    <div class="sns-gallery-img">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/bb969dd5e8334514b782abf304d19a97.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/3e4af4888ed34046a3ab1edf002cd0d8.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class=" sns-img-g">
+                    <div class="sns-gallery-img">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/b8346bc5a8b744d68c88bd8e00efea09.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/a135e449f9ae450588fc83932970f0e8.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class=" sns-img-g">
+                    <div class="sns-gallery-img">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/9392d81775f94cd681d48b7b5cd1edf3.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/4a6b06e09a5349e6b87ac5e252003276.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+                <div class=" sns-img-g">
+                    <div class="sns-gallery-img">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/4b9aa9ffef31465386de343edf47b810.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/a4ee0cefbb5c49c181e1fa470ec601d1.png"
+                            alt="" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+            <div class="car-btn" style="position: relative;">
+                <div class="sns-button" style="background-color: #2A2A2A;">
+                    <div class="sns-BN1 sns-BN" style="background-color:unset;">
+                        <a class="sns-btn sns-butn sns-btn-m-in-15"
+                            href="https://www.rimrocksubaru.com/financing/index.htm">
+                            <div>get pre-approved</div>
+                        </a>
+                    </div>
+                </div>
+                <div style="overflow: hidden;">
+                    <div class="car">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/07e54429b4f34c29bc023b051f8ea66e.png"
+                            alt="view inventory" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/4ce39abe28bd414bba060be7427b1cff.png"
+                            alt="view inventory" class="sns-desk-none">
+                    </div>
+                </div>
+            </div>
+            <div class="s-head sns-mt-4 sns-mb-3">
+                <h2 class="sns-f-36-fw-600 sns-pt-5">The 2024 Outback Onyx Edition and Onyx Edition XT</h2>
+                <h2 class="sns-f-48 sns-mt-4">Outback Onyx Edition and Onyx Edition XT</h2>
+                <p class="sns-f-head-26 m-inline-16 sns-mt-2">A bold, elevated take on Outback style, the Onyx
+                    Edition lets you
+                    select a naturally aspirated direct-injection SUBARU BOXER engine or a 260-horsepower
+                    direct-injection
+                    turbocharged SUBARU BOXER engine. Standard dual-function X-MODE optimizes the Symmetrical
+                    All-Wheel Drive system
+                    for maximum traction on slippery surfaces. The exterior features unique design accents including
+                    black-finish
+                    alloy wheels, mirrors, and rear badging. Inside, the theme continues with two-tone StarTex water
+                    repellent
+                    upholstery and green stitching.</p>
+            </div>
+            <div class="s-img sns-mb-5">
+                <div class="img-body">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/002e949b4296418591743977dee1ee64.png" alt=""
+                        class="sns-mob-none">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/08cd552661714253bbb7e6cba203bb8e.png" alt=""
+                        class="sns-desk-none">
+                </div>
+                <div class="img-body">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/b84981f98c0a4260ab9e69458ecb1c35.png" alt=""
+                        class="sns-mob-none">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/015a005d77d343e29be33a4d1aadc033.png" alt=""
+                        class="sns-desk-none">
+                </div>
+                <div class="img-body">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/2284e21c9b3548b2b1faaa2d6a546b93.png" alt=""
+                        class="sns-mob-none">
+                    <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/a3d508efb7d747e08782700b61b27ba0.png" alt=""
+                        class="sns-desk-none">
+                </div>
+            </div>
+            <div class="section-3" style="background-color: #fff;">
+                <div class="card-1x1">
+                    <div class="body-1x1">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/f977b663ac484cffa57b7ef182d2ef9c.png"
+                            class="sns-mob-none" alt="Subaru EyeSight">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/028928d1c407423294e4809e9e579dd5.png"
+                            class="sns-desk-none" alt="Subaru EyeSight">
+                        <div class="card-p sns-mb-5">
+                            <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">SUBARU BOXER Engines</h3>
+                            <p class="sns-f-26 sns-mt-2">The Onyx Edition gives you options when it comes to power.
+                                Choose the
+                                naturally aspirated direct-injection SUBARU BOXER engine delivering 182 horsepower
+                                or take the
+                                direct-injection turbocharged SUBARU BOXER engine with 260 horsepower, 277
+                                pound-feet of torque, and
+                                3,500 pounds of towing capacity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-3x3 sns-bg-white sns-pt-nic-0" style="background-color:#EEEEEE;">
+                    <div class="body-3x3">
+                        <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/3abe7adbb255487ab30fa4ce11a58795.png"
+                            class="sns-mob-none" alt="Up to 9.5 Inches of Ground Clearance and X-MODE<sup>®</sup>">
+                        <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/c4d65a67b5914566b1b365419d9e6bc1.png"
+                            class="sns-desk-none" alt="Up to 9.5 Inches of Ground Clearance and X-MODE<sup>®</sup>">
+                        <div class="card-p sns-mb-3">
+                            <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">18-Inch Alloy Wheels</h3>
+                            <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                                Standard 18-inch alloy wheels feature a gloss black finish and give the Onyx Edition
+                                a confident and
+                                composed foundation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="body-3x3">
+                        <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/9955c73d2cc642aaae7168aaf8d909c7.png"
+                            class="sns-mob-none" alt="Direct-Injection SUBARU BOXER<sup>®</sup> Engines">
+                        <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/bf236374755846e7aa7ad063347951b7.png"
+                            class="sns-desk-none" alt="Direct-Injection SUBARU BOXER<sup>®</sup> Engines">
+                        <div class="card-p sns-mb-3">
+                            <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">Water-Repellent
+                                StarTex<sup>®</sup> Interior
+                            </h3>
+                            <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                                The Onyx Edition cabin surrounds you in StarTex upholstery that’s water-repellent
+                                and hard wearing
+                                to withstand countless adventures.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="body-3x3">
+                        <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/c4c6c32a19884c1f8654b6d885fa52dd.png"
+                            class="sns-mob-none" alt="Subaru DriverFocus<sup>®</sup> Distraction Mitigation System">
+                        <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/07e628c248424bf0b41b81908dc7655c.png"
+                            class="sns-desk-none" alt="Subaru DriverFocus<sup>®</sup> Distraction Mitigation System">
+                        <div class="card-p sns-mb-3">
+                            <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase sns-mob-none">Dual-Function
+                                <br>X-MODE
+                            </h3>
+                            <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase sns-desk-none">Dual-Function
+                                X-MODE</h3>
+                            <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                                With standard dual-function X-MODE, the Onyx Edition can optimize the Symmetrical
+                                All-Wheel Drive
+                                with settings for snow/dirt and deep snow/mud – so you get maximum traction in
+                                almost any condition.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="model-section">
+                <h2 class="sns-f-48 sns-mt-4 sns-mb-4" style="text-align: center;">Models</h2>
+                <div class="s-mrp">
+                    <div class="mrp-card">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/9748cd3aa5ee41aab5c3457aecbd6347.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/f02dd1ea4468483f859c0dc3915d3f5a.png"
+                            alt="" class="sns-desk-none">
+                        <div class="mrp-body">
+                            <h4 class="sns-f-36-fw-700">Base</h4>
+                            <p class="sns-f-26-msrp">2024 Outback</p>
+                        </div>
+                    </div>
+                    <div class="mrp-card">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/dcbfdb258a934b8c998fa24cc130c76a.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/30cedfdcaa524b19889dca7c5a102f66.png"
+                            alt="" class="sns-desk-none">
+                        <div class="mrp-body">
+                            <h4 class="sns-f-36-fw-700">Premium</h4>
+                            <p class="sns-f-26-msrp">2024 Outback</p>
+                        </div>
+                    </div>
+                    <div class="mrp-card">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/df0bf5cf3fca4a908d93cd8ac5fcc251.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/ba7aced647cb4e839368f16aa80595a8.png"
+                            alt="" class="sns-desk-none">
+                        <div class="mrp-body">
+                            <h4 class="sns-f-36-fw-700">Onyx Edition</h4>
+                            <p class="sns-f-26-msrp">2024 Outback</p>
+                        </div>
+                    </div>
+                    <div class="mrp-card">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/c64fa5d70ff04a91addbe7ea47e5c3e5.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/9951a446469547a382091311c8f4022e.png"
+                            alt="" class="sns-desk-none">
+                        <div class="mrp-body">
+                            <h4 class="sns-f-36-fw-700">Limited</h4>
+                            <p class="sns-f-26-msrp">2024 Outback</p>
+                        </div>
+                    </div>
+                    <div class="mrp-card">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/c06e75a6b1f64a3f9c9e8aabc17bdda9.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/142a8e45394448549bfdb2dfcee2bee2.png"
+                            alt="" class="sns-desk-none">
+                        <div class="mrp-body">
+                            <h4 class="sns-f-36-fw-700">Touring</h4>
+                            <p class="sns-f-26-msrp">2024 Outback</p>
+                        </div>
+                    </div>
+                    <div class="mrp-card">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/1dc338189b8346458f0b37b4ade3bfa1.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/08a917f1aad947f0a574fcbae3528197.png"
+                            alt="" class="sns-desk-none">
+                        <div class="mrp-body">
+                            <h4 class="sns-f-36-fw-700">Onyx Edition XT</h4>
+                            <p class="sns-f-26-msrp">2024 Outback</p>
+                        </div>
+                    </div>
+                    <div class="mrp-card">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/ff80602e162a498c88c98d63aea521ba.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/333218bc644944bf8774b8dcd64730d4.png"
+                            alt="" class="sns-desk-none">
+                        <div class="mrp-body">
+                            <h4 class="sns-f-36-fw-700">Wilderness</h4>
+                            <p class="sns-f-26-msrp">2024 Outback</p>
+                        </div>
+                    </div>
+                    <div class="mrp-card">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/df5b527f65e44766abb60a02979fe436.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/a56e8a90017a464bac7567f35a7e60c1.png"
+                            alt="" class="sns-desk-none">
+                        <div class="mrp-body">
+                            <h4 class="sns-f-36-fw-700">Limited XT</h4>
+                            <p class="sns-f-26-msrp">2024 Outback</p>
+                        </div>
+                    </div>
+                    <div class="mrp-card">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/97d595cc67c344f0b36cc883435f9cbf.png"
+                            alt="" class="sns-mob-none">
+                        <img src="//pictures.dealer.com/r/rimrocksubarusoa/1234/7ff58a0c32cf4178bd38dceda7b1509f.png"
+                            alt="" class="sns-desk-none">
+                        <div class="mrp-body">
+                            <h4 class="sns-f-36-fw-700">Touring XT</h4>
+                            <p class="sns-f-26-msrp">2024 Outback</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="sns-button sns-mt-2">
+                <div class="sns-BN justify-content-evenly ">
+                    <a class="sns-btn sns-butn sns-f-b"
+                        href="https://www.rimrocksubaru.com/new-inventory/index.htm?year=2024&model=Outback&sortBy=year%20asc">
+                        <div>View Inventory</div>
+                    </a>
+                    <a class="sns-btn sns-butn sns-f-b "
+                        href="https://www.rimrocksubaru.com/contact-rimrock-subaru.htm">
+                        <div>get a quote</div>
+                    </a>
+                    <a class="sns-btn sns-butn sns-f-b-r " href="https://www.rimrocksubaru.com/buy-or-trade-online.htm">
+                        <div>value your trade</div>
+                    </a>
+                    <a class="sns-btn sns-butn " href="https://www.rimrocksubaru.com/financing/index.htm">
+                        <div>get pre-approved</div>
+                    </a>
+                </div>
+            </section>
+            <div class="s-seo sns-f-22 sns-justify-center">
+                <p><b>Introducing the 2024 Outback in Montana from Rimrock Subaru</b></p>
+                <p>The 2024 Outback is a groundbreaking, revolutionary car model as it stands in a class of its own.
+                    This Subaru model
+                    is carefully crafted with cutting-edge technology and an unbeatable modern design to deliver the
+                    utmost satisfaction
+                    to its users. This car is the total package; from its standard eyesight feature that gives an
+                    extra set of eyes to
+                    the driver to its impressive ground clearance that makes it capable of taking on rough terrains,
+                    you can never go
+                    wrong when you purchase the 2024 Outback.</p>
+                <p>Going on an adventure with your family just got easier; the Outback provides extra cargo space
+                    with its raised roof
+                    rails and integrated cross bars with tie-down points, so you can carry more gear for a more
+                    thrilling adventure.</p>
+                <p>Durability and versatility are hallmarks of the 2024 Outback, which is evident in its standard
+                    symmetrical all-wheel
+                    drive. This feature instills confidence when driving through challenging terrains, assuring
+                    enhanced traction and
+                    stability while minimizing concerns of vehicular damage. The 2024 Outback exemplifies resilience
+                    and adaptability,
+                    ensuring it remains a steadfast companion for all journeys, whether they be smooth or not.</p>
+                <p>This Subaru model is a great choice when you are looking to invest in a car; its durable
+                    engineering makes it stand
+                    out amongst its peers. Owning a Subaru Outback pays off now as it is easy on your pocket and
+                    also pays off down the
+                    road because it offers a reasonable resale value.</p>
+                <p><b> What Subaru Dealers Have The 2024 Outback In Montana For Test Drives?</b></p>
+                <p>Are you looking to test drive the 2024 Outback here in Montana? Look no further; Rimrock Subaru
+                    has got you covered.
+                    We offer an unbeatable test-driving experience when you visit us. Our professional staff will
+                    attend to your needs
+                    and ensure you have a swell time right from your arrival and throughout your stay with us.</p>
+                <p>Test driving your Subaru is a great choice, and even better when you choose to test drive with
+                    Rimrock Subaru. Test
+                    drives provide you with a firsthand experience of the stellar features of the 2024 Outback,
+                    starting from the
+                    interior comfort and dual multimedia system with high-resolution LCD; let your car come alive
+                    from simple touch
+                    gestures. Safety is in arms when you test drive our 2024 Outback; the driver assist technology
+                    coupled with the LED
+                    steering responsive headlight that helps you see around corners ensures you are in safe hands.
+                </p>
+                <p><b>Where Can I Test Drive A 2024 Outback In Montana?</b></p>
+                <p>Rimrock Subaru tops the list of places to test drive among many other Subaru dealers here in
+                    Montana. Customer
+                    satisfaction is a priority to us and we deliver on our word by offering first-class
+                    services.</p>
+                <p>You have probably heard a lot and have also read about the superb features of the 2024 Outback
+                    in this article;
+                    Rimrock Subaru is here to help you bring to life all that imagination and thought.</p>
+                <p>When you test drive our 2024 Outback Billings, MT, you are set for a wonderful adventure. We also
+                    provide other
+                    amazing car services for all your car needs. Look no further Rimrock Subaru is all you need.</p>
+                <p> So, if you are in or around Montana and need a place to test drive the 2024 Outback Subaru
+                    model, be sure to
+                    schedule or book a session with us; we're ready to serve you.</p>
+            </div>
+            <div class="s-disc sns-f-22 sns-justify-center">
+                <p>*EyeSight is a driver-assist system that may not operate optimally under all driving conditions.
+                    The driver is
+                    always
+                    responsible for safe and attentive driving. System effectiveness depends on many factors, such
+                    as vehicle
+                    maintenance,
+                    weather, and road conditions. See Owner’s Manual for complete details on system operation and
+                    limitations.</p>
+                <p>*MSRP does not include destination and delivery charges, tax, title, and registration fees.
+                    Destination and
+                    delivery
+                    includes handling and inland freight fees and may vary in some states. Prices, specifications,
+                    options,
+                    features, and
+                    models subject to change without notice. Select colors may be subject to an additional charge.
+                    See your retailer
+                    for
+                    more information.</p>
+                <p>*EPA-estimated fuel economy. Actual mileage may vary. For Crosstrek Hybrid and Solterra,
+                    EPA-estimated MPG
+                    equivalent on
+                    a full battery charge. Actual mileage will vary.</p>
+                <p>*Based on EPA-estimated hwy fuel economy and a full tank of fuel. Actual mileage and range may
+                    vary.</p>
+                <p>*Maximum towing capacity varies by trim level. Trailer brakes may be needed. See your retailer
+                    for details.</p>
+                <p>*Automatic Emergency Steering is a system designed to assist the driver. It is not a substitute
+                    for safe and
+                    attentive
+                    driving. Automatic Emergency Steering works in conjunction with and after Pre-Collision Braking
+                    has been
+                    activated by
+                    providing steering support at speeds lower than 50 mph to try and help avoid a collision. See
+                    Owner’s Manual for
+                    complete details, including important system limitations. Availability varies by trim level.</p>
+                <p>*EyeSight is a driver-assist system that may not operate optimally under all driving conditions.
+                    The
+                    Pre-Collision
+                    Braking System is designed to provide automatic braking that either prevents a collision or
+                    reduces the severity
+                    of a
+                    frontal impact. The driver is always responsible for safe and attentive driving. System
+                    effectiveness depends on
+                    many
+                    factors, such as vehicle maintenance, weather, and road conditions. See Owner’s Manual for
+                    complete details on
+                    system
+                    operation and limitations.</p>
+                <p>*EyeSight is a driver assist system which may not operate optimally under all driving conditions.
+                    Advanced
+                    Adaptive
+                    Cruise Control and Brake Light Recognition are designed to assist the driver and are not
+                    substitutes for safe
+                    and
+                    attentive driving. Lane Keep Assist operates only when the lane markings are visible. The driver
+                    is always
+                    responsible
+                    for safe and attentive driving. System effectiveness depends on many factors, such as vehicle
+                    maintenance,
+                    weather, and
+                    road conditions. Lane centering function operates only when used in conjunction with Advanced
+                    Adaptive Cruise
+                    Control.
+                    See Owner’s Manual for complete details on system operations and limitations.</p>
+                <p>*Blind-Spot Detection, Lane Change Assist and Rear Cross-Traffic Alert are systems designed to
+                    assist the driver
+                    by
+                    monitoring the rear and side areas of the vehicle during a lane change or reversing and are not
+                    a substitute for
+                    safe
+                    and attentive driving.</p>
+                <p>*Reverse Automatic Braking is a system designed to assist the driver by detecting objects to help
+                    avoid a
+                    possible
+                    collision when the vehicle is moving in a reverse direction. It is not a substitute for safe
+                    and attentive
+                    driving.
+                    System effectiveness depends on many factors such as vehicle maintenance, weather and road
+                    conditions. Always
+                    exercise
+                    caution and use vehicle mirrors and Rear-Vision Camera when backing up. See Owner’s Manual for
+                    complete details
+                    on
+                    system operation and limitations.</p>
+                <p>*Activation with subscription required. Includes a three-year trial subscription to Safety Plus
+                    services and a
+                    six-month
+                    trial subscription to Safety and Security Plus services. The Concierge plan can be purchased
+                    annually or
+                    monthly. A
+                    credit card on file will be required for specific packages and for renewal purposes. Features
+                    and availability
+                    vary by
+                    vehicle and trim level. May not be available in all states. See Retailer for details.</p>
+                <p>*Remote Engine Start available on Keyless Access and Push-Button Start-equipped models only.
+                    Climate Control
+                    function
+                    available on automatic climate control-equipped models only.</p>
+                <p>*Centers for Disease Control and Prevention, citing National Center for Statistics and Analysis.
+                    Distracted
+                    Driving:
+                    2015, in Traffic Safety Research Notes. DOT HS 812 381. March 2017, National Highway Traffic
+                    Safety
+                    Administration:
+                    Washington, D.C.</p>
+                <p>*DriverFocus is a driver recognition technology designed to alert the driver if their attention
+                    to the road
+                    wavers or if
+                    the driver’s face appears to turn away. The driver is always responsible for safe and attentive
+                    driving. System
+                    effectiveness may be affected by articles of clothing worn on the head or face. See Owner’s
+                    Manual for complete
+                    details
+                    on system operations and limitations.</p>
+                <p>*Compatible smartphone and application required. The MySubaru app requires Android 8.0 or newer
+                    or Apple iOS 11.0
+                    or
+                    newer. Latest app version is required for best performance. Data provided by smartphone is
+                    displayed on head
+                    unit
+                    screen. Some state laws prohibit the operation of handheld electronic devices while operating a
+                    vehicle.
+                    Smartphone apps
+                    should only be launched when vehicle is safely parked. Your wireless carrier’s rates may apply.
+                </p>
+                <p>*EPA fuel economy estimates. Actual mileage will vary with driving conditions and your vehicle’s
+                    condition.</p>
+                <p>*Based on competitor information from manufacturer websites as of September 2022.</p>
+                <p>*2023 IntelliChoice 5-Year Cost of Ownership Study © 2023 MOTOR TREND GROUP, LLC.</p>
+                <p>*Non-hybrid models. 2023 IntelliChoice 5-Year Cost of Ownership Study © 2024 MOTOR TREND
+                    GROUP, LLC.</p>
+                <p>*Based on Experian Automotive vehicles in operation vs. total new registrations for MY2013-2022
+                    as of December
+                    2022.</p>
+                <p>*Vehicle's projected resale value is specific to the 2020-2023 model years. For more information,
+                    visit Kelley
+                    Blue Book's KBB.com. Kelley Blue Book is a registered trademark of Kelley Blue Book Co., Inc.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>

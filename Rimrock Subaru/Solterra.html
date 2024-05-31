@@ -1,0 +1,1923 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    .page-bd .page-section .container-max-md {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    #page-body .mobile {
+        width: 100% !important;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .main-div {
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        background-color: #fff;
+    }
+
+    .main-div h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+    }
+
+    .main-div img {
+        max-width: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    .main-div sup {
+        line-height: 0.3em;
+    }
+
+    :root {
+        --sns-btn-bg: #2A2A2A;
+        --sns-btn-back: #3786E3;
+        --sns-blue: #3786E3;
+        --sns-black: #000;
+        --sns-white: #fff;
+        --sns-lite-blue: #EDF1F5;
+    }
+
+    .sns-f-48 {
+        font-size: 2.5vw;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    .sns-f-36-fw-600 {
+        font-size: 1.86vw;
+        font-weight: 600;
+        color: #3786E3;
+    }
+
+    .sns-f-36-fw-700 {
+        font-size: 1.8vw;
+        font-weight: 700;
+        color: #87BEFE;
+        /* line-height: 1.5em; */
+    }
+
+    .sns-f-30 {
+        font-size: 1.563vw;
+        font-weight: 700;
+        color: #87BEFE;
+    }
+
+    .sns-f-20 {
+        font-size: 1.042vw;
+        font-weight: 500;
+        color: #2E2D2D;
+        line-height: 1.5em;
+    }
+
+    .sns-f-22 {
+        font-size: 1.146vw;
+        font-weight: 500;
+        color: #2E2D2D;
+    }
+
+    .sns-f-head-26 {
+        font-size: 1.354vw;
+        font-weight: 500;
+        color: #2E2D2D;
+        line-height: 1.5em;
+    }
+
+    .sns-f-26 {
+        font-size: 1.354vw;
+        font-weight: 500;
+        color: #2E2D2D;
+        line-height: 1.5em;
+    }
+
+    .sns-f-26-msrp {
+        font-size: 1.354vw;
+        font-weight: 500;
+        color: #2E2D2D;
+    }
+
+    @media screen and (max-width: 890px) {
+        .sns-f-48 {
+            font-size: clamp(28px, 2.5vw, 48px);
+        }
+
+        .sns-f-36-fw-600 {
+            font-size: clamp(24px, 1.875vw, 36px);
+        }
+
+        .sns-f-36-fw-700 {
+            font-size: clamp(20px, 1.875vw, 36px);
+        }
+
+        .sns-f-30 {
+            font-size: clamp(20px, 1.563vw, 30px);
+        }
+
+        .sns-f-20 {
+            font-size: clamp(16px, 1.042vw, 20px);
+        }
+
+        .sns-f-22 {
+            font-size: clamp(14px, 1.146vw, 22px);
+        }
+
+        .sns-f-head-26 {
+            font-size: clamp(18px, 1.354vw, 26px);
+        }
+
+        .sns-f-26 {
+            font-size: clamp(16px, 1.354vw, 26px);
+        }
+
+        .sns-f-26-msrp {
+            font-size: clamp(20px, 1.354vw, 26px);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-f-36-fw-700 {
+            line-height: 1.5em;
+        }
+    }
+
+    .sns-mt-1 {
+        margin-top: 1%;
+    }
+
+    .sns-mt-2 {
+        margin-top: 2%;
+    }
+
+    .sns-mt-3 {
+        margin-top: 3%;
+    }
+
+    .sns-mt-4 {
+        margin-top: 4%;
+    }
+
+    .sns-mt-5 {
+        margin-top: 5%;
+    }
+
+    .sns-mb-1 {
+        margin-bottom: 1%;
+    }
+
+    .sns-mb-2 {
+        margin-bottom: 2%;
+    }
+
+    .sns-mb-3 {
+        margin-bottom: 3%;
+    }
+
+    .sns-mb-4 {
+        margin-bottom: 4%;
+    }
+
+    .sns-mb-5 {
+        margin-bottom: 5%;
+    }
+
+    .sns-pt-1 {
+        padding-top: 1%;
+    }
+
+    .sns-pt-2 {
+        padding-top: 2%;
+    }
+
+    .sns-pt-3 {
+        padding-top: 3%;
+    }
+
+    .sns-pt-4 {
+        padding-top: 4%;
+    }
+
+    .sns-pt-5 {
+        padding-top: 5%;
+    }
+
+    .sns-pb-1 {
+        padding-bottom: 1%;
+    }
+
+    .sns-pb-2 {
+        padding-bottom: 2%;
+    }
+
+    .sns-pb-3 {
+        padding-bottom: 3%;
+    }
+
+    .sns-pb-4 {
+        padding-bottom: 4%;
+    }
+
+    .sns-pb-5 {
+        padding-bottom: 5%;
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-mb-3 {
+            margin-bottom: 5%;
+        }
+
+        .sns-mt-2 {
+            margin-top: 4%;
+        }
+
+        .sns-mt-3 {
+            margin-top: 5%;
+        }
+
+        .sns-mb-nic-0 {
+            margin-top: 0 !important;
+        }
+    }
+
+    /* Custom css */
+    /* The sns-d-flex becomes flexible by setting the display property to flex */
+    .sns-d-flex {
+        display: flex;
+    }
+
+    /* justify-content to align the item on the main axis ,center */
+    .sns-justify-content-center {
+        justify-content: center;
+    }
+
+    .sns-justify-center {
+        justify-content: center;
+    }
+
+    /* Distribute items evenly Start, in-between, and end gaps have equal sizes */
+    .sns-justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    /*Items will have space between them */
+    .sns-justify-content-space-between {
+        justify-content: space-between;
+    }
+
+    /*tems will have space before, between, and after them */
+    .sns-justify-content-space-around {
+        justify-content: space-around;
+    }
+
+    /* the align-items property to align our item on the cross axis, center*/
+    .sns-align-center {
+        align-items: center;
+    }
+
+    .sns-align-end {
+        align-items: end;
+    }
+
+    /* sets the items in row */
+    .sns-f-row {
+        flex-direction: row;
+    }
+
+    /* sets the items in column */
+    .sns-f-column {
+        flex-direction: column;
+    }
+
+    /* sns-flex-wrap property is used to specify whether flex items are forced into a single line or wrapped onto multiple lines.  */
+    .sns-flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    /* The flexbox items are aligned at the baseline of the cross axis. */
+    .sns-basline {
+        align-items: baseline;
+    }
+
+    .sns-text-center {
+        text-align: center;
+    }
+
+    .sns-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    /* start */
+    .sns-desk-none {
+        display: none !important;
+    }
+
+    .sns-mob-none {
+        display: block !important;
+    }
+
+    /* End */
+    .sns-fw-100 {
+        font-weight: 100;
+    }
+
+    .sns-fw-200 {
+        font-weight: 200;
+    }
+
+    .sns-fw-300 {
+        font-weight: 300;
+    }
+
+    .sns-fw-400 {
+        font-weight: 400;
+    }
+
+    .sns-fw-500 {
+        font-weight: 500;
+    }
+
+    .sns-fw-600 {
+        font-weight: 600;
+    }
+
+    .sns-fw-700 {
+        font-weight: 700;
+    }
+
+    .sns-fw-800 {
+        font-weight: 800;
+    }
+
+    /* font-weight normal italic bold */
+    .sns-text-start {
+        text-align: left;
+    }
+
+    .sns-text-end {
+        text-align: right;
+    }
+
+    .sns-text-center {
+        text-align: center;
+    }
+
+    .sns-text-decoration-none {
+        text-decoration: none;
+    }
+
+    .sns-text-decoration-underline {
+        text-decoration: underline;
+    }
+
+    .sns-text-decoration-line-through {
+        text-decoration: line-through;
+    }
+
+    /* .text-capitalize lowercase capitalize*/
+    .sns-text-lowercase {
+        text-transform: lowercase;
+    }
+
+    .sns-text-uppercase {
+        text-transform: uppercase;
+    }
+
+    .sns-text-capitalize {
+        text-transform: capitalize;
+    }
+
+    .sns-text-wrap {
+        white-space: normal;
+    }
+
+    .sns-text-nowrap {
+        white-space: nowrap;
+    }
+
+    /* .text-capitalize lowercase capitalize*/
+    @media screen and (max-width: 480px) {
+        .sns-desk-none {
+            display: block !important;
+        }
+
+        .sns-mob-none {
+            display: none !important;
+        }
+    }
+
+    .s-banner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .s-banner .s-banner-txt {
+        position: absolute;
+        bottom: 5.5%;
+        left: 3%;
+    }
+
+    .s-banner-txt h1 {
+        font-size: 3.75vw;
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+
+    .s-banner-txt p {
+        font-size: 1.875vw;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-bottom: 0.8%;
+        margin-right: 72vw;
+    }
+
+    @media screen and (max-width: 890px) {
+        .s-banner-txt p {
+            font-size: clamp(18px, 1.875vw, 36px);
+            margin-right: 0;
+        }
+
+        .s-banner-txt h1 {
+            font-size: clamp(32px, 3.75vw, 72px);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .s-banner {
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+        }
+
+        .s-banner .s-banner-txt {
+            position: initial;
+            padding: 5%;
+        }
+
+        .s-banner-txt p {
+            color: #000000;
+            padding-bottom: 2%;
+        }
+
+        .s-banner-txt h1 {
+            color: #000000;
+        }
+    }
+
+    .sns-button>.sns-BN {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3% 0;
+        background-color: var(--sns-btn-bg);
+        justify-content: space-evenly;
+        /* margin-top: -1px; */
+    }
+
+    .sns-BN>a {
+        color: var(--sns-white);
+        text-decoration: none !important;
+        padding: 2%;
+    }
+
+    .sns-BN>.sns-btn {
+        width: calc(85%/4);
+        padding: 1.2% 0;
+        box-sizing: border-box;
+    }
+
+    .sns-BN .sns-butn {
+        background-color: var(--sns-btn-back);
+        color: #fff;
+        font-size: 1.25vw;
+        font-weight: 700;
+        text-align: center;
+        transition: 0.5s;
+        border-radius: 0;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .sns-btn-m-in-15 {
+        margin-inline: 15%;
+    }
+
+    .sns-BN .sns-butn:hover {
+        background-color: var(--sns-white);
+        color: var(--sns-black);
+    }
+
+    @media screen and (max-width: 1200px) {}
+
+    @media screen and (max-width: 890px) {
+        .sns-button>.sns-BN {
+            padding: 3% 0;
+        }
+
+        .sns-BN>.sns-btn {
+            width: calc(91%/2);
+            padding: 1.5% 0;
+        }
+
+        .sns-BN .sns-butn {
+            font-size: clamp(16px, 1.25vw, 24px);
+        }
+
+        .sns-f-b {
+            margin-bottom: 3%;
+        }
+
+        .sns-btn-m-in-15 {
+            margin-inline: 3%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-BN>.sns-btn {
+            width: calc(89%/1);
+            margin: 3%;
+            padding-block: 6%;
+        }
+
+        .sns-button>.sns-BN {
+            padding: 4% 0;
+        }
+    }
+
+    .s-head {
+        text-align: center;
+    }
+
+    .s-head .s-box {
+        margin-inline: 20.5vw;
+        background-color: #EEEEEE;
+        padding-block: 1%;
+    }
+
+    .s-head .m-inline-16 {
+        margin-inline: 14.5vw;
+    }
+
+    .s-head .m-inline-15 {
+        margin-inline: 15.5vw;
+    }
+
+    @media screen and (max-width: 890px) {
+        .s-head {
+            padding-inline: 5%;
+        }
+
+        .s-head .s-box {
+            margin-inline: 0vw;
+            background-color: #fff;
+        }
+
+        .s-head .m-inline-16 {
+            margin-inline: 0vw;
+        }
+
+        .s-head .m-inline-15 {
+            margin-inline: 0vw;
+        }
+    }
+
+    .card-1x1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-1x1 .body-1x1 {
+        width: calc(94%/1);
+        text-align: center;
+    }
+
+    .body-1x1 .card-p {}
+
+    .card-3x3 {
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+        background-color: #fff;
+        padding-top: 3%;
+        flex-wrap: wrap;
+        /* margin-inline: 3%; */
+    }
+
+    .card-3x3 .body-3x3 {
+        width: calc(91%/2);
+        text-align: center;
+    }
+
+    .card-3x3 .body-3x3-gap {
+        width: calc(88%/3);
+        text-align: center;
+    }
+
+    .img-3x3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* margin-inline: 3%; */
+    }
+
+    .img-3x3-body {
+        width: calc(94%/3);
+    }
+
+    @media screen and (max-width: 890px) {
+        .card-3x3 .body-3x3 {
+            width: calc(94%/1);
+        }
+
+        .card-3x3 .body-3x3-gap {
+            width: calc(91%/2);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .card-1x1 .body-1x1 {
+            width: calc(90%/1);
+            padding-top: 1%;
+        }
+
+        .body-1x1 .card-p {
+            /* padding: 3%; */
+        }
+
+        .card-1x1 .body-1x1 p {
+            color: #000 !important;
+        }
+
+        .card-3x3 {
+            padding-top: 5%;
+            margin-inline: 0;
+        }
+
+        .card-3x3 .body-3x3 {
+            width: calc(90%/1);
+        }
+
+        .card-3x3 .body-3x3-gap {
+            width: calc(94%/1);
+        }
+
+        .card-3x3 .body-3x3 p {
+            color: #000;
+        }
+
+        .img-3x3-body {
+            width: calc(94%/1);
+        }
+    }
+
+    .sns-BN1 {
+        padding-block: 8% !important;
+        justify-content: flex-start !important;
+        /* margin-left: 5%; */
+    }
+
+    .car {
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        width: 50%;
+    }
+
+    .car-btn {
+        margin-bottom: 10%;
+    }
+
+    @media screen and (max-width: 890px) {
+        .car {
+            top: 16%;
+            right: 0;
+        }
+
+        .sns-BN1>a {
+            padding-block: 2% !important;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .car {
+            width: 92%;
+            left: 5%;
+            top: 45%;
+        }
+
+        .sns-BN1 {
+            margin-left: unset;
+            padding-bottom: 22% !important;
+            justify-content: center !important;
+            padding-block: 3% 30% !important;
+        }
+
+        .sns-BN1>a {
+            padding-block: 5% !important;
+            width: 90% !important;
+        }
+
+        .car-btn {
+            margin-bottom: 15%;
+        }
+    }
+
+    /* This Secton was duplicated from Section 4. */
+    .card-con-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-inline: 3%;
+        gap: 3%;
+        background-color: #fff;
+    }
+
+    .card-con-img .body-con-img {
+        width: calc(97%/2);
+    }
+
+    .card-con-img .body-con-img h3 {
+        text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 890px) {
+        .card-con-img .body-con-img {
+            width: calc(100%/1);
+            text-align: center;
+        }
+
+        .card-con-img .body-con-img .card-p-2 {
+            padding: 3%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .card-con-img {
+            margin-inline: 0%;
+        }
+
+        .card-con-img .body-con-img .card-p-2 {
+            padding: 5% 0%;
+        }
+
+        .card-con-img .body-con-img {
+            width: calc(90%/1);
+            text-align: center;
+        }
+    }
+
+    /* This Secton was duplicated from Section 5. */
+    /* This Secton was duplicated from Section 3. */
+    .s-img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .s-img .img-body {
+        width: calc(94%/3);
+    }
+
+    @media screen and (max-width: 480px) {
+        .s-img .img-body {
+            width: calc(90%/1);
+            margin-bottom: 2%;
+        }
+    }
+
+    /* This Secton was duplicated from Section 6. */
+    /* Custom css */
+    .sns-d-flex {
+        display: flex;
+    }
+
+    .sns-justify-content-center {
+        justify-content: center;
+    }
+
+    .sns-justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    .sns-align-center {
+        align-items: center;
+    }
+
+    .sns-f-row {
+        flex-direction: row;
+    }
+
+    .sns-f-column {
+        flex-direction: column;
+    }
+
+    .sns-flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    /* section css */
+    .sns-img-g {
+        width: calc(100%/2);
+    }
+
+    .sns-gallery-img {
+        overflow: hidden;
+    }
+
+    .sns-gallery-img img {
+        width: 100%;
+        transition: 0.3s;
+        vertical-align: bottom;
+    }
+
+    .sns-gallery-img img:hover {
+        transform: scale(1.2);
+    }
+
+    /* media */
+    @media screen and (max-width: 640px) {
+        .sns-img-g {
+            width: calc(100%/2);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sns-img-g {
+            width: calc(100%/1);
+        }
+    }
+
+    /* This Secton was duplicated from Section 7. */
+    /* This Secton was duplicated from Section 8. */
+    /* This Secton was duplicated from Section 10. */
+    /* This Secton was duplicated from Section 11. */
+    /* This Secton was duplicated from Section 8. */
+    /* This Secton was duplicated from Section 6. */
+    /* This Secton was duplicated from Section 2. */
+    .s-mrp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5%;
+        margin-inline: 15%;
+    }
+
+    .s-mrp .mrp-card {
+        width: calc(90%/3);
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .s-mrp .mrp-card h4 {
+        margin-top: 3%;
+    }
+
+    .s-mrp .mrp-card p {
+        margin-top: 3%;
+    }
+
+    @media screen and (max-width: 890px) {
+        .s-mrp {
+            margin-inline: 15%;
+        }
+
+        .s-mrp .mrp-card {
+            width: calc(95%/2);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .s-mrp .mrp-card {
+            width: calc(90%/1);
+        }
+
+        .s-pb-0 {
+            padding-bottom: 0 !important;
+        }
+
+        .s-mb-0 {
+            margin-bottom: 0 !important;
+        }
+
+        .s-pb-mob-5 {
+            padding-bottom: 5% !important;
+        }
+    }
+
+    .s-seo {
+        padding: 4% 3%;
+    }
+
+    .s-seo p {
+        margin-bottom: 1.5%;
+        line-height: 1.3em;
+    }
+
+    .s-disc {
+        padding: 0% 3% 4% 3%;
+    }
+
+    .s-disc p {
+        margin-bottom: 1.5%;
+        line-height: 1.3em;
+    }
+
+    .sns-bg-white {
+        background-color: #EEEEEE !important;
+    }
+
+    @media screen and (max-width: 480px) {
+        .s-seo {
+            padding: 4% 5%;
+        }
+
+        .s-disc {
+            padding: 0% 5% 4% 5%;
+        }
+
+        .sns-bg-white {
+            background-color: #fff !important;
+        }
+
+        .sns-pt-nic-0 {
+            padding-top: 0 !important;
+        }
+    }
+</style>
+<div class="main-div">
+    <div class="s-banner">
+        <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/a9cf2ec1a7a54286b8a608d3fa3f1613.png" alt="banenr"
+            class="sns-mob-none">
+        <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/a9cf2ec1a7a54286b8a608d3fa3f1613.png" alt="banner"
+            class="sns-desk-none">
+        <div class="s-banner-txt">
+            <p>The Most Advanced Subaru Ever, Featuring Faster Charging and Enhanced Safety Technologies</p>
+            <h1>2024 Solterra</h1>
+        </div>
+    </div>
+    <section class="sns-button">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-f-b"
+                href="https://www.rimrocksubaru.com/new-inventory/index.htm?year=2024&model=Solterra&sortBy=year%20asc">
+                <div>View Inventory</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b " href="https://www.rimrocksubaru.com/contact-rimrock-subaru.htm">
+                <div>get a quote</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b-r " href="https://www.rimrocksubaru.com/buy-or-trade-online.htm">
+                <div>value your trade</div>
+            </a>
+            <a class="sns-btn sns-butn " href="https://www.rimrocksubaru.com/financing/index.htm">
+                <div>get pre-approved</div>
+            </a>
+        </div>
+    </section>
+    <div class="s-head sns-mt-5 sns-mb-5">
+        <h2 class="sns-f-48 s-box">The most advanced Subaru we’ve ever built.</h2>
+        <p class="sns-f-head-26 m-inline-16 sns-mt-2">
+            The 2024 Subaru Solterra gives you a new way to explore our world. It features an advanced all-electric,
+            zero-emission StarDrive<sup>&reg;</sup> electric powertrain and uses the e-Subaru Global Platform. Plus,
+            Solterra is
+            the first AWD electric vehicle to feature our legendary standard Symmetrical All-Wheel Drive. It’s also
+            our most advanced SUV ever, featuring a charge time reduced by about half and improved cold-weather
+            charging for 2024*. There’s state-of-the-art technology like a stunning available 12.3-inch touchscreen
+            and a standard DriverFocus<sup>&reg;</sup> Distraction Mitigation System*, along with the segment-leading
+            capability of
+            8.3 inches of ground clearance.
+        </p>
+    </div>
+    <div class="section-3" style="background-color: #EEEEEE;">
+        <div class="s-head sns-pt-5 sns-pb-5">
+            <h2 class="sns-f-48 ">Love Your Subaru and the Earth</h2>
+            <p class="sns-f-head-26 m-inline-16 sns-mt-2" style="font-weight: 800 !important;">The Solterra is our
+                first zero-emission all-electric SUV.</p>
+            <p class="sns-f-head-26 m-inline-16 sns-pb-5">
+
+                The Solterra lets you explore the outdoors and help protect it at the same time. The advanced
+                StarDrive electric powertrain means no tailpipe emissions and no need for gasoline or oil changes,
+                so every mile has significantly less impact on the environment. The Solterra is the latest example
+                of our commitment to safeguarding the natural world we all share through sustainable transportation
+                — and it’s just the beginning.
+            </p>
+            <div style="margin-inline: 3%;">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d6682094bf8f4389b85cfe5c6700775d.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <div class="section-3 " style="background-color: #fff;">
+        <div class="s-head sns-pt-5 sns-pb-5">
+            <h2 class="sns-f-48 ">Eco-Friendly with Upgraded Charging</h2>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/e7e78f86076a4cb499c19dbdbed4762c.png"
+                    class="sns-mob-none" alt="Capability">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/e7e78f86076a4cb499c19dbdbed4762c.png"
+                    class="sns-desk-none" alt="Capability">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Improved DC Fast Charging</h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        The 2024 Solterra can fast-charge in about half the time as the previous model, now taking
+                        about 35 minutes to charge from 10% to 80% using its built-in fast-charge capability*. The
+                        StarDrive powertrain gives Solterra an EPA-estimated range of up to 227 miles* with standard
+                        Symmetrical All-Wheel Drive as well as a variety of options for fast and convenient
+                        charging, both at home and on the go. The Solterra comes with a charger that works with any
+                        standard 120V outlet for Level 1 charging. You can also have a 240V Level 2 charger
+                        installed at home so you can plug in overnight and wake up each morning with a full charge*.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/e8cbf3c9b2354578a350eba876e86f81.png"
+                    class="sns-mob-none" alt="Stability">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/e8cbf3c9b2354578a350eba876e86f81.png"
+                    class="sns-desk-none" alt="Stability">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Improved Cold-Weather Charging</h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        Charging your Solterra is fast and easy even when you’re heading out for cold-weather fun.
+                        The upgraded charging system on the 2024 Solterra now charges two times faster at 32 degrees
+                        and four times faster at 14 degrees*, helping keep you on the go no matter the conditions.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/12b85f8aed9b4ebf8d1972106a505bc3.png"
+                    class="sns-mob-none" alt="Fuel Efficiency and Durability">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/12b85f8aed9b4ebf8d1972106a505bc3.png"
+                    class="sns-desk-none" alt="Fuel Efficiency and Durability">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Free Subaru Just Drive Car Rentals</h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        For extended cross-country road trips or backcountry expeditions way off the grid, Solterra
+                        owners get 10 free days of Subaru Just Drive car rentals. With Just Drive, you can choose
+                        from a selection of vehicles in the Subaru fleet and rent directly from a participating
+                        Subaru retailer. With Just Drive, you’re not just getting a rental car; you’re getting the
+                        extra peace of mind that comes with all the safety, capability, and quality Subaru vehicles
+                        are known for.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/667f750e677f46c18ee52f0f66175782.png"
+                    class="sns-mob-none" alt="Fuel Efficiency and Durability">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/667f750e677f46c18ee52f0f66175782.png"
+                    class="sns-desk-none" alt="Fuel Efficiency and Durability">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Conserving Our Parks</h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        As the largest corporate donor to the National Park Foundation, Subaru has a long history of
+                        commitment to protecting our nation’s greatest treasures, helping conserve over 85 million
+                        acres of land in America’s more than 400 national parks. Subaru has provided over $70
+                        million to organizations working to conserve our parks, helping fund efforts such as
+                        recycling, composting, and waste reduction operations. Subaru has also donated its
+                        zero-landfill expertise and funding to the parks to help them become more sustainable
+                        through the Subaru “Don’t Feed the Landfills” initiative.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="car-btn" style="position: relative;">
+        <div class="sns-button" style="background-color: #2A2A2A;">
+            <div class="sns-BN1 sns-BN" style="background-color:unset;">
+                <a class="sns-btn sns-butn sns-btn-m-in-15"
+                    href="https://www.rimrocksubaru.com/new-inventory/index.htm?year=2024&model=Solterra&sortBy=year%20asc">
+                    <div>View Inventory</div>
+                </a>
+            </div>
+        </div>
+        <div style="overflow: hidden;">
+            <div class="car">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/5b2b57e597524dee824f8907fe08e9b3.png"
+                    alt="view inventory" >
+                
+            </div>
+        </div>
+    </div>
+    <div class="s-head">
+        <h3 class="sns-f-36-fw-600 sns-pt-3">Subaru Safe</h3>
+    </div>
+    <div class="card-con-img sns-mt-3 ">
+        <div class="body-con-img">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/df186e24e31e463e9a909ed119d3704f.png" alt=""
+                class="sns-mob-none">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/df186e24e31e463e9a909ed119d3704f.png" alt=""
+                class="sns-desk-none">
+        </div>
+        <div class="body-con-img">
+            <div class="card-p-2 s-pb-0">
+                <h3 class="sns-f-36-fw-700">Quality Engineering</h3>
+                <p class="sns-f-26 sns-mt-3 sns-mb-3">
+                    It may be the first of its kind, but the Solterra is still a Subaru at heart. You can trust a
+                    Subaru vehicle for miles and miles of adventure — 96% of Subaru vehicles sold in the last 10
+                    years are still on the road today, more than Honda or Toyota brands*.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section-3" style="background-color: #fff;">
+        <div class="s-head">
+
+            <h2 class="sns-f-48 sns-pt-4 sns-pb-4">Standard EyeSight<sup>&reg;</sup> Driver Assist Technologies</h2>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/41342f2cbcc34d4d8def9b5b15498f7c.png"
+                    class="sns-mob-none" alt="Subaru EyeSight">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/41342f2cbcc34d4d8def9b5b15498f7c.png"
+                    class="sns-desk-none" alt="Subaru EyeSight">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Subaru EyeSight</h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        Every 2024 Solterra features standard EyeSight Driver Assist Technologies, which act like an
+                        extra set of eyes on the road and, if need be, an extra foot on the brake when you drive7.
+                        These advanced active safety systems monitor traffic movement, optimize cruise control, and
+                        warn you when you’re swaying outside your lane.*
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/9a55f5592c4c42eba64acd0aaa2b24e2.png"
+                    class="sns-mob-none" alt="Pre-Collision Braking">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/9a55f5592c4c42eba64acd0aaa2b24e2.png"
+                    class="sns-desk-none" alt="Pre-Collision Braking">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Pre-Collision system</h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        The Pre-Collision System* can apply full braking force and bring you to a complete stop in
+                        emergency situations.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0de15e14b9474a89b925022d1725f9f0.png"
+                    class="sns-mob-none" alt="Adaptive Cruise Control">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0de15e14b9474a89b925022d1725f9f0.png"
+                    class="sns-desk-none" alt="Adaptive Cruise Control">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Traffic Jam Assist</h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        Traffic Jam Assist* helps make traveling through congestion safer and easier by providing
+                        hands-free steering assistance with driver supervision in low-speed traffic jams (up to 25
+                        MPH) on most major highways. Dynamic Radar Cruise Control* and Lane Tracing Assist* can take
+                        some of the stress out of driving by helping with steering, braking, and throttle control —
+                        both in daily traffic and on long road trips.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-3x3 sns-mb-1" style="background-color:#EEEEEE;">
+        <div class="body-3x3">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/2a298108f7c449aca6b71aeb1662d49f.png"
+                class="sns-mob-none" alt="">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/2a298108f7c449aca6b71aeb1662d49f.png"
+                class="sns-desk-none" alt="">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">DriverFocus Distraction Mitigation System
+                    and Front Cross-Traffic Alert</h3>
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    Working in conjunction with EyeSight, the standard DriverFocus Distraction Mitigation System*,
+                    new for 2024, is like having an attentive co-pilot along for the ride, available to give a
+                    helpful alert if a driver becomes distracted or drowsy. This system is designed to enhance the
+                    effectiveness of other safety systems while also increasing passenger safety within the vehicle.
+                    If its steering-column-mounted camera detects a distracted, drowsy, or incapacitated driver, it
+                    will provide an alert. DriverFocus also combines with other safety systems such as Emergency
+                    Driving Stop System by allowing them to intervene earlier when necessary. Front Cross-Traffic
+                    Alert*, also new for 2024, watches for unexpected traffic from either side and can alert you to
+                    approaching vehicles — including those that may not be visible from the driver’s seat.
+
+
+                </p>
+                <p class="sns-f-20 sns-mb-5">
+                    DriverFocus standard on: All trims<br />
+                    Front Cross-Traffic Alert standard on: All trims
+                </p>
+            </div>
+        </div>
+        <div class="body-3x3">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/75c63c32127e40a5aac4b4e322843392.png"
+                class="sns-mob-none" alt="">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/75c63c32127e40a5aac4b4e322843392.png"
+                class="sns-desk-none" alt="">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase ">
+                    Panoramic View Monitor
+                </h3>
+
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    Panoramic View Monitor is an available 360-degree surround-view camera system that gives a clear
+                    picture of the objects around your Solterra, delivering enhanced awareness and safety when
+                    parking and reversing.
+
+
+                </p>
+                <p class="sns-f-20 sns-mb-5 ">
+                    Standard on: Limited and Touring
+                </p>
+            </div>
+        </div>
+        <div class="body-3x3">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/455a40380f5d41f2ad24fe7af6ac039e.png"
+                class="sns-mob-none" alt="">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/455a40380f5d41f2ad24fe7af6ac039e.png"
+                class="sns-desk-none" alt="">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase ">
+                    All-Around Awareness Technologies
+                </h3>
+
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    The 2024 Solterra features a comprehensive suite of active safety features to help protect you
+                    on every drive. The Blind-Spot Monitor* system warns you with a visual indicator on each side
+                    mirror if it senses a vehicle in your blind spots. New for 2024, Front Cross-Traffic Alert can
+                    alert you if unexpected vehicles — even vehicles you may not be able to see — approach from
+                    either side of your Solterra. Lane Change Assist*, another new feature, watches for other
+                    vehicles as you move into a new lane, helps with steering, and automatically cancels your turn
+                    signal. Rear Cross-Traffic Alert* helps warn you of traffic approaching from the side as you
+                    back up. And with Parking Support Brake, the Solterra can even stop itself to help avoid objects
+                    behind you*.
+                </p>
+                <p class="sns-f-20 sns-mb-5 ">
+                    Standard on: All trims
+                </p>
+            </div>
+        </div>
+        <div class="body-3x3">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/f3a6428bcae34e4c9a5f30f7232d0ae1.png"
+                class="sns-mob-none" alt="">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/f3a6428bcae34e4c9a5f30f7232d0ae1.png"
+                class="sns-desk-none" alt="">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase ">
+                    Safe Exit Assist
+                </h3>
+
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    Safe Exit Assist, a standard safety technology on Solterra, will beep and display a message if
+                    it detects approaching vehicles or moving objects before you open your door*. It’s just one more
+                    way the Solterra watches out for you — even after you’ve arrived at your destination.
+                </p>
+                <p class="sns-f-20 sns-mb-5 ">
+                    Standard on: All trims
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="card-con-img sns-mt-3 sns-mb-2 sns-mb-nic-0">
+        <div class="body-con-img">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/10177991bd7b4128a88a349a7594d3ea.png" alt=""
+                class="sns-mob-none">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/10177991bd7b4128a88a349a7594d3ea.png" alt=""
+                class="sns-desk-none">
+        </div>
+        <div class="body-con-img">
+            <div class="card-p-2 s-pb-0">
+                <h3 class="sns-f-36-fw-700">e-Subaru Global Platform</h3>
+                <p class="sns-f-26 sns-mt-3 sns-mb-3">
+                    The 2024 Solterra is built on an electric vehicle architecture called the e-Subaru Global
+                    Platform. Specifically designed for all-electric vehicles, the e-Subaru Global Platform is the
+                    most rigid vehicle platform we’ve ever built, featuring strategic crumple zones and a reinforced
+                    structure for secure crash protection.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="car-btn" style="position: relative;margin-top:2px;">
+        <div class="sns-button" style="background-color: #2A2A2A;">
+            <div class="sns-BN1 sns-BN" style="background-color:unset;">
+                <a class="sns-btn sns-butn sns-btn-m-in-15"
+                    href="https://www.rimrocksubaru.com/contact-rimrock-subaru.htm">
+                    <div>get a quote</div>
+                </a>
+            </div>
+        </div>
+        <div style="overflow: hidden;">
+            <div class="car">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/7e8bb5fe3db043c292115f6db3949325.png"
+                    alt="view inventory" class="">
+                
+            </div>
+        </div>
+    </div>
+    <div class="s-head">
+        <h3 class="sns-f-36-fw-600 sns-pt-3">Adventurous and Versatile SUV</h3>
+        <h2 class="sns-f-48 sns-pt-4">Standard Symmetrical All-Wheel Drive</h2>
+        <p class="sns-f-head-26 m-inline-16 sns-pb-5 sns-pt-3">
+            As the first-ever all-electric SUV to feature the capability of Symmetrical All-Wheel Drive, the
+            Solterra takes this legendary all-weather, all-terrain traction system to exciting new places. The
+            balanced design of Symmetrical All-Wheel Drive creates uniform stability and delivers an optimal
+            distribution of power for maximum traction and confident handling. Couple that with the smooth linear
+            output of the dual electric motors in the Solterra 5-seater SUV and you have outstanding traction on all
+            kinds of surfaces and weather conditions.
+        </p>
+    </div>
+    <div class="section-3" style="background-color: #fff;">
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/a525d5dfe1934da88c8366d875597265.png"
+                    class="sns-mob-none" alt="Subaru EyeSight">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/a525d5dfe1934da88c8366d875597265.png"
+                    class="sns-desk-none" alt="Subaru EyeSight">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">8.3 Inches of Ground Clearance and
+                        X-MODE<sup>&reg;</sup></h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        The 2024 Solterra has class-leading ground clearance and short overhangs for easy
+                        maneuverability over rough terrain so you can go places traditional electric vehicles
+                        typically can’t reach. Standard dual-function X-MODE with settings for snow/dirt and deep
+                        snow/mud lets you choose the perfect traction setting to match conditions for enhanced
+                        stability and control, even while going down hills. It’s everything you need in an electric
+                        off-road SUV.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/241a7f9dbb89441ba0a7121ffcc3507f.png"
+                    class="sns-mob-none" alt="Pre-Collision Braking">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/241a7f9dbb89441ba0a7121ffcc3507f.png"
+                    class="sns-desk-none" alt="Pre-Collision Braking">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Subaru StarDrive<sup>&reg;</sup> with
+                        Driving Mode
+                        Select and S-Pedal</h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        Subaru StarDrive offers an enhanced driving experience through Driving Mode Select, which
+                        lets you choose from Normal Mode for typical trips, Eco Mode to conserve battery power, and
+                        an extra-responsive Power Mode. This advanced technology is engineered with the latest
+                        breakthroughs in electric vehicle technology to deliver substantial on-demand torque at all
+                        speeds for exciting everyday driving. Steering-wheel-mounted paddles give the ability to
+                        dial in your preferred level of regenerative braking, while S-Pedal Drive adds even more
+                        braking to help reduce the fatigue of switching between gas and brake pedals*.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="section-3" style="background-color: #EEEEEE;">
+        <div class="s-head ">
+            <h3 class="sns-f-36-fw-600 sns-pt-5">A Subaru Electric SUV With Advanced Comfort and Convenience</h3>
+            <h2 class="sns-f-48 sns-pt-5 ">Subaru Multimedia with available 12.3-inch Touchscreen, Cloud Navigation,
+                and
+                Intelligent Assistant</h2>
+
+            <p class="sns-f-head-26 m-inline-16 sns-pb-5 sns-pt-3">
+
+                The 2024 Solterra features an advanced multimedia system with standard wireless Apple
+                CarPlay<sup>&reg;</sup> and
+                Android Auto<sup>&trade;</sup> integration and a high-resolution 12.3-inch touchscreen that’s available
+                for even more
+                intuitive control. On select models, you can even charge your smartphone wirelessly in the center
+                console while you safely operate the wire- and hands-free connection and enjoy your favorite apps
+                and content. Plus, you can access news, navigation, music, podcasts, and more through available apps
+                and SiriusXM<sup>&reg;</sup>*.
+            </p>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/ba92f376dfc14b07b6bf3413bda42cf3.png"
+                    class="sns-mob-none" alt="Subaru EyeSight">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/ba92f376dfc14b07b6bf3413bda42cf3.png"
+                    class="sns-desk-none" alt="Subaru EyeSight">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Subaru Solterra Connect with Digital Key
+                        and Advanced Park</h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        With Solterra Connect*, your Solterra and your smartphone make a great team. You can unlock
+                        and start select Solterra models using just your smartphone*. Remote Start with Climate
+                        Control, accessible via the Solterra Connect app, lets you set your preferred temperature so
+                        your drive is perfect from start to finish. Advanced Park is an available automatic
+                        self-parking system that can be engaged while at the wheel to take the hassle out of
+                        parking.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-1x1">
+            <div class="body-1x1">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/4b46a5aa35364111be646e8d7fbe4f0b.png"
+                    class="sns-mob-none" alt="Pre-Collision Braking">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/4b46a5aa35364111be646e8d7fbe4f0b.png"
+                    class="sns-desk-none" alt="Pre-Collision Braking">
+                <div class="card-p sns-mb-5">
+                    <h3 class="sns-f-36-fw-700 sns-mt-3 sns-text-uppercase">Intelligent Assistant</h3>
+                    <p class="sns-f-26 sns-mt-2">
+                        Intelligent Assistant* is a voice-activated vehicle interface for safer, easier use of
+                        navigation*, media, and other vehicle features and tasks. By just saying, “Hey, Subaru,” you
+                        can keep your hands on the wheel and let the assistant handle the rest. If you subscribe
+                        through Solterra Connect*, Intelligent Assistant can also direct you to the nearest charging
+                        stations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-3" style="background-color: #fff;margin-bottom: 5%;">
+        <div class="s-head ">
+            <h3 class="sns-f-36-fw-600 sns-pt-5">Extra Style. Upgraded Comfort.</h3>
+            <h2 class="sns-f-48 sns-pt-5 ">
+                Solterra Touring
+            </h2>
+
+            <p class="sns-f-head-26 m-inline-16 sns-pb-3 sns-pt-3">
+
+                The Solterra Touring electric SUV offers sophistication and comfort with stylish 20-inch alloy
+                wheels, a panoramic fixed glass roof, StarTex<sup>&reg;</sup> upholstery, Harman
+                Kardon<sup>&reg;</sup> premium audio with 576
+                equivalent watts of power, high-tech lighting, and exclusive cabin accents. In the Solterra Touring,
+                style and comfort can be just as advanced as its electric powertrain.
+            </p>
+        </div>
+        <div class="img-3x3">
+            <div class="img-3x3-body">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/30c4586fb8454c6394a365761ab33605.png">
+            </div>
+            <div class="img-3x3-body">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d87e53e0705440068ab354cb2f60b239.png">
+            </div>
+            <div class="img-3x3-body">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/edf2c9d895a64be4ad276524b9c7fe77.png">
+            </div>
+
+        </div>
+    </div>
+    <div class="card-3x3 sns-mb-5" style="background-color:#EEEEEE;margin-inline: 3%;">
+        <div class="body-3x3-gap">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0c2f15d0c77149b58a07f1f427095d59.png"
+                class="sns-mob-none" alt="">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0c2f15d0c77149b58a07f1f427095d59.png"
+                class="sns-desk-none" alt="">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">Interior</h3>
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    The Solterra Touring transports you in more ways than one. Just settling into the advanced
+                    comforts and style of its interior is like stepping into the future, with durable two-tone
+                    StarTex upholstery and high-tech illuminated trim. A Harman Kardon premium audio system with 576
+                    equivalent watts of power fills the cabin with your perfect driving soundtrack.
+                </p>
+            </div>
+        </div>
+        <div class="body-3x3-gap">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/1c6ffb540cef41b781c93c9e1dc0bf6f.png"
+                class="sns-mob-none" alt="">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/1c6ffb540cef41b781c93c9e1dc0bf6f.png"
+                class="sns-desk-none" alt="">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase ">
+                    20-inch Alloy Wheels
+                </h3>
+
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    Eye-catching 20-inch alloy wheels feature machine-finished accents and distinctly modern style.
+                </p>
+
+            </div>
+        </div>
+        <div class="body-3x3-gap">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/044a09a46be24d65b9d75dfb947d338e.png"
+                class="sns-mob-none" alt="">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/044a09a46be24d65b9d75dfb947d338e.png"
+                class="sns-desk-none" alt="">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase ">
+                    Panoramic Fixed Glass Roof
+                </h3>
+
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    A panoramic fixed glass roof with power sunshade makes the airy interior feel even more spacious
+                    and bright.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="car-btn" style="position: relative;">
+        <div class="sns-button" style="background-color: #2A2A2A;">
+            <div class="sns-BN1 sns-BN" style="background-color:unset;">
+                <a class="sns-btn sns-butn sns-btn-m-in-15"
+                    href="https://www.rimrocksubaru.com/buy-or-trade-online.htm">
+                    <div>value your trade</div>
+                </a>
+            </div>
+        </div>
+        <div style="overflow: hidden;">
+            <div class="car">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/a950d4821db1452bbb1be2e490a4a9c5.png"
+                    alt="view inventory" class="">
+                
+            </div>
+        </div>
+    </div>
+    <div class="section-3" style="background-color: #fff;margin-bottom: 5%;">
+        <div class="s-head ">
+            <h3 class="sns-f-36-fw-600 sns-pt-5">Interior</h3>
+            <h2 class="sns-f-48 sns-pt-5 ">
+                Modern, Stylish Cabin
+            </h2>
+
+            <p class="sns-f-head-26 m-inline-16 sns-pb-3 sns-pt-3">
+
+                The revolutionary engineering of the Solterra continues into its roomy, comfortable cabin packed
+                with
+                state-of-the-art features and materials like standard Subaru Multimedia with wireless Apple
+                CarPlay<sup>&reg;</sup> and Android Auto<sup>&trade;</sup> integration and available StarTex-trimmed
+                upholstery.
+            </p>
+        </div>
+        <div class="img-3x3">
+            <div class="img-3x3-body">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/3a43b5d7f8a84af6a25d26b12aa496de.png">
+            </div>
+            <div class="img-3x3-body">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/74ff0b36125d4671b633d38699fb1940.png">
+            </div>
+            <div class="img-3x3-body">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/00e8b1a595cb43d6869968082fc5ea76.png">
+            </div>
+
+        </div>
+    </div>
+    <div class="card-3x3 sns-mb-5" style="background-color:#EEEEEE;margin-inline: 3%;">
+        <div class="body-3x3">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d5235fcbae224656bca64b91f64f22e7.png"
+                class="sns-mob-none" alt="">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d5235fcbae224656bca64b91f64f22e7.png"
+                class="sns-desk-none" alt="">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">Spacious, Inviting Interior</h3>
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    With ample passenger space, generous rear legroom, and a flat floor, the 2024 Solterra gives you
+                    the airy, open feel of a much larger vehicle. For 2024, there’s a newly available power front
+                    passenger seat for easy customized comfort. Available StarTex-trimmed upholstery and
+                    high-quality, soft-touch materials throughout — along with an available Wi-Fi hotspot* — create
+                    a connected cabin that’s both modern and full of convenient, comfortable features.
+
+
+                </p>
+
+            </div>
+        </div>
+        <div class="body-3x3">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/1ff2b9931b35405fba93bd9abd4f5406.png"
+                class="sns-mob-none" alt="">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/1ff2b9931b35405fba93bd9abd4f5406.png"
+                class="sns-desk-none" alt="">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase ">
+                    Adventure-Ready Cargo Space
+                </h3>
+
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    The 2024 Solterra gives you plenty of cargo space — more than the Hyundai IONIQ 5* — so you can
+                    bring along all the gear you need for all your adventures. The low load height, a wide-opening
+                    rear gate, and an available power rear gate all make loading that gear even easier. If you’re
+                    hauling larger cargo, raised roof rails are now standard on every 2024 Solterra, so you can
+                    easily take on extra gear, bikes, and more.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="sns-gallery-section">
+        <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-center">
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/9e4769ddc3db4f589fcef23f520b6e56.png"
+                        alt="" class="">
+                </div>
+            </div>
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/b7cc8b3188da40839f935e89900ab376.png"
+                        alt="" class="">
+                </div>
+            </div>
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/40feda19daf84f948fc95686ae9dca49.png"
+                        alt="" class="">
+                </div>
+            </div>
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/725d4652006a4c0d8d660e7319115635.png"
+                        alt="" class="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="car-btn" style="position: relative;">
+        <div class="sns-button" style="background-color: #2A2A2A;">
+            <div class="sns-BN1 sns-BN" style="background-color:unset;">
+                <a class="sns-btn sns-butn sns-btn-m-in-15" href="https://www.rimrocksubaru.com/financing/index.htm">
+                    <div>get pre-approved</div>
+                </a>
+            </div>
+        </div>
+        <div style="overflow: hidden;">
+            <div class="car">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/817c3eb6c1544f958685c112db660a22.png"
+                    alt="view inventory" class="">
+                
+            </div>
+        </div>
+    </div>
+    <div class="section-3" style="background-color: #fff;margin-bottom: 5%;">
+        <div class="s-head ">
+            <h3 class="sns-f-36-fw-600 sns-pt-5">Exterior</h3>
+            <h2 class="sns-f-48 sns-pt-5 ">
+                An Innovation in Design
+            </h2>
+
+            <p class="sns-f-head-26 m-inline-16 sns-pb-3 sns-pt-3">
+
+                In every sense, the 2024 Solterra is made for exploring new frontiers. That same bold philosophy
+                went into its cutting-edge exterior design that showcases contrasting protective cladding, striking
+                LED headlights, and clean, modern lines.
+            </p>
+        </div>
+        <div class="img-3x3">
+            <div class="img-3x3-body">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/38d8dae3f0204bc39beb8d46f3daedbc.png">
+            </div>
+            <div class="img-3x3-body">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/1a1ef56ea105418492f40d72bdd1dde9.png">
+            </div>
+            <div class="img-3x3-body">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/927878057c7a4b019321629b4a43cf75.png">
+            </div>
+
+        </div>
+    </div>
+    <div class="card-3x3 sns-mb-5" style="background-color:#EEEEEE;">
+        <div class="body-3x3">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/ed30f2a3134c4724b1ea89634b545a15.png"
+                class="sns-mob-none" alt="">
+            <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/ed30f2a3134c4724b1ea89634b545a15.png"
+                class="sns-desk-none" alt="">
+            <div class="card-p sns-mb-3">
+                <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">Advanced Aerodynamics</h3>
+                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                    The available split-design roof spoiler, full underbody tray, and other aerodynamic features
+                    help manage airflow. These features enable quiet, efficient, and safe driving regardless of
+                    weather and road conditions.
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="sns-gallery-section">
+        <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-center">
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/2b9d051fdee749b39be75f991e3240e6.png"
+                        alt="" class="">
+                </div>
+            </div>
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/ca3470e632764c3cbacd3686d7ca59f0.png"
+                        alt="" class="">
+                </div>
+            </div>
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0c0c6b95fc1c467486272c9bb717ce0e.png"
+                        alt="" class="">
+                </div>
+            </div>
+            <div class=" sns-img-g">
+                <div class="sns-gallery-img">
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/56d9c671bdf6408bb6f1c2b15150505c.png"
+                        alt="" class="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model-section">
+        <h2 class="sns-f-48 sns-mt-4 sns-mb-4" style="text-align: center;">Pricing</h2>
+        <div class="s-mrp">
+            <div class="mrp-card">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/39de568dcb0a4bc0b7dd2c17b47524a7.png"
+                    alt="" class="">
+
+                <div class="mrp-body">
+                    <h4 class="sns-f-36-fw-700">Premium</h4>
+                    <p class="sns-f-26-msrp" style="padding-block: 3% 5%;">Starting Price*</p>
+                    <h2 class="sns-f-36-fw-600 " style="color:#2E2D2D !important;">$44,995*</h2>
+                </div>
+            </div>
+            <div class="mrp-card">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d1eefb3dfe854f369e88b987b242f1a6.png"
+                    alt="" class="">
+
+                <div class="mrp-body">
+                    <h4 class="sns-f-36-fw-700">Limited</h4>
+                    <p class="sns-f-26-msrp" style="padding-block: 3% 5%;">Starting Price*</p>
+                    <h2 class="sns-f-36-fw-600 " style="color:#2E2D2D !important;">$48,495*</h2>
+                </div>
+
+
+
+
+            </div>
+            <div class="mrp-card">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/39de568dcb0a4bc0b7dd2c17b47524a7.png"
+                    alt="" class="">
+
+                <div class="mrp-body">
+                    <h4 class="sns-f-36-fw-700">Touring</h4>
+                    <p class="sns-f-26-msrp" style="padding-block: 3% 5%;">Starting Price*</p>
+                    <h2 class="sns-f-36-fw-600 " style="color:#2E2D2D !important;">$51,995*</h2>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <section class="sns-button">
+        <div class="sns-BN justify-content-evenly ">
+            <a class="sns-btn sns-butn sns-f-b"
+                href="https://www.rimrocksubaru.com/new-inventory/index.htm?year=2024&model=Solterra&sortBy=year%20asc">
+                <div>View Inventory</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b " href="https://www.rimrocksubaru.com/contact-rimrock-subaru.htm">
+                <div>get a quote</div>
+            </a>
+            <a class="sns-btn sns-butn sns-f-b-r " href="https://www.rimrocksubaru.com/buy-or-trade-online.htm">
+                <div>value your trade</div>
+            </a>
+            <a class="sns-btn sns-butn " href="https://www.rimrocksubaru.com/financing/index.htm">
+                <div>get pre-approved</div>
+            </a>
+        </div>
+    </section>
+    <div class="s-seo sns-f-22 sns-justify-center">
+        <p><b>Introducing the 2024 Solterra in Montana</b></p>
+        <p>Born from Subaru's vision for a greener future, the 2024 Solterra represents a leap into the electric
+            era.
+            This groundbreaking SUV blends Subaru's legendary capability with cutting-edge electric performance.
+            Most
+            importantly, car enthusiasts are impressed by how the automakers are investing heavily in creating a
+            vehicle
+            that's as adventurous as it is environmentally conscious, as shown in the 2024 Solterra.</p>
+        <p><b>Which Dealership Offers the 2024 Solterra near Montana?</b></p>
+        <p>At Rimrock Subaru, we proudly display the 2024 Solterra, MT, at our dealership. You should feel free to
+            come
+            and experience firsthand the exceptional performance and innovative design that make this electric SUV a
+            standout. Our in-house experts will welcome you with a warm reception and tell you everything you need
+            to
+            know about this vehicle.</p>
+        <p>What makes the 2024 Solterra a top choice for any driver is that the automakers have shown an impressive
+            blend of power and efficiency. The vehicle, which comes in three trims—Premium, Limited, and
+            Touring—boasts
+            a reliable electric powertrain that delivers a total system power of 215 horsepower and 249 lb-ft of
+            torque.
+            This ensures a responsive and amazing driving experience. The Premium trim offers up to 114 MPGe in the
+            city
+            and 94 MPGe on the highway, while the Limited and Touring trims provide slightly lower but still
+            impressive
+            figures of up to 111 MPGe in the city and 93 MPGe on the highway. Its 205 Ah battery capacity makes sure
+            you
+            have the power you need for any adventure.</p>
+        <p>The exterior design of the 2024 Subaru Solterra perfectly matches its high-performance capabilities. It
+            is a
+            sight to behold, featuring sleek lines and modern styling. The Premium trim includes heated mirrors and
+            fixed exterior cross-bar mounting points, which add both functionality and elegance. The car comes with
+            multi-beam LED headlights that illuminate the road ahead with precision. This ensures excellent
+            visibility
+            in all conditions. The Limited and Touring trim enhances these features with heated power-folding
+            exterior
+            mirrors, including integrated turn signals and entry lights. All this is the manufacturer's way of
+            making
+            every aspect of this vehicle sophisticated and user-friendly.</p>
+        <p>The interior of the car is a special place for car lovers. The 2024 Solterra offers a comfortable and
+            high-tech environment that ensures a pleasurable ride for both driver and passengers. The interior
+            dimensions provide ample space, with 38.8 inches of headroom in the front and 38.0 inches in the rear,
+            42.1
+            inches of legroom in the front, and 35.3 inches in the rear. This spaciousness makes sure every
+            passenger
+            enjoys maximum comfort. Additionally, all trims come with 4G LTE Wi-Fi capability, keeping everyone
+            connected on the go.</p>
+        <p>Safety is one of Subaru's selling points, perfectly amplified in the 2024 Solterra. The car comes
+            equipped
+            with a suite of features designed to protect all occupants. The Solterra's comprehensive safety systems
+            include forward collision warning, automatic emergency braking, lane departure warning, and lane-keeping
+            assist. These technologies are designed to help prevent accidents and keep everyone inside the vehicle
+            safe.</p>
+        <p><b>Where Can I Test Drive the Subaru Solterra 2024 model in Montana?</b></p>
+        <p>You can come and experience the thrill of the 2024 Subaru Solterra by scheduling a test drive at Rimrock
+            Subaru in Montana. We will gladly put you behind the wheel of the car so that you can feel the power,
+            efficiency, and innovative features that set the Solterra apart. Visit us today and see why it's the
+            perfect
+            road companion for you.</p>
+
+    </div>
+    <div class="s-disc sns-f-22 sns-justify-center">
+        <p>*Charge time varies based on vehicle level of charge, charging rate, ambient temperature, and many other
+            factors. MY23 DC fast-charging capability 10% to 80% in about 60 minutes.</p>
+        <p>*DriverFocus is a driver recognition technology designed to alert the driver if their attention to the
+            road wavers or if the driver’s face appears to turn away. The driver is always responsible for safe and
+            attentive driving. System effectiveness may be affected by articles of clothing worn on the head or
+            face. See Owner’s Manual for complete details on system operations and limitations.</p>
+        <p>*EPA-estimated range on a full battery charge. Actual range will vary with driving conditions, weather,
+            and your vehicle’s condition.</p>
+        <p>*Charge time varies based on vehicle level of charge, charging rate, ambient temperature and many other
+            factors.</p>
+        <p>*Comparing initial MY23 Solterra cold weather charging speed without over the air updates to MY24
+            Solterra cold weather charging speed.</p>
+        <p>*Based on Experian Automotive non-luxury vehicles in operation vs. total new registrations for
+            MY2014-2023 as of December 2023.</p>
+        <p>*Eyesight Driver Assist Technologies may not operate optimally under all driving conditions. The driver
+            is always responsible for safe and attentive driving. System effectiveness depends on many factors such
+            as vehicle maintenance, weather and road conditions. Pre-Collision System is designed to provide
+            automatic braking that either prevents a collision or reduces the severity of a frontal impact.
+            Acceleration Suppression Low-Speed is designed to reduce acceleration and minimize the severity of
+            certain frontal impacts. Dynamic Radar Cruise Control is designed to assist the driver and is not a
+            substitute for safe and attentive driving. Lane Tracing operates only when used in conjunction with
+            Dynamic Radar Cruise Control. Lane Departure Alert and Lane Departure Prevention operate only when the
+            lane markings are visible and system effectiveness depends on many factors. See Owner’s Manual for
+            complete details on system operation and limitations.</p>
+        <p>*Traffic Jam Assist is not an automated driving system. Driving safely is solely the responsibility of
+            the driver. Do not overly rely on this system and pay careful attention to the surrounding conditions in
+            order to ensure safe driving. See Owner’s Manual for complete details on system operation and
+            limitations. Drive Connect subscription required after trial period ends.</p>
+        <p>*Blind-Spot Monitor and Front and Rear Cross-Traffic Alert are systems designed to assist the driver by
+            monitoring the front, rear, and side areas of the vehicle to detect potential hazards that may not be
+            visible from the driver’s position and are not a substitute for safe and attentive driving.</p>
+        <p>*Blind-Spot Monitor and Rear Cross-Traffic Alert are systems designed to assist the driver by monitoring
+            the rear and side areas of the vehicle during a lane change or reversing and are not a substitute for
+            safe and attentive driving.</p>
+        <p>*Lane Change Assist monitors the area of an indicated lane change and provides steering assist to perform
+            the change if the system determines it is safe to do so. It is not a substitute for safe and attentive
+            driving.</p>
+        <p>*The Parking Support Brake (PKSB) is a system designed to assist the driver by detecting objects to help
+            avoid a possible collision when the vehicle is moving in a reverse direction. It is not a substitute for
+            safe and attentive driving. System effectiveness depends on many factors, such as vehicle maintenance,
+            weather, and road conditions. Always exercise caution and use vehicle mirrors and the Rear-Vision Camera
+            when backing up. See Owner’s Manual for complete details on system operation and limitations.</p>
+        <p>*Safe Exit Assist (SEA) is designed to assist vehicle occupants by detecting approaching vehicles to help
+            reduce door opening accidents. If an approaching vehicle is detected, the system will display a warning
+            light on the door mirror. If an occupant opens the door to exit, the system provides additional visual
+            warning on the meter display and an audible alert. Safe Exit Assist will not prevent the door from
+            opening and is not a substitute for safe, attentive exiting. See Owner’s Manual for complete details on
+            system operation and limitations.</p>
+        <p>*S-Pedal is not a substitute for safe and attentive driving. The driver must press the brake pedal to
+            come to a complete stop. See your Owner’s Manual for complete system operation and details.</p>
+        <p>*All SiriusXM services require a subscription, sold separately by SiriusXM after the trial period. Your
+            SiriusXM service will automatically stop at the end of your trial unless you decide to subscribe. If you
+            decide to continue service, the subscription plan chosen will automatically renew and be charged
+            according to your chosen payment method at the then-current rates. Fees and taxes apply. See the
+            SiriusXM Customer Agreement & Privacy Policy at www.siriusxm.com for full terms and how to cancel, which
+            includes online methods or calling 1-866-635-2349. Available in the 48 contiguous United States, D.C.,
+            and Puerto Rico (with coverage limits and capable receiver). Visit http://www.siriusxm.com/FAQS for most
+            current service area information. Availability of some services and features is subject to device
+            capabilities and location restrictions. All fees, content and features are subject to change. SiriusXM,
+            Pandora and all related logos are trademarks of Sirius XM Radio Inc. and its respective subsidiaries.
+        </p>
+        <p>*Subscription required. Includes trial subscriptions to Safety Connect, Service Connect, Remote Connect,
+            and Wi-Fi Connect services. Limited and Touring trims include trial subscriptions to Drive Connect.
+            Wi-Fi Connect services are purchased separately through AT&T. See your retailer for details.</p>
+        <p>*Digital Key not compatible with all vehicle features and functionality. See Owner’s Manual for full
+            details. Remote Connect subscription required; includes 1-year trial subscription. Availability varies
+            by trim level. See your retailer for details.</p>
+        <p>*Drive Connect subscription required; Limited and Touring trims include a 1-year trial subscription. See
+            your retailer for details.</p>
+        <p>*Wi-Fi Connect subscription required; includes 30-day or up to 3 GB trial subscription for Wi-Fi hot
+            spot. Wi-Fi Connect services are purchased separately through AT&T. See your retailer for details.</p>
+        <p>*Based on competitor information from manufacturer websites as of January, 2024.</p>
+    </div>
+
+
+
+
+
+</div>
