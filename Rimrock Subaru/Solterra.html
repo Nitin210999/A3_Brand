@@ -18,11 +18,11 @@
 
     .main-div {
         width: 100%;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Montserrat";
         background-color: #fff;
     }
 
-    .main-div h1,
+    .main-div h5,
     h2,
     h3,
     h4,
@@ -429,7 +429,7 @@
         left: 3%;
     }
 
-    .s-banner-txt h1 {
+    .s-banner-txt h5 {
         font-size: 3.75vw;
         font-weight: 600;
         color: #FFFFFF;
@@ -439,41 +439,52 @@
         font-size: 1.875vw;
         font-weight: 400;
         color: #FFFFFF;
-        margin-bottom: 0.8%;
+        margin-bottom: 0.7%;
         margin-right: 72vw;
     }
 
-    @media screen and (max-width: 890px) {
-        .s-banner-txt p {
-            font-size: clamp(18px, 1.875vw, 36px);
-            margin-right: 0;
-        }
-
-        .s-banner-txt h1 {
-            font-size: clamp(32px, 3.75vw, 72px);
-        }
+    .s-mi-8 {
+        margin-inline: 8vw;
     }
 
-    @media screen and (max-width: 480px) {
+    .s-mi-16 {
+        margin-inline: 15.5vw;
+    }
+
+    @media screen and (max-width: 890px) {
         .s-banner {
-            flex-direction: column-reverse;
+            flex-direction: column;
             flex-wrap: wrap;
         }
 
         .s-banner .s-banner-txt {
             position: initial;
             padding: 5%;
+            text-align: center;
         }
 
         .s-banner-txt p {
-            color: #000000;
+            color: #2E2D2D;
             padding-bottom: 2%;
+            font-size: clamp(18px, 1.875vw, 36px);
+            margin-right: 0;
         }
 
-        .s-banner-txt h1 {
-            color: #000000;
+        .s-banner-txt h5 {
+            color: #2E2D2D;
+            font-size: clamp(32px, 3.75vw, 72px);
+        }
+
+        .s-mi-8 {
+            margin-inline: 0;
+        }
+
+        .s-mi-16 {
+            margin-inline: 0;
         }
     }
+
+    @media screen and (max-width: 480px) {}
 
     .sns-button>.sns-BN {
         display: flex;
@@ -617,11 +628,13 @@
     .card-3x3 .body-3x3 {
         width: calc(91%/2);
         text-align: center;
+        margin-bottom: 2%;
     }
 
     .card-3x3 .body-3x3-gap {
         width: calc(88%/3);
         text-align: center;
+        margin-bottom: 3%;
     }
 
     .img-3x3 {
@@ -643,6 +656,7 @@
         .card-3x3 .body-3x3-gap {
             width: calc(91%/2);
         }
+
     }
 
     @media screen and (max-width: 480px) {
@@ -669,7 +683,7 @@
         }
 
         .card-3x3 .body-3x3-gap {
-            width: calc(94%/1);
+            width: calc(90%/1);
         }
 
         .card-3x3 .body-3x3 p {
@@ -677,7 +691,7 @@
         }
 
         .img-3x3-body {
-            width: calc(94%/1);
+            width: calc(90%/1);
         }
     }
 
@@ -689,13 +703,17 @@
 
     .car {
         position: absolute;
-        top: 10%;
-        right: 5%;
-        width: 50%;
+        top: 8%;
+        right: 7%;
+        width: 51%;
     }
 
     .car-btn {
         margin-bottom: 10%;
+    }
+
+    .s-mi-3-nic {
+        margin-inline: 3%;
     }
 
     @media screen and (max-width: 890px) {
@@ -709,7 +727,12 @@
         }
     }
 
+
     @media screen and (max-width: 480px) {
+        .s-mi-3-nic {
+            margin-inline: 5%;
+        }
+
         .car {
             width: 92%;
             left: 5%;
@@ -730,6 +753,13 @@
 
         .car-btn {
             margin-bottom: 15%;
+        }
+
+        .s-pt-15 {
+            padding-top: 15% !important;
+        }
+        .s-pt-15-nic {
+            padding-top: 10% !important;
         }
     }
 
@@ -877,15 +907,23 @@
     .s-mrp .mrp-card {
         width: calc(90%/3);
         text-align: center;
-        margin-bottom: 5%;
+        margin-bottom: 7%;
     }
 
     .s-mrp .mrp-card h4 {
-        margin-top: 3%;
+        margin-top: 7%;
     }
 
     .s-mrp .mrp-card p {
         margin-top: 3%;
+    }
+
+    .s-mi-3 {
+        margin-inline: 3%;
+    }
+
+    .s-pt-8-5 {
+        padding-top: 8.5%;
     }
 
     @media screen and (max-width: 890px) {
@@ -895,6 +933,14 @@
 
         .s-mrp .mrp-card {
             width: calc(95%/2);
+        }
+
+        .s-mi-3 {
+            margin-inline: 0;
+        }
+
+        .s-pt-8-5 {
+            padding-top: 0%;
         }
     }
 
@@ -922,7 +968,7 @@
 
     .s-seo p {
         margin-bottom: 1.5%;
-        line-height: 1.3em;
+        line-height: 1.5em;
     }
 
     .s-disc {
@@ -931,7 +977,7 @@
 
     .s-disc p {
         margin-bottom: 1.5%;
-        line-height: 1.3em;
+        line-height: 1.5em;
     }
 
     .sns-bg-white {
@@ -964,7 +1010,7 @@
             class="sns-desk-none">
         <div class="s-banner-txt">
             <p>The Most Advanced Subaru Ever, Featuring Faster Charging and Enhanced Safety Technologies</p>
-            <h1>2024 Solterra</h1>
+            <h5>2024 Solterra</h5>
         </div>
     </div>
     <section class="sns-button">
@@ -986,7 +1032,7 @@
     </section>
     <div class="s-head sns-mt-5 sns-mb-5">
         <h2 class="sns-f-48 s-box">The most advanced Subaru we’ve ever built.</h2>
-        <p class="sns-f-head-26 m-inline-16 sns-mt-2">
+        <p class="sns-f-head-26 m-inline-16 sns-mt-3">
             The 2024 Subaru Solterra gives you a new way to explore our world. It features an advanced all-electric,
             zero-emission StarDrive<sup>&reg;</sup> electric powertrain and uses the e-Subaru Global Platform. Plus,
             Solterra is
@@ -1011,7 +1057,7 @@
                 of our commitment to safeguarding the natural world we all share through sustainable transportation
                 — and it’s just the beginning.
             </p>
-            <div style="margin-inline: 3%;">
+            <div class="s-mi-3" style="">
                 <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d6682094bf8f4389b85cfe5c6700775d.png"
                     alt="">
             </div>
@@ -1109,15 +1155,15 @@
         <div style="overflow: hidden;">
             <div class="car">
                 <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/5b2b57e597524dee824f8907fe08e9b3.png"
-                    alt="view inventory" >
-                
+                    alt="view inventory">
+
             </div>
         </div>
     </div>
-    <div class="s-head">
+    <div class="s-head sns-pt-5 s-pt-15">
         <h3 class="sns-f-36-fw-600 sns-pt-3">Subaru Safe</h3>
     </div>
-    <div class="card-con-img sns-mt-3 ">
+    <div class="card-con-img sns-mt-5 ">
         <div class="body-con-img">
             <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/df186e24e31e463e9a909ed119d3704f.png" alt=""
                 class="sns-mob-none">
@@ -1138,7 +1184,7 @@
     <div class="section-3" style="background-color: #fff;">
         <div class="s-head">
 
-            <h2 class="sns-f-48 sns-pt-4 sns-pb-4">Standard EyeSight<sup>&reg;</sup> Driver Assist Technologies</h2>
+            <h2 class="sns-f-48 sns-pt-5 sns-pb-5">Standard EyeSight<sup>&reg;</sup> Driver Assist Technologies</h2>
         </div>
         <div class="card-1x1">
             <div class="body-1x1">
@@ -1191,7 +1237,7 @@
             </div>
         </div>
     </div>
-    <div class="card-3x3 sns-mb-1" style="background-color:#EEEEEE;">
+    <div class="card-3x3 sns-mb-1" style="background-color:#EEEEEE;padding-top: 5%;">
         <div class="body-3x3">
             <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/2a298108f7c449aca6b71aeb1662d49f.png"
                 class="sns-mob-none" alt="">
@@ -1288,7 +1334,7 @@
             </div>
         </div>
     </div>
-    <div class="card-con-img sns-mt-3 sns-mb-2 sns-mb-nic-0">
+    <div class="card-con-img sns-mt-3">
         <div class="body-con-img">
             <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/10177991bd7b4128a88a349a7594d3ea.png" alt=""
                 class="sns-mob-none">
@@ -1320,14 +1366,14 @@
             <div class="car">
                 <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/7e8bb5fe3db043c292115f6db3949325.png"
                     alt="view inventory" class="">
-                
+
             </div>
         </div>
     </div>
-    <div class="s-head">
+    <div class="s-head sns-pt-5 s-pt-15">
         <h3 class="sns-f-36-fw-600 sns-pt-3">Adventurous and Versatile SUV</h3>
-        <h2 class="sns-f-48 sns-pt-4">Standard Symmetrical All-Wheel Drive</h2>
-        <p class="sns-f-head-26 m-inline-16 sns-pb-5 sns-pt-3">
+        <h2 class="sns-f-48 sns-pt-5">Standard Symmetrical All-Wheel Drive</h2>
+        <p class="sns-f-head-26 m-inline-16 sns-pb-5 sns-pt-2">
             As the first-ever all-electric SUV to feature the capability of Symmetrical All-Wheel Drive, the
             Solterra takes this legendary all-weather, all-terrain traction system to exciting new places. The
             balanced design of Symmetrical All-Wheel Drive creates uniform stability and delivers an optimal
@@ -1384,11 +1430,12 @@
     <div class="section-3" style="background-color: #EEEEEE;">
         <div class="s-head ">
             <h3 class="sns-f-36-fw-600 sns-pt-5">A Subaru Electric SUV With Advanced Comfort and Convenience</h3>
-            <h2 class="sns-f-48 sns-pt-5 ">Subaru Multimedia with available 12.3-inch Touchscreen, Cloud Navigation,
+            <h2 class="sns-f-48 sns-pt-5 s-mi-8">Subaru Multimedia with available 12.3-inch Touchscreen, Cloud
+                Navigation,
                 and
                 Intelligent Assistant</h2>
 
-            <p class="sns-f-head-26 m-inline-16 sns-pb-5 sns-pt-3">
+            <p class="sns-f-head-26 s-mi-16 sns-pb-5 sns-pt-3">
 
                 The 2024 Solterra features an advanced multimedia system with standard wireless Apple
                 CarPlay<sup>&reg;</sup> and
@@ -1446,7 +1493,7 @@
                 Solterra Touring
             </h2>
 
-            <p class="sns-f-head-26 m-inline-16 sns-pb-3 sns-pt-3">
+            <p class="sns-f-head-26 s-mi-16 sns-pb-3 sns-pt-3">
 
                 The Solterra Touring electric SUV offers sophistication and comfort with stylish 20-inch alloy
                 wheels, a panoramic fixed glass roof, StarTex<sup>&reg;</sup> upholstery, Harman
@@ -1468,7 +1515,7 @@
 
         </div>
     </div>
-    <div class="card-3x3 sns-mb-5" style="background-color:#EEEEEE;margin-inline: 3%;">
+    <div class="card-3x3 sns-mb-5 s-mi-3-nic" style="background-color:#EEEEEE;">
         <div class="body-3x3-gap">
             <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0c2f15d0c77149b58a07f1f427095d59.png"
                 class="sns-mob-none" alt="">
@@ -1476,7 +1523,7 @@
                 class="sns-desk-none" alt="">
             <div class="card-p sns-mb-3">
                 <h3 class="sns-f-36-fw-700 sns-mt-5 sns-text-uppercase">Interior</h3>
-                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                <p class="sns-f-26 sns-mt-3 sns-mb-5 s-pt-8-5">
                     The Solterra Touring transports you in more ways than one. Just settling into the advanced
                     comforts and style of its interior is like stepping into the future, with durable two-tone
                     StarTex upholstery and high-tech illuminated trim. A Harman Kardon premium audio system with 576
@@ -1494,7 +1541,7 @@
                     20-inch Alloy Wheels
                 </h3>
 
-                <p class="sns-f-26 sns-mt-3 sns-mb-5">
+                <p class="sns-f-26 sns-mt-3 sns-mb-5 s-pt-8-5">
                     Eye-catching 20-inch alloy wheels feature machine-finished accents and distinctly modern style.
                 </p>
 
@@ -1531,12 +1578,12 @@
             <div class="car">
                 <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/a950d4821db1452bbb1be2e490a4a9c5.png"
                     alt="view inventory" class="">
-                
+
             </div>
         </div>
     </div>
     <div class="section-3" style="background-color: #fff;margin-bottom: 5%;">
-        <div class="s-head ">
+        <div class="s-head sns-pt-5 s-pt-15">
             <h3 class="sns-f-36-fw-600 sns-pt-5">Interior</h3>
             <h2 class="sns-f-48 sns-pt-5 ">
                 Modern, Stylish Cabin
@@ -1564,7 +1611,7 @@
 
         </div>
     </div>
-    <div class="card-3x3 sns-mb-5" style="background-color:#EEEEEE;margin-inline: 3%;">
+    <div class="card-3x3 sns-mb-5 s-mi-3-nic" style="background-color:#EEEEEE;">
         <div class="body-3x3">
             <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/d5235fcbae224656bca64b91f64f22e7.png"
                 class="sns-mob-none" alt="">
@@ -1644,19 +1691,21 @@
         <div style="overflow: hidden;">
             <div class="car">
                 <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/817c3eb6c1544f958685c112db660a22.png"
-                    alt="view inventory" class="">
-                
+                    alt="view inventory" class="sns-mob-none" style="margin-top: 1.4em;">
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/817c3eb6c1544f958685c112db660a22.png"
+                    alt="view inventory" class="sns-desk-none" style="">
+
             </div>
         </div>
     </div>
     <div class="section-3" style="background-color: #fff;margin-bottom: 5%;">
-        <div class="s-head ">
+        <div class="s-head s-pt-15-nic">
             <h3 class="sns-f-36-fw-600 sns-pt-5">Exterior</h3>
             <h2 class="sns-f-48 sns-pt-5 ">
                 An Innovation in Design
             </h2>
 
-            <p class="sns-f-head-26 m-inline-16 sns-pb-3 sns-pt-3">
+            <p class="sns-f-head-26 s-mi-16 sns-pb-3 sns-pt-2">
 
                 In every sense, the 2024 Solterra is made for exploring new frontiers. That same bold philosophy
                 went into its cutting-edge exterior design that showcases contrasting protective cladding, striking
@@ -1698,39 +1747,39 @@
         <div class="sns-wor sns-d-flex sns-flex-wrap sns-justify-content-center">
             <div class=" sns-img-g">
                 <div class="sns-gallery-img">
-                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/2b9d051fdee749b39be75f991e3240e6.png"
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/10a6ec8098a14872813beabaf3ce85f1.png"
                         alt="" class="">
                 </div>
             </div>
             <div class=" sns-img-g">
                 <div class="sns-gallery-img">
-                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/ca3470e632764c3cbacd3686d7ca59f0.png"
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/eaaebb58f73548a68aca2cd3a20897bf.png"
                         alt="" class="">
                 </div>
             </div>
             <div class=" sns-img-g">
                 <div class="sns-gallery-img">
-                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/0c0c6b95fc1c467486272c9bb717ce0e.png"
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/437234f28d3c42efb92a8764571ea27d.png"
                         alt="" class="">
                 </div>
             </div>
             <div class=" sns-img-g">
                 <div class="sns-gallery-img">
-                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/56d9c671bdf6408bb6f1c2b15150505c.png"
+                    <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/57588449581d4f27a2b1b6664d822cf7.png"
                         alt="" class="">
                 </div>
             </div>
         </div>
     </div>
     <div class="model-section">
-        <h2 class="sns-f-48 sns-mt-4 sns-mb-4" style="text-align: center;">Pricing</h2>
+        <h2 class="sns-f-48 sns-mt-5 sns-mb-5" style="text-align: center;">Pricing</h2>
         <div class="s-mrp">
             <div class="mrp-card">
                 <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/39de568dcb0a4bc0b7dd2c17b47524a7.png"
                     alt="" class="">
 
                 <div class="mrp-body">
-                    <h4 class="sns-f-36-fw-700">Premium</h4>
+                    <h4 class="sns-f-30">Premium</h4>
                     <p class="sns-f-26-msrp" style="padding-block: 3% 5%;">Starting Price*</p>
                     <h2 class="sns-f-36-fw-600 " style="color:#2E2D2D !important;">$44,995*</h2>
                 </div>
@@ -1740,7 +1789,7 @@
                     alt="" class="">
 
                 <div class="mrp-body">
-                    <h4 class="sns-f-36-fw-700">Limited</h4>
+                    <h4 class="sns-f-30">Limited</h4>
                     <p class="sns-f-26-msrp" style="padding-block: 3% 5%;">Starting Price*</p>
                     <h2 class="sns-f-36-fw-600 " style="color:#2E2D2D !important;">$48,495*</h2>
                 </div>
@@ -1750,11 +1799,11 @@
 
             </div>
             <div class="mrp-card">
-                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/39de568dcb0a4bc0b7dd2c17b47524a7.png"
+                <img src="https://pictures.dealer.com/r/rimrocksubarusoa/1234/85269257d594469394622a955bb153c6.png"
                     alt="" class="">
 
                 <div class="mrp-body">
-                    <h4 class="sns-f-36-fw-700">Touring</h4>
+                    <h4 class="sns-f-30">Touring</h4>
                     <p class="sns-f-26-msrp" style="padding-block: 3% 5%;">Starting Price*</p>
                     <h2 class="sns-f-36-fw-600 " style="color:#2E2D2D !important;">$51,995*</h2>
                 </div>
